@@ -1084,7 +1084,7 @@ div.tags a:hover {
 
     }
 }
-@media (max-width: 10px) {
+@media (max-width: 1000px) {
     div.tags {
         display: none;
     }
