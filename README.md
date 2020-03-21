@@ -1,2 +1,2 @@
-# PhyAAt.github.io
-Physiology of Auditory Attention
+# SpKit.github.io
+Signal Processing ToolKit
