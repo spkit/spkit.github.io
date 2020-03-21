@@ -1037,14 +1037,14 @@ table.field-list tr td.field-body p {
 /* ------- tag cloud on the front page -------------------- */
 
 div.tags {
-    display: block;
+    display: inline-block;
     max-width: 30em;
     max-height: 1em;
     float: right;
     font-weight: bold;
-    font-size: 95%;
-    padding: -5px;
-    margin: 1px 200px 0px 1px;
+    font-size: 100%;
+    padding: 0% 0% 0% 0%;
+    margin: 0% 0% 0% 10%;
     text-align: left;
     /*background-color: #FFC588;
     border-radius: 15px;
@@ -1052,7 +1052,7 @@ div.tags {
 }
 
 div.tags ul {
-    display: inline;
+    display: inline-block;
     width: 100%;
     text-align: left;
     float: right;
@@ -1075,7 +1075,16 @@ div.tags a:hover {
     color: #000;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
+    div.tags {
+        display: block;
+        font-size: 0.8em;
+        margin: -1em 0em 0em 0em;
+        padding: 0em 0em 0em 0em;
+
+    }
+}
+@media (max-width: 10px) {
     div.tags {
         display: none;
     }
@@ -1185,8 +1194,9 @@ div#logo-banner .logo a img {
 
 @media (max-width: 800px) {
     div#logo-banner .logo a img {
-        max-width: 85%;
-	margin: 5px;
+        max-width: 95%;
+        margin : 1em 0em 0em 0em;
+        padding: 0 10% 1% 0%;
     }
 }
 
@@ -1197,8 +1207,9 @@ div#logo-banner .banner {
 }
 
 div#logo-banner .banner h1 {
-    text-align: left;
+    text-align: center;
     margin : -0.7em 0 0.3em 0.2em;
+    margin-left: 0em;
 }
 
 div#logo-banner .banner h2 {
@@ -1206,6 +1217,7 @@ div#logo-banner .banner h2 {
     margin : -0.5em 0 0 0.5em;
     font-size: 1.05em;
     color: #11557C;
+    margin-left: 0em;
 }
 div#logo-banner .banner h4 {
     text-align: left;
@@ -1216,23 +1228,28 @@ div#logo-banner .banner h4 {
 
 @media (max-width: 100px) {
     div#logo-banner .banner {
-        font-size: 0.7em;
-	padding: 0 0 0 0;
+         font-size: 0.7em;
+	       padding: 0 0 0 0;
+         margin-left: 5em;
     }
 }
 
 @media (max-width: 800px) {
     div#logo-banner .banner h1 {
          font-size: 241%;
-	 margin: -0.7em 0 0.3em 4.2em;
+	       margin: -0.7em 0 0.3em 4.2em;
     }
 }
 
 @media (max-width: 800px) {
     div#logo-banner .banner h2 {
-   	 font-size: 168%;
-	 margin-left: 8em;
-	 text-align: center;
+   	 font-size: 0.9em;
+    }
+}
+@media (max-width: 800px) {
+    div#logo-banner .banner h4 {
+   	 font-size: 0.55em;
+     margin: -1.3em 0 3em 0em;
     }
 }
 
@@ -1261,12 +1278,6 @@ div#banner.banner img {
     margin: 0 0 0 0;
 }
 
-
-@media (max-width: 800px) {
-    div#banner.banner {
-        display: none;
-    }
-}
 
 @media (max-width: 800px) {
     ul.horizontal img {
@@ -1373,6 +1384,15 @@ div#index-grid p {
     }
 }
 
+@media (max-width: 800px) {
+  div#index-grid-half {
+      max-width: 100em;
+      margin: 1% 10% 1% 1%;
+      padding: 0px 10% 0px 10%;
+      font-size: 80%;
+  }
+}
+
 @media (min-width: 801px) and (max-width: 1135px) {
     div#index-grid.section.group {
         margin: 0.5em 0.5em 14.5em 0;
@@ -1437,6 +1457,14 @@ div#index-grid p {
 @media (min-width: 801px) and (max-width: 1135px) {
     .span_1_of_2 {
 	width: 45%;
+    }
+}
+
+@media (max-width: 800px) {
+    .span_1_of_4 {
+	width: 80%;
+  margin: 0% 0% 0% 0%;
+  padding: 0px 10% 0px 10%;
     }
 }
 
