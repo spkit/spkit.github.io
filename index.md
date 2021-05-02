@@ -8,10 +8,12 @@ You can use HTML elements in Markdown, such as the comment element, and they won
 be affected by a markdown parser. However, if you create an HTML element in your
 markdown file, you cannot use markdown syntax within that element's contents.
 -->
+
+<!--
 <div id="index-grid-full" class="section group">
   <div class="index-paragraph docutils container"><p> <strong> Page is being updated ...untill then please refere to  the  <a href="https://spkit.readthedocs.io/en/latest/"><font color="blue">Documentation</font></a></strong></p></div>
 </div>
-
+-->
 
 <div id="index-grid-full" class="section group">
   <div class="col span_1_of_4">
