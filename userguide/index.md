@@ -47,8 +47,8 @@ markdown file, you cannot use markdown syntax within that element's contents.
     </ul></li>
   <li><a href="#">Signal Decomposition</a>
     <ul class="simple">
-    <li><a href="https://spkit.readthedocs.io/en/latest/ica.html" target="_blank">ICA</a></li>
-    <li><a>PCA, SVD</a></li>
+    <li><a href="https://spkit.readthedocs.io/en/latest/ica.html" target="_blank">Independent Component Analysis - ICA</a></li>
+    <li><a>Principal Component Analysis, Singular Value Decomposition</a></li>
     <li><a>Fractional Fourier Transform</a></li>
     </ul></li>
   <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html" target="_blank">Machine Learning Algorithms</a>
