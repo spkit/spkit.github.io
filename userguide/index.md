@@ -29,11 +29,10 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#entropy-of-real-valued-signal" target="_blank">Entropy functions: Shannan, Rényi entropy</a></li>
     <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#mutual-information-joint-entropy" target="_blank">Mutual Information & Joint Entropy</a></li>
     <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#cross-entropy-kullbackleibler-divergence" target="_blank">Cross Entropy & KL-divergence</a></li>
-      
-     <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#eeg-signal" target="_blank">EEG Signal Analysis</a></li>
-       <ul class="simple">
-        <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#single-channel" target="_blank"><font size="3">Single Channel Analysis</font></a></li>
-        <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#multi-channels-cross" target="_blank"><font size="3">Multi-channel Analysis, with cross/joint entropy, Mututal Information Wavelet</font></a></li>
+    <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#eeg-signal" target="_blank">EEG Signal Analysis</a></li>
+     <ul class="simple">
+        <li><a><font size="3">Single Channel Analysis</font></a></li>
+        <li><a><font size="3">Multi-channel Analysis, with cross/joint entropy, Mututal Information Wavelet</font></a></li>
         </ul>
      </ul>
   </li>
