@@ -34,8 +34,8 @@ markdown file, you cannot use markdown syntax within that element's contents.
   <li><a href="#">Wavelet Analysis</a>
     <ul class="simple">
     <li><a href="https://spkit.readthedocs.io/en/latest/cwt.html" target="_blank">Continues Wavelet Transform - CWT - (Complext wavelets)</a></li>
-    <li><a href="#">Discrete Wavelet Transform - DWT</a></li>
-    <li><a href="#">Wavelet Packet Decomposition - WPD</a></li>
+    <li><a>Discrete Wavelet Transform - DWT</a></li>
+    <li><a>Wavelet Packet Decomposition - WPD</a></li>
     </ul></li>
   <li><a href="#">Signal Decomposition</a>
     <ul class="simple">
@@ -47,19 +47,19 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html#naive-bayes" target="_blank">Naive Bayes</a></li>
     <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html#logistic-regression" target="_blank">Logistic Regression</a></li>
     <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html#decision-trees" target="_blank">Decision Tree</a></li>
-    <li><a href="#">Kernel Learning</a></li>
+    <li><a>Kernel Learning</a></li>
     </ul></li>
   <li><a href="#">Biomedical Signal Processing techniques</a>
     <ul class="simple">
     <li><a href="#">EEG Signals</a>
       <ul class="simple">
-      <li><a href="#">Artifact Removal Algorithms</a></li>
-      <li><a href="#">Wavelet Analysis</a></li>
+      <li><a>Artifact Removal Algorithms</a></li>
+      <li><a>Wavelet Analysis</a></li>
       </ul></li>
     <li><a href="#">GSR</a>
       <ul class="simple">
-      <li><a href="#">Phasic and tonic deomposition</a></li>
-      <li><a href="#">Wavelet Analysis</a></li>
+      <li><a>Phasic and tonic deomposition</a></li>
+      <li><a>Wavelet Analysis</a></li>
     </ul>
     </li>
     </ul></li>
