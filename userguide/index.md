@@ -24,7 +24,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <ul class="simple">
     <li><i><font size="3">pip install spkit</font></i></li>
     </ul></li>
-  <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#entropy-of-real-valued-signal" target="_blank">Information Theory</a>
+  <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#information-theory-for-real-valued-signals" target="_blank">Information Theory</a>
     <ul class="simple">
     <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#entropy-of-real-valued-signal" target="_blank">Entropy functions: Shannan, Rényi entropy</a></li>
     <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#mutual-information-joint-entropy" target="_blank">Mutual Information & Joint Entropy</a></li>
