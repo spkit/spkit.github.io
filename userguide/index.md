@@ -34,12 +34,21 @@ markdown file, you cannot use markdown syntax within that element's contents.
   <li><a href="#">Wavelet Analysis</a>
     <ul class="simple">
     <li><a href="https://spkit.readthedocs.io/en/latest/cwt.html" target="_blank">Continues Wavelet Transform - CWT - (Complext wavelets)</a></li>
+      <ul class="simple">
+        <li><a><font size="3">Gauss Wavelet</font></a></li>
+        <li><a><font size="3">Morlet Wavelet</font></a></li>
+        <li><a><font size="3">Gabor Wavelet</font></a></li>
+        <li><a><font size="3">Poisson Wavelet</font></a></li>
+        <li><a><font size="3">Maxican Wavelet</font></a></li>
+        <li><a><font size="3">Shannan Wavelet</font></a></li>
+        </ul>
     <li><a>Discrete Wavelet Transform - DWT</a></li>
     <li><a>Wavelet Packet Decomposition - WPD</a></li>
     </ul></li>
   <li><a href="#">Signal Decomposition</a>
     <ul class="simple">
-    <li><a href="https://spkit.readthedocs.io/en/latest/ica.html" target="_blank">PCA, ICA</a></li>
+    <li><a href="https://spkit.readthedocs.io/en/latest/ica.html" target="_blank">ICA</a></li>
+    <li><a>PCA, SVD</a></li>
     <li><a>Fractional Fourier Transform</a></li>
     </ul></li>
   <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html" target="_blank">Machine Learning Algorithms</a>
