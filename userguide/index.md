@@ -20,14 +20,15 @@ markdown file, you cannot use markdown syntax within that element's contents.
 <h2 style="text-align:left;"><u>Getting Started - Table of Content</u></h2>
 <h3 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
-  <li><a href="#">Installation</a>
+  <li><a href="https://spkit.readthedocs.io/en/latest/pylfsr.html">Installation</a>
     <ul class="simple">
     <li><i><font size="3">pip install spkit</font></i></li>
     </ul></li>
   <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#entropy-of-real-valued-signal">Information Theory</a>
     <ul class="simple">
-    <li><a href="#">Entropy functions</a></li>
-    <li><a href="#">Mutual Information</a></li>
+    <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#entropy-of-real-valued-signal">Entropy functions: Shannan, Rényi entropy</a></li>
+    <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#mutual-information-joint-entropy">Mutual Information & Joint Entropy</a></li>
+    <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#cross-entropy-kullbackleibler-divergence">Cross Entropy & KL-divergence</a></li>
     </ul>
   </li>
   <li><a href="#">Wavelet Analysis</a>
