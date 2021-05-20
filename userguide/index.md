@@ -20,7 +20,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
 <h2 style="text-align:left;"><u>Getting Started - Table of Content</u></h2>
 <h3 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
-  <li><a href="https://spkit.readthedocs.io/en/latest/pylfsr.html" target="_blank">Installation</a>
+  <li><a href="https://spkit.readthedocs.io/en/latest/installation.html" target="_blank">Installation</a>
     <ul class="simple">
     <li><i><font size="3">pip install spkit</font></i></li>
     </ul></li>
@@ -40,7 +40,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <ul class="simple">
     <li><a href="https://spkit.readthedocs.io/en/latest/cwt.html" target="_blank">Continues Wavelet Transform - CWT - (complext wavelets)</a></li>
       <ul class="simple">
-        <li><a><font size="3">Gauss Wavelet</font></a></li>
+        <li><a href="https://spkit.readthedocs.io/en/latest/cwt.html#gauss-wavelet" target="_blank"><font size="3">Gauss Wavelet</font></a></li>
         <li><a><font size="3">Morlet Wavelet</font></a></li>
         <li><a><font size="3">Gabor Wavelet</font></a></li>
         <li><a><font size="3">Poisson Wavelet</font></a></li>
