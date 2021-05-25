@@ -21,9 +21,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/spkit_InfoTheory/1_Entropy_Example.ipynb"  target="_blank"><span class="std std-ref">Entropy of real-valued signal</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
-
    <div class="toctree-wrapper compound"></div>
-
    <div class="sphx-glr-thumbcontainer" tooltip="Scalogram CWT with different wavelets"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/cwt.jpg" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/spkit_SP/ScalogramCWT_v0.0.9.2.ipynb" target="_blank"><span class="std std-ref">Scalogram CWT</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
@@ -39,7 +37,6 @@ markdown file, you cannot use markdown syntax within that element's contents.
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">In case of broken links, try this</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
-
    <div class="toctree-wrapper compound"></div>
    <hr width="10%">
    <h4 style="text-align:left;">Click here to try examples: <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="25em"></a> </h4>
@@ -48,7 +45,6 @@ markdown file, you cannot use markdown syntax within that element's contents.
  <span id="id1"></span><h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#LR"><span class="section-number"></span>Logistic Regression & Naïve Bayes</a>
  <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
  <p style="text-align:left;">Examples of Logistic Regression with SpKit</p>
-
  <div class="sphx-glr-thumbcontainer" tooltip="An example to demonstrate the visulization of Logistic Regression while training and plotting resulting weights.">
    <div class="figure align-default" id="">
    <img alt="" src="{{"assets/images/LR_v1.gif" | relative_url }}"/>
