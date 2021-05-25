@@ -1,6 +1,6 @@
 ---
 title: Gallery - Examples
-layout: default
+layout: default1
 ---
 
 # {{ page.title }}
