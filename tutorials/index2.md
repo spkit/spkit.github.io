@@ -12,16 +12,16 @@ layout: default
 <ul class="simple" style="line-height:1.4;">
   <li><a>1. nbviewer</a>
     <ul class="simple">
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression (Boston House Price)</a></li>
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification (Breast Cancer, Iris, MNIST)</a></li>
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/3_Deeplearning_CNN.ipynb" target="_blank">3. Deeplearning (MNIST)</a></li>
     <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/tree/master/Tutorials_ML_DL/" target="_blank">All notebooks</a></li>
-    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression with Boston House Price</a></li>
-    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification</a></li>
-    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/3_Deeplearning_CNN.ipynb" target="_blank">3. Deeplearning</a></li>
     </ul></li>
   <li><a>Google Colab</a>
     <ul class="simple">
-    <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression with Boston House Price</a></li>
-    <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification</a></li>
-    <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/3_Deeplearning_CNN.ipynb" target="_blank">3. Deeplearning</a></li>
+    <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression  (Boston House Price)</a></li>
+    <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification (Breast Cancer, Iris, MNIST)</a></li>
+    <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/3_Deeplearning_CNN.ipynb" target="_blank">3. Deeplearning (MNIST)</a></li>
     </ul></li>
   <li><a>Binder</a>
     <ul class="simple">
