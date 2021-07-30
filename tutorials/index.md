@@ -10,7 +10,7 @@ layout: default
 <div id="index-grid-half" class="section group">
 <h2 style="text-align:left;">Agenda/Objectives</h2>
 <h3 style="text-align:left;">
-<h3 style="text-align:left;"> Links to Jupyter-notebooks/Objectives</h3>
+<h3 style="text-align:left;"> Links to Jupyter-notebooks</h3>
 <ul class="simple" style="line-height:1.4;">
   <li>1. nbviewer
     <ul class="simple">
@@ -35,6 +35,8 @@ layout: default
 </h3>
 </div>
 
+<h2 style="text-align:left;">PPTs</h2>
+ - 
 
 
 ## Agenda
