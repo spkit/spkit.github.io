@@ -17,14 +17,14 @@ markdown file, you cannot use markdown syntax within that element's contents.
 <div class="col span_1_of_4">
   <a class="reference external" href="http://nikeshbajaj.in"><img src="{{ "assets/images/nbajaj.jpg" | relative_url }}" width="45%"></a>
   <h3><a href="http://nikeshbajaj.in">Nikesh Bajaj</a></h3>
-  <p>Postdoctoral Research Associate at Imperial Collage London, UK</p>
-  <p>PhD from Queen Mary University of London, UK</p>
+  <p>Postdoctoral Research Associate @ <b>Imperial Collage London, UK</b>. 
+   PhD from <b>Queen Mary University of London, UK</b></p>
 </div>
 <div class="col span_1_of_4">
   <a class="reference external" href="http://www.eecs.qmul.ac.uk/~jrequena/"><img src="{{ "assets/images/jesusRcarrion.jpg" | relative_url }}" width="40%"></a>
   <h3><a href="http://www.eecs.qmul.ac.uk/~jrequena/">Jesús Requena Carrión</a></h3>
   <p>Senior Lecturer in Data Analytics, Centre for Intelligent Sensing, School of Electronic Engineering and Computer Science,
-    Queen Mary University Of London</p>
+    <b>Queen Mary University Of London</b></p>
 </div>
 </div>
 
