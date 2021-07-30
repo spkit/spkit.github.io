@@ -7,7 +7,7 @@ layout: default
 # Hands on practice on Machine Learning & Deeplearning
 
 
-<div id="index-grid-half" class="section group">
+<div id="index-grid-full" class="section group">
 <h2 style="text-align:left;">Agenda/Objectives</h2>
  <ul class="simple">
     <li>Short Introduction of ML & AI</li>
