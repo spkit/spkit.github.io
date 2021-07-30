@@ -9,12 +9,16 @@ layout: default
 
 <div id="index-grid-half" class="section group">
 <h2 style="text-align:left;">Agenda/Objectives</h2>
- - Short Introduction of ML & AI
- - Start with Regression - Boston house price
-<h3 style="text-align:left;">
+ <ul class="simple">
+    <li>Short Introduction of ML & AI</li>
+    <li>Start with Regression - Boston house price</li>
+    <li>.</li>
+    <li>.</li>
+ </ul>
 <h3 style="text-align:left;"> Links to Jupyter-notebooks</h3>
+<h3 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
-  <li>1. nbviewer
+  <li><br>1. nbviewer<\br>
     <ul class="simple">
     <li>https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/tree/master/Tutorials_ML_DL/</li>
     <li>- 1. https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb</li>
@@ -36,6 +40,7 @@ layout: default
 </ul>
 </h3>
 </div>
+<div id="index-grid-full" class="section group"></div>
 
 <h2 style="text-align:left;">PPTs</h2>
  - 
