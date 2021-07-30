@@ -18,8 +18,8 @@ layout: default
   <li><a>1. nbviewer</a>
     <ul class="simple">
     <li<a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/tree/master/Tutorials_ML_DL/" target="_blank">All notebooks</a></li>
-    <li<a href="" target="_blank">XX</a></li>
-    <li<a href="" target="_blank">XX</a></li>
+    <li<a href=" " target="_blank">XX</a></li>
+    <li<a href=" " target="_blank">XX</a></li>
     </ul></li>
   <li><a>Information Theory</a>
     <ul class="simple">
@@ -27,6 +27,7 @@ layout: default
     <li<a href="" target="_blank">XX</a></li>
     <li<a href="" target="_blank">XX</a></li>
     <li<a href="" target="_blank">XX</a></li>
+    </ul></li>
   <li><a>Wavelet Analysis</a>
     <ul class="simple">
     <li<a href="" target="_blank">XX</a></li>
