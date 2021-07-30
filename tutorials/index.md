@@ -7,6 +7,7 @@ layout: default
 
 <div id="index-grid-half" class="section group">
 <h3 style="text-align:left;"><u>Agenda/Objectives</u></h3>
+<p style="text-align:left;">Short introduction to machine learning and artificial intelligence, followed by supervised learning examples.</p>
 <h3 style="text-align:left;"><u>Links to Jupyter-notebooks</u></h3>
 <h3 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
