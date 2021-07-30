@@ -34,7 +34,7 @@ layout: default
 <h3 style="text-align:left;"><u>Slides</u></h3>
 <h3 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
-  <li><a>.</a></li>
+  <li>Introdcution to ML and DL (30/07/2021 - CU_FDP) <a href="https://github.com/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/Intorduction_to_ML_&_DL_30_07_21.pptx?raw=true" target="_blank">PPT</a> | <a href="https://github.com/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/Intorduction_to_ML_%26_DL_30_07_21.pdf" target="_blank">PDF</a></li>
   <li><a>.</a></li>
   <li><a>.</a></li>
 </ul>
