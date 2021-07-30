@@ -13,8 +13,9 @@ layout: default
   <li><a>1. nbviewer</a>
     <ul class="simple">
     <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/tree/master/Tutorials_ML_DL/" target="_blank">All notebooks</a></li>
-    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/tree/master/Tutorials_ML_DL/" target="_blank">All notebooks</a></li>
-    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/tree/master/Tutorials_ML_DL/" target="_blank">All notebooks</a></li>
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression with Boston House Price</a></li>
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification</a></li>
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/3_Deeplearning_CNN.ipynb" target="_blank">3. Deeplearning</a></li>
     </ul></li>
   <li><a>Information Theory</a>
     <ul class="simple">
