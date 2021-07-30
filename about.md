@@ -17,7 +17,8 @@ markdown file, you cannot use markdown syntax within that element's contents.
 <div class="col span_1_of_4">
   <a class="reference external" href="http://nikeshbajaj.in"><img src="{{ "assets/images/nbajaj.jpg" | relative_url }}" width="45%"></a>
   <h3><a href="http://nikeshbajaj.in">Nikesh Bajaj</a></h3>
-  <p>Postdoctoral Research Fellow, PhD from Queen Mary University of London</p>
+  <p>Postdoctoral Research Associate at Imperial Collage London, UK</p>
+  <p>PhD from Queen Mary University of London, UK</p>
 </div>
 <div class="col span_1_of_4">
   <a class="reference external" href="http://www.eecs.qmul.ac.uk/~jrequena/"><img src="{{ "assets/images/jesusRcarrion.jpg" | relative_url }}" width="40%"></a>
