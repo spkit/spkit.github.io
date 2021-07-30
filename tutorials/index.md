@@ -9,6 +9,8 @@ layout: default
 
 <div id="index-grid-half" class="section group">
 <h2 style="text-align:left;">Agenda/Objectives</h2>
+ - Short Introduction of ML & AI
+ - Start with Regression - Boston house price
 <h3 style="text-align:left;">
 <h3 style="text-align:left;"> Links to Jupyter-notebooks</h3>
 <ul class="simple" style="line-height:1.4;">
@@ -38,6 +40,7 @@ layout: default
 <h2 style="text-align:left;">PPTs</h2>
  - 
 
+<!--
 
 ## Agenda
  - Short Introduction of ML & AI
@@ -62,4 +65,5 @@ layout: default
   - https://tinyurl.com/MLTutorial
 
 
+-->
 
