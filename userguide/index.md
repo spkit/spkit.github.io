@@ -16,9 +16,9 @@ markdown file, you cannot use markdown syntax within that element's contents.
 </div>
 
 
-<div id="index-grid-half" class="section group">
+<div id="index-grid-full" class="section group">
 <h2 style="text-align:left;"><u>Getting Started - Table of Content</u></h2>
-<h3 style="text-align:left;">
+<h5 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
   <li><a href="https://spkit.readthedocs.io/en/latest/installation.html" target="_blank">Installation</a>
     <ul class="simple">
@@ -82,6 +82,6 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <li><a href="https://spkit.readthedocs.io/en/latest/pylfsr.html" target="_blank">Linear Feedback Shift Register</a></li>
     </ul></li>
 </ul>
-</h3>
+</h5>
 </div>
 <div id="index-grid-full" class="section group"></div>
