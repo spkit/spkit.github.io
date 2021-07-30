@@ -18,7 +18,7 @@ layout: default
 <h4 style="text-align:left;"> Links to Jupyter-notebooks</h4>
 <h5 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
-  <li><br>1. nbviewer<\br>
+  <li>1. nbviewer
     <ul class="simple">
     <li>https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/tree/master/Tutorials_ML_DL/</li>
     <li>- 1. https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb</li>
