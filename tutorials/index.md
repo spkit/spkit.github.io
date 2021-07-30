@@ -10,7 +10,7 @@ layout: default
 <h3 style="text-align:left;"><u>Links to Jupyter-notebooks</u></h3>
 <h3 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
-  <li><a>1. nbviewer</a>
+  <li><a>nbviewer - jupyter</a>
     <ul class="simple">
     <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression (Boston House Price)</a></li>
     <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification (Breast Cancer, Iris, MNIST)</a></li>
