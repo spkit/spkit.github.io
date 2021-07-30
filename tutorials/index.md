@@ -15,8 +15,8 @@ layout: default
     <li>.</li>
     <li>.</li>
  </ul>
-<h3 style="text-align:left;"> Links to Jupyter-notebooks</h3>
-<h3 style="text-align:left;">
+<h4 style="text-align:left;"> Links to Jupyter-notebooks</h4>
+<h5 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
   <li><br>1. nbviewer<\br>
     <ul class="simple">
@@ -38,11 +38,11 @@ layout: default
     <li>https://tinyurl.com/MLTutorial</li>
     </ul></li>
 </ul>
-</h3>
+</h5>
 </div>
 <div id="index-grid-full" class="section group"></div>
 
-<h2 style="text-align:left;">PPTs</h2>
+<h3 style="text-align:left;">PPTs</h3>
  - 
 
 <!--
