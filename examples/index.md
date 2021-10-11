@@ -41,19 +41,19 @@ markdown file, you cannot use markdown syntax within that element's contents.
    <hr width="10%">
    
    
-   <span id="id1"></span><h1 style="text-align:left;"><a style="color:Orange;" class="toc-backref" href="#LR"><span class="section-number"></span>EEG Artifact Removal</a>
+   <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>EEG Artifact Removal Algorithms</a>
    <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
    <p style="text-align:left;"></p>
    
   <div class="sphx-glr-thumbcontainer" tooltip="Automatic and Tunable Artifact Removal Algorithm.">
      <div class="figure align-default" id="">
      <img alt="" src="{{"assets/images/ATAR_Beta_tune.gif" | relative_url }}"/>
-     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ATAR_Algorithm_EEG_Artifact_Removal_v0.0.9.3.ipynb"  target="_blank"><span class="std std-ref">ATAR Algorithm</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ATAR_Algorithm_EEG_Artifact_Removal_v0.0.9.3.ipynb"  target="_blank"><span class="std std-ref">\n ATAR Algorithm</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
   <div class="sphx-glr-thumbcontainer" tooltip="ICA based Artifact Removal Algorithm.">
      <div class="figure align-default" id="">
-     <img alt="" src="{{"assets/images/entropy_1.jpg" | relative_url }}"/>
+     <img alt="" src="{{"assets/images/ICA_Artifact_Removal.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ICA_based_Artifact_Removal_v0.0.9.3.ipynb"  target="_blank"><span class="std std-ref">ICA based Algorithm</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
