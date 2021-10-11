@@ -47,7 +47,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
    
   <div class="sphx-glr-thumbcontainer" tooltip="Automatic and Tunable Artifact Removal Algorithm.">
      <div class="figure align-default" id="">
-     <img alt="" src="{{"assets/images/entropy_1.jpg" | relative_url }}"/>
+     <img alt="" src="{{"assets/images/ATAR_Beta_tune.gif" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/spkit_InfoTheory/1_Entropy_Example.ipynb"  target="_blank"><span class="std std-ref">ATAR Algorithm</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
@@ -58,6 +58,8 @@ markdown file, you cannot use markdown syntax within that element's contents.
      </div>
    </div>
    
+   
+   <div class="toctree-wrapper compound"></div>
    <hr width="10%">
    <h4 style="text-align:left;">Click here to try examples: <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="25em"></a> </h4>
  </div>
