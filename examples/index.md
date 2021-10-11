@@ -38,6 +38,28 @@ markdown file, you cannot use markdown syntax within that element's contents.
      </div>
    </div>
    <div class="toctree-wrapper compound"></div>
+   
+   <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;background-color:Orange;" class="toc-backref" href="#LR"><span class="section-number"></span>EEG Artifact Removal</a>
+   <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
+   <p style="text-align:left;"></p>
+   
+   
+  <div class="sphx-glr-thumbcontainer" tooltip="Automatic and Tunable Artifact Removal Algorithm.">
+     <div class="figure align-default" id="">
+     <img alt="" src="{{"assets/images/entropy_1.jpg" | relative_url }}"/>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/spkit_InfoTheory/1_Entropy_Example.ipynb"  target="_blank"><span class="std std-ref">ATAR Algorithm</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     </div>
+   </div>
+  <div class="sphx-glr-thumbcontainer" tooltip="ICA based Artifact Removal Algorithm.">
+     <div class="figure align-default" id="">
+     <img alt="" src="{{"assets/images/entropy_1.jpg" | relative_url }}"/>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/spkit_InfoTheory/1_Entropy_Example.ipynb"  target="_blank"><span class="std std-ref">ICA based Algorithm</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     </div>
+   </div>
+   
+   
+   
+   
    <hr width="10%">
    <h4 style="text-align:left;">Click here to try examples: <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="25em"></a> </h4>
  </div>
