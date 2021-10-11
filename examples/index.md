@@ -53,7 +53,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
   <div class="sphx-glr-thumbcontainer" tooltip="Automatic and Tunable Artifact Removal Algorithm.">
      <div class="figure align-default" id="">
      <img alt="" src="{{"assets/images/ATAR_Beta_tune_2.gif" | relative_url }}"/>
-     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ATAR_Algorithm_EEG_Artifact_Removal_v0.0.9.3.ipynb"  target="_blank"><span class="std std-ref">ATAR Algorithm</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ATAR_Algorithm_EEG_Artifact_Removal.ipynb"  target="_blank"><span class="std std-ref">ATAR Algorithm</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
   <div class="sphx-glr-thumbcontainer" tooltip="ICA based Artifact Removal Algorithm.">
