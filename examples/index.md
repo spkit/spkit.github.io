@@ -11,7 +11,7 @@ be affected by a markdown parser. However, if you create an HTML element in your
 markdown file, you cannot use markdown syntax within that element's contents.
 -->
 <div id="index-grid-half" class="section group">
-   <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>Signal Processing techniques</a>
+   <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;background-color:Orange;" class="toc-backref" href="#LR"><span class="section-number"></span>Signal Processing techniques</a>
    <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
    <p style="text-align:left;"></p>
 
