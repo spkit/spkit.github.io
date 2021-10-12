@@ -45,8 +45,8 @@ markdown file, you cannot use markdown syntax within that element's contents.
 <div id="index-grid-full" class="section group">
    <div class="col span_1_of_3">
 	<h2>Citing<a class="headerlink" href="#citing" title="Permalink to this headline">¶</a></h2>
-	<pre>
 	<div align="left >
+	<pre>
 	<code>
 	@misc{spkit@2019, 
 	  author = {Bajaj,Nikesh and Requena Carrión, Jesús}, 
@@ -59,7 +59,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
 	  publisher={Python package, Github} 
 	   }
 	</code>
-        </div>
 	</pre>
+        </div>
    </div>
 </div>
