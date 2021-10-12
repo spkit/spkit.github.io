@@ -35,8 +35,22 @@ markdown file, you cannot use markdown syntax within that element's contents.
 <div id="index-grid-full" class="section group"></div>
 <hr width="10%">
 <div id="index-grid-full" class="section group">
+	<div class="col span_1_of_4">
 	<div class="section" id="citing">
 	<h2>Citing<a class="headerlink" href="#citing" title="Permalink to this headline">¶</a></h2>
+		<code>
+		@misc{spkit@2019,
+		  author = {Bajaj,Nikesh and Requena Carrión, Jesús},
+		  title = {{SpKit: Signal Processing Toolkit}},
+		  url = {https://spkit.github.io},
+		  version = {0.0.9.3},
+		  year={2021},
+		  note ={version 0.9.3, \url{https://spkit.github.io}},
+		  howpublished = {\url{https://github.com/Nikeshbajaj/spkit}},
+		  publisher={Python package, Github}
+	           }
+		</code>
+		
 		<pre>
 		<code>
 		@misc{spkit@2019,
@@ -51,5 +65,6 @@ markdown file, you cannot use markdown syntax within that element's contents.
 	           }
 		</code>
 		</pre>
+	</div>
 	</div>
 </div>
