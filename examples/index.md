@@ -12,7 +12,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
 -->
 <div id="index-grid-half" class="section group">
    <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>Signal Processing techniques</a>
-   <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
+   <a class="headerlink" href="#signal-processing" title="Permalink to this headline">¶</a></h1>
    <p style="text-align:left;"></p>
 
    <div class="sphx-glr-thumbcontainer" tooltip="Computing entropy of real-valued signal.">
@@ -47,7 +47,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
    
    
    <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>EEG Artifact Removal Algorithms</a>
-   <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
+   <a class="headerlink" href="#artifact-eeg" title="Permalink to this headline">¶</a></h1>
    <p style="text-align:left;"></p>
    
   <div class="sphx-glr-thumbcontainer" tooltip="Automatic and Tunable Artifact Removal Algorithm.">
