@@ -33,10 +33,11 @@ markdown file, you cannot use markdown syntax within that element's contents.
 <div id="index-grid-full" class="section group"></div>
 
 <div id="index-grid-full" class="section group"></div>
-
+<br>
+<hr>
 <div id="index-grid-full" class="section group">
-	
 	<div class="section" id="citing">
+	<h2>Citing<a class="headerlink" href="#citing" title="Permalink to this headline">¶</a></h2>
 		 <code>
 		@misc{spkit@2019,
 		  author = {Bajaj,Nikesh and Requena Carrión, Jesús},
