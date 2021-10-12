@@ -34,18 +34,20 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
 <div id="index-grid-full" class="section group"></div>
 
-<div id="index-grid-full" class="section group"></div>
-
-<div class="section" id="citing">
-	@misc{spkit@2019,
-          author = {Bajaj,Nikesh and Requena Carrión, Jesús},
-          title = {{SpKit: Signal Processing Toolkit}},
-          url = {https://spkit.github.io},
-          version = {0.0.9.3},
-          year={2021},
-          note ={version 0.9.3, \url{https://spkit.github.io}},
-          howpublished = {\url{https://github.com/Nikeshbajaj/spkit}},
-          publisher={Python package, Github}
-       }
+<div id="index-grid-full" class="section group">
+	
+	<div class="section" id="citing">
+		 <code>
+		@misc{spkit@2019,
+		  author = {Bajaj,Nikesh and Requena Carrión, Jesús},
+		  title = {{SpKit: Signal Processing Toolkit}},
+		  url = {https://spkit.github.io},
+		  version = {0.0.9.3},
+		  year={2021},
+		  note ={version 0.9.3, \url{https://spkit.github.io}},
+		  howpublished = {\url{https://github.com/Nikeshbajaj/spkit}},
+		  publisher={Python package, Github}
+	           }
+		</code>
+	</div>
 </div>
-
