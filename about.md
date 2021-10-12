@@ -29,11 +29,19 @@ markdown file, you cannot use markdown syntax within that element's contents.
 </div>
 
 <div id="index-grid-full" class="section group"></div>
-
+<div class="col span_1_of_4">
+<h3><a href="">.</a></h3>
+</div>
+<div class="col span_1_of_4">
+<h3><a href="">.</a></h3>
+</div>
+<div class="col span_1_of_4">
+<h3><a href="">.</a></h3>
+</div>
 <div id="index-grid-full" class="section group"></div>
 
 <div id="index-grid-full" class="section group"></div>
-<hr width="10%">
+<!--<hr width="10%"> -->
 <div id="index-grid-full" class="section group">
 	<div class="col span_1_of_4">
 	<div class="section" id="citing">
