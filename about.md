@@ -43,8 +43,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
 <div id="index-grid-full" class="section group"></div>
 <!--<hr width="10%"> -->
 <div id="index-grid-full" class="section group">
-	<div class="col span_1_of_3">
-	<div class="section" id="citing">
+   <div class="col span_1_of_3">
 	<h2>Citing<a class="headerlink" href="#citing" title="Permalink to this headline">¶</a></h2>
 	<pre>
 	<code>
@@ -60,6 +59,5 @@ markdown file, you cannot use markdown syntax within that element's contents.
 	   }
 	</code>
 	</pre>
-	</div>
-	</div>
+   </div>
 </div>
