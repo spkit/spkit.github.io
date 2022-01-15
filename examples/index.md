@@ -37,7 +37,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Entropy_EEG_Example.ipynb" target="_blank"><span class="std std-ref">Multi-channel EEG signal: Mutual Info, Cross, Joint, Entropy</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
-   <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+   <div class="sphx-glr-thumbcontainer" tooltip="Venn Diagram and Mutual Info."><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/MutualInfo_Venn_1.gif" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">Mutual Information and Venn Diagram</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
@@ -46,51 +46,51 @@ markdown file, you cannot use markdown syntax within that element's contents.
    <div class="toctree-wrapper compound"></div>
    <hr width="10%">
    
-   <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+   <div class="sphx-glr-thumbcontainer" tooltip="Ramanujam Filter Banks: Demo"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/RFB_ex2.2.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Ramanujan_Filter_Banks_for_Period_Estimation_Demo_examples.ipynb" target="_blank"><span class="std std-ref">Ramanujam Filter Banks: Demo</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    
-    <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+    <div class="sphx-glr-thumbcontainer" tooltip="Ramanujam Filter Banks"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/RFB_ex1.2.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Ramanujan_Filter_Banks_for_Period_Estimation_from_signal.ipynb" target="_blank"><span class="std std-ref">Ramanujam Filter Banks: Signal</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    
-    <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+    <div class="sphx-glr-thumbcontainer" tooltip="Ramanujam Filter Banks with L1 penalty"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/RFB_l1_ex2.4.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Ramanujan_Filter_Banks_for_Period_Estimation_with_sparse_penalty.ipynb" target="_blank"><span class="std std-ref">Ramanujam Filter Banks: L1 penalty</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    
    
-    <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+    <div class="sphx-glr-thumbcontainer" tooltip="Dispersion Entropy"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/dis_entropy_2.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Dispersion_Entropy_EEG.ipynb" target="_blank"><span class="std std-ref">Dispersion Entropy</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    
-   <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+   <div class="sphx-glr-thumbcontainer" tooltip="Fractional Fourier Transform"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/frft_sin_3.gif" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/FRFT_demo_sine.ipynb" target="_blank"><span class="std std-ref">Fractional Fourier Transform</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    
-     <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+     <div class="sphx-glr-thumbcontainer" tooltip="Wavelet Filtering"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/wavelet_filtering_2.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://github.com/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><span class="std std-ref">Wavelet Filtering</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    
-   <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+   <div class="sphx-glr-thumbcontainer" tooltip="Sinusodal Model"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/sinusodal_model_2.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">Sinusodal Model for signal decomposion and synthesis</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    
    
-   <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+   <div class="sphx-glr-thumbcontainer" tooltip="Binder Links"><div class="figure align-default" id="id3">
      <img alt="" src="https://mybinder.org/badge_logo.svg" height="25em"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">In case of broken links, try this</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
