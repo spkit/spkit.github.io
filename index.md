@@ -49,3 +49,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
 </div>
 
 <div id="index-grid-full" class="section group"></div>
+
+<div id="index-grid-full" class="section group">
+  <div class="index-paragraph docutils container"><p> <strong> Check <a href="https://spkit.github.io/guide" target="_blank"><font color="DodgerBlue">New Guide for documentation here</font></a></strong></p></div>
+</div>
