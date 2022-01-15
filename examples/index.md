@@ -38,6 +38,15 @@ markdown file, you cannot use markdown syntax within that element's contents.
      </div>
    </div>
    <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+     <img alt="" src="{{"assets/images/MutualInfo_Venn_1.gif" | relative_url }}"/>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">Mutual Information and Venn Diagram</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     </div>
+   </div>
+   
+   <div class="toctree-wrapper compound"></div>
+   <hr width="10%">
+   
+   <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/RFB_ex2.2.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">Ramanujam Filter Banks: Demo</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
@@ -68,11 +77,18 @@ markdown file, you cannot use markdown syntax within that element's contents.
      </div>
    </div>
    
-   <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
-     <img alt="" src="{{"assets/images/MutualInfo_Venn_1.gif" | relative_url }}"/>
-     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">Mutual Information and Venn Diagram</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+     <img alt="" src="{{"assets/images/wavelet_filtering_2.png" | relative_url }}"/>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">Wavelet Filtering</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
+   
+   <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
+     <img alt="" src="{{"assets/images/sinusodal_model_1.png" | relative_url }}"/>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">Sinusodal Model for signal decomposion and synthesis</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     </div>
+   </div>
+   
    
    <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
      <img alt="" src="https://mybinder.org/badge_logo.svg" height="25em"/>
