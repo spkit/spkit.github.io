@@ -33,7 +33,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
      </div>
    </div>
    <div class="sphx-glr-thumbcontainer" tooltip="Multi-channel EEG analysis with Information Theory"><div class="figure align-default" id="id3">
-     <img alt="" src="{{"assets/images/EEG_it3.png" | relative_url }}"/>
+     <img alt="" src="{{"assets/images/EEG_it4.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Entropy_EEG_Example.ipynb" target="_blank"><span class="std std-ref">Multi-channel EEG signal: Mutual Info, Cross, Joint, Entropy</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
@@ -84,7 +84,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
    </div>
    
    <div class="sphx-glr-thumbcontainer" tooltip="BinderLink"><div class="figure align-default" id="id3">
-     <img alt="" src="{{"assets/images/sinusodal_model_1.png" | relative_url }}"/>
+     <img alt="" src="{{"assets/images/sinusodal_model_2.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">Sinusodal Model for signal decomposion and synthesis</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
