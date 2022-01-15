@@ -11,7 +11,7 @@ be affected by a markdown parser. However, if you create an HTML element in your
 markdown file, you cannot use markdown syntax within that element's contents.
 -->
 <div id="index-grid-half" class="section group">
-   <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>Signal Processing techniques</a>
+   <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#SP"><span class="section-number"></span>Signal Processing techniques</a>
    <a class="headerlink" href="#signal-processing" title="Permalink to this headline">¶</a></h1>
    <p style="text-align:left;"></p>
 
@@ -46,7 +46,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
    <hr width="10%">
    
    
-   <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>EEG Artifact Removal Algorithms</a>
+   <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#EEG"><span class="section-number"></span>EEG Artifact Removal Algorithms</a>
    <a class="headerlink" href="#artifact-eeg" title="Permalink to this headline">¶</a></h1>
    <p style="text-align:left;"></p>
    
@@ -62,14 +62,14 @@ markdown file, you cannot use markdown syntax within that element's contents.
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ICA_based_Artifact_Removal.ipynb"  target="_blank"><span class="std std-ref">ICA based Algorithm</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
-   
-   
    <div class="toctree-wrapper compound"></div>
    <hr width="10%">
    <h4 style="text-align:left;">Click here to try examples: <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="25em"></a> </h4>
  </div>
+ 
+ 
  <div id="index-grid-half" class="section group">
- <span id="id1"></span><h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#LR"><span class="section-number"></span>Logistic Regression & Naïve Bayes</a>
+ <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>Logistic Regression & Naïve Bayes</a>
  <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
  <p style="text-align:left;">Examples of Logistic Regression with SpKit</p>
  <div class="sphx-glr-thumbcontainer" tooltip="An example to demonstrate the visulization of Logistic Regression while training and plotting resulting weights.">
@@ -106,7 +106,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
  </div>
 
  <div id="index-grid-half" class="section group">
- <span id="id1"></span><h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#trees"><span class="section-number"></span>Decision Trees</a>
+ <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#trees"><span class="section-number"></span>Decision Trees</a>
  <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
  <p style="text-align:left;">Examples of Decision Tree with SpKit</p>
 
@@ -146,37 +146,42 @@ markdown file, you cannot use markdown syntax within that element's contents.
  </h4>
  </div>
 
+
  <div id="index-grid-half" class="section group">
  <span id="id1"></span><h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#logit"><span class="section-number"></span>..</a>
    <hr width="10%">
-   <h3 style="text-align:left;">More to come ..</h3>
- <!--</div>-->
+   <!--<h3 style="text-align:left;">More to come ..</h3> -->
 
+ <!--</div>-->
+<!--
  <div id="index-grid-half" class="section group">
  <span id="id1"></span><h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#RF"><span class="section-number"></span>Random Forest</a>
  <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
  <p style="text-align:left;">Examples with SpKit</p>
  </div>
-
-
+-->
+   
+<!--
  <div id="index-grid-half" class="section group">
  <span id="id1"></span><h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#SVM"><span class="section-number"></span>Spport Vector Machine</a>
  <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
  <p style="text-align:left;">Examples with SpKit</p>
  </div>
-
+-->
+<!--
  <div id="index-grid-half" class="section group">
  <span id="id1"></span><h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#NN"><span class="section-number"></span>Neural Networks</a>
  <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
  <p style="text-align:left;">Examples with SpKit</p>
  </div>
-
+-->
+<!--
  <div id="index-grid-half" class="section group">
  <span id="id1"></span><h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#ensemble"><span class="section-number"></span>Ensemble Approach</a>
  <a class="headerlink" href="#tutorial-examples" title="Permalink to this headline">¶</a></h1>
  <p style="text-align:left;">Examples with SpKit</p>
  </div>
-
+-->
 
  <div id="index-grid-full" class="section group"></div>
 
