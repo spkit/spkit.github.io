@@ -12,7 +12,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
 -->
 
 <div id="index-grid-full" class="section group">
-  <div class="index-paragraph docutils container"><p> <strong> Page is being updated ...untill then please refere to  the  <a href="https://spkit.readthedocs.io/en/latest/" target="_blank"><font color="blue">Documentation</font></a></strong></p></div>
+  <div class="index-paragraph docutils container"><p> <strong> For updated version please check <a href="https://spkit.readthedocs.io/en/latest/" target="_blank"><font color="DodgerBlue">documentation</font></a> or  <a href="https://spkit.github.io/guide" target="_blank"><font color="DodgerBlue">New Guide here</font></a></strong></p></div>
 </div>
 
 
