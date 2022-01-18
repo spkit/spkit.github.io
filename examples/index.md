@@ -85,7 +85,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
    
    <div class="sphx-glr-thumbcontainer" tooltip="Sinusodal Model"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/sinusodal_model_2.png" | relative_url }}"/>
-     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><span class="std std-ref">Sinusodal Model for signal decomposion and synthesis</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit/SP" target="_blank"><span class="std std-ref">Sinusodal Model for signal decomposion and synthesis</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    
