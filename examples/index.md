@@ -237,8 +237,11 @@ markdown file, you cannot use markdown syntax within that element's contents.
  <p style="text-align:left;">Examples with SpKit</p>
  </div>
 -->
-
+ </div>
+  
+   
+<!--
  <div id="index-grid-full" class="section group"></div>
-
  <div id="getting-started"><a href="{{"userguide" | relative_url }}" class="btn btn-primary">Getting Started</a></div>
  <div id="index-grid-full" class="section group"></div>
+-->
