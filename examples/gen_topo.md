@@ -129,4 +129,4 @@ for i in range(0,len(X)-N,skip):
     fig.canvas.draw()
 ```
 
-<img src = "figures/eeg_dynamic_ssfi_1.gif"  width="500"> 
+<img src = "figures/eeg_dynamic_ssfi_1.gif"> 
