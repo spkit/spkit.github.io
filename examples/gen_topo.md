@@ -5,6 +5,7 @@ layout: default
 
 # {{ page.title }}
 
+<div id="index-grid-half" class="section group">
 
 ## Generating Spatio-Temporal Map
 
@@ -130,3 +131,7 @@ for i in range(0,len(X)-N,skip):
 ```
 
 <img src = "figures/eeg_dynamic_ssfi_1.gif" > 
+            
+            
+            
+</div>
