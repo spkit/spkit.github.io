@@ -1,6 +1,6 @@
 ---
 title: Generating Topographical Map
-layout: default
+layout: base
 ---
 
 # {{ page.title }}
