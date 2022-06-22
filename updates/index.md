@@ -1,6 +1,6 @@
 ---
 title: Updates and chainlogs
-layout: base
+layout: base_ex
 ---
 
 0.0.9.4  -
