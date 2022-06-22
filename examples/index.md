@@ -138,7 +138,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
   <div class="sphx-glr-thumbcontainer" tooltip="Topographical Maps.">
      <div class="figure align-default" id="">
      <img alt="" src="{{"examples/figures/eeg_dynamic_ssfi_1.gif" | relative_url }}"/>
-     <p class="caption"><span class="caption-text"><a class="reference internal" href="/gen_topo"  target="_blank"><span class="std std-ref">Topographic Map</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="gen_topo"  target="_blank"><span class="std std-ref">Topographic Map</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    <div class="toctree-wrapper compound"></div>
