@@ -3,6 +3,8 @@ title: Updates and chainlogs
 layout: base_ex
 ---
 
+# {{ page.title }}
+
 0.0.9.4  -
 ------
 
