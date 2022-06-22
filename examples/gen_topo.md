@@ -22,10 +22,10 @@ plt.show()
 ```    
 
 
-<img src = "assets/images/eeg_topo_1.png" >
+<img src = "figures/eeg_topo_1.png" >
 
 ```python
 plt.imshow(Zi,cmap='jet',origin='lower')
 
 ```
-<img src = "assets/images/eeg_topo_sqr_1.png" >
+<img src = "figures/eeg_topo_sqr_1.png" >
