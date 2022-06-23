@@ -2,7 +2,7 @@
 title: Wavelet Filtering
 layout: base_ex
 ---
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 # {{ page.title }}
 
 **Background**
