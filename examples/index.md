@@ -79,7 +79,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
    
      <div class="sphx-glr-thumbcontainer" tooltip="Wavelet Filtering"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/wavelet_filtering_2.png" | relative_url }}"/>
-     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><span class="std std-ref">Wavelet Filtering</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
+     <p class="caption"><span class="caption-text"><a class="reference internal" href="wfiltering" target="_blank"><span class="std std-ref">Wavelet Filtering</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
    
