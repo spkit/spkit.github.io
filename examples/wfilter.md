@@ -5,19 +5,18 @@ layout: base_ex
 
 # {{ page.title }}
 
-<p style="text-align:right; font-weight:bold;">.<br><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/nav_logo.svg" width="150px"></a></p>
-
-<p style="text-align:right; font-weight:bold;">Execute with <br><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg" width="150px"></a></p>
+<p style="text-align:right; font-weight:bold;"><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/nav_logo.svg" width="150px"></a><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg" width="150px"></a></p>
 
 **Background**
 --
-Other than classical frequency filtering, Wavelet filtering is one of common techniques used in signal processing. It allows to filter out short-time duration patterns captured by used wavelet. The patterns to be filtered out depends on the wavelet family (e.g. *db3*) used and number of level of decomposition. 
+Other than classical frequency filtering, Wavelet filtering is one of common techniques used in signal processing. It allows to filter out short-time duration patterns captured by used wavelet. The patterns to be filtered out depends on the wavelet family (e.g. ***db3***) used and number of level of decomposition. 
 
-Algorithmically, it is very straightforward. Decompose a signal $x(n)$, into wavelet coefficients $X(k)$, where each coefficient represents the strength of wavelet pattern at particular time. With some threshold, remove the coefficients by zeroing out and reconstruct the signal back.
+Algorithmically, it is very straightforward. Decompose a signal **x(n)**, into wavelet coefficients **X(k)**, where each coefficient represents the strength of wavelet pattern at particular time. With some threshold, remove the coefficients by zeroing out and reconstruct the signal back.
 
 The machanism to choose a threshold on the strength of wavelet coefficient depends on the application and objective. To remove the noise and compress the signal, a widely used approach is to filter out all the wavelet coefficients with smaller strength.
 
 Literature [1] suggest the **optimal threshold** on the wavelet coeffiecient is
+
 
 $$ \theta = \tilde{\sigma} \sqrt{2log(N)}$$
 where $\tilde{\sigma}$ is estimation of noise variance and $N$ length of signal
