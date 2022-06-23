@@ -31,7 +31,7 @@ where $$\tilde{\sigma}$$ is estimation of noise variance and $$N$$ length of sig
 
 There are other methods to choose threshold too. One can choose a $$\theta =1.5\times SD(X(k))$$ or $$\theta =IQR(X(k))$$ as to select the outliers, by standard deviation and interquartile range, respectively.
 
-According to the theory, the **optimal threshold** should be applied by zeroing out the coefficients below with magnitude lower than threshold $$|X(k)|<\theta$$, and for later two methods of thresholds,standard deviation and interquartile range, the coefficients outside of the threshold should be zeroing out, since they reprepresent the outliers. However, some of the (weired) articles use these thresholds in other-way round.
+According to the theory, the **optimal threshold** should be applied by zeroing out the coefficients below with magnitude lower than threshold $$ abs(X(k))< \theta $$, and for later two methods of thresholds,standard deviation and interquartile range, the coefficients outside of the threshold should be zeroing out, since they reprepresent the outliers. However, some of the (weired) articles use these thresholds in other-way round.
 
 A simple block-diagram shown below is the procedure of wavelet filtering.
 
