@@ -20,6 +20,8 @@ $$\begin{eqnarray}
 \tilde{\sigma} = median(|X(k)|)/0.6745
 \end{eqnarray}$$
 
+--
+
 $$ \theta = \tilde{\sigma} \sqrt{2log(N)}$$
 where $\tilde{\sigma}$ is estimation of noise variance and $N$ length of signal
 $$ \tilde{\sigma} = median(|X(k)|)/0.6745$$
