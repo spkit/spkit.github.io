@@ -4,7 +4,7 @@ layout: base_ex
 ---
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 # {{ page.title }}
-
+<p style="text-align:right; font-weight:bold;"><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/nav_logo.svg" width="150px"></a><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg" width="150px"></a></p>
 **Background**
 --
 Other than classical frequency filtering, Wavelet filtering is one of common techniques used in signal processing. It allows to filter out short-time duration patterns captured by used wavelet. The patterns to be filtered out depends on the wavelet family (e.g. ***db3***) used and number of level of decomposition. 
@@ -102,7 +102,7 @@ plt.show()
 xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='optimal',verbose=1,WPD=False,show=True,fs=fs)
 ```
 
-    WPD: False  wv: db3  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
+WPD: False  wv: db3  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
     
 
 
@@ -118,7 +118,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='optimal',verbose=1,WPD=Fa
 xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='sd',verbose=1,WPD=False,show=True,fs=fs)
 ```
 
-    WPD: False  wv: db3  threshold: sd  k: 1.5  mode: elim  filter_out_below?: True
+WPD: False  wv: db3  threshold: sd  k: 1.5  mode: elim  filter_out_below?: True
     
 
 
@@ -134,7 +134,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='sd',verbose=1,WPD=False,s
 xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='iqr',verbose=1,WPD=False,show=True,fs=fs)
 ```
 
-    WPD: False  wv: db3  threshold: iqr  k: 1.5  mode: elim  filter_out_below?: True
+WPD: False  wv: db3  threshold: iqr  k: 1.5  mode: elim  filter_out_below?: True
     
 
 
@@ -150,7 +150,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='iqr',verbose=1,WPD=False,
 xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='optimal',wpd_maxlevel=2,verbose=1,WPD=False,show=True,fs=fs)
 ```
 
-    WPD: False  wv: db3  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
+WPD: False  wv: db3  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
     
 
 
@@ -166,7 +166,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='optimal',wpd_maxlevel=2,v
 xf = sp.wavelet_filtering(x.copy(),wv='db12',threshold='optimal',verbose=1,WPD=False,show=True,fs=fs)
 ```
 
-    WPD: False  wv: db12  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
+WPD: False  wv: db12  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
     
 
 
@@ -182,7 +182,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db12',threshold='optimal',verbose=1,WPD=F
 xf = sp.wavelet_filtering(x.copy(),wv='sym4',threshold='optimal',verbose=1,WPD=False,show=True,fs=fs)
 ```
 
-    WPD: False  wv: sym4  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
+WPD: False  wv: sym4  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
     
 
 
@@ -198,7 +198,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='sym4',threshold='optimal',verbose=1,WPD=F
 xf = sp.wavelet_filtering(x.copy(),wv='coif4',threshold='optimal',verbose=1,WPD=False,show=True,fs=fs)
 ```
 
-    WPD: False  wv: coif4  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
+WPD: False  wv: coif4  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
     
 
 
@@ -212,7 +212,9 @@ xf = sp.wavelet_filtering(x.copy(),wv='coif4',threshold='optimal',verbose=1,WPD=
 help(sp.wavelet_filtering)
 ```
 
-    Help on function wavelet_filtering in module spkit.core.processing:
+
+
+Help on function wavelet_filtering in module spkit.core.processing:
     
     wavelet_filtering(x, wv='db3', threshold='optimal', filter_out_below=True, k=1.5, mode='elim', show=False, wpd_mode='symmetric', wpd_maxlevel=None, packetwise=False, WPD=True, lvl=[], verbose=False, fs=128.0, sf=1, IPR=[0.25, 0.75])
         Threshold Computation method:
@@ -244,3 +246,8 @@ help(sp.wavelet_filtering)
         packetwise: if true, thresholding is applied to each packet/level individually, else globally
         WPD: if true, WPD is applied as wavelet transform
         lvl: list of levels/packets apply the thresholding, if empty, applied to all the levels/packets
+
+
+
+
+<p style="text-align:right; font-weight:bold;"><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/nav_logo.svg" width="150px"></a><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg" width="150px"></a></p>
