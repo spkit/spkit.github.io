@@ -5,6 +5,11 @@ layout: base_ex
 
 # {{ page.title }}
 
+
+<p style="text-align:right; font-weight:bold;">Execute with <br><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg" width="150px"></a></p>
+
+`View in Jupyter-Notebook <https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb>`_
+
 **Background**
 --
 Other than classical frequency filtering, Wavelet filtering is one of common techniques used in signal processing. It allows to filter out short-time duration patterns captured by used wavelet. The patterns to be filtered out depends on the wavelet family (e.g. *db3*) used and number of level of decomposition. 
@@ -80,7 +85,7 @@ plt.show()
 
 
     
-![png](output_5_0.png)
+![png](figures/wfilter_output_5_0.png)
     
 
 
@@ -96,7 +101,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='optimal',verbose=1,WPD=Fa
 
 
     
-![png](output_7_1.png)
+![png](figures/wfilter_output_7_1.png)
     
 
 
@@ -112,7 +117,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='sd',verbose=1,WPD=False,s
 
 
     
-![png](output_9_1.png)
+![png](figures/wfilter_output_9_1.png)
     
 
 
@@ -128,7 +133,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='iqr',verbose=1,WPD=False,
 
 
     
-![png](output_11_1.png)
+![png](figures/wfilter_output_11_1.png)
     
 
 
@@ -144,7 +149,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db3',threshold='optimal',wpd_maxlevel=2,v
 
 
     
-![png](output_13_1.png)
+![png](figures/wfilter_output_13_1.png)
     
 
 
@@ -160,7 +165,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='db12',threshold='optimal',verbose=1,WPD=F
 
 
     
-![png](output_15_1.png)
+![png](figures/wfilter_output_15_1.png)
     
 
 
@@ -176,7 +181,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='sym4',threshold='optimal',verbose=1,WPD=F
 
 
     
-![png](output_17_1.png)
+![png](figures/wfilter_output_17_1.png)
     
 
 
@@ -192,7 +197,7 @@ xf = sp.wavelet_filtering(x.copy(),wv='coif4',threshold='optimal',verbose=1,WPD=
 
 
     
-![png](output_19_1.png)
+![png](figures/wfilter_output_19_1.png)
     
 
 
