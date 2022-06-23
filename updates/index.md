@@ -1,5 +1,5 @@
 ---
-title: Updates and chainlogs
+title: Updates and changelog
 layout: base_ex
 ---
 
