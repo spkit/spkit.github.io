@@ -15,10 +15,10 @@ The machanism to choose a threshold on the strength of wavelet coefficient depen
 
 Literature [1] suggest the **optimal threshold** on the wavelet coeffiecient is
 
-\begin{eqnarray}
+$$\begin{eqnarray}
 \theta = \tilde{\sigma} \sqrt{2log(N)}\\
 \tilde{\sigma} = median(|X(k)|)/0.6745
-\end{eqnarray}
+\end{eqnarray}$$
 
 $$ \theta = \tilde{\sigma} \sqrt{2log(N)}$$
 where $\tilde{\sigma}$ is estimation of noise variance and $N$ length of signal
