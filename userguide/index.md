@@ -55,9 +55,11 @@ markdown file, you cannot use markdown syntax within that element's contents.
         <li><a><font size="3">Shannan Wavelet</font></a></li>
         </ul>
     <li><a href="https://spkit.github.io/examples/wfilter" target="_blank">Wavelet Filtering</a></li>
-    </ul></li>
+    </ul>
     </h5>
-  <li><a href="#">Signal Decomposition & Synthesis</a>
+  </li>
+  
+  <li><a href="#">Signal Decomposition & Synthesis</a>  
     <h5 style="text-align:left;">
     <ul class="simple">
     <li><a href="https://spkit.readthedocs.io/en/latest/analysis_synthesis_models.html#dft-analysis-and-synthesis" target="_blank">Discrete Fourier Transform  - DFT</a></li>
@@ -67,8 +69,10 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <li><a href="https://spkit.readthedocs.io/en/latest/ica.html" target="_blank">Independent Component Analysis - ICA</a></li>
     <!--<li><a>Principal Component Analysis, Singular Value Decomposition</a></li>-->
     <li><a href="" target="_blank"></a></li>
-    </ul></li>
+    </ul>
+     
   </h5>
+  </li>
   
   <li><a href="https://spkit.github.io/guide/notebooks/Ramanujan_Filter_Banks_for_Period_Estimation_Demo_examples.html">Ramanujan Filter Banks</a>
     <h5 style="text-align:left;">
