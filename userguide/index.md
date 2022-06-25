@@ -43,6 +43,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
   
   
   <li><a href="#">Wavelet Analysis</a>
+    <h5 style="text-align:left;">
     <ul class="simple">
     <li><a href="https://spkit.readthedocs.io/en/latest/cwt.html" target="_blank">Continues Wavelet Transform - CWT - (complext wavelets)</a></li>
       <ul class="simple">
@@ -55,27 +56,43 @@ markdown file, you cannot use markdown syntax within that element's contents.
         </ul>
     <li><a href="https://spkit.github.io/examples/wfilter" target="_blank">Wavelet Filtering</a></li>
     </ul></li>
-  
-  <li><a href="#">Signal Decomposition</a>
+    </h5>
+  <li><a href="#">Signal Decomposition & Synthesis</a>
+    <h5 style="text-align:left;">
     <ul class="simple">
+    <li><a href="https://spkit.readthedocs.io/en/latest/analysis_synthesis_models.html#dft-analysis-and-synthesis" target="_blank">Discrete Fourier Transform  - DFT</a></li>
+    <li><a href="https://spkit.readthedocs.io/en/latest/analysis_synthesis_models.html#stft-analysis-and-synthesis" target="_blank">Short-Time Fourier Transform - STFT</a></li>
+    <li><a href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/FRFT_demo_sine.ipynb" target="_blank">Fractional Fourier Transform</a></li>
+    <li><a href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Sinasodal_Model_AnalysisSynthesis.ipynb" target="_blank">Sinasodal Decomposition Model</a></li>
     <li><a href="https://spkit.readthedocs.io/en/latest/ica.html" target="_blank">Independent Component Analysis - ICA</a></li>
     <!--<li><a>Principal Component Analysis, Singular Value Decomposition</a></li>-->
-    <li><a href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/FRFT_demo_sine.ipynb" target="_blank">Fractional Fourier Transform</a></li>
+    <li><a href="" target="_blank"></a></li>
+    </ul></li>
+  </h5>
+  
+  <li><a href="https://spkit.github.io/guide/notebooks/Ramanujan_Filter_Banks_for_Period_Estimation_Demo_examples.html">Ramanujan Filter Banks</a>
+    <h5 style="text-align:left;">
+    <ul class="simple">
+    <li><a href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Ramanujan_Filter_Banks_for_Period_Estimation_Demo_examples.ipynb" target="_blank">Ramanujan Filter Banks for period estimation - example 1</a></li>
+    <li><a href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Ramanujan_Filter_Banks_for_Period_Estimation_from_signal.ipynb" target="_blank">Ramanujan Filter Banks  - example 2</a></li>
+    <li><a href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Ramanujan_Filter_Banks_for_Period_Estimation_with_sparse_penalty.ipynb" target="_blank"></a>Ramanujan Dictionary - with sparse penalty</li>
+    <li><a href="" target="_blank"></a></li>
     </ul></li>
   
-  
   <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html" target="_blank">Machine Learning Algorithms</a>
+    <h5 style="text-align:left;">
     <ul class="simple">
     <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html#naive-bayes" target="_blank">Naive Bayes</a></li>
     <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html#logistic-regression" target="_blank">Logistic Regression</a></li>
     <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html#decision-trees" target="_blank">Decision Tree</a></li>
     <li><a>Kernel Learning</a></li>
     </ul></li>
-  
+  </h5>
   
   <li><a href="#">Biomedical Signal Processing techniques</a>
     <ul class="simple">
     <li><a href="#">EEG Signals</a>
+      <h5 style="text-align:left;">
       <ul class="simple">
       <li><a>Artifact Removal Algorithms</a></li>
         <ul class="simple">
@@ -85,7 +102,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
         </ul></li>
       <!--<li><a>Wavelet Analysis</a></li>-->
       </ul></li>
-      
+      </h5>
       <!--<li><a href="#">GSR</a>
       <ul class="simple">
       <li><a>Phasic and tonic deomposition</a></li>
