@@ -66,7 +66,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
    
    
     <div class="sphx-glr-thumbcontainer" tooltip="Dispersion Entropy"><div class="figure align-default" id="id3">
-     <img alt="" src="{{"assets/images/dis_entropy_2.png" | relative_url }}"/>
+     <img alt="" src="{{"assets/images/dis_entropy_4.png" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Dispersion_Entropy_1_demo_EEG.ipynb" target="_blank"><span class="std std-ref">Dispersion Entropy</span></a></span><a class="headerlink" href="#" title="Permalink to this image">¶</a></p>
      </div>
    </div>
