@@ -11,19 +11,22 @@ be affected by a markdown parser. However, if you create an HTML element in your
 markdown file, you cannot use markdown syntax within that element's contents.
 -->
 
+
 <div id="index-grid-full" class="section group">
-  <div class="index-paragraph docutils container"><p> <strong> For updated version please check <a href="https://spkit.readthedocs.io/en/latest/" target="_blank"><font color="DodgerBlue">documentation</font></a> or  <a href="https://spkit.github.io/guide" target="_blank"><font color="DodgerBlue">New Guide here</font></a></strong></p></div>
+  <div class="index-paragraph docutils container"><p> <strong> User-guide is under process. For more organized contents, please check <a href="https://spkit.github.io/guide" target="_blank"><font color="DodgerBlue">Example Gallery</font></a> or <a href="https://spkit.readthedocs.io/en/latest/" target="_blank"><font color="DodgerBlue">Documentation</font></a></strong></p></div>
 </div>
+
+
 
 
 <div id="index-grid-half" class="section group">
 <h2 style="text-align:left;"><u>Getting Started - Table of Content</u></h2>
 <h3 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
- 
+
 <li><a href="https://spkit.readthedocs.io/en/latest/installation.html" target="_blank">Installation</a>
  <ul class="simple"><li><i><font size="3">pip install spkit</font></i></li></ul></li>
-  
+
  <li><a href="https://spkit.readthedocs.io/en/latest/informationtheory.html#information-theory-for-real-valued-signals" target="_blank">Information Theory</a>
  <h5 style="text-align:left;">
  <ul class="simple">
@@ -39,9 +42,9 @@ markdown file, you cannot use markdown syntax within that element's contents.
  </h5>  
  </ul>
  </li>
- 
-  
-  
+
+
+
   <li><a href="#">Wavelet Analysis</a>
     <h5 style="text-align:left;">
     <ul class="simple">
@@ -58,7 +61,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
     </ul>
     </h5>
   </li>
-  
+
   <li><a href="#">Signal Decomposition & Synthesis</a>  
     <h5 style="text-align:left;">
     <ul class="simple">
@@ -70,10 +73,10 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <!--<li><a>Principal Component Analysis, Singular Value Decomposition</a></li>-->
     <li><a href="" target="_blank"></a></li>
     </ul>
-     
+
   </h5>
   </li>
-  
+
   <li><a href="https://spkit.github.io/guide/notebooks/Ramanujan_Filter_Banks_for_Period_Estimation_Demo_examples.html">Ramanujan Filter Banks</a>
     <h5 style="text-align:left;">
     <ul class="simple">
@@ -82,7 +85,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <li><a href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Ramanujan_Filter_Banks_for_Period_Estimation_with_sparse_penalty.ipynb" target="_blank"></a>Ramanujan Dictionary - with sparse penalty</li>
     <li><a href="" target="_blank"></a></li>
     </ul></li>
-  
+
   <li><a href="https://spkit.readthedocs.io/en/latest/machinelearning.html" target="_blank">Machine Learning Algorithms</a>
     <h5 style="text-align:left;">
     <ul class="simple">
@@ -92,7 +95,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <li><a>Kernel Learning</a></li>
     </ul></li>
   </h5>
-  
+
   <li><a href="#">Biomedical Signal Processing techniques</a>
     <ul class="simple">
     <li><a href="#">EEG Signals</a>
@@ -115,7 +118,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
       </li>-->
     </ul></li>
   x-->
-  
+
   <li><a href="#">Miscellaneous</a>
     <ul class="simple">
     <li><a href="https://spkit.readthedocs.io/en/latest/pylfsr.html" target="_blank">Linear Feedback Shift Register</a></li>
@@ -124,3 +127,6 @@ markdown file, you cannot use markdown syntax within that element's contents.
 </h3>
 </div>
 <div id="index-grid-full" class="section group"></div>
+<div id="index-grid-full" class="section group">
+  <div class="index-paragraph docutils container"><p> <strong> For updated version please check <a href="https://spkit.readthedocs.io/en/latest/" target="_blank"><font color="DodgerBlue">documentation</font></a> or  <a href="https://spkit.github.io/guide" target="_blank"><font color="DodgerBlue">New Guide here</font></a></strong></p></div>
+</div>
