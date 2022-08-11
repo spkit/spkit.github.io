@@ -14,7 +14,10 @@ be affected by a markdown parser. However, if you create an HTML element in your
 markdown file, you cannot use markdown syntax within that element's contents.
 -->
 <div id="index-grid-half" class="section group">
-<h1 style="text-align:center;background: #F9BE87;"><a style="color:black;">Signal Processing Techniques</a></h1>
+<!-- <h1 style="max-width: 90%; text-align:center;background: #F9BE87;display=flex;padding:10px;"><a style="color:black;">Signal Processing Techniques</a></h1> -->
+<h1 style="max-width: 80%; text-align:center;background: #F9BE87;"><a style="color:black;">Signal Processing Techniques</a></h1>
+  
+  
 
 <span id="id2"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#ITC"><span class="section-number"></span>Information Theory based techniques</a></h1>
 <p style="text-align:left;"></p>
@@ -190,8 +193,8 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
 
  <div id="index-grid-half" class="section group">
- <h1 style="text-align:center; background: #F9BE87;"><a style="color:black;" class="toc-backref" href="#ML">Machine Learning Models with visualization</a></h1>
-
+<!--<h1 style="text-align:center; background: #F9BE87;"><a style="color:black;" class="toc-backref" href="#ML">Machine Learning Models with visualization</a></h1>-->
+<h1 style="max-width: 80%; text-align:center; background: #F9BE87;"><a style="color:black;" class="toc-backref" href="#ML">Machine Learning Models with visualization</a><a class="headerlink" href="#ML" title="Permalink to this headline">¶</a></h1>
 
  <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>Logistic Regression & Naïve Bayes</a></h1>
  <p style="text-align:left;">Examples of Logistic Regression with SpKit</p>
