@@ -8,6 +8,20 @@ layout: default1
 <script type="text/javascript"
   src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+<script type='text/x-mathjax-config'>
+MathJax.Hub.Config({                  
+tex2jax: {                  
+    inlineMath: [ ['$','$'], ["\[","\]"] ],                  
+},                  
+"HTML-CSS": {                  
+    linebreaks: {                  
+        automatic: true                   
+    }                  
+}                  
+});                  
+</script>                  
+<script type="text/javascript" async src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 <!--
 You can use HTML elements in Markdown, such as the comment element, and they won't
 be affected by a markdown parser. However, if you create an HTML element in your
