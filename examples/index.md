@@ -98,8 +98,8 @@ markdown file, you cannot use markdown syntax within that element's contents.
 <!---================================================================ -->
  <div class="toctree-wrapper compound"></div>
  <hr width="10%">
- <span id="id2"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#A&S"><span class="section-number"></span>Analysis & Synthesis Models $f^{-1}(f(x))=\tilde{x}$</a></h1>
- <p style="text-align:left;"></p>
+ <span id="id2"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#A&S"><span class="section-number"></span>Analysis & Synthesis Models: $f^{-1}(f(x))=\tilde{x}$</a></h1>
+ <!--<p style="text-align:left;"></p>-->
 $$f^{-1}(f(x))=\tilde{x}$$
  <div class="sphx-glr-thumbcontainer" tooltip="ICA of EEG signal"><div class="figure align-default" id="id3">
    <img alt="" src="{{"assets/images/ICA_EEG_3.jpg" | relative_url }}"/>
