@@ -109,7 +109,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
  <div class="sphx-glr-thumbcontainer" tooltip="Analysis & Synthesis Models"><div class="figure align-default" id="id3">
     <img alt="" src="{{"assets/images/A&S_blockgiagram_1.png" | relative_url }}"/>
-    <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Analysis_Sythesis_Models.ipynb" target="_blank"><span class="std std-ref">Analysis & Synthesis Models</span></a></span> </p>
+    <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Analysis_Sythesis_Models.ipynb" target="_blank"><span class="std std-ref">Analysis & Synthesis Models: DFT, STFT, FRFT, Sinusodal model</span></a></span> </p>
     </div>
   </div>
   <div class="sphx-glr-thumbcontainer" tooltip="Fractional Fourier Transform"><div class="figure align-default" id="id3">
