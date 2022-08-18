@@ -27,18 +27,23 @@ You can use HTML elements in Markdown, such as the comment element, and they won
 be affected by a markdown parser. However, if you create an HTML element in your
 markdown file, you cannot use markdown syntax within that element's contents.
 -->
+<!-- # <ins>Signal Processing Techniques</ins> -->
 <div id="index-grid-half" class="section group">
-<!-- <h1 style="max-width: 90%; text-align:center;background: #F9BE87;display=flex;padding:10px;"><a style="color:black;">Signal Processing Techniques</a></h1> -->
-<h1 style="max-width: 80%; text-align:center;background: #F9BE87;"><a style="color:black;">Signal Processing Techniques</a></h1>
-  
-  
 
-<span id="id2"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#ITC"><span class="section-number"></span>Information Theory based techniques</a></h1>
-<p style="text-align:left;"></p>
+<!-- <h1 style="max-width: 90%; text-align:center;background: #F9BE87;display=flex;padding:10px;"><a style="color:black;">Signal Processing Techniques</a></h1> -->
+<h1 style="max-width: 80%; text-align:center;background: #F9BE87;color:#3A464A;">Signal Processing Techniques</h1>
+
+
+<!-- <h1 style="text-align:center;display=block;padding:10px;left:50%;"><a style="color:black;">Signal Processing Techniques</a></h1> -->
+
+<!-- <span id="id2"></span><h1 id = 'ITC' style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#ITC"><span class="section-number"></span>Information Theory based techniques</a></h1> -->
+
+<h1 id = 'ITC' style="text-align:left;color:#4080D4;">Information Theory based techniques</h1>
+<!-- <p style="text-align:left;"></p> -->
 
    <div class="sphx-glr-thumbcontainer" tooltip="Computing entropy of real-valued signal.">
      <div class="figure align-default" id="">
-     <img alt="" src="{{"assets/images/entropy_3.jpg" | relative_url }}"/>
+     <img alt="" src="{{"assets/images/entropy_1.jpg" | relative_url }}"/>
      <p class="caption"><span class="caption-text">
      <a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Entropy_example.ipynb"  target="_blank">Entropy of real-valued signal ~ (IID)</a>
      </span>
@@ -47,7 +52,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
    </div>
    <div class="sphx-glr-thumbcontainer" tooltip="Computing entropy of real-valued signal.">
      <div class="figure align-default" id="">
-     <img alt="" src="{{"assets/images/entropy_2.jpg" | relative_url }}"/>
+     <img alt="" src="{{"assets/images/entropy_1.jpg" | relative_url }}"/>
      <p class="caption"><span class="caption-text">
      <a class="reference internal" href="https://spkit.readthedocs.io/en/latest/informationtheory.html#entropy-of-real-valued-signal-non-iid"  target="_blank">Entropy of real-valued signal ~ (non-IID)</a></span>
      </p>
@@ -72,9 +77,15 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
 <!---================================================================ -->
   <div class="toctree-wrapper compound"></div>
-  <hr width="10%">
-  <span id="id2"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#wavelet"><span class="section-number"></span>Wavelet Analysis: CWT & DWT</a></h1>
-  <p style="text-align:left;"></p>
+  <hr style="width:1%;margin-left: 0px;">
+  <!-- <hr style="width:10%;margin-left: 0px;"> -->
+  <!-- <hr width="10%"> -->
+  <!-- <span id="id2"></span> -->
+  <h1 id = 'wavelet' style="text-align:left;color:#4080D4;">Wavelet Analysis: CWT & DWT</h1>
+  <hr style="width:90%;margin-left: 0px;margin-right: 0px;margin-top: 0px;">
+
+<!-- <a style="color:DodgerBlue;"></a>
+  <p style="text-align:left;"></p> -->
 
    <div class="toctree-wrapper compound"></div>
    <div class="sphx-glr-thumbcontainer" tooltip="Scalogram CWT with different wavelets"><div class="figure align-default" id="id3">
@@ -96,11 +107,17 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
 
 <!---================================================================ -->
- <div class="toctree-wrapper compound"></div>
- <hr width="10%">
- <span id="id2"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#A&S"><span class="section-number"></span>Analysis & Synthesis Models: $f^{-1}(f(x))=\tilde{x}$</a></h1>
- <p style="text-align:left;"></p>
-<!--$$f^{-1}(f(x))=\tilde{x}$$-->
+<div class="toctree-wrapper compound"></div>
+<!-- <hr style="width:90%;margin-left: 0px;margin-right: 0px;"> -->
+<hr style="width:1%;margin-left: 0px;">
+ <!-- <hr width="10%"> -->
+ <!-- <span id="id2"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#A&S"><span class="section-number"></span>Analysis & Synthesis Models $$f^{-1}(f(x))=\tilde{x}$$</a></h1> -->
+
+<h1 id = 'A&S' style="text-align:left;color:#4080D4;">Analysis & Synthesis Models $f^{-1}(f(x))=\tilde{x}$</h1>
+<hr style="width:90%;margin-left: 0px;margin-right: 0px;margin-top: 0px;">
+
+ <!-- <p style="text-align:left;"></p> -->
+
  <div class="sphx-glr-thumbcontainer" tooltip="ICA of EEG signal"><div class="figure align-default" id="id3">
    <img alt="" src="{{"assets/images/ICA_EEG_3.jpg" | relative_url }}"/>
    <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ICA_EEG_example.ipynb" target="_blank"><span class="std std-ref">ICA of multi-channel signal</span></a></span> </p>
@@ -109,7 +126,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
  <div class="sphx-glr-thumbcontainer" tooltip="Analysis & Synthesis Models"><div class="figure align-default" id="id3">
     <img alt="" src="{{"assets/images/A&S_blockgiagram_1.png" | relative_url }}"/>
-    <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Analysis_Sythesis_Models.ipynb" target="_blank"><span class="std std-ref">Analysis & Synthesis Models: DFT, STFT, FRFT, Sinusodal model</span></a></span> </p>
+    <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Analysis_Sythesis_Models.ipynb" target="_blank"><span class="std std-ref">Analysis & Synthesis Models</span></a></span> </p>
     </div>
   </div>
   <div class="sphx-glr-thumbcontainer" tooltip="Fractional Fourier Transform"><div class="figure align-default" id="id3">
@@ -126,9 +143,14 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
 <!---================================================================ -->
  <div class="toctree-wrapper compound"></div>
- <hr width="10%">
- <span id="id2"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#A&S"><span class="section-number"></span>Ramanujan Filter bank for periodicity</a></h1>
- <p style="text-align:left;"></p>
+ <!-- <hr width="10%"> -->
+ <hr style="width:1%;margin-left: 0px;">
+ <!-- <span id="id2"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#A&S"><span class="section-number"></span>Ramanujan Filter bank for periodicity</a></h1>
+ <p style="text-align:left;"></p> -->
+
+ <h1 id = 'RBF' style="text-align:left;color:#4080D4;">Ramanujan Filter bank for periodicity</h1>
+ <hr style="width:90%;margin-left: 0px;margin-right: 0px;margin-top: 0px;">
+ <!-- <hr style="width:1%;margin-left: 0px;"> -->
 
    <div class="sphx-glr-thumbcontainer" tooltip="Ramanujan Filter Banks: Demo"><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/RFB_ex2.2.png" | relative_url }}"/>
@@ -156,39 +178,44 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
 
 <!---================================================================ -->
-   <div class="toctree-wrapper compound"></div>
-   <hr width="10%">
-
-   <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#EEG"><span class="section-number"></span>EEG Signal Processing & Artifact Removal Algorithms</a>
+<div class="toctree-wrapper compound"></div>
+   <!-- <hr width="10%"> -->
+<hr style="width:1%;margin-left: 0px;">
+   <!-- <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#EEG"><span class="section-number"></span>EEG Signal Processing & Artifact Removal Algorithms</a>
    <a class="headerlink" href="#eeg" title="Permalink to this headline">¶</a></h1>
-   <p style="text-align:left;"></p>
+   <p style="text-align:left;"></p> -->
 
-  <div class="sphx-glr-thumbcontainer" tooltip="Automatic and Tunable Artifact Removal Algorithm.">
-     <div class="figure align-default" id="">
-     <img alt="" src="{{"assets/images/ATAR_Beta_tune_2.gif" | relative_url }}"/>
-     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ATAR_Algorithm_EEG_Artifact_Removal.ipynb"  target="_blank"><span class="std std-ref">ATAR Algorithm</span></a></span> </p>
-     </div>
+ <h1 id='EEG' style="text-align:left;color:#4080D4;">EEG Signal Processing & Artifact Removal Algorithms</h1>
+ <hr style="width:90%;margin-left: 0px;margin-right: 0px;margin-top: 0px;">
+   <!-- <hr style="width:1%;margin-left: 0px;"> -->
+
+<div class="sphx-glr-thumbcontainer" tooltip="Automatic and Tunable Artifact Removal Algorithm.">
+   <div class="figure align-default" id="">
+   <img alt="" src="{{"assets/images/ATAR_Beta_tune_2.gif" | relative_url }}"/>
+ <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ATAR_Algorithm_EEG_Artifact_Removal.ipynb"  target="_blank"><span class="std std-ref">ATAR Algorithm</span></a></span> </p>
    </div>
-  <div class="sphx-glr-thumbcontainer" tooltip="ICA based Artifact Removal Algorithm.">
-     <div class="figure align-default" id="">
-     <img alt="" src="{{"assets/images/ICA_Artifact_Removal.png" | relative_url }}"/>
-     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ICA_based_Artifact_Removal.ipynb"  target="_blank"><span class="std std-ref">ICA based Algorithm</span></a></span> </p>
-     </div>
-   </div>
-   <div class="sphx-glr-thumbcontainer" tooltip="Topographical Maps.">
-      <div class="figure align-default" id="">
-      <img alt="" src="{{"examples/figures/eeg_dynamic_ssfi_1.gif" | relative_url }}"/>
-      <p class="caption"><span class="caption-text"><a class="reference internal" href="gen_topo"  target="_blank"><span class="std std-ref">Topographic Map</span></a></span> </p>
-      </div>
-    </div>
-
-
-   <div class="toctree-wrapper compound"></div>
-   <hr width="10%">
-   <h4 style="text-align:left;">Click here to try examples: <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="25em"></a> </h4>
  </div>
- <div class="toctree-wrapper compound"></div>
+<div class="sphx-glr-thumbcontainer" tooltip="ICA based Artifact Removal Algorithm.">
+   <div class="figure align-default" id="">
+   <img alt="" src="{{"assets/images/ICA_Artifact_Removal.png" | relative_url }}"/>
+   <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/ICA_based_Artifact_Removal.ipynb"  target="_blank"><span class="std std-ref">ICA based Algorithm</span></a></span> </p>
+   </div>
+ </div>
+ <div class="sphx-glr-thumbcontainer" tooltip="Topographical Maps.">
+    <div class="figure align-default" id="">
+    <img alt="" src="{{"examples/figures/eeg_dynamic_ssfi_1.gif" | relative_url }}"/>
+    <p class="caption"><span class="caption-text"><a class="reference internal" href="gen_topo"  target="_blank"><span class="std std-ref">Topographic Map</span></a></span> </p>
+    </div>
+  </div>
 
+
+ <div class="toctree-wrapper compound"></div>
+ <!-- <hr width="10%"> -->
+ <hr style="width:1%;margin-left: 0px;">
+ <h4 style="text-align:left;">Click here to try examples: <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="25em"></a> </h4>
+</div>
+<div class="toctree-wrapper compound"></div>
+<!-- <hr style="width:1%;margin-left: 0px;"> -->
 <!--
 <div id="index-grid-half" class="section group">
    <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#EEG"><span class="section-number"></span>EEG Signal Processing</a>
@@ -205,12 +232,30 @@ markdown file, you cannot use markdown syntax within that element's contents.
   </div> -->
 
 
+<!-- # <ins>Machine Learning Models with visualization</ins> -->
 
  <div id="index-grid-half" class="section group">
-<!--<h1 style="text-align:center; background: #F9BE87;"><a style="color:black;" class="toc-backref" href="#ML">Machine Learning Models with visualization</a></h1>-->
-<h1 style="max-width: 80%; text-align:center; background: #F9BE87;"><a style="color:black;" class="toc-backref" href="#ML">Machine Learning Models with visualization</a><a class="headerlink" href="#ML" title="Permalink to this headline">¶</a></h1>
 
- <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>Logistic Regression & Naïve Bayes</a></h1>
+ <!-- <hr style="width:50%;size:3;color:black;margin-left: 0px;"> -->
+
+ <!-- <hr style="height:2px; width:50%; border-width:0; color:red; background-color:red;margin-left: 0px;"> -->
+ <!-- <a name='ml'></a> -->
+ <hr style="color:#3A464A; width:80%;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
+ <h1 id = 'ml' style="color:#3A464A; max-width: 80%; text-align:center; background: #F9BE87;">Machine Learning Models with visualization</h1>
+ <hr style="color:#3A464A; width:80%;margin-left: 0px;margin-right: 0px;margin-top: 0px;">
+   <!-- <hr style="width:1%;margin-left: 0px;"> -->
+<!-- <a style="color:#3A464A;"></a> -->
+ <!-- class="toc-backref" -->
+<!-- <a class="headerlink" href="#ml" title="">¶</a> -->
+
+
+
+ <!-- <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#LR"><span class="section-number"></span>Logistic Regression & Naïve Bayes</a></h1> -->
+<h1 id='LRNB' style="text-align:left;color:#4080D4;">Logistic Regression & Naïve Bayes</h1>
+<hr style="width:90%;margin-left: 0px;margin-right: 0px;margin-top: 0px;">
+  <!-- <hr style="width:1%;margin-left: 0px;"> -->
+
+
  <p style="text-align:left;">Examples of Logistic Regression with SpKit</p>
  <div class="sphx-glr-thumbcontainer" tooltip="An example to demonstrate the visulization of Logistic Regression while training and plotting resulting weights.">
    <div class="figure align-default" id="">
@@ -241,12 +286,19 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
 
  <div class="toctree-wrapper compound"></div>
- <hr width="10%">
+ <!-- <hr width="10%"> -->
+ <hr style="width:1%;margin-left: 0px;">
  <h4 style="text-align:left;">Click here to try examples on cloud LR: <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_ML/LogisticRegression" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="25em"></a> NB: <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_ML/NaiveBayes"><img src="https://mybinder.org/badge_logo.svg" height="25em"></a></h4>
  </div>
 
  <div id="index-grid-half" class="section group">
- <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#trees"><span class="section-number"></span>Decision Trees</a></h1>
+ <hr style="width:1%;margin-left: 0px;">
+ <!-- <span id="id1"></span><h1 style="text-align:left;"><a style="color:DodgerBlue;" class="toc-backref" href="#trees"><span class="section-number"></span>Decision Trees</a></h1> -->
+ <h1 id='trees' style="text-align:left;color:#4080D4;">Decision Trees</h1>
+ <hr style="width:90%;margin-left: 0px;margin-right: 0px;margin-top: 0px;">
+   <!-- <hr style="width:1%;margin-left: 0px;"> -->
+
+
  <p style="text-align:left;">Examples of Decision Tree with SpKit</p>
 
  <div class="sphx-glr-thumbcontainer" tooltip="An example to demonstrate the visulization of tree while training and plotting resulting tree.">
@@ -272,23 +324,28 @@ markdown file, you cannot use markdown syntax within that element's contents.
    </div>
  </div>
 
- <div class="toctree-wrapper compound"></div>
+ <!-- <div class="toctree-wrapper compound"></div> -->
 
  <div class="sphx-glr-thumbcontainer" tooltip="An example showing how to use catogorical features without need of any enconding"><div class="figure align-default" id="id5">
    <img alt="" src="{{"assets/images/tree-cat.png" | relative_url }}"/>
    <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/0.0.9/ML/Trees/4_DecisionTrees_CatogoricalFeatures_spkit_v0.0.9.ipynb" target="_blank"><span class="std std-ref">Use of Catogorical Features without encoding</span></a></span></p>
    </div>
  </div>
+
  <div class="toctree-wrapper compound"></div>
- <hr width="10%">
- <h4 style="text-align:left;">Click here to try examples on cloud <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit/0.0.9/ML/Trees" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="20em"></a>
- </h4>
+ <!-- <hr width="10%"> -->
+ <hr style="width:1%;margin-left: 0px;">
+   <h4 style="text-align:left;">Click here to try examples on cloud <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit/0.0.9/ML/Trees" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="20em"></a></h4>
  </div>
+ 
+   <!-- <hr style="width:1%;margin-left: 0px;"> -->
 
-
- <div id="index-grid-half" class="section group">
- <span id="id1"></span><h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#logit"><span class="section-number"></span>..</a>
-   <hr width="10%">
+<div id="index-grid-half" class="section group">
+<!-- <span id="id1"></span> -->
+<!-- <h1 style="text-align:left;"><a style="color:blue;" class="toc-backref" href="#logit"> -->
+<!-- <span class="section-number"></span>..</a> -->
+<!-- <hr width="10%"> -->
+ <!-- </div> -->
    <!--<h3 style="text-align:left;">More to come ..</h3> -->
 
  <!--</div>-->
