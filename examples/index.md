@@ -241,7 +241,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
  <!-- <hr style="height:2px; width:50%; border-width:0; color:red; background-color:red;margin-left: 0px;"> -->
  <!-- <a name='ml'></a> -->
  <hr style="color:#3A464A; width:80%;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
- <h1 id = 'ml' style="color:#3A464A; max-width: 80%; text-align:center; background: #F9BE87;">Machine Learning Models with visualization</h1>
+ <h1 id = 'ML' style="color:#3A464A; max-width: 80%; text-align:center; background: #F9BE87;">Machine Learning Models with visualization</h1>
  <hr style="color:#3A464A; width:80%;margin-left: 0px;margin-right: 0px;margin-top: 0px;">
    <!-- <hr style="width:1%;margin-left: 0px;"> -->
 <!-- <a style="color:#3A464A;"></a> -->
@@ -337,7 +337,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
  <hr style="width:1%;margin-left: 0px;">
    <h4 style="text-align:left;">Click here to try examples on cloud <a class="reference external" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit/0.0.9/ML/Trees" target="_blank"><img src="https://mybinder.org/badge_logo.svg" height="20em"></a></h4>
  </div>
- 
+
    <!-- <hr style="width:1%;margin-left: 0px;"> -->
 
 <div id="index-grid-half" class="section group">
