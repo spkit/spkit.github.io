@@ -4,28 +4,27 @@ layout: default
 ---
 
 # EEG Artifact Removal Algorithms: ATAR & ICA based
+
 <div id="index-grid-half" class="section group">
-  
 * <h4><u><b><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></b></u></h4>
-  
-<!--  <a href="https://link.medium.com/90mYhbr8Osb" target="_blank"><img src="{{"assets/images/ATAR_2.png" | relative_url }}" alt="tutorial" style="width:300px;height:200px;"></a> -->
-
-<!-- <iframe width="400" height="200" src="https://medium.com/@nikeshbajaj/artifacts-in-eeg-and-how-to-remove-them-atar-algorithm-ica-fbb91ea8485a" title="Medium Blog"></iframe> -->
-
 <div class="col span_1_of_3">
   <a class="reference external" href="https://link.medium.com/90mYhbr8Osb" target="_blank"><img src="{{ "assets/images/ATAR_2.png" | relative_url }}" width="80%"></a>
   <h3><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></h3>
-<!--   <p>Postdoctoral Research Associate @ <b>Imperial Collage London, UK</b>. -->
-<!--    PhD from <b>Queen Mary University of London, UK</b></p> -->
 </div>
-<hr style="width:1%;margin-left: 0px;">
+
+<!-- <hr style="width:1%;margin-left: 0px;"> -->
+<div class="toctree-wrapper compound"></div>
+<!--   <hr style="width:1%;margin-left: 0px;"> -->
+<!-- <hr style="width:10%;margin-left: 0px;"> -->
+<hr width="10%"> 
+
 </div>
 
 
 # Hands on practice on Machine Learning & Deeplearning
 
 <div id="index-grid-half" class="section group">
-<hr style="width:1%;margin-left: 0px;">
+<hr width="10%"> 
 <h3 style="text-align:left;"><u>Agenda/Objectives</u></h3>
 <p style="text-align:left;">Short introduction to machine learning and artificial intelligence, followed by supervised learning examples.</p>
 <h3 style="text-align:left;"><u>Links to Jupyter-notebooks</u></h3>
