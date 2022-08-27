@@ -3,6 +3,13 @@ title: Tutorials
 layout: default
 ---
 
+# EEG Artifact Removal Algorithms: ATAR & ICA based
+
+* **Blog: [Artifacts in EEG and how to remove them: ATAR, ICA](https://medium.com/@nikeshbajaj/artifacts-in-eeg-and-how-to-remove-them-atar-algorithm-ica-fbb91ea8485a)**
+
+<iframe width="560" height="315" src="https://medium.com/@nikeshbajaj/artifacts-in-eeg-and-how-to-remove-them-atar-algorithm-ica-fbb91ea8485a" title="Medium Blog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 # Hands on practice on Machine Learning & Deeplearning
 
 <div id="index-grid-half" class="section group">
@@ -35,8 +42,6 @@ layout: default
 <h3 style="text-align:left;">
 <ul class="simple" style="line-height:1.4;">
   <li>Introdcution to ML and DL (30/07/2021 - CU_FDP) <a href="https://github.com/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/Intorduction_to_ML_&_DL_30_07_21.pptx?raw=true" target="_blank">PPT</a> | <a href="https://github.com/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/Intorduction_to_ML_%26_DL_30_07_21.pdf" target="_blank">PDF</a></li>
-  <li><a>.</a></li>
-  <li><a>.</a></li>
 </ul>
 </h3>
 </div>
