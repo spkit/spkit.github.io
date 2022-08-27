@@ -11,6 +11,14 @@ layout: default
  <a href="https://link.medium.com/90mYhbr8Osb"><img src="{{"assets/images/ATAR_2.png" | relative_url }}" alt="tutorial" style="width:300px;height:200px;"></a>
 
 <!-- <iframe width="400" height="200" src="https://medium.com/@nikeshbajaj/artifacts-in-eeg-and-how-to-remove-them-atar-algorithm-ica-fbb91ea8485a" title="Medium Blog"></iframe> -->
+
+<div class="col span_1_of_3">
+  <a class="reference external" href="https://link.medium.com/90mYhbr8Osb"><img src="{{ "assets/images/ATAR_2.png" | relative_url }}" width="45%"></a>
+  <h3><a href="https://link.medium.com/90mYhbr8Osb">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></h3>
+<!--   <p>Postdoctoral Research Associate @ <b>Imperial Collage London, UK</b>. -->
+<!--    PhD from <b>Queen Mary University of London, UK</b></p> -->
+</div>
+  
 </div>
 
 
