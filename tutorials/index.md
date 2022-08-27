@@ -16,7 +16,7 @@ layout: default
 <div class="toctree-wrapper compound"></div>
 <!--   <hr style="width:1%;margin-left: 0px;"> -->
 <!-- <hr style="width:10%;margin-left: 0px;"> -->
-<hr width="10%"> 
+<!-- <hr width="10%">  -->
 
 </div>
 
@@ -24,7 +24,7 @@ layout: default
 # Hands on practice on Machine Learning & Deeplearning
 
 <div id="index-grid-half" class="section group">
-<hr width="10%"> 
+<!-- <hr width="10%">  -->
 <h3 style="text-align:left;"><u>Agenda/Objectives</u></h3>
 <p style="text-align:left;">Short introduction to machine learning and artificial intelligence, followed by supervised learning examples.</p>
 <h3 style="text-align:left;"><u>Links to Jupyter-notebooks</u></h3>
