@@ -7,7 +7,7 @@ layout: default
 
 <div id="index-grid-half" class="section group">
 * <h4><u><b><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></b></u></h4>
-<div class="col span_1_of_3">
+<div class="col span_1_of_2">
   <a class="reference external" href="https://link.medium.com/90mYhbr8Osb" target="_blank"><img src="{{ "assets/images/ATAR_2.png" | relative_url }}" width="80%"></a>
   <h3><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">How to remove artifacts from EEG signals</a></h3>
 </div>
@@ -17,7 +17,12 @@ layout: default
 <!--   <hr style="width:1%;margin-left: 0px;"> -->
 <!-- <hr style="width:10%;margin-left: 0px;"> -->
 <!-- <hr width="10%">  -->
-
+<div class="col span_1_of_2">
+  <h3>.</h3>
+</div>
+<div class="col span_1_of_2">
+  <h3>.</h3>
+</div>
 </div>
 
 
