@@ -9,7 +9,7 @@ layout: default
 * <h4><u><b><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></b></u></h4>
 <div class="col span_1_of_3">
   <a class="reference external" href="https://link.medium.com/90mYhbr8Osb" target="_blank"><img src="{{ "assets/images/ATAR_2.png" | relative_url }}" width="80%"></a>
-  <h3><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></h3>
+  <h3><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">How to remove artifacts from EEG signals</a></h3>
 </div>
 
 <!-- <hr style="width:1%;margin-left: 0px;"> -->
