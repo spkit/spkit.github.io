@@ -6,9 +6,9 @@ layout: default
 # EEG Artifact Removal Algorithms: ATAR & ICA based
 <div id="index-grid-half" class="section group">
   
-* <h4><u><b>Blog: [Artifacts in EEG and how to remove them: ATAR, ICA](https://link.medium.com/90mYhbr8Osb)</b></u></h4>
+* <h4><u><b><a href="https://link.medium.com/90mYhbr8Osb">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></b></u></h4>
   
-  <a href="https://link.medium.com/90mYhbr8Osb"><img src=src="{{"assets/images/ATAR_2.png" | relative_url }}" alt="tutorial" style="width:300px;height:200px;"></a>
+ <a href="https://link.medium.com/90mYhbr8Osb"><img src="{{"assets/images/ATAR_2.png" | relative_url }}" alt="tutorial" style="width:300px;height:200px;"></a>
 
 <iframe width="400" height="200" src="https://medium.com/@nikeshbajaj/artifacts-in-eeg-and-how-to-remove-them-atar-algorithm-ica-fbb91ea8485a" title="Medium Blog"></iframe>
 </div>
