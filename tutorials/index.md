@@ -10,7 +10,7 @@ layout: default
   
  <a href="https://link.medium.com/90mYhbr8Osb"><img src="{{"assets/images/ATAR_2.png" | relative_url }}" alt="tutorial" style="width:300px;height:200px;"></a>
 
-<iframe width="400" height="200" src="https://medium.com/@nikeshbajaj/artifacts-in-eeg-and-how-to-remove-them-atar-algorithm-ica-fbb91ea8485a" title="Medium Blog"></iframe>
+<!-- <iframe width="400" height="200" src="https://medium.com/@nikeshbajaj/artifacts-in-eeg-and-how-to-remove-them-atar-algorithm-ica-fbb91ea8485a" title="Medium Blog"></iframe> -->
 </div>
 
 
