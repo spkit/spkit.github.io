@@ -2,11 +2,12 @@
 title: Tutorials
 layout: default
 ---
+# Tutorials
 
-# EEG Artifact Removal Algorithms: ATAR & ICA based
+## EEG Artifact Removal Algorithms: ATAR & ICA based
 
 <div id="index-grid-half" class="section group">
-* <h4><u><b><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></b></u></h4>
+<!-- * <h4><u><b><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></b></u></h4> -->
 <div class="col span_1_of_2">
   <a class="reference external" href="https://link.medium.com/90mYhbr8Osb" target="_blank"><img src="{{ "assets/images/ATAR_2.png" | relative_url }}" width="80%"></a>
   <h3><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">How to remove artifacts from EEG signals</a></h3>
@@ -27,7 +28,7 @@ layout: default
 </div>
 <br>
 
-# Hands on practice on Machine Learning & Deeplearning
+## Hands on practice on Machine Learning & Deeplearning
 
 <div id="index-grid-half" class="section group">
 <!-- <hr width="10%">  -->
