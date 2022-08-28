@@ -18,13 +18,12 @@ layout: default
 <!-- <hr style="width:10%;margin-left: 0px;"> -->
 <!-- <hr width="10%">  -->
 <div class="col span_1_of_3">
-  <h3>.</h3>
 </div>
 <div class="toctree-wrapper compound"></div>
 <div class="col span_1_of_3">
-  <h3>.</h3>
 </div>
 <div class="toctree-wrapper compound"></div>
+<hr width="10%">
 </div>
 <br>
 
