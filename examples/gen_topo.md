@@ -127,7 +127,7 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10,4),gridspec_kw={'width_ratios':
 
 for i in range(0,len(X)-N,skip):
     ax1.clear()
-    ee = np.sqrt(np.abs(X[i:i+N,:]).sum(0))
+    ee = np.sqrt(np.abs(X[i:i+N,:]**2).sum(0))
     _ = sp.eeg.TopoMap(pos,ee,res=128, showplot=True,axes=ax1,contours=True,showsensors=True,
             interpolation=None,shownames=True, ch_names=ch_names,showhead=True,vmin=None,vmax=None,
             returnIm = False,fontdict=None)
