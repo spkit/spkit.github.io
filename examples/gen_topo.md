@@ -19,10 +19,11 @@ import matplotlib.pyplot as plt
 X,ch_names = sp.load_data.eegSample()
 fs=128
 
-# get the locations of electrodes on 2D -  "pos" for channels as in list ch_names
-#ch_names = ['AF3','F7','F3','FC5','T7','P7','O1','O2','P8','T8','FC6','F4','F8','AF4']
+# get the locations of electrodes on 2D plane according to 10-20 system
+# "pos" for channels as in list ch_names
+# ch_names = ['AF3','F7','F3','FC5','T7','P7','O1','O2','P8','T8','FC6','F4','F8','AF4']
 
-pos, ch1 = s1020_get_epos2d_(ch_names, reorder=False)
+pos, ch1 = sp.eeg.s1020_get_epos2d_(ch_names, reorder=False)
 
 
 Zi = sp.eeg.TopoMap(pos,X[0],res=128, showplot=True,axes=None,contours=True,showsensors=True,
@@ -51,10 +52,11 @@ import spkit as sp
 
 X,ch_names = sp.load_data.eegSample()
 
-# get the locations of electrodes on 2D -  "pos" for channels as in list ch_names
-#ch_names = ['AF3','F7','F3','FC5','T7','P7','O1','O2','P8','T8','FC6','F4','F8','AF4']
+# get the locations of electrodes on 2D plane according to 10-20 system
+# "pos" for channels as in list ch_names
+# ch_names = ['AF3','F7','F3','FC5','T7','P7','O1','O2','P8','T8','FC6','F4','F8','AF4']
 
-pos, ch1 = s1020_get_epos2d_(ch_names, reorder=False)
+pos, ch1 = sp.eeg.s1020_get_epos2d_(ch_names, reorder=False)
 
 
 
