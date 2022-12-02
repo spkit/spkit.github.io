@@ -43,7 +43,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
 
    <div class="sphx-glr-thumbcontainer" tooltip="Computing entropy of real-valued signal.">
      <div class="figure align-default" id="">
-     <img alt="" src="{{"assets/images/entropy_1.jpg" | relative_url }}"/>
+     <img alt="" src="{{"assets/images/entropy_3.jpg" | relative_url }}"/>
      <p class="caption"><span class="caption-text">
      <a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Entropy_example.ipynb"  target="_blank">Entropy of real-valued signal ~ (IID)</a>
      </span>
@@ -52,7 +52,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
    </div>
    <div class="sphx-glr-thumbcontainer" tooltip="Computing entropy of real-valued signal.">
      <div class="figure align-default" id="">
-     <img alt="" src="{{"assets/images/entropy_1.jpg" | relative_url }}"/>
+     <img alt="" src="{{"assets/images/entropy_2.jpg" | relative_url }}"/>
      <p class="caption"><span class="caption-text">
      <a class="reference internal" href="https://spkit.readthedocs.io/en/latest/informationtheory.html#entropy-of-real-valued-signal-non-iid"  target="_blank">Entropy of real-valued signal ~ (non-IID)</a></span>
      </p>
