@@ -54,20 +54,20 @@ python setup.py install
 <h3 class="no-bg" id="">Removing baseline/drift/wander - DC component</h3>
 
 
-```console
+```python
 import spkit as sp
 Xf = sp.filterDC(X,..)
 Xf = sp.filterDC_sGolay(X,..)
 Xf = sp.filter_X(X,band =[0.5],btype='highpass',order=5,fs=128.0,ftype='filtfilt')
 ```
 
-<a href="https://spkit.github.io/docs/docs/filtering.html" target="_blank"> Check here</a>
+<font size="4"><a href="https://spkit.github.io/docs/docs/filtering.html" target="_blank"> Check here for details</a></font>
 
 
 <h3 class="no-bg" id="">Filtering</h3>
 
 
-```console
+```python
 import spkit as sp
 
 #highpass
@@ -80,7 +80,7 @@ Xf = sp.filter_X(X,band =[1, 4],btype='bandpass',order=5,fs=128.0,ftype='filtfil
 Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 ```
 
-<a href="https://spkit.github.io/docs/docs/filtering.html" target="_blank"> Check here</a>
+<font size="4"><a href="https://spkit.github.io/docs/docs/filtering.html" target="_blank"> Check here for details</a></font>
 
 
 <h2 class="no-bg" id="3-informtion-theory">Information Theory</h2>
