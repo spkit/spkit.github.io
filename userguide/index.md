@@ -50,6 +50,39 @@ python setup.py install
 ```
 
 <h2 class="no-bg" id="2-filtering">Basic Filtering</h2>
+
+<h3 class="no-bg" id="">Removing baseline/drift/wander - DC component</h3>
+
+
+```console
+import spkit as sp
+Xf = sp.filterDC(X,..)
+Xf = sp.filterDC_sGolay(X,..)
+Xf = sp.filter_X(X,band =[0.5],btype='highpass',order=5,fs=128.0,ftype='filtfilt')
+```
+
+<a href="https://spkit.github.io/docs/docs/filtering.html" target="_blank"> Check here</a>
+
+
+<h3 class="no-bg" id="">Filtering</h3>
+
+
+```console
+import spkit as sp
+
+#highpass
+Xf = sp.filter_X(X,band =[0.5],btype='highpass',order=5,fs=128.0,ftype='filtfilt')
+
+#bandpass
+Xf = sp.filter_X(X,band =[1, 4],btype='bandpass',order=5,fs=128.0,ftype='filtfilt')
+
+#lowpass
+Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
+```
+
+<a href="https://spkit.github.io/docs/docs/filtering.html" target="_blank"> Check here</a>
+
+
 <h2 class="no-bg" id="3-informtion-theory">Information Theory</h2>
 <h2 class="no-bg" id="4-wavelet-analysis">Wavelet Analysis</h2>
 <h2 class="no-bg" id="5-transform-techniques">Transform Techniques</h2>
