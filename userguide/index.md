@@ -89,12 +89,12 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 <h2 class="no-bg" id="6-biomedical">Biomedical Signals</h2>
 <h2 class="no-bg" id="8-links">Helpful Links</h2>
 
-* Homepage - http://spkit.github.io
-* Documentation - https://spkit.readthedocs.io
-* Documentation in page - http://spkit.github.io/docs
-* Example Gallery in page - http://spkit.github.io/examples
-* Github - https://github.com/Nikeshbajaj/spkit
-* PyPi-project - https://pypi.org/project/spkit
+* [Homepage](http://spkit.github.io) - http://spkit.github.io
+* [Documentation](https://spkit.readthedocs.io) - https://spkit.readthedocs.io
+* [Documentation in page](http://spkit.github.io/docs) - http://spkit.github.io/docs
+* [Example Gallery](http://spkit.github.io/examples) - http://spkit.github.io/examples
+* [Github](https://github.com/Nikeshbajaj/spkit) - https://github.com/Nikeshbajaj/spkit
+* [PyPi-project](https://pypi.org/project/spkit) - https://pypi.org/project/spkit
 
 
 
