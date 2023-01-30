@@ -1,6 +1,6 @@
 ---
 title: User Guide
-layout: default
+layout: base_ex
 ---
 
 <div id="index-grid-full" class="section group">
