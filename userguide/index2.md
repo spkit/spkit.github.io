@@ -362,9 +362,33 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 | ```io.write_vtk(filename,...)``` 		| Text |
 
 
+
+<h2 class="no-bg">Dataset Module</h2>
+
+| Syntax | Description |
+| --- | ----------- |
+| ```data.create_dataset(N=100,...)``` 		| Text |
+| ```data.gaussian(N=[100,...)``` 		| Text |
+| ```data.linear_data(N=[100,...)``` 		| Text |
+| ```data.mclassGaus(N=100,...)``` 		| Text |
+| ```data.moons(N=[100,...)``` 		| Text |
+| ```data.sinusoidal(N=[100,...)``` 		| Text |
+| ```data.spiral(N=[100,...)``` 		| Text |
+| ```data.load_data.eegSample()``` 		| Text |
+| ```data.load_data.eegSample_1ch(ch=1,...)``` 		| Text |
+| ```data.load_data.eegSample_artifact()``` 		| Text |
+| ```data.load_data.primitivePolynomials()``` 		| Text |
+
+<h2 class="no-bg">ML Module</h2>
+
+| ```ml.LR()``` 		| Text |
+| ```ml.LogisticRegression()``` 		| Text |
+| ```ml.NaiveBayes()``` 		| Text |
+| ```ml.ClassificationTree()``` 		| Text |
+| ```ml.RegressionTree()``` 		| Text |
+
+
 <h2 class="no-bg">Geometry Module</h2>
-
-
 
 | Syntax | Description |
 | --- | ----------- |
