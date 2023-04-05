@@ -274,10 +274,12 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 
 <h2 class="no-bg" id="4-wavelet-analysis">Wavelet Analysis</h2>
 
-    | Syntax | Description |
-    | --- | ----------- |
-    | ```wavelet_filtering(x, wv='db3', threshold='optimal',...)``` 		| Text |
-    | ```wavelet_filtering_win(x, winsize=128, ..)``` 		| Text |
+
+| Syntax | Description |
+| --- | ----------- |
+| ```wavelet_filtering(x, wv='db3', threshold='optimal',...)``` 		| Text |
+| ```wavelet_filtering_win(x, winsize=128, ..)``` 		| Text |
+
 
 <h2 class="no-bg" id="5-transform-techniques">Transform Techniques</h2>
 <h2 class="no-bg" id="6-biomedical">Biomedical Signals</h2>
