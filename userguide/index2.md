@@ -80,8 +80,6 @@ Xf = sp.filter_X(X,band =[0.5],btype='highpass',order=5,fs=128.0,ftype='filtfilt
 
 <h3 class="no-bg" id="">Filtering</h3>
 
-<hr>
-
   | Syntax | Description |
   | --- | ----------- |
   | ```filterDC(X, alpha=256,)``` 		| Text |
@@ -95,10 +93,7 @@ Xf = sp.filter_X(X,band =[0.5],btype='highpass',order=5,fs=128.0,ftype='filtfilt
   | ```filtering_pipeline(X, fs,...)``` 		| Text |
   | ```spatial_filter_adj(X, AdjM, ftype='mean')``` 		| Text |
   | ```spatial_filter_dist(X, V, r=0.1, ftype='mean')``` 		| Text |
-  | ```wavelet_filtering(x, wv='db3', threshold='optimal',...)``` 		| Text |
-  | ```wavelet_filtering_win(x, winsize=128, ..)``` 		| Text |
 
-<hr>
 
 
 ```python
@@ -135,7 +130,7 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 |```entropy_svd(x)```		        | Text |
 |```entropy_permutation(x)```		| Text |
 
-
+<h3 class="no-bg">Differential Entropy</h3>
 
 | Syntax | Description |
 | --- | ----------- |
@@ -154,29 +149,316 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 
 
 
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
+<h2 class="no-bg">Core Module</h2>
+
+| Syntax | Description |
+| --- | ----------- |
+| ```A_law(x,...)``` 		| Text |
+| ```Create_Dictionary(Nmax,...)``` 		| Text |
+| ```HistPlot(x,...)``` 		| Text |
+| ```Mu_law(x,...)``` 		| Text |
+| ```OutLiers(x,...)``` 		| Text |
+| ```PeriodStrength(x,...)``` 		| Text |
+| ```Periodogram(x,...)``` 		| Text |
+| ```RFB(x,...)``` 		| Text |
+| ```RFB_example_1(period=10,...)``` 		| Text |
+| ```RFB_example_2(periods=[3,...)``` 		| Text |
+| ```RFB_prange(x,...)``` 		| Text |
+| ```SVD(X,...)``` 		| Text |
+| ```TD_Embed(x,...)``` 		| Text |
+| ```TWM_algo(pfreq,...)``` 		| Text |
+| ```WPA_coeff(x,...)``` 		| Text |
+| ```WPA_plot(x,...)``` 		| Text |
+| ```WPA_temporal(x,...)``` 		| Text |
+| ```add_noise(x,...)``` 		| Text |
+| ```agg_angles(thetas,...)``` 		| Text |
+| ```amplitude_equalizer(x,...)``` 		| Text |
+| ```binSize_FD(x)``` 		| Text |
+| ```bin_width(x,...)``` 		| Text |
+| ```blackman_lobe(x,...)``` 		| Text |
+| ```cdf_mapping(x)``` 		| Text |
+| ```clean_phase(xp,...)``` 		| Text |
+| ```conv1d_fb(x,...)``` 		| Text |
+| ```conv1d_fft(x,...)``` 		| Text |
+| ```conv1d_nan(x,...)``` 		| Text |
+| ```conv2d_nan(x,...)``` 		| Text |
+| ```create_multidim_space_signal(x,...)``` 		| Text |
+| ```create_signal_1d(n=100,...)``` 		| Text |
+| ```create_signal_2d(n=100,...)``` 		| Text |
+| ```denorm_kernel(kernel,...)``` 		| Text |
+| ```dft_analysis(x,...)``` 		| Text |
+| ```dft_synthesis(mX,...)``` 		| Text |
+| ```direction_flow_map(X_theta,...)``` 		| Text |
+| ```dispersion_entropy(x,...)``` 		| Text |
+| ```dispersion_entropy_multiscale_refined(x,...)``` 		| Text |
+| ```dominent_freq(X,...)``` 		| Text |
+| ```dominent_freq_win(X,...)``` 		| Text |
+| ```entropy(x,...)``` 		| Text |
+| ```entropy_approx(X,...)``` 		| Text |
+| ```entropy_cond(x,...)``` 		| Text |
+| ```entropy_cross(x,...)``` 		| Text |
+| ```entropy_diff_cond(X,...)``` 		| Text |
+| ```entropy_diff_cond_self(X,...)``` 		| Text |
+| ```entropy_diff_joint(x,...)``` 		| Text |
+| ```entropy_diff_joint_cond(X,...)``` 		| Text |
+| ```entropy_differential(x,...)``` 		| Text |
+| ```entropy_granger_causality(X,...)``` 		| Text |
+| ```entropy_joint(x,...)``` 		| Text |
+| ```entropy_kld(x,...)``` 		| Text |
+| ```entropy_permutation(x,...)``` 		| Text |
+| ```entropy_sample(X,...)``` 		| Text |
+| ```entropy_spectral(x,...)``` 		| Text |
+| ```entropy_svd(x,...)``` 		| Text |
+| ```f0_detection(x,...)``` 		| Text |
+| ```ffrft(x,...)``` 		| Text |
+| ```fill_nans_1d(x,...)``` 		| Text |
+| ```fill_nans_2d(X,...)``` 		| Text |
+| ```filterDC(X,...)``` 		| Text |
+| ```filterDC_X(X,...)``` 		| Text |
+| ```filterDC_sGolay(X,...)``` 		| Text |
+| ```filter_X(X,...)``` 		| Text |
+| ```filter_powerline(X,...)``` 		| Text |
+| ```filter_smooth_gauss(X,...)``` 		| Text |
+| ```filter_smooth_mollifier(X,...)``` 		| Text |
+| ```filter_smooth_sGolay(X,...)``` 		| Text |
+| ```filter_with_kernel(X,...)``` 		| Text |
+| ```filtering_pipeline(X,...)``` 		| Text |
+| ```frft(x,...)``` 		| Text |
+| ```friedrichs_mollifier_kernel(window_size,...)``` 		| Text |
+| ```gaussian_kernel(window_length,...)``` 		| Text |
+| ```getQuickStats(x)``` 		| Text |
+| ```getStats(x,...)``` 		| Text |
+| ```get_activation_time(x,...)``` 		| Text |
+| ```get_repolarisation_time(x,...)``` 		| Text |
+| ```iffrft(x,...)``` 		| Text |
+| ```ifrft(x,...)``` 		| Text |
+| ```infomax(data,...)``` 		| Text |
+| ```isPower2(n)``` 		| Text |
+| ```low_resolution(x,...)``` 		| Text |
+| ```mean_minSE(x,...)``` 		| Text |
+| ```minMSE(x,...)``` 		| Text |
+| ```mutual_Info(x,...)``` 		| Text |
+| ```mutual_info_diff(X,...)``` 		| Text |
+| ```mutual_info_diff_self(X,...)``` 		| Text |
+| ```partial_transfer_entropy(X,...)``` 		| Text |
+| ```partial_transfer_entropy_(X,...)``` 		| Text |
+| ```peak_detection(mX,...)``` 		| Text |
+| ```peak_interp(mX,...)``` 		| Text |
+| ```phase_map(X,...)``` 		| Text |
+| ```phase_map_reconstruction(X,...)``` 		| Text |
+| ```plotJointEntropyXY(x,...)``` 		| Text |
+| ```quantize_FD(x,...)``` 		| Text |
+| ```quantize_signal(x,...)``` 		| Text |
+| ```show_compass(Ax_theta,...)``` 		| Text |
+| ```show_farmulas()``` 		| Text |
+| ```signal_delayed_space(x,...)``` 		| Text |
+| ```signal_diff(x,...)``` 		| Text |
+| ```signal_embeddings(x,...)``` 		| Text |
+| ```simplify_signal(x,...)``` 		| Text |
+| ```sinc_dirichlet(x,...)``` 		| Text |
+| ```sinc_interp(x)``` 		| Text |
+| ```sineModel_analysis(x,...)``` 		| Text |
+| ```sineModel_synthesis(fXt,...)``` 		| Text |
+| ```sine_spectrum(ipfreq,...)``` 		| Text |
+| ```sinetracks_cleaning(tfreq,...)``` 		| Text |
+| ```spatial_filter_adj(X,...)``` 		| Text |
+| ```spatial_filter_dist(X,...)``` 		| Text |
+| ```stft_analysis(x,...)``` 		| Text |
+| ```stft_synthesis(mXt,...)``` 		| Text |
+| ```transfer_entropy(X,...)``` 		| Text |
+| ```transfer_entropy_cond(X,...)``` 		| Text |
+| ```wavelet_filtering(x,...)``` 		| Text |
+| ```wavelet_filtering_win(x,...)``` 		| Text |
 
 
 
 <h2 class="no-bg" id="4-wavelet-analysis">Wavelet Analysis</h2>
+
+    | Syntax | Description |
+    | --- | ----------- |
+    | ```wavelet_filtering(x, wv='db3', threshold='optimal',...)``` 		| Text |
+    | ```wavelet_filtering_win(x, winsize=128, ..)``` 		| Text |
+
 <h2 class="no-bg" id="5-transform-techniques">Transform Techniques</h2>
 <h2 class="no-bg" id="6-biomedical">Biomedical Signals</h2>
+
+
+
+<h2 class="no-bg">EEG Module</h2>
+
+
+| Syntax | Description |
+| --- | ----------- |
+| ```eeg.ATAR(X,...)``` 		| Text |
+| ```eeg.ATAR_1Ch(x,...)``` 		| Text |
+| ```eeg.ATAR_mCh(X,...)``` 		| Text |
+| ```eeg.ATAR_mCh_noParallel(X,...)``` 		| Text |
+| ```eeg.CBIeye(Wnr,...)``` 		| Text |
+| ```eeg.Elimination(w,...)``` 		| Text |
+| ```eeg.Gen_SSFI(X,...)``` 		| Text |
+| ```eeg.GridInterpolation(pos,...)``` 		| Text |
+| ```eeg.ICA_filtering(X,...)``` 		| Text |
+| ```eeg.ICAremoveArtifact(x,...)``` 		| Text |
+| ```eeg.LinearAttenuanating(w,...)``` 		| Text |
+| ```eeg.Periodogram(x,...)``` 		| Text |
+| ```eeg.RhythmicDecomposition(E,...)``` 		| Text |
+| ```eeg.SoftThresholding(w,...)``` 		| Text |
+| ```eeg.TopoMap(pos,...)``` 		| Text |
+| ```eeg.Wfilter(x,...)``` 		| Text |
+| ```eeg.s1020_get_epos2d_(ch_names,...)``` 		| Text |
+| ```eeg.showTOPO(Zi,...)``` 		| Text |
+
+
+<h2 class="no-bg">MEA Module</h2>
+
+
+| Syntax | Description |
+| --- | ----------- |
+| ```mea.activation_repol_time_loc(X,...)``` 		| Text |
+| ```mea.activation_time_loc(X,...)``` 		| Text |
+| ```mea.align_cycles(X,...)``` 		| Text |
+| ```mea.analyse_mea_file(file_name,...)``` 		| Text |
+| ```mea.arrange_mea_grid(features,...)``` 		| Text |
+| ```mea.ch_idx2label(ch_idx,...)``` 		| Text |
+| ```mea.ch_label2idx(ch_list,...)``` 		| Text |
+| ```mea.channel_mask(mask_ch,...)``` 		| Text |
+| ```mea.compute_cv(Ax,...)``` 		| Text |
+| ```mea.egm_features(x,...)``` 		| Text |
+| ```mea.extract_egm(X,...)``` 		| Text |
+| ```mea.feature_mat(features,...)``` 		| Text |
+| ```mea.find_bad_channels_idx(X,...)``` 		| Text |
+| ```mea.get_stim_loc(X,...)``` 		| Text |
+| ```mea.mat_1_show(A,...)``` 		| Text |
+| ```mea.mat_list_show(A,...)``` 		| Text |
+| ```mea.mea_feature_map(features,...)``` 		| Text |
+| ```mea.plot_mea_grid(X,...)``` 		| Text |
+| ```mea.unarrange_mea_grid(M,...)``` 		| Text |
+
+
+<h2 class="no-bg">Stats Module</h2>
+
+| Syntax | Description |
+| --- | ----------- |
+| ```stats._getSS(p,...)``` 		| Text |
+| ```stats.entropy(x,...)``` 		| Text |
+| ```stats.f_oneway(*samples,...)``` 		| Text |
+| ```stats.get_stats(x,...)``` 		| Text |
+| ```stats.outliers(x,...)``` 		| Text |
+| ```stats.plotBoxes_groups(xi,...)``` 		| Text |
+| ```stats.quick_stats(x,...)``` 		| Text |
+| ```stats.test_2groups(x1,...)``` 		| Text |
+| ```stats.test_groups(x,...)``` 		| Text |
+
+
+<h2 class="no-bg">IO Module</h2>
+
+
+| Syntax | Description |
+| --- | ----------- |
+| ```io.read_bdf(file_name,...)``` 		| Text |
+| ```io.read_hdf(file_name,...)``` 		| Text |
+| ```io.read_surf_file(file_name)``` 		| Text |
+| ```io.view_hierarchical_order(file_obj,...)``` 		| Text |
+| ```io.write_vtk(filename,...)``` 		| Text |
+
+
+<h2 class="no-bg">Geometry Module</h2>
+
+
+
+| Syntax | Description |
+| --- | ----------- |
+| ```geometry.Elliptical(X,...)``` 		| Text |
+| ```geometry.FGSquircular(X,...)``` 		| Text |
+| ```geometry.RadialMapping(X,...)``` 		| Text |
+| ```geometry.SchwarzChristoffel(X,...)``` 		| Text |
+| ```geometry.ShirleyEA(X,...)``` 		| Text |
+| ```geometry.area_tri(p1,...)``` 		| Text |
+| ```geometry.car2spar(X)``` 		| Text |
+| ```geometry.create_random_map_2d(n_samples=500,...)``` 		| Text |
+| ```geometry.create_signal_1d(n=100,...)``` 		| Text |
+| ```geometry.create_signal_2d(n=100,...)``` 		| Text |
+| ```geometry.demo_1(n=100)``` 		| Text |
+| ```geometry.demo_2()``` 		| Text |
+| ```geometry.demo_3(seed=1)``` 		| Text |
+| ```geometry.dir_vectors(V,...)``` 		| Text |
+| ```geometry.divide_space(X,...)``` 		| Text |
+| ```geometry.downsampling_space(X,...)``` 		| Text |
+| ```geometry.downsampling_surface_points(V,...)``` 		| Text |
+| ```geometry.ds_mapping(X,...)``` 		| Text |
+| ```geometry.ellipj_clx(u,...)``` 		| Text |
+| ```geometry.filterDC_sGolay(X,...)``` 		| Text |
+| ```geometry.find_E1inE2(E1_xy,...)``` 		| Text |
+| ```geometry.forceUnitCircle(X)``` 		| Text |
+| ```geometry.getEdges_idx(tri)``` 		| Text |
+| ```geometry.getEdges_idxSet(tri)``` 		| Text |
+| ```geometry.getTriFaces(V,...)``` 		| Text |
+| ```geometry.getTriFaces_V2(V,...)``` 		| Text |
+| ```geometry.get_PCA(X,...)``` 		| Text |
+| ```geometry.get_adjacency_matrix_depth(V,...)``` 		| Text |
+| ```geometry.get_adjacency_matrix_dist(V,...)``` 		| Text |
+| ```geometry.get_boundary_points(XY)``` 		| Text |
+| ```geometry.get_boundary_points_r(XY,...)``` 		| Text |
+| ```geometry.get_boundary_v1(X,...)``` 		| Text |
+| ```geometry.get_boundary_v2(X,...)``` 		| Text |
+| ```geometry.get_center(X)``` 		| Text |
+| ```geometry.get_circle(r=1,...)``` 		| Text |
+| ```geometry.get_circular_grid(n=10,...)``` 		| Text |
+| ```geometry.get_ellipsoid(n1=100,...)``` 		| Text |
+| ```geometry.get_neibours(V,...)``` 		| Text |
+| ```geometry.get_optimal_projection(X,...)``` 		| Text |
+| ```geometry.get_plane(X,...)``` 		| Text |
+| ```geometry.get_sphare(n1=100,...)``` 		| Text |
+| ```geometry.get_square(n=5,...)``` 		| Text |
+| ```geometry.get_square_grid(n=10,...)``` 		| Text |
+| ```geometry.im2vec(file_name,...)``` 		| Text |
+| ```geometry.indx2points_edges(xy,...)``` 		| Text |
+| ```geometry.isEdge_inTri(T,...)``` 		| Text |
+| ```geometry.lin_inter(x1,...)``` 		| Text |
+| ```geometry.map_to_circle_v1(X,...)``` 		| Text |
+| ```geometry.map_to_circle_v2(X,...)``` 		| Text |
+| ```geometry.multi_plots(X,...)``` 		| Text |
+| ```geometry.node2C_to_adjacency_matrix(node2C,...)``` 		| Text |
+| ```geometry.opt_project(X,...)``` 		| Text |
+| ```geometry.plot_map_2d(X,...)``` 		| Text |
+| ```geometry.plot_proj(Xp,...)``` 		| Text |
+| ```geometry.points_insideCurve(curvXY,...)``` 		| Text |
+| ```geometry.project_on_hemisphere(X,...)``` 		| Text |
+| ```geometry.removeTri_Edges(F,...)``` 		| Text |
+| ```geometry.removeTri_edge(F,...)``` 		| Text |
+| ```geometry.remove_long_edges_k(V,...)``` 		| Text |
+| ```geometry.resize(image,...)``` 		| Text |
+| ```geometry.rotation_matrix(theta=0.7853981633974483)``` 		| Text |
+| ```geometry.selEdges(xy,...)``` 		| Text |
+| ```geometry.spar2car(S)``` 		| Text |
+| ```geometry.surface_plot_mayavi(V,...)``` 		| Text |
+| ```geometry.surface_reconstruction(V,...)``` 		| Text |
+| ```geometry.transform_image(X,...)``` 		| Text |
+| ```geometry.transform_image_all(file,...)``` 		| Text |
+| ```geometry.unwrape_3d(V,...)``` 		| Text |
+| ```geometry.unwrape_surface(V,...)``` 		| Text |
+| ```geometry.unwrape_surface_mirror(V,...)``` 		| Text |
+| ```geometry.vec2im(X,...)``` 		| Text |
+
+
+<h2 class="no-bg">Utils Module</h2>
+
+
+| Syntax | Description |
+| --- | ----------- |
+| ```utils.ProgBar(i,...)``` 		| Text |
+| ```utils.ProgBar_JL(i,...)``` 		| Text |
+| ```utils.ProgBar_float(i,...)``` 		| Text |
+| ```utils.ProgStatus(i,...)``` 		| Text |
+| ```utils.entropy(x,...)``` 		| Text |
+| ```utils.pretty_print(List,...)``` 		| Text |
+| ```utils.print_list(L,...)``` 		| Text |
+| ```utils.resize(image,...)``` 		| Text |
+| ```utils.view_hierarchical_order(file_obj,...)``` 		| Text |
+| ```utils.warning_on_one_line(message,...)``` 		| Text |
+
+
+
 <h2 class="no-bg" id="8-links">Helpful Links</h2>
 
 * [Homepage](http://spkit.github.io) - http://spkit.github.io
