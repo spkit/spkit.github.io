@@ -2,6 +2,20 @@
 title: User Guide
 layout: base_ex
 ---
+<style>
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+   border: 1px solid black;
+}
+blockquote {
+    border-left: solid blue;
+    padding-left: 10px;
+}
+</style>
+
+
 
 <div id="index-grid-full" class="section group">
   <div class="index-paragraph docutils container"><p> <strong> Please check <a href="https://spkit.github.io/guide" target="_blank"><font color="DodgerBlue">Example Gallery</font></a> or <a href="https://spkit.readthedocs.io/en/latest/" target="_blank"><font color="DodgerBlue">Documentation</font></a></strong></p></div>
@@ -81,8 +95,8 @@ Xf = sp.filter_X(X,band =[0.5],btype='highpass',order=5,fs=128.0,ftype='filtfilt
   | ```filtering_pipeline(X, fs,...)``` 		| Text |
   | ```spatial_filter_adj(X, AdjM, ftype='mean')``` 		| Text |
   | ```spatial_filter_dist(X, V, r=0.1, ftype='mean')``` 		| Text |
-  | ```wavelet_filtering(x, wv='db3', threshold='optimal', wpd_maxlevel=None)``` 		| Text |
-  | ```wavelet_filtering_win(x, winsize=128, wv='db3', threshold='optimal', filter_out_below=True)``` 		| Text |
+  | ```wavelet_filtering(x, wv='db3', threshold='optimal',...)``` 		| Text |
+  | ```wavelet_filtering_win(x, winsize=128, ..)``` 		| Text |
 
 <hr>
 
@@ -105,18 +119,6 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 
 <h2 class="no-bg" id="3-informtion-theory">Information Theory</h2>
 
-<style>
-table {
-    border-collapse: collapse;
-}
-table, th, td {
-   border: 1px solid black;
-}
-blockquote {
-    border-left: solid blue;
-    padding-left: 10px;
-}
-</style>
 
 
 | Syntax | Description |
