@@ -279,6 +279,18 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 | --- | ----------- |
 | ```wavelet_filtering(x, wv='db3', threshold='optimal',...)``` 		| Text |
 | ```wavelet_filtering_win(x, winsize=128, ..)``` 		| Text |
+| ```cwt.GaborWave(t,...)``` 		| Text |
+| ```cwt.GaussWave(t,...)``` 		| Text |
+| ```cwt.MorlateWave(t,...)``` 		| Text |
+| ```cwt.PoissonWave(t,...)``` 		| Text |
+| ```cwt.ScalogramCWT(x,...)``` 		| Text |
+| ```cwt.ShannonWave(t,...)``` 		| Text |
+| ```cwt.ShannonWaveV1(t,...)``` 		| Text |
+| ```cwt.ShannonWaveV2(t,...)``` 		| Text |
+| ```cwt.WavePSD(x,...)``` 		| Text |
+| ```cwt.cMaxicanHatWave(t,...)``` 		| Text |
+| ```cwt.cMaxicanHatWaveV1(t,...)``` 		| Text |
+| ```cwt.compare_cwt_example(x,...)``` 		| Text |
 
 
 <h2 class="no-bg" id="5-transform-techniques">Transform Techniques</h2>
