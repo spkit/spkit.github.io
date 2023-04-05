@@ -66,6 +66,24 @@ Xf = sp.filter_X(X,band =[0.5],btype='highpass',order=5,fs=128.0,ftype='filtfilt
 
 <h3 class="no-bg" id="">Filtering</h3>
 
+| Syntax | Description |
+| --- | ----------- |
+| ```filterDC(X, alpha=256,)``` 		| Text |
+| ```filterDC_sGolay(X, window_length=127, polyorder=3)``` 		| Text |
+| ```filter_X(X, fs=128.0, band=[0.5], btype='highpass', ftype='filtfilt')``` 		| Text |
+| ```filter_powerline(X, fs=1000, powerline=50)``` 		| Text |
+| ```filter_smooth_gauss(X, window_length=11)``` 		| Text |
+| ```filter_smooth_mollifier(X, window_length=11)``` 		| Text |
+| ```filter_smooth_sGolay(X, window_length=127, polyorder=3)``` 		| Text |
+| ```filter_with_kernel(X, kernel, iterations=1)``` 		| Text |
+| ```filtering_pipeline(X, fs, trim=[0, 0], iir_alpha=0, sg_window=1001, sg_polyorder=1, sg_itr=1, filter_lpf=None, filter_pwrline=None)``` 		| Text |
+| ```spatial_filter_adj(X, AdjM, ftype='mean')``` 		| Text |
+| ```spatial_filter_dist(X, V, r=0.1, ftype='mean')``` 		| Text |
+| ```wavelet_filtering(x, wv='db3', threshold='optimal', wpd_maxlevel=None)``` 		| Text |
+| ```wavelet_filtering_win(x, winsize=128, wv='db3', threshold='optimal', filter_out_below=True)``` 		| Text |
+
+
+
 
 ```python
 import spkit as sp
