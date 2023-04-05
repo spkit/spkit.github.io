@@ -86,22 +86,37 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 <h2 class="no-bg" id="3-informtion-theory">Information Theory</h2>
 | Syntax | Description |
 | --- | ----------- |
-|```entropy(x)```		| Text |
-|```entropy_approx(X, m, r) -> float```		| Text |
+|```entropy(x)```		              | Text |
 |```entropy_cond(x)```		| Text |
 |```entropy_cross(x)```		| Text |
-|```entropy_diff_cond(X)```		| Text |
-|```entropy_diff_cond_self(X)```		| Text |
-|```entropy_diff_joint(x, y)```		| Text |
-|```entropy_diff_joint_cond(X)```		| Text |
-|```entropy_differential(x)```		| Text |
-|```entropy_granger_causality(X)```		| Text |
 |```entropy_joint(x)```		| Text |
-|```entropy_kld(x)```		| Text |
+|```mutual_Info(x, y)```	| Text |
+|```entropy_kld(x)```		  | Text |
+|```entropy_approx(X, m, r)```		| Text |
+|```entropy_sample(X, m, r)```	| Text |
+|```entropy_spectral(x)```		  | Text |
+|```entropy_svd(x)```		        | Text |
 |```entropy_permutation(x)```		| Text |
-|```entropy_sample(X, m, r)```		| Text |
-|```entropy_spectral(x)```		| Text |
-|```entropy_svd(x)```		| Text |
+
+
+
+
+
+
+
+| Syntax | Description |
+| --- | ----------- |
+|```entropy_differential(x)```	| Text |
+|```entropy_diff_cond(X)```		  | Text |
+|```entropy_diff_cond_self(X)```| Text |
+|```entropy_diff_joint(x, y)```	| Text |
+|```entropy_diff_joint_cond(X)```| Text |
+|```mutual_info_diff_self(X)```| Text |
+|```mutual_info_diff(X, Y)```| Text |
+|```transfer_entropy(X, Y, present_first=True)```| Text |
+|```transfer_entropy_cond(X, Y, Z, present_first=True)```| Text |
+|```partial_transfer_entropy(X, Y, Z)```| Text |
+|```entropy_granger_causality(X)```| Text |
 
 
 
