@@ -102,21 +102,38 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 
 
 
-
-
 |] Syntax |] Description ]|
 | --- | ----------- |
-|]```entropy_differential(x)```	|] Text ]|
-|]```entropy_diff_cond(X)```		  |] Text ]|
-|]```entropy_diff_cond_self(X)```|] Text ]|
-|]```entropy_diff_joint(x, y)```	|] Text ]|
-|]```entropy_diff_joint_cond(X)```|] Text ]|
-|]```mutual_info_diff_self(X)```|] Text ]|
-|]```mutual_info_diff(X, Y)```|] Text ]|
-|]```transfer_entropy(X, Y)```|] Text ]|
-|]```transfer_entropy_cond(X, Y, Z)```|] Text ]|
-|]```partial_transfer_entropy(X, Y, Z)```|] Text ]|
-|]```entropy_granger_causality(X)```|] Text ]|
+|] ```entropy_differential(x)```	|] Text ]|
+|] ```entropy_diff_cond(X)```		  |] Text ]|
+|] ```entropy_diff_cond_self(X)```|] Text ]|
+|] ```entropy_diff_joint(x, y)```	|] Text ]|
+|] ```entropy_diff_joint_cond(X)```|] Text ]|
+|] ```mutual_info_diff_self(X)```|] Text ]|
+|] ```mutual_info_diff(X, Y)```|] Text ]|
+|] ```transfer_entropy(X, Y)```|] Text ]|
+|] ```transfer_entropy_cond(X, Y, Z)```|] Text ]|
+|] ```partial_transfer_entropy(X, Y, Z)```|] Text ]|
+|] ```entropy_granger_causality(X)```|] Text ]|
+
+
+
+
+Entropy Functions:
+~~~~~~~~~
+
+.. list-table:: **Clocking (running LFSR)**
+   :widths: 30 50
+   :header-rows: 1
+
+   * - Method
+     - Discription
+   * - ``entropy(x)``
+     - Executing/running one cycle
+   * - ``entropy(x)``
+     - Executing/running k cycles
+   * - ``entropy(x)``
+     - Executing/running a full period of cylces
 
 
 
