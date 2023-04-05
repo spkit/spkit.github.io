@@ -103,6 +103,19 @@ Xf = sp.filter_X(X,band =[40],btype='lowpass',order=5,fs=128.0,ftype='filtfilt')
 
 <h2 class="no-bg" id="3-informtion-theory">Information Theory</h2>
 
+<style>
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+   border: 1px solid black;
+}
+blockquote {
+    border-left: solid blue;
+    padding-left: 10px;
+}
+</style>
+
 
 | Syntax | Description |
 | --- | ----------- |
