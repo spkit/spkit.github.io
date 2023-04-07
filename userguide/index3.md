@@ -53,48 +53,51 @@ Download the repository or clone it with git, after cd in directory build it fro
 python setup.py install
 ```
 
-
+# Filtering
 
 1\. Filtering
 ------------
 
-  * <h3 id="1-1-removing-drift">1.1. Removing Drift</h3>
+  * <h2 id="1-1-removing-drift">1.1. Removing Drift</h2>
 
     * 1.1.1.  **[High Pass filter](#1-install)**
     * 1.1.2.  **[IIR-1st-order filter](#2-filtering)**
     * 1.1.3.  **[Savitzky–Golay filter](#3-informtion-theory)**
 
-  * <h3 id="1-2-smoothing">1.2. Smoothing</h3>
+  * <h2 id="1-2-smoothing">1.2. Smoothing</h2>
 
     * 1.2.1.  **[Low Pass filter](#4-wavelet-analysis)**
     * 1.2.2.  **[Savitzky–Golay filter](#5-transform-techniques)**
     * 1.2.3.  **[Gaussian filter](#6-biomedical)**
     * 1.2.4.  **[Mollifier](#7-machine-learning)**
 
-  * <h3 id="1-install">1.3. Basic filtering</h3>
+  * <h2 id="1-install">1.3. Basic filtering</h2>
 
     * 1.3.1.  **[Butter-worth filter LP/HP/BS/BR](#4-wavelet-analysis)**
 
-  * <h3 id="1-install">1.4. Wavelet Filtering</h3>
+  * <h2 id="1-install">1.4. Wavelet Filtering</h2>
 
     * 1.4.1.  **[Wavelet filtering on whole signal](#5-transform-techniques)**
     * 1.4.2.  **[Wavelet filtering on smaller windows](#6-biomedical)**
     * 1.4.3.  **[Wavelet Packet Analysis filter](#7-machine-learning)**
 
 
-  * <h3 id="1-install">1.5. Kernel Filtering</h3>
+  * <h2 id="1-install">1.5. Kernel Filtering</h2>
     * 1.5.1.  **[Filtering with Custom kernel](#5-transform-techniques)**
 
-* <h3 id="1-install">1.6. Spatial Filter</h3>
+  * <h2 id="1-install">1.6. Spatial Filter</h2>
 
-  * 1.6.1.  **[Proximity based filter](#5-transform-techniques)**
-  * 1.6.2.  **[Connectivity (Adjuscy Matrix) based filter](#5-transform-techniques)**
+    * 1.6.1.  **[Proximity based filter](#5-transform-techniques)**
+    * 1.6.2.  **[Connectivity (Adjuscy Matrix) based filter](#5-transform-techniques)**
 
 
-2. Information Theory 
+# Information Theory
+
+
+2\. Information Theory 
 ---------------------
 
-* <h3 id="1-1-removing-drift">2.1. Signal as IID Source</h3>
+* <h2 id="1-1-removing-drift">2.1. Signal as IID Source</h2>
 
   * 2.1.1.  **[Shannan entropy](#1-install)**
   * 2.1.2.  **[Rényi entropy](#2-filtering)**
@@ -104,7 +107,7 @@ python setup.py install
   * 2.1.3.  **[Cross entropy](#3-informtion-theory)**
   * 2.1.3.  **[Kullback–Leibler divergence](#3-informtion-theory)**
 
-* <h3 id="1-1-removing-drift">2.2. Signal as non-IID Source</h3>
+* <h2 id="1-1-removing-drift">2.2. Signal as non-IID Source</h2>
 
 * 2.2.1.  **[Approximate Entropy](#1-install)**
 * 2.2.2.  **[Sample Entropy](#2-filtering)**
@@ -114,13 +117,13 @@ python setup.py install
 * 2.2.6.  **[Permutation Entropy](#3-informtion-theory)**
 * 2.2.7.  **[Dispersion Entropy](#3-informtion-theory)**
 
-* <h3 id="1-1-removing-drift">2.3. Dispersion Entropy</h3>
+* <h2 id="1-1-removing-drift">2.3. Dispersion Entropy</h2>
 
 * 2.3.1.  **[Dispersion Entropy](#1-install)**
 * 2.3.2.  **[Multi-scale Dispersion Entropy](#1-install)**
 
 
-* <h3 id="1-1-removing-drift">2.4. Differential Entropy ~ Gaussian Distribution</h3>
+* <h2 id="1-1-removing-drift">2.4. Differential Entropy ~ Gaussian Distribution</h2>
 
 * 2.1.1  **[Shannan entropy](#1-install)**
 * 2.1.2  **[Rényi entropy](#2-filtering)**
