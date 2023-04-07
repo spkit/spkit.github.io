@@ -28,7 +28,7 @@ layout: base_ex
 Installation
 ------------
 
-<h2 class="no-bg" id="1-install">Installation</h2>
+<h2 id="1-install">Installation</h2>
 
 Installing `spkit` is simple ans easy
 
