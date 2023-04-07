@@ -26,7 +26,7 @@ layout: base_ex
 
 <h2 class="no-bg" id="1-install">Installation</h2>
 
-Installing `spkit` is simple ans easy
+Installing `spkit` is simple and easy
 
 **with pip**
 
