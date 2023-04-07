@@ -50,11 +50,11 @@ Download the repository or clone it with git, after cd in directory build it fro
 python setup.py install
 ```
 
-<h1 style="background: #198dbc;" id="1-filtering">1. Filtering</h1>
+<h1 style="background: #97c6d2;" id="1-filtering">1. Filtering</h1>
 
 
-1\. Filtering
-------------
+<!-- 1\. Filtering
+------------ -->
 
 <h2 id="1-1-removing-drift">1.1. Removing Drift</h2>
 * 1.1.1.  **[High Pass filter](#1-install)**
@@ -84,12 +84,12 @@ python setup.py install
 * 1.6.2.  **[Connectivity (Adjuscy Matrix) based filter](#5-transform-techniques)**
 
 
-# Information Theory
+<!-- # Information Theory -->
 
-<h1 style="background: #198dbc;" id="2-infomation">2. Information Theory</h1>
+<h1 style="background: #97c6d2;" id="2-infomation">2. Information Theory</h1>
 
-2\. Information Theory 
----------------------
+<!-- 2\. Information Theory 
+--------------------- -->
 
 <h2 id="1-1-removing-drift">2.1. Signal as IID Source</h2>
 
@@ -130,13 +130,13 @@ python setup.py install
 
 
 
-<h1 style="background: #198dbc;" id="3-infomation">3. Ramanujan Filter Bank (RBF)</h1>
+<h1 style="background: #97c6d2;" id="3-infomation">3. Ramanujan Filter Bank (RBF)</h1>
 * 3.1  **[Period Estimation using RBF](#1-install)**
 * 3.2  **[Period Strength Analysis](#2-filtering)**
 
 
 
-<h1 style="background: #198dbc;" id="3-infomation">4. Analysis & Synthesis Models</h1>
+<h1 style="background: #97c6d2;" id="3-infomation">4. Analysis & Synthesis Models</h1>
 
 * 4.1  **[Discreet Fourier Transform: Analysis & Synthesis](#1-install)**
 * 4.2  **[Short Time Fourier Transform: Analysis & Synthesis](#2-filtering)**
@@ -144,10 +144,10 @@ python setup.py install
 * 4.4  **[Sinasodal Model: Analysis & Synthesis](#3-informtion-theory)**
 
 
-<h1 style="background: #198dbc;" id="3-infomation">5. Multi-Electrode-Array (MEA) Processing</h1>
+<h1 style="background: #97c6d2;" id="3-infomation">5. Multi-Electrode-Array (MEA) Processing</h1>
 
 
-<h1 style="background: #198dbc;" id="3-infomation">5. Geomatrical Transformations</h1>
+<h1 style="background: #97c6d2;" id="3-infomation">5. Geomatrical Transformations</h1>
 
 * 5.1  **[Discreet Fourier Transform: Analysis & Synthesis](#1-install)**
 * 5.2  **[Short Time Fourier Transform: Analysis & Synthesis](#2-filtering)**
