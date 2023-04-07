@@ -57,29 +57,35 @@ python setup.py install
 ------------
 
 <h2 class="no-bg" id="1-1-removing-drift">1.1. Removing Drift</h2>
+
 * 1.1.1.  **[High Pass filter](#1-install)**
 * 1.1.2.  **[IIR-1st-order filter](#2-filtering)**
 * 1.1.3.  **[Savitzky–Golay filter](#3-informtion-theory)**
 
 <h2 class="no-bg" id="1-2-smoothing">1.2. Smoothing</h2>
+
 * 1.2.1.  **[Low Pass filter](#4-wavelet-analysis)**
 * 1.2.2.  **[Savitzky–Golay filter](#5-transform-techniques)**
 * 1.2.3.  **[Gaussian filter](#6-biomedical)**
 * 1.2.4.  **[Mollifier](#7-machine-learning)**
 
 <h2 id="1-install">1.3. Basic filtering</h2>
+
 * 1.3.1.  **[Butter-worth filter LP/HP/BS/BR](#4-wavelet-analysis)**
 
 <h2 class="no-bg" id="1-install">1.4. Wavelet Filtering</h2>
+
 * 1.4.1.  **[Wavelet filtering on whole signal](#5-transform-techniques)**
 * 1.4.2.  **[Wavelet filtering on smaller windows](#6-biomedical)**
 * 1.4.3.  **[Wavelet Packet Analysis filter](#7-machine-learning)**
 
 
 <h2 class="no-bg" id="1-install">1.5. Kernel Filtering</h2>
+
 * 1.5.1.  **[Filtering with Custom kernel](#5-transform-techniques)**
 
-* <h2 id="1-install">1.6. Spatial Filter</h2>
+<h2 id="1-install">1.6. Spatial Filter</h2>
+
 * 1.6.1.  **[Proximity based filter](#5-transform-techniques)**
 * 1.6.2.  **[Connectivity (Adjuscy Matrix) based filter](#5-transform-techniques)**
 
@@ -133,6 +139,7 @@ python setup.py install
 <h1 style="background: #97c6d2;" id="3-infomation">3. Ramanujan Filter Bank (RBF)</h1>
 
 <h2 style="background: #97c6d2;" id="3-infomation">3. Ramanujan Filter Bank (RBF)</h2>
+
 * 3.1  **[Period Estimation using RBF](#1-install)**
 * 3.2  **[Period Strength Analysis](#2-filtering)**
 
@@ -153,6 +160,7 @@ python setup.py install
 <h1 style="background: #97c6d2;" id="3-infomation">5. Geomatrical Transformations</h1>
 
 <h2 id="3-infomation">5. Geomatrical Transformations</h2>
+
 * 5.1  **[Discreet Fourier Transform: Analysis & Synthesis](#1-install)**
 * 5.2  **[Short Time Fourier Transform: Analysis & Synthesis](#2-filtering)**
 
