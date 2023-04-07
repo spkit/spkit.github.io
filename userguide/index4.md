@@ -67,9 +67,11 @@ python setup.py install
 * 1.2.3.  **[Gaussian filter](#6-biomedical)**
 * 1.2.4.  **[Mollifier](#7-machine-learning)**
 
-<h2 class="no-bg" id="1-install">1.3. Basic filtering</h2>
+<h2 class="no-bg" id="1-2-smoothing">1.3. Filtering Powerline (50Hz/60Hz) Interfarence</h2>
 
-* 1.3.1.  **[Butter-worth filter LP/HP/BS/BR](#4-wavelet-analysis)**
+* 1.2.1.  **[Moving Average filter](#4-wavelet-analysis)**
+* 1.2.2.  **[IIR filter](#5-transform-techniques)**
+
 
 <h2 class="no-bg" id="1-install">1.4. Wavelet Filtering</h2>
 
@@ -86,6 +88,18 @@ python setup.py install
 
 * 1.6.1.  **[Proximity based filter](#5-transform-techniques)**
 * 1.6.2.  **[Connectivity (Adjuscy Matrix) based filter](#5-transform-techniques)**
+
+
+<h2 class="no-bg" id="1-install">1.7. Basic filtering</h2>
+
+* 1.7.1.  **[Low-pass filter](#4-wavelet-analysis)**
+* 1.7.2.  **[High pass filter](#4-wavelet-analysis)**
+* 1.7.3.  **[Band pass filter](#4-wavelet-analysis)**
+* 1.7.4.  **[Band reject /band stop filter](#4-wavelet-analysis)**
+
+<h2 class="no-bg" id="1-install">1.8. Filtering Pipeline</h2>
+
+* 1.8.1.  **[Filtering Pipeline](#4-wavelet-analysis)**
 
 
 <!-- # Information Theory -->
@@ -131,6 +145,14 @@ python setup.py install
 * 2.1.3  **[Joint Entropy](#3-informtion-theory)**
 * 2.1.3  **[Cross entropy](#3-informtion-theory)**
 * 2.1.3  **[Kullback–Leibler divergence](#3-informtion-theory)**
+
+
+
+<h2 id="3-RBF">3. EEG Artifact Removal Algorithms</h2>
+
+* 2.1.1  **[ICA Based Algorithm](#2-filtering)**
+* 2.1.2  **[Wavelet Based Algorithm](#2-filtering)**
+* 2.1.3  **[ATAR Algorithm](#1-install)**
 
 
 <h2 id="3-RBF">3. Ramanujan Filter Bank (RBF)</h2>
