@@ -79,7 +79,7 @@ python setup.py install
 <h2 id="1-install">1.5. Kernel Filtering</h2>
 * 1.5.1.  **[Filtering with Custom kernel](#5-transform-techniques)**
 
-* <h2 id="1-install">1.6. Spatial Filter</h2>
+<h2 id="1-install">1.6. Spatial Filter</h2>
 * 1.6.1.  **[Proximity based filter](#5-transform-techniques)**
 * 1.6.2.  **[Connectivity (Adjuscy Matrix) based filter](#5-transform-techniques)**
 
