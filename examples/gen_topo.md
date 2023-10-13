@@ -115,37 +115,6 @@ According to Parseval's theorem, energy in time-domain and frequency domain rema
 
 
 ```python
-%matplotlib notebook
-
-N = 128
-skip = 32
-diff = 50
-
-tx = 1000*np.arange(X.shape[0])/fs
-
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10,4),gridspec_kw={'width_ratios': [1,2]})
-
-for i in range(0,len(X)-3*N,skip):
-    ax1.clear()
-    # ee = np.sqrt(np.abs(X[i:i+N,:]**2).sum(0)) #RMS
-    # ee = np.abs(X[i:i+N,:]**2).sum(0))         #Energy
-    #ee = np.log10(np.abs(X[i:i+N,:]**2).sum(0))/N + 1)       #Power(dB) +1 keeps avoiding huge negative values
-    ee = (np.abs(X[i:i+N,:]**2).sum(0))/N       #Power
-    
-    _ = sp.eeg.TopoMap(pos,ee,res=128, showplot=True,axes=ax1,contours=True,showsensors=True,
-            interpolation=None,shownames=True, ch_names=ch_names,showhead=True,vmin=None,vmax=None,
-            returnIm = False,fontdict=None)
-    
-    ax2.clear()
-    ax2.plot(tx[i:i+3*N],X[i:i+3*N,:] + diff*np.arange(14))
-    ax2.set_yticks(diff*np.arange(14))
-    ax2.set_yticklabels(ch_names)
-    ax2.set_xlabel('time (ms)')
-    ax2.set_xlim([tx[i],tx[i+3*N]])
-    ax2.grid(alpha=0.4)
-    ax2.axvline(tx[i+N],color='r')
-    fig.canvas.draw()
-
 
 %matplotlib notebook
 
