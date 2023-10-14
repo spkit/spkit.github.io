@@ -63,6 +63,8 @@ markdown file, you cannot use markdown syntax within that element's contents.
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Entropy_EEG_Example.ipynb" target="_blank">Multi-channel EEG signal: Mutual Info, Cross, Joint, Entropy</a></span></p>
      </div>
    </div>
+  <div class="toctree-wrapper compound"></div>
+  <hr style="width:1%;margin-left: 0px;">
    <div class="sphx-glr-thumbcontainer" tooltip="Venn Diagram and Mutual Info."><div class="figure align-default" id="id3">
      <img alt="" src="{{"assets/images/MutualInfo_Venn_1.gif" | relative_url }}"/>
      <p class="caption"><span class="caption-text"><a class="reference internal" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?urlpath=lab/tree/spkit_SP" target="_blank">Mutual Information and Venn Diagram</a></span>
