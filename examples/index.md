@@ -67,6 +67,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
     <img alt="" src="{{"assets/images/dis_entropy_4.png" | relative_url }}"/>
     <p class="caption"><span class="caption-text"><a class="reference internal" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Dispersion_Entropy_1_demo_EEG.ipynb" target="_blank">Dispersion Entropy</a></span></p>
     </div>
+      </div>
   <div class="toctree-wrapper compound"></div>
   <hr style="width:1%;margin-left: 0px;">
    <div class="sphx-glr-thumbcontainer" tooltip="Venn Diagram and Mutual Info."><div class="figure align-default" id="id3">
@@ -76,7 +77,7 @@ markdown file, you cannot use markdown syntax within that element's contents.
      </div>
    </div>
 
-  </div>
+  
 
 <!---================================================================ -->
   <div class="toctree-wrapper compound"></div>
