@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SpKit &#8212; Signal Processing Toolkit</title>
+    <link rel="stylesheet" href="/assets/css/nature.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/nature.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/gallery.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="/assets/js/documentation_options.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="/assets/js/underscore.js"></script>
+    <script type="text/javascript" src="/assets/js/doctools.js"></script>
+    <script type="text/javascript" src="/assets/js/copybutton.js"></script>
+    <link rel="shortcut icon" href="/assets/logo/spkit.ico"/>
+    <link rel="search" title="Search" href="/search.html"/>
+    <link rel="next" title="About" href="/about.html"/>
+    <meta content="True" name="HandheldFriendly">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="signal processing, machine learning, wavelet analysis, information theory">
+
+    <script type="text/javascript">
+      function updateTopMenuPosition(height, width) {
+            if($(window).scrollTop() > height && $(window).outerWidth() > 1024) {
+                //begin to scroll
+                $('.related-wrapper').css("z-index", 1000)
+                $('.related-wrapper').css("position", "sticky")
+                $('.related-wrapper').css("top", 0)
+                $('.related-wrapper').css("width", width)
+            } else {
+                //lock it back into place
+                $('.related-wrapper').css("position", "relative")
+                $('.related-wrapper').css("top", 0)
+            }
+        }
+
+        $(function() {
+            var banner_height = $('#logo-banner').outerHeight()
+            var banner_width = $('#logo-banner').outerWidth()
+            var width = $('.related-wrapper').css("height", $('.related').outerHeight())
+
+            updateTopMenuPosition(banner_height, width)
+
+            $(window).scroll(function(event) {
+                updateTopMenuPosition(banner_height, width)
+            });
+
+            $(window).resize(function(event) {
+                var banner_width = $('#logo-banner').outerWidth()
+                var menu_height = $('.related').outerHeight()
+                $('.related').css("width", banner_width)
+                $('.related-wrapper').css("height", menu_height)
+                updateTopMenuPosition(banner_height, width)
+            })
+        });
+
+        </script>
+
+    <script type="text/javascript" src="/assets/js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+      (function($) {
+          $(function() {
+      	$('.jcarousel').jcarousel();
+              $('.jcarousel-control-prev')
+                  .on('active.jcarouselcontrol', function() {
+                      $(this).removeClass('inactive');
+                  })
+                  .on('inactive.jcarouselcontrol', function() {
+                      $(this).addClass('inactive');
+                  })
+                  .jcarouselControl({
+                      target: '-=1'
+                  });
+
+              $('.jcarousel-control-next')
+                  .on('active.jcarouselcontrol', function() {
+                      $(this).removeClass('inactive');
+                  })
+                  .on('inactive.jcarouselcontrol', function() {
+                      $(this).addClass('inactive');
+                  })
+                  .jcarouselControl({
+                      target: '+=1'
+                  });
+
+              $('.jcarousel-pagination')
+                  .on('active.jcarouselpagination', 'a', function() {
+                      $(this).addClass('active');
+                  })
+                  .on('inactive.jcarouselpagination', 'a', function() {
+                      $(this).removeClass('active');
+                  })
+                  .jcarouselPagination();
+          });
+      })(jQuery);
+      </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59299155-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-59299155-3');
+</script>
+</head>
+
+<body>
+
+<!--- Header  start-->
+<div id="logo-banner">
+  <div class="logo">
+  <a href="/"><img src="/assets/logo/logo.png" alt="spkit logo"  border="0" /></a>
+  </div>
+  <div class="tags">
+  <ul>
+    <li>&#9672; Easy to use toolkit for signal processing and analysis</li>
+    <li>&#9672; More of biomedical signal analysis with visualization</li>
+    <li>&#9672; Includes basic machine learning models with visualization</li>
+    <li>&#9672; Open source</li>
+<!--     <li>&#9672; </li> -->
+  </ul>
+  </div>
+  <div class="banner">
+  <h2>Signal Processing Toolkit</h2>
+  <h4><i>Simple and easy to use for signal analysis and predictive analysis</i></h4>
+  </div>
+</div>
+
+
+<div class=related-wrapper>
+  <div class="related" role="navigation" aria-label="related navigation">
+  <ul>
+  <li><a href="/">Home</a> |&nbsp;</li>
+  <li><a href="/userguide">User Guide</a> |&nbsp;</li>
+  <li><a href="/docs">Documentation</a> |&nbsp;</li>
+  <li><a href="/examples">Examples</a> |&nbsp;</li>
+  <li><a href="/tutorials">Tutorials</a> |&nbsp;</li>
+  <li><a href="/updates">Updates</a> |&nbsp;</li>
+  <li><a href="/about">About</a> |&nbsp;</li>
+  <li><a href="https://github.com/Nikeshbajaj/spkit/discussions?discussions_q=" target="_blank">Discussion Forum</a> |&nbsp;</li>
+  </ul>
+  </div>
+</div>
+<!--- Header  end-->
+
+
+<!--- Sidebar  start-->
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+  <div class="sphinxsidebarwrapper">
+  <a class="reference external" href="https://pypi.org/project/spkit" target="_blank"><img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/Nikeshbajaj/spkit?label=latest%20version&style=plastic"></a>
+  <a class="reference external" href="https://pepy.tech/project/spkit" target="_blank"><img src="https://static.pepy.tech/personalized-badge/spkit?period=total&amp;units=international_system&amp;left_color=black&amp;right_color=orange&amp;left_text=downloads" alt="PyPI - Downloads" /></a>
+  <a class="reference external" href="https://pypi.python.org/pypi/spkit" target="_blank"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/spkit?style=plastic"></a>
+  <!--- <img alt="PyPI - Downloads" src="https://static.pepy.tech/personalized-badge/spkit?period=total&units=international_system&left_color=grey&right_color=blue&left_text=downloads">-->
+  <!--- <h4>Version - 0.0.9.4</h4>-->
+  <ul class="simple">
+  <li><div id="getting-started"><a href="/userguide" class="btn btn-primary">Getting Started</a></div></li>
+  <li><div id="docs"><a href="https://spkit.github.io/docs" target="_blank" class="btn btn-primary">Documentation v2</a></div></li>
+  <li><div id="docs"><a href="https://spkit.readthedocs.io/" target="_blank" class="btn btn-primary">Documentation</a></div></li>
+<!--   <li><div id="docs"><a href="https://spkit.github.io/docs" target="_blank" class="btn btn-outline-primary">Documentation v2</a></div></li> -->
+  <li><div id="examples"><a href="/examples" class="btn btn-primary">Examples</a></div></li>
+  <li><div id="github"><a href="https://github.com/Nikeshbajaj/spkit/fork" target="_blank" class="btn btn-primary">Github</a></div></li>
+<!--   <li><div id="book"><a href="https://spkit.github.io/guide" target="_blank" class="btn btn-primary">HTML Guide</a></div></li> -->
+  <li><div id="book"><a href="https://github.com/Nikeshbajaj/spkit/discussions?discussions_q=" target="_blank" class="btn btn-primary">Discussion Forum</a></div></li>
+  </ul>
+
+  <h4>Updates:</h4>
+  <ul class="simple">
+  <li>&bull; Released: 0.0.9.6</li>
+  <li>&bull; Discussion Forum</li>
+  <li>&bull; Ramanujam methods for period estimation</li>
+  <li>&bull; Fractional Fourier Trasform.</li>
+  <li>&bull; Sinasodal Model for analysis and sythesis.</li>
+  <li>&bull; EEG Artifact removal algorithms (<strong>ATAR</strong> and <strong>ICA</strong> based) are added.</li>
+  <li>&bull; More entropy functions are added.</li>
+  <li>&bull; CWT functions are added for Scalogram.</li>
+  </ul>
+
+  <h4> Giving credit & Citing</h4>
+  <ul class="simple">
+  <li><p>All material: Free Software: <strong>The 3-Clause BSD License</strong>.</p></li><li><p><a href="about.html">About</a></p></li>
+  <li><p>Please consider <a href="/about.html#citing"><strong>citing</strong></a>.</p></li>
+  </ul>
+
+
+  <h4> Visitors </h4>
+  <ul class="simple">
+  <li>
+  <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=eQr8xSBiKVuSq6m0psK-Ey9TZ7rLzjRX-MpatyfFGQI"></script>
+  <!--<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=eQr8xSBiKVuSq6m0psK-Ey9TZ7rLzjRX-MpatyfFGQI"></script>
+  -->
+  </li></ul>
+
+  </div>
+</div>
+<!--- Sidebar  start-->
+
+
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+  <div class="body" role="main">
+      <h1 id="generating-topographical-map">Generating Topographical Map</h1>
+
+<h2 id="generating-spatio-temporal-map">Generating Spatio-Temporal Map</h2>
+
+<p>Map at every time point x(t)</p>
+
+<h3 id="at-t0-x0">At t=0, X[0]</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">spkit</span> <span class="k">as</span> <span class="n">sp</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">ch_names</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">load_data</span><span class="p">.</span><span class="nf">eegSample</span><span class="p">()</span>
+<span class="n">fs</span><span class="o">=</span><span class="mi">128</span>
+
+<span class="c1"># get the locations of electrodes on 2D plane according to 10-20 system
+# "pos" for channels as in list ch_names
+# ch_names = ['AF3','F7','F3','FC5','T7','P7','O1','O2','P8','T8','FC6','F4','F8','AF4']
+</span>
+<span class="n">pos</span><span class="p">,</span> <span class="n">ch1</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">eeg</span><span class="p">.</span><span class="nf">s1020_get_epos2d_</span><span class="p">(</span><span class="n">ch_names</span><span class="p">,</span> <span class="n">reorder</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+
+<span class="n">Zi</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">eeg</span><span class="p">.</span><span class="nc">TopoMap</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">res</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">showplot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">axes</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">contours</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">showsensors</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">interpolation</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">shownames</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">ch_names</span><span class="o">=</span><span class="n">ch_names</span><span class="p">,</span><span class="n">showhead</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+            <span class="n">returnIm</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>    
+</code></pre></div></div>
+
+<p><img src="figures/eeg_topo_1.png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="nf">imshow</span><span class="p">(</span><span class="n">Zi</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="sh">'</span><span class="s">jet</span><span class="sh">'</span><span class="p">,</span><span class="n">origin</span><span class="o">=</span><span class="sh">'</span><span class="s">lower</span><span class="sh">'</span><span class="p">)</span>
+
+</code></pre></div></div>
+<p><img src="figures/eeg_topo_sqr_1.png" /></p>
+
+<p>Map at every time point x(t)</p>
+
+<h3 id="at-t0-x0-with-colorbar">At t=0, X[0] with colorbar</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="n">spkit</span> <span class="k">as</span> <span class="n">sp</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">ch_names</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">load_data</span><span class="p">.</span><span class="nf">eegSample</span><span class="p">()</span>
+
+<span class="c1"># get the locations of electrodes on 2D plane according to 10-20 system
+# "pos" for channels as in list ch_names
+# ch_names = ['AF3','F7','F3','FC5','T7','P7','O1','O2','P8','T8','FC6','F4','F8','AF4']
+</span>
+<span class="n">pos</span><span class="p">,</span> <span class="n">ch1</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">eeg</span><span class="p">.</span><span class="nf">s1020_get_epos2d_</span><span class="p">(</span><span class="n">ch_names</span><span class="p">,</span> <span class="n">reorder</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+
+
+<span class="n">Zi</span><span class="p">,</span><span class="n">im</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">eeg</span><span class="p">.</span><span class="nc">TopoMap</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">res</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">showplot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">axes</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">contours</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">showsensors</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">interpolation</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">shownames</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">ch_names</span><span class="o">=</span><span class="n">ch_names</span><span class="p">,</span><span class="n">showhead</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+            <span class="n">returnIm</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>    
+</code></pre></div></div>
+
+<p><img src="figures/eeg_topo_2.png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">imshow</span><span class="p">(</span><span class="n">Zi</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="sh">'</span><span class="s">jet</span><span class="sh">'</span><span class="p">,</span><span class="n">origin</span><span class="o">=</span><span class="sh">'</span><span class="s">lower</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span> 
+
+</code></pre></div></div>
+
+<p><img src="figures/eeg_topo_sqr_2.png" /></p>
+
+<h2 id="generating-spatio-spectral-map">Generating Spatio-Spectral Map</h2>
+
+<h3 id="for-three-different-frequency-bands">For Three different frequency Bands</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fBands</span> <span class="o">=</span><span class="p">[[</span><span class="mi">4</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">14</span><span class="p">]]</span>
+<span class="n">Px</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">eeg</span><span class="p">.</span><span class="nc">RhythmicDecomposition</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="mf">128.0</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">Sum</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">Mean</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">SD</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">fBands</span><span class="o">=</span><span class="n">fBands</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">Px</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">log10</span><span class="p">(</span><span class="n">Px</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">add_subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+<span class="n">Zi</span>  <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">eeg</span><span class="p">.</span><span class="nc">TopoMap</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">Px</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">res</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">showplot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">axes</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span><span class="n">ch_names</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">ax1</span><span class="p">.</span><span class="nf">set_title</span><span class="p">(</span><span class="sh">'</span><span class="s">&lt;4 Hz</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">add_subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+<span class="n">Zi</span>  <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">eeg</span><span class="p">.</span><span class="nc">TopoMap</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">Px</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">res</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">showplot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">axes</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span><span class="n">ch_names</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">ax2</span><span class="p">.</span><span class="nf">set_title</span><span class="p">(</span><span class="sh">'</span><span class="s">(4-8) Hz</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="n">ax3</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">add_subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+<span class="n">Zi</span>  <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">eeg</span><span class="p">.</span><span class="nc">TopoMap</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">Px</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">res</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">showplot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">axes</span><span class="o">=</span><span class="n">ax3</span><span class="p">,</span><span class="n">ch_names</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">ax3</span><span class="p">.</span><span class="nf">set_title</span><span class="p">(</span><span class="sh">'</span><span class="s">(8-14) Hz</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div>
+<p><strong><em>Note that colorbar is not shown, and power in each band has different range</em></strong>
+<img src="figures/eeg_ssfi_1.png" /></p>
+
+<h2 id="generating-dynamic-spatio-spectral-map">Generating Dynamic Spatio-Spectral Map</h2>
+
+<p>According to Parseval’s theorem, energy in time-domain and frequency domain remain same, so computing total power at each channel for 1 sec with 0.5 overlapping</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">skip</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">nCh</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">extra_win</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">tx</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">extra_win</span><span class="o">*</span><span class="n">N</span><span class="p">)</span><span class="o">/</span><span class="n">fs</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="sh">'</span><span class="s">width_ratios</span><span class="sh">'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]})</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nf">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">-</span><span class="n">N</span><span class="p">,</span><span class="n">skip</span><span class="p">):</span>
+    <span class="n">ax1</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
+    <span class="c1"># ee = np.sqrt(np.abs(X[i:i+N,:]**2).sum(0)) #RMS
+</span>    <span class="c1"># ee = np.abs(X[i:i+N,:]**2).sum(0))         #Energy
+</span>    <span class="c1">#ee = np.log10(np.abs(X[i:i+N,:]**2).sum(0))/N + 1)       #Power(dB) +1 keeps avoiding huge negative values
+</span>    <span class="n">ee</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">abs</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">N</span><span class="p">,:]</span><span class="o">**</span><span class="mi">2</span><span class="p">).</span><span class="nf">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">N</span>       <span class="c1">#Power
+</span>    
+    <span class="n">_</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">eeg</span><span class="p">.</span><span class="nc">TopoMap</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">ee</span><span class="p">,</span><span class="n">res</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">showplot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">axes</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span><span class="n">contours</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">showsensors</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">interpolation</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">shownames</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">ch_names</span><span class="o">=</span><span class="n">ch_names</span><span class="p">,</span><span class="n">showhead</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+            <span class="n">returnIm</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+    
+    <span class="n">ax2</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">X</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;</span><span class="n">i</span><span class="o">+</span><span class="n">extra_win</span><span class="o">*</span><span class="n">N</span><span class="p">:</span>
+        <span class="n">ax2</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">tx</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">extra_win</span><span class="o">*</span><span class="n">N</span><span class="p">],</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">extra_win</span><span class="o">*</span><span class="n">N</span><span class="p">,:]</span> <span class="o">+</span> <span class="n">diff</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="n">nCh</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ni</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,:].</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">ax2</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">tx</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">ni</span><span class="p">],</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,:]</span> <span class="o">+</span> <span class="n">diff</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="n">nCh</span><span class="p">))</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="nf">set_yticks</span><span class="p">(</span><span class="n">diff</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="n">nCh</span><span class="p">))</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="nf">set_yticklabels</span><span class="p">(</span><span class="n">ch_names</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="nf">set_xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">time (ms)</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="nf">set_xlim</span><span class="p">([</span><span class="n">tx</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">tx</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">extra_win</span><span class="o">*</span><span class="n">N</span><span class="p">]])</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="nf">axvline</span><span class="p">(</span><span class="n">tx</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">N</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="sh">'</span><span class="s">r</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">fig</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="figures/eeg_dynamic_ssfi_1.gif" /></p>
+
+  </div>
+</div>
+
+<div class="clearer"></div></div>
+  <!--- Footer  start-->
+<hr>
+<div style="clear: center"></div>
+<div class="footer">
+   &copy; Signal Processing Toolkit <a href="https://spkit.github.io/">Home</a>
+  <span style="padding-left: 5ex;">
+  <a href="https://spkit.github.io/"
+   rel="nofollow">Extras</a>
+  </span>
+</div>
+
+<div class="container index-upper" >
+  <div class="row-fluid">
+    <div>
+      <span style="padding-left: 5ex;"><big><a>Collabration</a></big></span>
+      <a class="reference internal" href="https://phyaat.github.io" style="text-decoration: none; white-space: nowrap" >
+      <span style="padding-left: 5ex;">
+      <img id="index-funding-logo-big" src="/assets/images/phyaat.png" title="phyaat" style="max-height: 42px">
+      </span>
+      <span style="padding-left: 5ex;"></span>
+      <span style="padding-left: 5ex;"></span>
+      <span style="padding-left: 5ex;"></span>
+      <span style="padding-left: 5ex;"></span>
+      </a>
+      <span style="padding-left: 10ex;">
+      <a class="reference internal" href="https://spkit.github.io/about.html">More information</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- find start
+</div>
+</div>
+ -->
+<!--- Footer  end-->
+
+</body>
+</html>

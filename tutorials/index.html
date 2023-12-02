@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SpKit &#8212; Signal Processing Toolkit</title>
+    <link rel="stylesheet" href="/assets/css/nature.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/nature.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/gallery.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="/assets/js/documentation_options.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="/assets/js/underscore.js"></script>
+    <script type="text/javascript" src="/assets/js/doctools.js"></script>
+    <script type="text/javascript" src="/assets/js/copybutton.js"></script>
+    <link rel="shortcut icon" href="/assets/logo/spkit.ico"/>
+    <link rel="search" title="Search" href="/search.html"/>
+    <link rel="next" title="About" href="/about.html"/>
+    <meta content="True" name="HandheldFriendly">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="signal processing, machine learning, wavelet analysis, information theory">
+
+    <script type="text/javascript">
+      function updateTopMenuPosition(height, width) {
+            if($(window).scrollTop() > height && $(window).outerWidth() > 1024) {
+                //begin to scroll
+                $('.related-wrapper').css("z-index", 1000)
+                $('.related-wrapper').css("position", "sticky")
+                $('.related-wrapper').css("top", 0)
+                $('.related-wrapper').css("width", width)
+            } else {
+                //lock it back into place
+                $('.related-wrapper').css("position", "relative")
+                $('.related-wrapper').css("top", 0)
+            }
+        }
+
+        $(function() {
+            var banner_height = $('#logo-banner').outerHeight()
+            var banner_width = $('#logo-banner').outerWidth()
+            var width = $('.related-wrapper').css("height", $('.related').outerHeight())
+
+            updateTopMenuPosition(banner_height, width)
+
+            $(window).scroll(function(event) {
+                updateTopMenuPosition(banner_height, width)
+            });
+
+            $(window).resize(function(event) {
+                var banner_width = $('#logo-banner').outerWidth()
+                var menu_height = $('.related').outerHeight()
+                $('.related').css("width", banner_width)
+                $('.related-wrapper').css("height", menu_height)
+                updateTopMenuPosition(banner_height, width)
+            })
+        });
+
+        </script>
+
+    <script type="text/javascript" src="/assets/js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+      (function($) {
+          $(function() {
+      	$('.jcarousel').jcarousel();
+              $('.jcarousel-control-prev')
+                  .on('active.jcarouselcontrol', function() {
+                      $(this).removeClass('inactive');
+                  })
+                  .on('inactive.jcarouselcontrol', function() {
+                      $(this).addClass('inactive');
+                  })
+                  .jcarouselControl({
+                      target: '-=1'
+                  });
+
+              $('.jcarousel-control-next')
+                  .on('active.jcarouselcontrol', function() {
+                      $(this).removeClass('inactive');
+                  })
+                  .on('inactive.jcarouselcontrol', function() {
+                      $(this).addClass('inactive');
+                  })
+                  .jcarouselControl({
+                      target: '+=1'
+                  });
+
+              $('.jcarousel-pagination')
+                  .on('active.jcarouselpagination', 'a', function() {
+                      $(this).addClass('active');
+                  })
+                  .on('inactive.jcarouselpagination', 'a', function() {
+                      $(this).removeClass('active');
+                  })
+                  .jcarouselPagination();
+          });
+      })(jQuery);
+      </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59299155-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-59299155-3');
+</script>
+</head>
+
+<body>
+<!--- Header -->
+<!--- Header  start-->
+<div id="logo-banner">
+  <div class="logo">
+  <a href="/"><img src="/assets/logo/logo.png" alt="spkit logo"  border="0" /></a>
+  </div>
+  <div class="tags">
+  <ul>
+    <li>&#9672; Easy to use toolkit for signal processing and analysis</li>
+    <li>&#9672; More of biomedical signal analysis with visualization</li>
+    <li>&#9672; Includes basic machine learning models with visualization</li>
+    <li>&#9672; Open source</li>
+<!--     <li>&#9672; </li> -->
+  </ul>
+  </div>
+  <div class="banner">
+  <h2>Signal Processing Toolkit</h2>
+  <h4><i>Simple and easy to use for signal analysis and predictive analysis</i></h4>
+  </div>
+</div>
+
+
+<div class=related-wrapper>
+  <div class="related" role="navigation" aria-label="related navigation">
+  <ul>
+  <li><a href="/">Home</a> |&nbsp;</li>
+  <li><a href="/userguide">User Guide</a> |&nbsp;</li>
+  <li><a href="/docs">Documentation</a> |&nbsp;</li>
+  <li><a href="/examples">Examples</a> |&nbsp;</li>
+  <li><a href="/tutorials">Tutorials</a> |&nbsp;</li>
+  <li><a href="/updates">Updates</a> |&nbsp;</li>
+  <li><a href="/about">About</a> |&nbsp;</li>
+  <li><a href="https://github.com/Nikeshbajaj/spkit/discussions?discussions_q=" target="_blank">Discussion Forum</a> |&nbsp;</li>
+  </ul>
+  </div>
+</div>
+<!--- Header  end-->
+
+
+<!--- Sidebar-->
+<!--- Sidebar  start-->
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+  <div class="sphinxsidebarwrapper">
+  <a class="reference external" href="https://pypi.org/project/spkit" target="_blank"><img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/Nikeshbajaj/spkit?label=latest%20version&style=plastic"></a>
+  <a class="reference external" href="https://pepy.tech/project/spkit" target="_blank"><img src="https://static.pepy.tech/personalized-badge/spkit?period=total&amp;units=international_system&amp;left_color=black&amp;right_color=orange&amp;left_text=downloads" alt="PyPI - Downloads" /></a>
+  <a class="reference external" href="https://pypi.python.org/pypi/spkit" target="_blank"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/spkit?style=plastic"></a>
+  <!--- <img alt="PyPI - Downloads" src="https://static.pepy.tech/personalized-badge/spkit?period=total&units=international_system&left_color=grey&right_color=blue&left_text=downloads">-->
+  <!--- <h4>Version - 0.0.9.4</h4>-->
+  <ul class="simple">
+  <li><div id="getting-started"><a href="/userguide" class="btn btn-primary">Getting Started</a></div></li>
+  <li><div id="docs"><a href="https://spkit.github.io/docs" target="_blank" class="btn btn-primary">Documentation v2</a></div></li>
+  <li><div id="docs"><a href="https://spkit.readthedocs.io/" target="_blank" class="btn btn-primary">Documentation</a></div></li>
+<!--   <li><div id="docs"><a href="https://spkit.github.io/docs" target="_blank" class="btn btn-outline-primary">Documentation v2</a></div></li> -->
+  <li><div id="examples"><a href="/examples" class="btn btn-primary">Examples</a></div></li>
+  <li><div id="github"><a href="https://github.com/Nikeshbajaj/spkit/fork" target="_blank" class="btn btn-primary">Github</a></div></li>
+<!--   <li><div id="book"><a href="https://spkit.github.io/guide" target="_blank" class="btn btn-primary">HTML Guide</a></div></li> -->
+  <li><div id="book"><a href="https://github.com/Nikeshbajaj/spkit/discussions?discussions_q=" target="_blank" class="btn btn-primary">Discussion Forum</a></div></li>
+  </ul>
+
+  <h4>Updates:</h4>
+  <ul class="simple">
+  <li>&bull; Released: 0.0.9.6</li>
+  <li>&bull; Discussion Forum</li>
+  <li>&bull; Ramanujam methods for period estimation</li>
+  <li>&bull; Fractional Fourier Trasform.</li>
+  <li>&bull; Sinasodal Model for analysis and sythesis.</li>
+  <li>&bull; EEG Artifact removal algorithms (<strong>ATAR</strong> and <strong>ICA</strong> based) are added.</li>
+  <li>&bull; More entropy functions are added.</li>
+  <li>&bull; CWT functions are added for Scalogram.</li>
+  </ul>
+
+  <h4> Giving credit & Citing</h4>
+  <ul class="simple">
+  <li><p>All material: Free Software: <strong>The 3-Clause BSD License</strong>.</p></li><li><p><a href="about.html">About</a></p></li>
+  <li><p>Please consider <a href="/about.html#citing"><strong>citing</strong></a>.</p></li>
+  </ul>
+
+
+  <h4> Visitors </h4>
+  <ul class="simple">
+  <li>
+  <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=eQr8xSBiKVuSq6m0psK-Ey9TZ7rLzjRX-MpatyfFGQI"></script>
+  <!--<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=eQr8xSBiKVuSq6m0psK-Ey9TZ7rLzjRX-MpatyfFGQI"></script>
+  -->
+  </li></ul>
+
+  </div>
+</div>
+<!--- Sidebar  start-->
+
+
+<!--- Page-->
+<h1 id="tutorials">Tutorials</h1>
+
+<h2 id="eeg-artifact-removal-algorithms-atar--ica-based">EEG Artifact Removal Algorithms: ATAR &amp; ICA based</h2>
+
+<div id="index-grid-half" class="section group">
+<!-- * <h4><u><b><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">Blog: Artifacts in EEG and how to remove them: ATAR, ICA</a></b></u></h4> -->
+<div class="col span_1_of_2">
+  <a class="reference external" href="https://link.medium.com/90mYhbr8Osb" target="_blank"><img src="/assets/images/ATAR_2.png" width="80%" /></a>
+  <h3><a href="https://link.medium.com/90mYhbr8Osb" target="_blank">How to remove artifacts from EEG signals</a></h3>
+</div>
+
+<!-- <hr style="width:1%;margin-left: 0px;"> -->
+<div class="toctree-wrapper compound"></div>
+<!--   <hr style="width:1%;margin-left: 0px;"> -->
+<!-- <hr style="width:10%;margin-left: 0px;"> -->
+<!-- <hr width="10%">  -->
+<div class="col span_1_of_3">
+</div>
+<div class="toctree-wrapper compound"></div>
+<div class="col span_1_of_3">
+</div>
+<div class="toctree-wrapper compound"></div>
+<hr width="10%" />
+</div>
+<p><br /></p>
+
+<h2 id="hands-on-practice-on-machine-learning--deeplearning">Hands on practice on Machine Learning &amp; Deeplearning</h2>
+
+<div id="index-grid-half" class="section group">
+<!-- <hr width="10%">  -->
+<h3 style="text-align:left;"><u>Agenda/Objectives</u></h3>
+<p style="text-align:left;">Short introduction to machine learning and artificial intelligence, followed by supervised learning examples.</p>
+<h3 style="text-align:left;"><u>Links to Jupyter-notebooks</u></h3>
+<h3 style="text-align:left;">
+<ul class="simple" style="line-height:1.4;">
+  <li><a>nbviewer - jupyter</a>
+    <ul class="simple">
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression (Boston House Price)</a></li>
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification (Breast Cancer, Iris, MNIST)</a></li>
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/3_Deeplearning_CNN.ipynb" target="_blank">3. Deeplearning (MNIST)</a></li>
+    <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/tree/master/Tutorials_ML_DL/" target="_blank">All notebooks</a></li>
+    </ul></li>
+  <li><a>Google Colab</a>
+    <ul class="simple">
+    <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression  (Boston House Price)</a></li>
+    <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification (Breast Cancer, Iris, MNIST)</a></li>
+    <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/3_Deeplearning_CNN.ipynb" target="_blank">3. Deeplearning (MNIST)</a></li>
+    </ul></li>
+  <li><a>Binder</a>
+    <ul class="simple">
+    <li><a href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/HEAD" target="_blank">All notebooks</a></li>
+    <li><a href="https://tinyurl.com/MLTutorial" target="_blank">https://tinyurl.com/MLTutorial</a></li>
+    </ul></li>
+</ul>
+</h3>
+<h3 style="text-align:left;"><u>Slides</u></h3>
+<h3 style="text-align:left;">
+<ul class="simple" style="line-height:1.4;">
+  <li>Introdcution to ML and DL (30/07/2021 - CU_FDP) <a href="https://github.com/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/Intorduction_to_ML_&amp;_DL_30_07_21.pptx?raw=true" target="_blank">PPT</a> | <a href="https://github.com/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/Intorduction_to_ML_%26_DL_30_07_21.pdf" target="_blank">PDF</a></li>
+</ul>
+</h3>
+</div>
+<div id="index-grid-full" class="section group"></div>
+
+
+<!--- Footer-->
+<!--- Footer  start-->
+<hr>
+<div style="clear: center"></div>
+<div class="footer">
+   &copy; Signal Processing Toolkit <a href="https://spkit.github.io/">Home</a>
+  <span style="padding-left: 5ex;">
+  <a href="https://spkit.github.io/"
+   rel="nofollow">Extras</a>
+  </span>
+</div>
+
+<div class="container index-upper" >
+  <div class="row-fluid">
+    <div>
+      <span style="padding-left: 5ex;"><big><a>Collabration</a></big></span>
+      <a class="reference internal" href="https://phyaat.github.io" style="text-decoration: none; white-space: nowrap" >
+      <span style="padding-left: 5ex;">
+      <img id="index-funding-logo-big" src="/assets/images/phyaat.png" title="phyaat" style="max-height: 42px">
+      </span>
+      <span style="padding-left: 5ex;"></span>
+      <span style="padding-left: 5ex;"></span>
+      <span style="padding-left: 5ex;"></span>
+      <span style="padding-left: 5ex;"></span>
+      </a>
+      <span style="padding-left: 10ex;">
+      <a class="reference internal" href="https://spkit.github.io/about.html">More information</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- find start
+</div>
+</div>
+ -->
+<!--- Footer  end-->
+
+
+</body>
+</html>

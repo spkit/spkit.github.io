@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SpKit &#8212; Signal Processing Toolkit</title>
+    <link rel="stylesheet" href="/assets/css/nature.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/nature.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/gallery.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="/assets/js/documentation_options.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="/assets/js/underscore.js"></script>
+    <script type="text/javascript" src="/assets/js/doctools.js"></script>
+    <script type="text/javascript" src="/assets/js/copybutton.js"></script>
+    <link rel="shortcut icon" href="/assets/logo/spkit.ico"/>
+    <link rel="search" title="Search" href="/search.html"/>
+    <link rel="next" title="About" href="/about.html"/>
+    <meta content="True" name="HandheldFriendly">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="signal processing, machine learning, wavelet analysis, information theory">
+
+    <script type="text/javascript">
+      function updateTopMenuPosition(height, width) {
+            if($(window).scrollTop() > height && $(window).outerWidth() > 1024) {
+                //begin to scroll
+                $('.related-wrapper').css("z-index", 1000)
+                $('.related-wrapper').css("position", "sticky")
+                $('.related-wrapper').css("top", 0)
+                $('.related-wrapper').css("width", width)
+            } else {
+                //lock it back into place
+                $('.related-wrapper').css("position", "relative")
+                $('.related-wrapper').css("top", 0)
+            }
+        }
+
+        $(function() {
+            var banner_height = $('#logo-banner').outerHeight()
+            var banner_width = $('#logo-banner').outerWidth()
+            var width = $('.related-wrapper').css("height", $('.related').outerHeight())
+
+            updateTopMenuPosition(banner_height, width)
+
+            $(window).scroll(function(event) {
+                updateTopMenuPosition(banner_height, width)
+            });
+
+            $(window).resize(function(event) {
+                var banner_width = $('#logo-banner').outerWidth()
+                var menu_height = $('.related').outerHeight()
+                $('.related').css("width", banner_width)
+                $('.related-wrapper').css("height", menu_height)
+                updateTopMenuPosition(banner_height, width)
+            })
+        });
+
+        </script>
+
+    <script type="text/javascript" src="/assets/js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+      (function($) {
+          $(function() {
+      	$('.jcarousel').jcarousel();
+              $('.jcarousel-control-prev')
+                  .on('active.jcarouselcontrol', function() {
+                      $(this).removeClass('inactive');
+                  })
+                  .on('inactive.jcarouselcontrol', function() {
+                      $(this).addClass('inactive');
+                  })
+                  .jcarouselControl({
+                      target: '-=1'
+                  });
+
+              $('.jcarousel-control-next')
+                  .on('active.jcarouselcontrol', function() {
+                      $(this).removeClass('inactive');
+                  })
+                  .on('inactive.jcarouselcontrol', function() {
+                      $(this).addClass('inactive');
+                  })
+                  .jcarouselControl({
+                      target: '+=1'
+                  });
+
+              $('.jcarousel-pagination')
+                  .on('active.jcarouselpagination', 'a', function() {
+                      $(this).addClass('active');
+                  })
+                  .on('inactive.jcarouselpagination', 'a', function() {
+                      $(this).removeClass('active');
+                  })
+                  .jcarouselPagination();
+          });
+      })(jQuery);
+      </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59299155-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-59299155-3');
+</script>
+</head>
+
+<body>
+
+<!--- Header  start-->
+<div id="logo-banner">
+  <div class="logo">
+  <a href="/"><img src="/assets/logo/logo.png" alt="spkit logo"  border="0" /></a>
+  </div>
+  <div class="tags">
+  <ul>
+    <li>&#9672; Easy to use toolkit for signal processing and analysis</li>
+    <li>&#9672; More of biomedical signal analysis with visualization</li>
+    <li>&#9672; Includes basic machine learning models with visualization</li>
+    <li>&#9672; Open source</li>
+<!--     <li>&#9672; </li> -->
+  </ul>
+  </div>
+  <div class="banner">
+  <h2>Signal Processing Toolkit</h2>
+  <h4><i>Simple and easy to use for signal analysis and predictive analysis</i></h4>
+  </div>
+</div>
+
+
+<div class=related-wrapper>
+  <div class="related" role="navigation" aria-label="related navigation">
+  <ul>
+  <li><a href="/">Home</a> |&nbsp;</li>
+  <li><a href="/userguide">User Guide</a> |&nbsp;</li>
+  <li><a href="/docs">Documentation</a> |&nbsp;</li>
+  <li><a href="/examples">Examples</a> |&nbsp;</li>
+  <li><a href="/tutorials">Tutorials</a> |&nbsp;</li>
+  <li><a href="/updates">Updates</a> |&nbsp;</li>
+  <li><a href="/about">About</a> |&nbsp;</li>
+  <li><a href="https://github.com/Nikeshbajaj/spkit/discussions?discussions_q=" target="_blank">Discussion Forum</a> |&nbsp;</li>
+  </ul>
+  </div>
+</div>
+<!--- Header  end-->
+
+
+<!--- Sidebar  start-->
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+  <div class="sphinxsidebarwrapper">
+  <a class="reference external" href="https://pypi.org/project/spkit" target="_blank"><img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/Nikeshbajaj/spkit?label=latest%20version&style=plastic"></a>
+  <a class="reference external" href="https://pepy.tech/project/spkit" target="_blank"><img src="https://static.pepy.tech/personalized-badge/spkit?period=total&amp;units=international_system&amp;left_color=black&amp;right_color=orange&amp;left_text=downloads" alt="PyPI - Downloads" /></a>
+  <a class="reference external" href="https://pypi.python.org/pypi/spkit" target="_blank"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/spkit?style=plastic"></a>
+  <!--- <img alt="PyPI - Downloads" src="https://static.pepy.tech/personalized-badge/spkit?period=total&units=international_system&left_color=grey&right_color=blue&left_text=downloads">-->
+  <!--- <h4>Version - 0.0.9.4</h4>-->
+  <ul class="simple">
+  <li><div id="getting-started"><a href="/userguide" class="btn btn-primary">Getting Started</a></div></li>
+  <li><div id="docs"><a href="https://spkit.github.io/docs" target="_blank" class="btn btn-primary">Documentation v2</a></div></li>
+  <li><div id="docs"><a href="https://spkit.readthedocs.io/" target="_blank" class="btn btn-primary">Documentation</a></div></li>
+<!--   <li><div id="docs"><a href="https://spkit.github.io/docs" target="_blank" class="btn btn-outline-primary">Documentation v2</a></div></li> -->
+  <li><div id="examples"><a href="/examples" class="btn btn-primary">Examples</a></div></li>
+  <li><div id="github"><a href="https://github.com/Nikeshbajaj/spkit/fork" target="_blank" class="btn btn-primary">Github</a></div></li>
+<!--   <li><div id="book"><a href="https://spkit.github.io/guide" target="_blank" class="btn btn-primary">HTML Guide</a></div></li> -->
+  <li><div id="book"><a href="https://github.com/Nikeshbajaj/spkit/discussions?discussions_q=" target="_blank" class="btn btn-primary">Discussion Forum</a></div></li>
+  </ul>
+
+  <h4>Updates:</h4>
+  <ul class="simple">
+  <li>&bull; Released: 0.0.9.6</li>
+  <li>&bull; Discussion Forum</li>
+  <li>&bull; Ramanujam methods for period estimation</li>
+  <li>&bull; Fractional Fourier Trasform.</li>
+  <li>&bull; Sinasodal Model for analysis and sythesis.</li>
+  <li>&bull; EEG Artifact removal algorithms (<strong>ATAR</strong> and <strong>ICA</strong> based) are added.</li>
+  <li>&bull; More entropy functions are added.</li>
+  <li>&bull; CWT functions are added for Scalogram.</li>
+  </ul>
+
+  <h4> Giving credit & Citing</h4>
+  <ul class="simple">
+  <li><p>All material: Free Software: <strong>The 3-Clause BSD License</strong>.</p></li><li><p><a href="about.html">About</a></p></li>
+  <li><p>Please consider <a href="/about.html#citing"><strong>citing</strong></a>.</p></li>
+  </ul>
+
+
+  <h4> Visitors </h4>
+  <ul class="simple">
+  <li>
+  <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=eQr8xSBiKVuSq6m0psK-Ey9TZ7rLzjRX-MpatyfFGQI"></script>
+  <!--<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=eQr8xSBiKVuSq6m0psK-Ey9TZ7rLzjRX-MpatyfFGQI"></script>
+  -->
+  </li></ul>
+
+  </div>
+</div>
+<!--- Sidebar  start-->
+
+
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+  <div class="body" role="main">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default"></script>
+
+<h1 id="wavelet-filtering">Wavelet Filtering</h1>
+<p style="text-align:right; font-weight:bold;"><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/nav_logo.svg" width="150px" /></a><a class="reference external image-reference" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?filepath=spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg" width="150px" /></a></p>
+
+<h2 id="background"><strong>Background</strong></h2>
+<p>Other than classical frequency filtering, Wavelet filtering is one of common techniques used in signal processing. It allows to filter out short-time duration patterns captured by used wavelet. The patterns to be filtered out depends on the wavelet family (e.g. <strong><em>db3</em></strong>) used and number of level of decomposition.</p>
+
+<p>Algorithmically, it is very straightforward. Decompose a signal <strong>x(n)</strong>, into wavelet coefficients <strong>X(k)</strong>, where each coefficient represents the strength of wavelet pattern at particular time. With some threshold, remove the coefficients by zeroing out and reconstruct the signal back.</p>
+
+<p>The machanism to choose a threshold on the strength of wavelet coefficient depends on the application and objective. To remove the noise and compress the signal, a widely used approach is to filter out all the wavelet coefficients with smaller strength.</p>
+
+<p>Literature [1] suggest the <strong>optimal threshold</strong> on the wavelet coeffiecient is</p>
+
+\[\begin{eqnarray}
+\theta = \tilde{\sigma} \sqrt{2log(N)}\\
+\tilde{\sigma} = median(|X(k)|)/0.6745
+\end{eqnarray}\]
+
+<!--
+$$ \theta = \tilde{\sigma} \sqrt{2log(N)}$$ 
+where $\tilde{\sigma}$ is estimation of noise variance and $N$ length of signal
+$$ \tilde{\sigma} = median(|X(k)|)/0.6745$$
+and $X(k)$ are wavelet coeffients of $x(n)$
+-->
+
+<p>where \(\tilde{\sigma}\) is estimation of noise variance and \(N\) length of signal.</p>
+
+<p>There are other methods to choose threshold too. One can choose a \(\theta =1.5\times SD(X(k))\) or \(\theta =IQR(X(k))\) as to select the outliers, by standard deviation and interquartile range, respectively.</p>
+
+<p>According to the theory, the <strong>optimal threshold</strong> should be applied by zeroing out the coefficients below with magnitude lower than threshold \(abs(X(k))&lt; \theta\), and for later two methods of thresholds,standard deviation and interquartile range, the coefficients outside of the threshold should be zeroing out, since they reprepresent the outliers. However, some of the (weired) articles use these thresholds in other-way round.</p>
+
+<p>A simple block-diagram shown below is the procedure of wavelet filtering.</p>
+
+<div style="align: left; text-align:center;">
+    <img src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelet_filtering_block_dia_1.png" width="700" />
+    <div class="caption">Fig 1: Wavelet Filtering</div>
+</div>
+
+<p><strong>References:</strong></p>
+<ul>
+  <li>[1] D.L. Donoho, J.M. Johnstone, <strong>Ideal spatial adaptation by wavelet shrinkage</strong> Biometrika, 81 (1994), pp. 425-455</li>
+</ul>
+
+<p style="text-align:right; font-weight:bold;"><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/nav_logo.svg" width="150px" /></a><a class="reference external image-reference" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?filepath=spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg" width="150px" /></a></p>
+<p>API
+–</p>
+<ul>
+  <li><strong>spkit.wavelet_filtering(…)</strong></li>
+  <li><strong>spkit.wavelet_filtering_win(…)</strong></li>
+</ul>
+
+<p>In <strong><em>spkit</em></strong>, we have implemented all three methods for threshold computing, can be chosen by <em>threshold = ‘optimal’, ‘sd’ or ‘iqr’</em> or can be passed as a float value for a fixed threshold, e.g. <em>threshold = 0.5</em>. It also support to choose, if you want to zero out coefficient below the threshold or above by setting <em>filter_out_below</em> True or False. However, default setting is <em>threshold=’optimal’</em> and <em>filter_out_below=True</em>.</p>
+
+<p>There are a few more options to tune threshold and mode of filtering. For more details see doc section or run <code class="language-plaintext highlighter-rouge">help(sp.wavelet_filtering)</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+
+<span class="kn">import</span> <span class="n">spkit</span> <span class="k">as</span> <span class="n">sp</span>
+<span class="n">sp</span><span class="p">.</span><span class="n">__version__</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'0.0.9.4'
+</code></pre></div></div>
+
+<h2 id="example-with-eeg-sample-signal">Example with EEG sample signal</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="p">,</span><span class="n">fs</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">load_data</span><span class="p">.</span><span class="nf">eegSample_1ch</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">fs</span><span class="o">*</span><span class="mi">2</span><span class="p">:</span><span class="n">fs</span><span class="o">*</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="n">fs</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlim</span><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">time (s)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="figures/wfilter_output_5_0.png" alt="png" /></p>
+
+<h3 id="wavelet-filtering-with-optimal-threshold-ans-db3">Wavelet filtering with optimal threshold ans db3</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">xf</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="nf">wavelet_filtering</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span><span class="n">wv</span><span class="o">=</span><span class="sh">'</span><span class="s">db3</span><span class="sh">'</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="sh">'</span><span class="s">optimal</span><span class="sh">'</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">WPD</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>WPD: False  wv: db3  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True</p>
+
+<p><img src="figures/wfilter_output_7_1.png" alt="png" /></p>
+
+<h3 id="with-sd-threshold">with SD threshold</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">xf</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="nf">wavelet_filtering</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span><span class="n">wv</span><span class="o">=</span><span class="sh">'</span><span class="s">db3</span><span class="sh">'</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="sh">'</span><span class="s">sd</span><span class="sh">'</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">WPD</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>WPD: False  wv: db3  threshold: sd  k: 1.5  mode: elim  filter_out_below?: True</p>
+
+<p><img src="figures/wfilter_output_9_1.png" alt="png" /></p>
+
+<h3 id="with-iqr">with IQR</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">xf</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="nf">wavelet_filtering</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span><span class="n">wv</span><span class="o">=</span><span class="sh">'</span><span class="s">db3</span><span class="sh">'</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="sh">'</span><span class="s">iqr</span><span class="sh">'</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">WPD</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>WPD: False  wv: db3  threshold: iqr  k: 1.5  mode: elim  filter_out_below?: True</p>
+
+<p><img src="figures/wfilter_output_11_1.png" alt="png" /></p>
+
+<h3 id="limit-the-number-of-levels-for-decomposition-to-2">Limit the number of levels for decomposition to 2</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">xf</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="nf">wavelet_filtering</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span><span class="n">wv</span><span class="o">=</span><span class="sh">'</span><span class="s">db3</span><span class="sh">'</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="sh">'</span><span class="s">optimal</span><span class="sh">'</span><span class="p">,</span><span class="n">wpd_maxlevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">WPD</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>WPD: False  wv: db3  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True</p>
+
+<p><img src="figures/wfilter_output_13_1.png" alt="png" /></p>
+
+<h3 id="with-db12">with <em>db12</em></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">xf</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="nf">wavelet_filtering</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span><span class="n">wv</span><span class="o">=</span><span class="sh">'</span><span class="s">db12</span><span class="sh">'</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="sh">'</span><span class="s">optimal</span><span class="sh">'</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">WPD</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>WPD: False  wv: db12  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True</p>
+
+<p><img src="figures/wfilter_output_15_1.png" alt="png" /></p>
+
+<h3 id="with-symlet---sym4">with Symlet - <em>sym4</em></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">xf</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="nf">wavelet_filtering</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span><span class="n">wv</span><span class="o">=</span><span class="sh">'</span><span class="s">sym4</span><span class="sh">'</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="sh">'</span><span class="s">optimal</span><span class="sh">'</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">WPD</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>WPD: False  wv: sym4  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True</p>
+
+<p><img src="figures/wfilter_output_17_1.png" alt="png" /></p>
+
+<h3 id="with-coiflet---coif4">with Coiflet - <em>coif4</em></h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">xf</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="nf">wavelet_filtering</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span><span class="n">wv</span><span class="o">=</span><span class="sh">'</span><span class="s">coif4</span><span class="sh">'</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="sh">'</span><span class="s">optimal</span><span class="sh">'</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">WPD</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>WPD: False  wv: coif4  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True</p>
+
+<p><img src="figures/wfilter_output_19_1.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">help</span><span class="p">(</span><span class="n">sp</span><span class="p">.</span><span class="n">wavelet_filtering</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Help on function wavelet_filtering in module spkit.core.processing:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wavelet_filtering(x, wv='db3', threshold='optimal', filter_out_below=True, k=1.5, mode='elim', show=False, wpd_mode='symmetric', wpd_maxlevel=None, packetwise=False, WPD=True, lvl=[], verbose=False, fs=128.0, sf=1, IPR=[0.25, 0.75])
+    Threshold Computation method:
+    threshold: 'str' or float
+             : if str, method to compute threshold, example : 'optimal', 'sd', 'iqr'
+    
+             'optimal': threshold = sig*sqrt(2logN), sig = median(|w|)/0.6745
+             'sd' : threshold = k*SD(w)
+             'iqr': threshold = q3+kr, threshold_l =q1-kr, where r = IQR(w)  #Tukey's fences
+             'ttt': Modified Thompson Tau test (ttt) #TODO
+             default - optimal
+    
+    mode: str, 'elim' - remove the coeeficient (by zering out), 'clip' - cliping the coefficient to threshold
+         default 'elim'
+    
+    below: bool, if true, wavelet coefficient below threshold are eliminated else obove threshold
+    
+    
+    Wavelet Decomposition modes:
+    wpd_mode = ['zero', 'constant', 'symmetric', 'periodic', 'smooth', 'periodization']
+                default 'symmetric'
+    
+    wpd_maxlevel: level of decomposition, if None, max level posible is used
+    
+    Wavelet family:
+    wv = ['db3'.....'db38', 'sym2.....sym20', 'coif1.....coif17', 'bior1.1....bior6.8', 'rbio1.1...rbio6.8', 'dmey']
+         :'db3'(default)
+    
+    packetwise: if true, thresholding is applied to each packet/level individually, else globally
+    WPD: if true, WPD is applied as wavelet transform
+    lvl: list of levels/packets apply the thresholding, if empty, applied to all the levels/packets
+</code></pre></div></div>
+
+<p style="text-align:right; font-weight:bold;"><a class="reference external image-reference" href="https://nbviewer.org/github/Nikeshbajaj/Notebooks/blob/master/spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/nav_logo.svg" width="150px" /></a><a class="reference external image-reference" href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/master?filepath=spkit/SP/Wavelet_Filtering_1_demo.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg" width="150px" /></a></p>
+
+  </div>
+</div>
+
+<div class="clearer"></div></div>
+  <!--- Footer  start-->
+<hr>
+<div style="clear: center"></div>
+<div class="footer">
+   &copy; Signal Processing Toolkit <a href="https://spkit.github.io/">Home</a>
+  <span style="padding-left: 5ex;">
+  <a href="https://spkit.github.io/"
+   rel="nofollow">Extras</a>
+  </span>
+</div>
+
+<div class="container index-upper" >
+  <div class="row-fluid">
+    <div>
+      <span style="padding-left: 5ex;"><big><a>Collabration</a></big></span>
+      <a class="reference internal" href="https://phyaat.github.io" style="text-decoration: none; white-space: nowrap" >
+      <span style="padding-left: 5ex;">
+      <img id="index-funding-logo-big" src="/assets/images/phyaat.png" title="phyaat" style="max-height: 42px">
+      </span>
+      <span style="padding-left: 5ex;"></span>
+      <span style="padding-left: 5ex;"></span>
+      <span style="padding-left: 5ex;"></span>
+      <span style="padding-left: 5ex;"></span>
+      </a>
+      <span style="padding-left: 10ex;">
+      <a class="reference internal" href="https://spkit.github.io/about.html">More information</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- find start
+</div>
+</div>
+ -->
+<!--- Footer  end-->
+
+</body>
+</html>
