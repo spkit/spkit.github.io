@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://spkit.github.io/</loc>
+  <lastmod>2023-12-02T01:12:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/userguide/</loc>
+  <lastmod>2023-12-02T01:12:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/examples/</loc>
+  <lastmod>2023-12-02T01:12:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/tutorials/</loc>
+  <lastmod>2023-12-02T01:12:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/updates/</loc>
+  <lastmod>2023-12-02T01:12:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/about</loc>
+  <lastmod>2023-12-02T01:12:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/examples/index.html</loc>
+  <lastmod>2023-12-02T01:12:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/filtering.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/genindex.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/installation.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/informationtheory.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/dispersion_entropy.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/atar_algo.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/ica_artifact_algo.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/cwt.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/ramanujam_methods.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/analysis_synthesis_models.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/fractional_fourier.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/wavelet_filtering.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/ica.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/eeg_topog.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/machinelearning.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/basic.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/pylfsr.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/api.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/changelog.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/Examples.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/contacts.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/docs/sinasodal_model.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/examples/wfilter</loc>
+  <lastmod>2023-12-02T01:12:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/examples/gen_topo</loc>
+  <lastmod>2023-12-02T01:12:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/core/informationtheory.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/notebooks/Dispersion_Entropy_1_demo_EEG.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/notebooks/ATAR_Algorithm_EEG_Artifact_Removal.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/core/cwt.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/notebooks/Wavelet_Filtering_1_demo.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/notebooks/Ramanujan_Filter_Banks_for_Period_Estimation_Demo_examples.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/notebooks/Ramanujan_Filter_Banks_for_Period_Estimation_from_signal.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/notebooks/Ramanujan_Filter_Banks_for_Period_Estimation_with_sparse_penalty.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/info/contacts.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/docs/index.html</loc>
+  <lastmod>2023-12-02T03:00:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://spkit.github.io/guide/index.html</loc>
+  <lastmod>2022-01-15T15:26:16+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
