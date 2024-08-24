@@ -1,0 +1,43 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2024-08-24T20:06:20.631361Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2024-08-24T20:06:19.233057Z",
+      "mimetype": null,
+      "name": "plot_stats_group_boxplotes.ipynb",
+      "path": "auto_examples/statistics/plot_stats_group_boxplotes.ipynb",
+      "size": 3829,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2024-08-24T20:06:20.631749Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2024-08-24T20:06:19.233289Z",
+      "mimetype": null,
+      "name": "plot_stats_testing_2groups_demo.ipynb",
+      "path": "auto_examples/statistics/plot_stats_testing_2groups_demo.ipynb",
+      "size": 3166,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2024-08-24T20:06:20.631600Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2024-08-24T20:06:20.631600Z",
+  "mimetype": null,
+  "name": "statistics",
+  "path": "auto_examples/statistics",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

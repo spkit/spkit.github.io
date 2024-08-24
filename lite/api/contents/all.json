@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2024-08-24T20:06:20.631918Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2024-08-24T20:06:20.631918Z",
+      "mimetype": null,
+      "name": "auto_examples",
+      "path": "auto_examples",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    }
+  ],
+  "created": "2024-08-24T20:06:20.612551Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2024-08-24T20:06:20.612551Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
