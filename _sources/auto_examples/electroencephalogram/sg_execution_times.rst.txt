@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**01:21.156** total execution time for 7 files **from auto_examples/electroencephalogram**:
+**01:20.431** total execution time for 7 files **from auto_examples/electroencephalogram**:
 
 .. container::
 
@@ -33,23 +33,23 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_eeg_rhythmic_features.py` (``plot_sp_eeg_rhythmic_features.py``)
-     - 00:49.715
+     - 00:44.870
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ATAR_algorithm_tuning.py` (``plot_sp_ATAR_algorithm_tuning.py``)
-     - 00:14.873
+     - 00:14.480
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_eeg_artifact_removal_ICA_ATAR.py` (``plot_sp_eeg_artifact_removal_ICA_ATAR.py``)
-     - 00:08.397
+     - 00:13.181
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_eeg_artifact_removal_ICA.py` (``plot_sp_eeg_artifact_removal_ICA.py``)
-     - 00:04.311
+     - 00:04.246
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_eeg_artifact_removal_ATAR_algorithm.py` (``plot_sp_eeg_artifact_removal_ATAR_algorithm.py``)
-     - 00:01.588
+     - 00:01.526
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ICA_eeg_example.py` (``plot_sp_ICA_eeg_example.py``)
-     - 00:01.443
+     - 00:01.288
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_eeg_topomaps.py` (``plot_sp_eeg_topomaps.py``)
-     - 00:00.829
+     - 00:00.840
      - 0.0

@@ -456,7 +456,7 @@ Breast Cancer data
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 6.063 seconds)
+   **Total running time of the script:** (0 minutes 6.062 seconds)
 
 
 .. _sphx_glr_download_auto_examples_machine_learning_plot_ml_decision_tree_visualisation.py:

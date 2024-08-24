@@ -158,7 +158,7 @@ Signal with period 10 and SNR = 0
 
  .. code-block:: none
 
-    top 10 periods:  [10 39 18 17 16 15 14 13 12 11]
+    top 10 periods:  [10  5  4  2 12 18 17 16 15 14]
 
 
 
@@ -243,7 +243,7 @@ Period Estimation from specific range of period
 
  .. code-block:: none
 
-    top 10 periods:  [30 32 28 29 26 31 34 27 21 22]
+    top 10 periods:  [30 38 34 26 23 28 29 21 22 24]
 
 
 
@@ -324,7 +324,7 @@ Multiple Periods
 
  .. code-block:: none
 
-    top 10 periods:  [10 14  9 18  5  7  6 16  8 11]
+    top 10 periods:  [10  7  6 14  9 18  5 16  8 11]
 
 
 
@@ -332,7 +332,7 @@ Multiple Periods
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.859 seconds)
+   **Total running time of the script:** (0 minutes 0.811 seconds)
 
 
 .. _sphx_glr_download_auto_examples_signal_processing_plot_sp_RFB_for_period_estimation_from_signal.py:

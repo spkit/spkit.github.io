@@ -609,7 +609,7 @@ General examples about Signal Processing algorithms.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip=" # # Sinusoidal Model:  Analysis and Synthesis">
+    <div class="sphx-glr-thumbcontainer" tooltip="# Sinusoidal Model:  Analysis and Synthesis">
 
 .. only:: html
 

@@ -14,10 +14,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://spkit.github.io/auto_examples/signal_processing/plot_sp_sinusodal_model_analysis_synthesis.html" />
 <meta property="og:site_name" content="spkit" />
-<meta property="og:description" content="# # Sinusoidal Model: Analysis and Synthesis Model: embed_audio(‘singing_female_recons’, attribute = c(“controls”, “loop”)) Example with audio signal: STFT of Audio: Analysis of Audio with only 20 ..." />
+<meta property="og:description" content="# Sinusoidal Model: Analysis and Synthesis In this example, first we decompose an audio file into ONLY 20 sinusoidal tracks and then reconstruct an audio from it. We will also examin the residual. ..." />
 <meta property="og:image" content="https://github.com/spkit/spkit.github.io/blob/master/assets/logo/logo.png" />
 <meta property="og:image:alt" content="spkit" />
-<meta name="description" content="# # Sinusoidal Model: Analysis and Synthesis Model: embed_audio(‘singing_female_recons’, attribute = c(“controls”, “loop”)) Example with audio signal: STFT of Audio: Analysis of Audio with only 20 ..." />
+<meta name="description" content="# Sinusoidal Model: Analysis and Synthesis In this example, first we decompose an audio file into ONLY 20 sinusoidal tracks and then reconstruct an audio from it. We will also examin the residual. ..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -239,13 +239,13 @@
           <div class="spk-sidebar-toc">
             <ul>
 <li><a class="reference internal" href="#">Sinusoidal Model:  Analysis and Synthesis</a><ul>
-<li><a class="reference internal" href="#model">Model</a></li>
-<li><a class="reference internal" href="#example-with-audio-signal">Example with audio signal</a></li>
+<li><a class="reference internal" href="#resulting-sinusoidal-model">Resulting Sinusoidal Model</a></li>
+<li><a class="reference internal" href="#download-audio-file">Download audio file</a></li>
 <li><a class="reference internal" href="#stft-of-audio">STFT of Audio</a></li>
 <li><a class="reference internal" href="#analysis-of-audio-with-only-20-sinusodal-tracks">Analysis of Audio with only 20 sinusodal tracks</a></li>
 <li><a class="reference internal" href="#synthesis-of-audio-from-20-sinusodal-tracks">Synthesis of Audio from 20 sinusodal tracks</a></li>
 <li><a class="reference internal" href="#residual-discarded-part-of-audio-mostly-hissing-sound">Residual: Discarded part of Audio - mostly hissing sound</a></li>
-<li><a class="reference internal" href="#audio-file">Audio File</a></li>
+<li><a class="reference internal" href="#save-files-and-play-with-jupyter">Save files and Play with Jupyter</a></li>
 </ul>
 </li>
 </ul>
@@ -268,13 +268,37 @@ to download the full example code or to run this example in your browser via Jup
 </div>
 <section class="sphx-glr-example-title" id="sinusoidal-model-analysis-and-synthesis">
 <span id="sphx-glr-auto-examples-signal-processing-plot-sp-sinusodal-model-analysis-synthesis-py"></span><h1>Sinusoidal Model:  Analysis and Synthesis<a class="headerlink" href="#sinusoidal-model-analysis-and-synthesis" title="Link to this heading">¶</a></h1>
-<p># # Sinusoidal Model:  Analysis and Synthesis</p>
-<section id="model">
-<h2>Model<a class="headerlink" href="#model" title="Link to this heading">¶</a></h2>
-<p>embed_audio(‘singing_female_recons’, attribute = c(“controls”, “loop”))</p>
+<p># Sinusoidal Model:  Analysis and Synthesis</p>
+<p>In this example, first we decompose an audio file into ONLY 20 sinusoidal tracks and then
+reconstruct an audio from it. We will  also examin the residual.</p>
+<p>Before starting, listen following three audio files, that are the same as generated from
+this example.</p>
+<section id="resulting-sinusoidal-model">
+<h2>Resulting Sinusoidal Model<a class="headerlink" href="#resulting-sinusoidal-model" title="Link to this heading">¶</a></h2>
+<p>&lt;h3&gt;Original Audio&lt;/h3&gt;
+<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav">https://github.com/spkit/data_samples/raw/main/files/singing-female.wav</a>
+&lt;audio controls=”controls”&gt;</p>
+<blockquote>
+<div><p>&lt;source src=”<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true">https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true</a>” type=”audio/wav”&gt;</p>
+</div></blockquote>
+<p>&lt;/audio&gt;</p>
+<p>&lt;h3&gt;Reconstructed Audio&lt;/h3&gt;
+<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav">https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav</a>
+&lt;audio controls=”controls”&gt;</p>
+<blockquote>
+<div><p>&lt;source src=”<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav?raw=true">https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav?raw=true</a>” type=”audio/wav”&gt;</p>
+</div></blockquote>
+<p>&lt;/audio&gt;</p>
+<p>&lt;h3&gt;Residual Audio&lt;/h3&gt;
+<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav">https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav</a>
+&lt;audio controls=”controls”&gt;</p>
+<blockquote>
+<div><p>&lt;source src=”<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav?raw=true">https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav?raw=true</a>” type=”audio/wav”&gt;</p>
+</div></blockquote>
+<p>&lt;/audio&gt;</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">logging</span><span class="o">,</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">wavfile</span>
 <span class="kn">import</span> <span class="nn">spkit</span> <span class="k">as</span> <span class="nn">sp</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;spkit-version :&#39;</span><span class="p">,</span><span class="n">sp</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
@@ -284,29 +308,19 @@ to download the full example code or to run this example in your browser via Jup
 </pre></div>
 </div>
 </section>
-<section id="example-with-audio-signal">
-<h2>Example with audio signal<a class="headerlink" href="#example-with-audio-signal" title="Link to this heading">¶</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">path1</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/Nikeshbajaj/web-data/blob/main/sounds/violin-B3.wav?raw=true&#39;</span>
-<span class="n">path2</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/Nikeshbajaj/web-data/blob/main/sounds/singing-female.wav?raw=true&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">path2</span><span class="p">)</span>
+<section id="download-audio-file">
+<h2>Download audio file<a class="headerlink" href="#download-audio-file" title="Link to this heading">¶</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span>  <span class="o">=</span> <span class="s1">&#39;https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true&#39;</span>
 
-<span class="c1"># embed_audio(path2, attribute = c(&quot;controls&quot;, &quot;loop&quot;))</span>
-<span class="c1"># ![](&#39;https://github.com/Nikeshbajaj/web-data/blob/main/sounds/singing-female.wav?raw=true&#39;)</span>
-<span class="c1">#</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;singing-female.wav&#39;</span>
 
-<a href="https://docs.python.org/3/library/logging.html#logging.info" title="logging.info" class="sphx-glr-backref-module-logging sphx-glr-backref-type-py-function"><span class="n">logging</span><span class="o">.</span><span class="n">info</span></a><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Downloading wav file from: </span><span class="si">{</span><span class="n">path2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path2</span><span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;myfile.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span><span class="p">(</span><a href="https://docs.python.org/3/library/os.path.html#os.path.exists" title="os.path.exists" class="sphx-glr-backref-module-os-path sphx-glr-backref-type-py-function"><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span></a><span class="p">(</span><span class="n">file_name</span><span class="p">)):</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 
-<span class="n">fs</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.wavfile.read.html#scipy.io.wavfile.read" title="scipy.io.wavfile.read" class="sphx-glr-backref-module-scipy-io-wavfile sphx-glr-backref-type-py-function"><span class="n">wavfile</span><span class="o">.</span><span class="n">read</span></a><span class="p">(</span><span class="s1">&#39;myfile.wav&#39;</span><span class="p">)</span>
+<span class="n">fs</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.wavfile.read.html#scipy.io.wavfile.read" title="scipy.io.wavfile.read" class="sphx-glr-backref-module-scipy-io-wavfile sphx-glr-backref-type-py-function"><span class="n">wavfile</span><span class="o">.</span><span class="n">read</span></a><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="n">fs</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>https://github.com/Nikeshbajaj/web-data/blob/main/sounds/singing-female.wav?raw=true
-(272243,) 44100
 </pre></div>
 </div>
 </section>
@@ -314,35 +328,20 @@ to download the full example code or to run this example in your browser via Jup
 <h2>STFT of Audio<a class="headerlink" href="#stft-of-audio" title="Link to this heading">¶</a></h2>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mXt</span><span class="p">,</span><span class="n">pXt</span> <span class="o">=</span> <a href="../../modules/generated/spkit.stft_analysis.html#spkit.stft_analysis" title="spkit.stft_analysis" class="sphx-glr-backref-module-spkit sphx-glr-backref-type-py-function"><span class="n">sp</span><span class="o">.</span><span class="n">stft_analysis</span></a><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">winlen</span><span class="o">=</span><span class="mi">441</span><span class="p">,</span> <span class="n">overlap</span><span class="o">=</span><span class="mi">220</span><span class="p">,</span><span class="n">window</span><span class="o">=</span><span class="s1">&#39;blackmanharris&#39;</span><span class="p">,</span><span class="n">nfft</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
-
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlim.html#matplotlib.pyplot.xlim" title="matplotlib.pyplot.xlim" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span></a><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="matplotlib.pyplot.grid" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a><span class="p">()</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s1">&#39;Original audio&#39;</span><span class="p">)</span>
-<span class="c1">#plt.xlabel(&#39;time (s)&#39;)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;amplitude (μV)&#39;</span><span class="p">)</span>
-
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="matplotlib.pyplot.imshow" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span></a><span class="p">(</span><span class="n">mXt</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span><span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span><span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="n">fs</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s1">&#39;Spectrogram&#39;</span><span class="p">)</span>
-<span class="c1">#plt.xlabel(&#39;time (s)&#39;)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;frequency (Hz)&#39;</span><span class="p">)</span>
-
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel" title="matplotlib.pyplot.xlabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span></a><span class="p">(</span><span class="s1">&#39;time (s)&#39;</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
-
-<span class="c1"># IPython.display.Audio(x,rate=fs)</span>
-
-
-<span class="c1"># Original Audio</span>
-<span class="c1">#</span>
-<span class="c1"># &lt;audio controls=&quot;controls&quot;&gt;</span>
-<span class="c1">#       &lt;source src=&quot;https://github.com/Nikeshbajaj/web-data/blob/main/sounds/singing-female.wav?raw=true&quot; type=&quot;audio/wav&quot;&gt;</span>
-<span class="c1"># &lt;/audio&gt;</span>
-<span class="c1">#</span>
-<span class="c1"># https://github.com/Nikeshbajaj/web-data/blob/main/sounds/singing-female.wav?raw=true</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_001.png" srcset="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_001.png" alt="Original audio, Spectrogram" class = "sphx-glr-single-img"/></section>
@@ -362,28 +361,19 @@ to download the full example code or to run this example in your browser via Jup
 <span class="n">fXt1</span> <span class="o">=</span> <span class="p">(</span><span class="n">fXst</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span><span class="o">*</span><span class="p">(</span><span class="n">mXst</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">fXt1</span><span class="p">[</span><span class="n">fXt1</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><a href="https://numpy.org/doc/stable/reference/constants.html#numpy.nan" title="numpy.nan" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">nan</span></a>
 
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">311</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlim.html#matplotlib.pyplot.xlim" title="matplotlib.pyplot.xlim" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span></a><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="matplotlib.pyplot.grid" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a><span class="p">()</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s1">&#39;Original Audio&#39;</span><span class="p">)</span>
-<span class="c1">#plt.xlabel(&#39;time (s)&#39;)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;amplitude (μV)&#39;</span><span class="p">)</span>
-
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">312</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="matplotlib.pyplot.imshow" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span></a><span class="p">(</span><span class="n">mXt</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span><span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span><span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="n">fs</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s1">&#39;Spectrogram&#39;</span><span class="p">)</span>
-<span class="c1">#plt.xlabel(&#39;time (s)&#39;)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;frequency (Hz)&#39;</span><span class="p">)</span>
-
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">313</span><span class="p">)</span>
 <span class="n">tx</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">fXt1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="n">fXt1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">tx</span><span class="p">,</span><span class="n">fXt1</span><span class="p">,</span><span class="s1">&#39;-k&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="c1">#plt.ylim([0,fs/2])</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlim.html#matplotlib.pyplot.xlim" title="matplotlib.pyplot.xlim" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span></a><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">tx</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
-
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sinusoidal tracks: n=</span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel" title="matplotlib.pyplot.xlabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span></a><span class="p">(</span><span class="s1">&#39;time (s)&#39;</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;frequency (Hz)&#39;</span><span class="p">)</span>
@@ -392,7 +382,7 @@ to download the full example code or to run this example in your browser via Jup
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_002.png" srcset="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_002.png" alt="Original Audio, Spectrogram, Sinusoidal tracks: n=20" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(363, 20) (363, 20) (363, 20)
+<img src="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_002.png" srcset="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_002.png" alt="Original Audio, Sinusoidal tracks: n=20" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(363, 20) (363, 20) (363, 20)
 </pre></div>
 </div>
 </section>
@@ -401,10 +391,7 @@ to download the full example code or to run this example in your browser via Jup
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Xr</span> <span class="o">=</span> <a href="../../modules/generated/spkit.sineModel_synthesis.html#spkit.sineModel_synthesis" title="spkit.sineModel_synthesis" class="sphx-glr-backref-module-spkit sphx-glr-backref-type-py-function"><span class="n">sp</span><span class="o">.</span><span class="n">sineModel_synthesis</span></a><span class="p">(</span><span class="n">fXst</span><span class="p">,</span> <span class="n">mXst</span><span class="p">,</span> <span class="n">pXst</span><span class="p">,</span><span class="n">fs</span><span class="p">,</span><span class="n">overlap</span><span class="o">=</span><span class="mi">750</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Xr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
-
-
 <span class="n">mXrt</span><span class="p">,</span><span class="n">pXrt</span> <span class="o">=</span> <a href="../../modules/generated/spkit.stft_analysis.html#spkit.stft_analysis" title="spkit.stft_analysis" class="sphx-glr-backref-module-spkit sphx-glr-backref-type-py-function"><span class="n">sp</span><span class="o">.</span><span class="n">stft_analysis</span></a><span class="p">(</span><span class="n">Xr</span><span class="p">,</span> <span class="n">winlen</span><span class="o">=</span><span class="mi">441</span><span class="p">,</span> <span class="n">overlap</span><span class="o">=</span><span class="mi">220</span><span class="p">,</span><span class="n">window</span><span class="o">=</span><span class="s1">&#39;blackmanharris&#39;</span><span class="p">,</span><span class="n">nfft</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-
 
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
@@ -412,30 +399,14 @@ to download the full example code or to run this example in your browser via Jup
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlim.html#matplotlib.pyplot.xlim" title="matplotlib.pyplot.xlim" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span></a><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="matplotlib.pyplot.grid" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a><span class="p">()</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Reconstructed Audio from </span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s1"> Sinusoidal: $x_r(t)$&#39;</span><span class="p">)</span>
-<span class="c1">#plt.xlabel(&#39;time (s)&#39;)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;amplitude (μV)&#39;</span><span class="p">)</span>
-
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="matplotlib.pyplot.imshow" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span></a><span class="p">(</span><span class="n">mXrt</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span><span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span><span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="n">fs</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Spectrogram of $x_r(t)$&#39;</span><span class="p">)</span>
-<span class="c1">#plt.xlabel(&#39;time (s)&#39;)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel" title="matplotlib.pyplot.xlabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span></a><span class="p">(</span><span class="s1">&#39;time (s)&#39;</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;frequency (Hz)&#39;</span><span class="p">)</span>
-
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
-
-<span class="c1"># Reconstructed Audio File</span>
-<span class="c1">#------------------------------------</span>
-<span class="c1">#IPython.display.Audio(Xr,rate=fs)</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
-<span class="c1"># Reconstructed Audio</span>
-<span class="c1">#</span>
-<span class="c1"># &lt;audio controls=&quot;controls&quot;&gt;</span>
-<span class="c1">#       &lt;source src=&quot;https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_recons.wav&quot; type=&quot;audio/wav&quot;&gt;</span>
-<span class="c1"># &lt;/audio&gt;</span>
-<span class="c1">#</span>
-<span class="c1"># https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_recons.wav</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_003.png" srcset="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_003.png" alt="Reconstructed Audio from 20 Sinusoidal: $x_r(t)$, Spectrogram of $x_r(t)$" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(273000,)
@@ -454,33 +425,29 @@ to download the full example code or to run this example in your browser via Jup
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlim.html#matplotlib.pyplot.xlim" title="matplotlib.pyplot.xlim" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span></a><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="matplotlib.pyplot.grid" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a><span class="p">()</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Residual: Discarded part of Audio: $x_d(t) = x(t)-x_r(t)$&#39;</span><span class="p">)</span>
-<span class="c1">#plt.xlabel(&#39;time (s)&#39;)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;amplitude (μV)&#39;</span><span class="p">)</span>
-
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="matplotlib.pyplot.imshow" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span></a><span class="p">(</span><span class="n">mXdt</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span><span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span><span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="n">fs</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Spectrogram of $x_d(t)$&#39;</span><span class="p">)</span>
-<span class="c1">#plt.xlabel(&#39;time (s)&#39;)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;frequency (Hz)&#39;</span><span class="p">)</span>
-
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_004.png" srcset="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_004.png" alt="Residual: Discarded part of Audio: $x_d(t) = x(t)-x_r(t)$, Spectrogram of $x_d(t)$" class = "sphx-glr-single-img"/></section>
-<section id="audio-file">
-<h2>Audio File<a class="headerlink" href="#audio-file" title="Link to this heading">¶</a></h2>
+<section id="save-files-and-play-with-jupyter">
+<h2>Save files and Play with Jupyter<a class="headerlink" href="#save-files-and-play-with-jupyter" title="Link to this heading">¶</a></h2>
 <blockquote>
-<div><p>IPython.display.Audio(Xd,rate=fs)</p>
-<p>Residual Audio
-&lt;audio controls=”controls”&gt;</p>
-<blockquote>
-<div><p>&lt;source src=”<a class="reference external" href="https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_residual.wav">https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_residual.wav</a>” type=”audio/wav”&gt;</p>
+<div><p>&lt;code&gt;
+import IPython</p>
+<p>wavfile.write(f”<a href="#id1"><span class="problematic" id="id2">sinmodel_recons_</span></a>”+file_name, rate=fs, data=Xr[:len(x)].astype(np.int16))
+wavfile.write(f”<a href="#id3"><span class="problematic" id="id4">sinmodel_residual_</span></a>”+file_name, rate=fs, data=Xd.astype(np.int16))</p>
+<p>display(IPython.display.Audio(data=x,rate=fs))
+display(IPython.display.Audio(data=Xr[:len(x)],rate=fs))
+display(IPython.display.Audio(data=Xd,rate=fs))
+&lt;/code&gt;</p>
 </div></blockquote>
-<p>&lt;/audio&gt;</p>
-<p><a class="reference external" href="https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_residual.wav">https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_residual.wav</a></p>
-</div></blockquote>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.011 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.571 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-signal-processing-plot-sp-sinusodal-model-analysis-synthesis-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/spkit/spkit/0.9.X?urlpath=lab/tree/notebooks/auto_examples/signal_processing/plot_sp_sinusodal_model_analysis_synthesis.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo5.svg" width="150px" /></a>
@@ -499,18 +466,18 @@ to download the full example code or to run this example in your browser via Jup
 <div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Analysis and Synthesis Models"><img alt="" src="../../_images/sphx_glr_plot_sp_analysis_sythesis_models_thumb.png" />
 <p><a class="reference internal" href="plot_sp_analysis_sythesis_models.html#sphx-glr-auto-examples-signal-processing-plot-sp-analysis-sythesis-models-py"><span class="std std-ref">Analysis and Synthesis Models</span></a></p>
   <div class="sphx-glr-thumbnail-title">Analysis and Synthesis Models</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="In this example code, we demonstrate analysis of MEA Recording, with minimal settings, using si..."><img alt="" src="../../_images/sphx_glr_plot_mea_minimal_setting_example_thumb.png" />
+<p><a class="reference internal" href="../multielectrode-array/plot_mea_minimal_setting_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-minimal-setting-example-py"><span class="std std-ref">MEA: Minimal Setting: Example</span></a></p>
+  <div class="sphx-glr-thumbnail-title">MEA: Minimal Setting: Example</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="Analysis and Synthesis Models"><img alt="" src="../../_images/sphx_glr_plot_sp_sinusodal_model_example_sound_thumb.png" />
 <p><a class="reference internal" href="plot_sp_sinusodal_model_example_sound.html#sphx-glr-auto-examples-signal-processing-plot-sp-sinusodal-model-example-sound-py"><span class="std std-ref">Sinusoidal Model : Synthesis : Audio</span></a></p>
   <div class="sphx-glr-thumbnail-title">Sinusoidal Model : Synthesis : Audio</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip=" ATAR: Automatic and Tunable Artifact Removal Algorithm -  Tuning"><img alt="" src="../../_images/sphx_glr_plot_sp_ATAR_algorithm_tuning_thumb.png" />
-<p><a class="reference internal" href="../electroencephalogram/plot_sp_ATAR_algorithm_tuning.html#sphx-glr-auto-examples-electroencephalogram-plot-sp-atar-algorithm-tuning-py"><span class="std std-ref">ATAR: Automatic and Tunable Artifact Removal Algorithm</span></a></p>
-  <div class="sphx-glr-thumbnail-title">ATAR: Automatic and Tunable Artifact Removal Algorithm</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip=" ATAR: Automatic and Tunable Artifact Removal Algorithm -  Tuning"><img alt="" src="../../_images/sphx_glr_plot_sp_ATAR_algorithm_tuning_thumb1.png" />
-<p><a class="reference internal" href="plot_sp_ATAR_algorithm_tuning.html#sphx-glr-auto-examples-signal-processing-plot-sp-atar-algorithm-tuning-py"><span class="std std-ref">ATAR: Automatic and Tunable Artifact Removal Algorithm</span></a></p>
-  <div class="sphx-glr-thumbnail-title">ATAR: Automatic and Tunable Artifact Removal Algorithm</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="ATAR: Automatic and Tunable Artifact Removal Algorithm"><img alt="" src="../../_images/sphx_glr_plot_sp_ATAR_algorith_eeg_artifact_removal_thumb.png" />
-<p><a class="reference internal" href="plot_sp_ATAR_algorith_eeg_artifact_removal.html#sphx-glr-auto-examples-signal-processing-plot-sp-atar-algorith-eeg-artifact-removal-py"><span class="std std-ref">EEG Artifact removal using ATAR</span></a></p>
-  <div class="sphx-glr-thumbnail-title">EEG Artifact removal using ATAR</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Scalogram CWT"><img alt="" src="../../_images/sphx_glr_plot_sp_scalogram_cwt_example_thumb.png" />
+<p><a class="reference internal" href="../wavelet_analysis/plot_sp_scalogram_cwt_example.html#sphx-glr-auto-examples-wavelet-analysis-plot-sp-scalogram-cwt-example-py"><span class="std std-ref">Scalogram CWT</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Scalogram CWT</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip=" An example of computation of entropy for a discreet source."><img alt="" src="../../_images/sphx_glr_plot_it_entropy_discreet_example_thumb.png" />
+<p><a class="reference internal" href="../information_theory/plot_it_entropy_discreet_example.html#sphx-glr-auto-examples-information-theory-plot-it-entropy-discreet-example-py"><span class="std std-ref">Entropy  -  Discreet Source</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Entropy  -  Discreet Source</div>
 </div></div><p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
 </section>
 </section>
