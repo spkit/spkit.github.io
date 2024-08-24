@@ -19,12 +19,12 @@
 
 
 ===================================
-Sinusodal Model : Synthesis : Audio 
+Sinusoidal Model : Synthesis : Audio 
 ===================================
 
 Analysis and Synthesis Models
 
-* Sinasodual Model: Audio
+* Sinusoidal Model: Audio
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-50
 
@@ -84,7 +84,7 @@ Analysis and Synthesis Models
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.054 seconds)
+   **Total running time of the script:** (0 minutes 2.442 seconds)
 
 
 .. _sphx_glr_download_auto_examples_signal_processing_plot_sp_sinusodal_model_example_sound.py:

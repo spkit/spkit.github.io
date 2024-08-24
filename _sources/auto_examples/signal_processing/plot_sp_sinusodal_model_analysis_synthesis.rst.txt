@@ -18,22 +18,20 @@
 .. _sphx_glr_auto_examples_signal_processing_plot_sp_sinusodal_model_analysis_synthesis.py:
 
 
-===============================
-Sinasodal Model:  Analysis and Synthesis
-===============================
+========================================
+Sinusoidal Model:  Analysis and Synthesis
+========================================
 
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Example-with-audio-signal" data-toc-modified-id="Example-with-audio-signal-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Example with audio signal</a></span></li><li><span><a href="#Analysis-of-Audio-with-only-20-sinasodals" data-toc-modified-id="Analysis-of-Audio-with-only-20-sinasodals-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Analysis of Audio with only 20 sinasodals</a></span></li><li><span><a href="#Synthesis-of-Audio-from-20-sinasodal-tracks" data-toc-modified-id="Synthesis-of-Audio-from-20-sinasodal-tracks-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Synthesis of Audio from 20 sinasodal tracks</a></span></li><li><span><a href="#Residual:-Discarded-part-of-Audio---mostly-hissing-sound" data-toc-modified-id="Residual:-Discarded-part-of-Audio---mostly-hissing-sound-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Residual: Discarded part of Audio - mostly hissing sound</a></span></li></ul></div>
 
-# # Sinasodal Model:  Analysis and Synthesis
+# # Sinusoidal Model:  Analysis and Synthesis
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-16
+.. GENERATED FROM PYTHON SOURCE LINES 11-14
 
 Model
 --------
 embed_audio('singing_female_recons', attribute = c("controls", "loop"))
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-87
+.. GENERATED FROM PYTHON SOURCE LINES 14-23
 
 .. code-block:: Python
 
@@ -42,15 +40,32 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
     import matplotlib.pyplot as plt
     import requests, logging
     from scipy.io import wavfile
-    #import IPython
-
-
     import spkit as sp
-    sp.__version__
+    print('spkit-version :',sp.__version__)
 
 
 
-    # ## Example with audio signal
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    spkit-version : 0.0.9.7
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 24-26
+
+Example with audio signal
+---------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 26-46
+
+.. code-block:: Python
+
 
     path1 = 'https://github.com/Nikeshbajaj/web-data/blob/main/sounds/violin-B3.wav?raw=true'
     path2 = 'https://github.com/Nikeshbajaj/web-data/blob/main/sounds/singing-female.wav?raw=true'
@@ -58,20 +73,41 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
 
     # embed_audio(path2, attribute = c("controls", "loop"))
     # ![]('https://github.com/Nikeshbajaj/web-data/blob/main/sounds/singing-female.wav?raw=true')
-
+    #
 
     logging.info(f"Downloading wav file from: {path2}")
     req = requests.get(path2)
     with open('myfile.wav', 'wb') as f:
             f.write(req.content)
 
-
-
     fs, x = wavfile.read('myfile.wav')
     t = np.arange(len(x))/fs
 
     print(x.shape, fs)
 
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    https://github.com/Nikeshbajaj/web-data/blob/main/sounds/singing-female.wav?raw=true
+    (272243,) 44100
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 47-49
+
+STFT of Audio
+--------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 49-83
+
+.. code-block:: Python
 
 
     mXt,pXt = sp.stft_analysis(x, winlen=441, overlap=220,window='blackmanharris',nfft=None)
@@ -110,34 +146,26 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
 
 
 
-
 .. image-sg:: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_001.png
    :alt: Original audio, Spectrogram
    :srcset: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_001.png
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    https://github.com/Nikeshbajaj/web-data/blob/main/sounds/singing-female.wav?raw=true
-    (272243,) 44100
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 84-86
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-89
+Analysis of Audio with only 20 sinusodal tracks
+------------------------------------------------
 
-## Analysis of Audio with only 20 sinasodals
-
-.. GENERATED FROM PYTHON SOURCE LINES 89-220
+.. GENERATED FROM PYTHON SOURCE LINES 86-131
 
 .. code-block:: Python
 
 
     N = 20
-
 
     fXst, mXst, pXst = sp.sineModel_analysis(x,fs,winlen=3001,overlap=750,
                                 window='blackmanharris', nfft=None, thr=-10, 
@@ -148,11 +176,8 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
 
     # plotting only frequency which have magnitude > 0dB
 
-
     fXt1 = (fXst.copy())*(mXst>0)
     fXt1[fXt1==0]=np.nan
-
-
 
     plt.figure(figsize=(13,9))
     plt.subplot(311)
@@ -163,13 +188,11 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
     #plt.xlabel('time (s)')
     plt.ylabel('amplitude (μV)')
 
-
     plt.subplot(312)
     plt.imshow(mXt.T,aspect='auto',origin='lower',cmap='jet',extent=[t[0],t[-1],0,fs/2])
     plt.title('Spectrogram')
     #plt.xlabel('time (s)')
     plt.ylabel('frequency (Hz)')
-
 
     plt.subplot(313)
     tx = t[-1]*np.arange(fXt1.shape[0])/fXt1.shape[0]
@@ -178,7 +201,7 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
     #plt.ylim([0,fs/2])
     plt.xlim([0,tx[-1]])
 
-    plt.title(f'Sinasodals tracks: n={N}')
+    plt.title(f'Sinusoidal tracks: n={N}')
     plt.xlabel('time (s)')
     plt.ylabel('frequency (Hz)')
     plt.grid(alpha=0.3)
@@ -186,7 +209,33 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
     plt.show()
 
 
-    # ## Synthesis of Audio from 20 sinasodal tracks
+
+
+
+.. image-sg:: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_002.png
+   :alt: Original Audio, Spectrogram, Sinusoidal tracks: n=20
+   :srcset: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_002.png
+   :class: sphx-glr-single-img
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    (363, 20) (363, 20) (363, 20)
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 132-134
+
+Synthesis of Audio from 20 sinusodal tracks
+------------------------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 134-176
+
+.. code-block:: Python
+
 
     Xr = sp.sineModel_synthesis(fXst, mXst, pXst,fs,overlap=750)
     print(Xr.shape)
@@ -201,7 +250,7 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
     plt.plot(t,Xr[:len(x)])
     plt.xlim([t[0],t[-1]])
     plt.grid()
-    plt.title(f'Reconstructed Audio from {N} Sinasodals: $x_r(t)$')
+    plt.title(f'Reconstructed Audio from {N} Sinusoidal: $x_r(t)$')
     #plt.xlabel('time (s)')
     plt.ylabel('amplitude (μV)')
 
@@ -214,9 +263,11 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
     plt.tight_layout()
     plt.show()
 
+    # Reconstructed Audio File
+    #------------------------------------
     #IPython.display.Audio(Xr,rate=fs)
-
-
+    #
+    #
     # Reconstructed Audio
     # 
     # <audio controls="controls">
@@ -225,16 +276,39 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
     # 
     # https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_recons.wav
 
-    # ## Residual: Discarded part of Audio - mostly hissing sound
+
+
+
+
+
+.. image-sg:: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_003.png
+   :alt: Reconstructed Audio from 20 Sinusoidal: $x_r(t)$, Spectrogram of $x_r(t)$
+   :srcset: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_003.png
+   :class: sphx-glr-single-img
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    (273000,)
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 177-179
+
+Residual: Discarded part of Audio - mostly hissing sound
+------------------------------------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 179-204
+
+.. code-block:: Python
 
 
     Xd = x - Xr[:len(x)]
-    Xd.shape
-
-
 
     mXdt,pXdt = sp.stft_analysis(Xd, winlen=441, overlap=220,window='blackmanharris',nfft=None)
-
 
     plt.figure(figsize=(13,6))
     plt.subplot(211)
@@ -254,60 +328,38 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
     plt.tight_layout()
     plt.show()
 
-    #IPython.display.Audio(Xd,rate=fs)
-
-
-    # Residual Audio   
-    # <audio controls="controls">
-    #       <source src="https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_residual.wav" type="audio/wav">
-    # </audio>
-    # 
-    # https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_residual.wav
 
 
 
 
 
-
-.. rst-class:: sphx-glr-horizontal
-
-
-    *
-
-      .. image-sg:: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_002.png
-         :alt: Original Audio, Spectrogram, Sinasodals tracks: n=20
-         :srcset: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_002.png
-         :class: sphx-glr-multi-img
-
-    *
-
-      .. image-sg:: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_003.png
-         :alt: Reconstructed Audio from 20 Sinasodals: $x_r(t)$, Spectrogram of $x_r(t)$
-         :srcset: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_003.png
-         :class: sphx-glr-multi-img
-
-    *
-
-      .. image-sg:: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_004.png
-         :alt: Residual: Discarded part of Audio: $x_d(t) = x(t)-x_r(t)$, Spectrogram of $x_d(t)$
-         :srcset: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_004.png
-         :class: sphx-glr-multi-img
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    (363, 20) (363, 20) (363, 20)
-    (273000,)
+.. image-sg:: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_004.png
+   :alt: Residual: Discarded part of Audio: $x_d(t) = x(t)-x_r(t)$, Spectrogram of $x_d(t)$
+   :srcset: /auto_examples/signal_processing/images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_004.png
+   :class: sphx-glr-single-img
 
 
 
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 205-216
+
+Audio File
+------------------------------------
+ IPython.display.Audio(Xd,rate=fs)
+
+
+ Residual Audio   
+ <audio controls="controls">
+       <source src="https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_residual.wav" type="audio/wav">
+ </audio>
+
+ https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/spkit/data/singing_female_residual.wav
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.234 seconds)
+   **Total running time of the script:** (0 minutes 3.011 seconds)
 
 
 .. _sphx_glr_download_auto_examples_signal_processing_plot_sp_sinusodal_model_analysis_synthesis.py:

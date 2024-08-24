@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:08.267** total execution time for 34 files **from all galleries**:
+**00:05.454** total execution time for 34 files **from all galleries**:
 
 .. container::
 
@@ -32,8 +32,11 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_machine_learning_plot_ml_naive_bayes_examples.py` (``../examples/machine_learning/plot_ml_naive_bayes_examples.py``)
-     - 00:08.267
+   * - :ref:`sphx_glr_auto_examples_signal_processing_plot_sp_sinusodal_model_analysis_synthesis.py` (``../examples/signal_processing/plot_sp_sinusodal_model_analysis_synthesis.py``)
+     - 00:03.011
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_signal_processing_plot_sp_sinusodal_model_example_sound.py` (``../examples/signal_processing/plot_sp_sinusodal_model_example_sound.py``)
+     - 00:02.442
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ATAR_algorithm_tuning.py` (``../examples/electroencephalogram/plot_sp_ATAR_algorithm_tuning.py``)
      - 00:00.000
@@ -92,6 +95,9 @@ Computation times
    * - :ref:`sphx_glr_auto_examples_machine_learning_plot_ml_logistic_regression_examples.py` (``../examples/machine_learning/plot_ml_logistic_regression_examples.py``)
      - 00:00.000
      - 0.0
+   * - :ref:`sphx_glr_auto_examples_machine_learning_plot_ml_naive_bayes_examples.py` (``../examples/machine_learning/plot_ml_naive_bayes_examples.py``)
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_auto_examples_multielectrode-array_plot_mea_minimal_setting_example.py` (``../examples/multielectrode-array/plot_mea_minimal_setting_example.py``)
      - 00:00.000
      - 0.0
@@ -114,12 +120,6 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_signal_processing_plot_sp_fractional_fourier_transform.py` (``../examples/signal_processing/plot_sp_fractional_fourier_transform.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_signal_processing_plot_sp_sinusodal_model_analysis_synthesis.py` (``../examples/signal_processing/plot_sp_sinusodal_model_analysis_synthesis.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_signal_processing_plot_sp_sinusodal_model_example_sound.py` (``../examples/signal_processing/plot_sp_sinusodal_model_example_sound.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_statistics_plot_stats_group_boxplotes.py` (``../examples/statistics/plot_stats_group_boxplotes.py``)
