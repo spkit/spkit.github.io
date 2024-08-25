@@ -113,7 +113,7 @@ Very important when you need to extract and simplify the decision rule.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.528 seconds)
+   **Total running time of the script:** (0 minutes 0.225 seconds)
 
 
 .. _sphx_glr_download_auto_examples_machine_learning_plot_ml_decision_tree_catogorical_features.py:

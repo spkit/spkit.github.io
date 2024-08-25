@@ -5,7 +5,7 @@ API Reference
 =============
 
 This is the function and class objects reference of spkit. This the most up-to-date documentation
-of spkit functions/classes/modules. We are set out to write comprehensive :ref:`User Guide <user_guide>`
+of spkit functions/classes/modules. We are set out to write a comprehensive :ref:`User Guide <user_guide>`
 and we are continuously updating it, however, it might be missing the full details of functions.
 Please refer to each function here at :ref:`api_ref`, where the docstring of each function and class
 have been written with most of the information with examples.

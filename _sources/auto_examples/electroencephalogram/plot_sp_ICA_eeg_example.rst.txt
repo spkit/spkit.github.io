@@ -250,8 +250,8 @@ Decomposition and Construction matrices (Extended InfoMax)
 
  .. code-block:: none
 
-    Error X 4.003699455301657e-11
-    Error S 4.803376793538483e-11
+    Error X 4.785559448716725e-11
+    Error S 7.449304058803827e-11
 
 
 
@@ -259,7 +259,7 @@ Decomposition and Construction matrices (Extended InfoMax)
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.511 seconds)
+   **Total running time of the script:** (0 minutes 1.705 seconds)
 
 
 .. _sphx_glr_download_auto_examples_electroencephalogram_plot_sp_ICA_eeg_example.py:

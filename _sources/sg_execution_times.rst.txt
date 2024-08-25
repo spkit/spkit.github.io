@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.744** total execution time for 34 files **from all galleries**:
+**00:04.387** total execution time for 35 files **from all galleries**:
 
 .. container::
 
@@ -32,8 +32,11 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_wavelet_analysis_plot_sp_wavelet_filtering_example.py` (``../examples/wavelet_analysis/plot_sp_wavelet_filtering_example.py``)
-     - 00:00.744
+   * - :ref:`sphx_glr_auto_examples_release_highlights_plot_release_highlights_0_0_9_6.py` (``../examples/release_highlights/plot_release_highlights_0_0_9_6.py``)
+     - 00:02.992
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_release_highlights_plot_release_highlights_0_0_9_7.py` (``../examples/release_highlights/plot_release_highlights_0_0_9_7.py``)
+     - 00:01.395
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ATAR_algorithm_tuning.py` (``../examples/electroencephalogram/plot_sp_ATAR_algorithm_tuning.py``)
      - 00:00.000
@@ -101,9 +104,6 @@ Computation times
    * - :ref:`sphx_glr_auto_examples_multielectrode-array_plot_mea_stepwise_example.py` (``../examples/multielectrode-array/plot_mea_stepwise_example.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_release_highlights_plot_release_highlights_0_0_9_7.py` (``../examples/release_highlights/plot_release_highlights_0_0_9_7.py``)
-     - 00:00.000
-     - 0.0
    * - :ref:`sphx_glr_auto_examples_signal_processing_plot_sp_RFB_for_period_estimation_demo_examples.py` (``../examples/signal_processing/plot_sp_RFB_for_period_estimation_demo_examples.py``)
      - 00:00.000
      - 0.0
@@ -132,5 +132,8 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_wavelet_analysis_plot_sp_scalogram_cwt_example.py` (``../examples/wavelet_analysis/plot_sp_scalogram_cwt_example.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_wavelet_analysis_plot_sp_wavelet_filtering_example.py` (``../examples/wavelet_analysis/plot_sp_wavelet_filtering_example.py``)
      - 00:00.000
      - 0.0

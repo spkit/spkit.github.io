@@ -24,12 +24,15 @@ Release Highlights for spkit 0.0.9.7
 
 .. currentmodule:: spkit
 
+**Release Highlights for spkit 0.0.9.7**
+
+
 We are pleased to announce the release of spkit 0.0.9.7, which comes
-with many bug fixes, more organised documentation and new features!
+with many fixed bug, more organised documentation and new features!
 For an exhaustive list of all the changes, please
 refer to the :ref:`release notes <changes_0_0_9_7>`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 15-30
+.. GENERATED FROM PYTHON SOURCE LINES 18-33
 
 Topographic Map correction: 10-20 System
 ----------------------------------------
@@ -47,7 +50,7 @@ In above examples, Cz is the center point and horizontal line crossing is straig
 In Spkit we tried to correct this mapping style, however, keeping the conventional style as option.
 See following examples.
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-52
+.. GENERATED FROM PYTHON SOURCE LINES 33-55
 
 .. code-block:: Python
 
@@ -85,7 +88,7 @@ See following examples.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-58
+.. GENERATED FROM PYTHON SOURCE LINES 56-61
 
 Location of all the eletrodes
 -----------------------------
@@ -93,7 +96,7 @@ Location of all the eletrodes
 Location of all the electrodes are shown here.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-114
+.. GENERATED FROM PYTHON SOURCE LINES 61-117
 
 .. code-block:: Python
 
@@ -177,12 +180,12 @@ Location of all the electrodes are shown here.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-117
+.. GENERATED FROM PYTHON SOURCE LINES 118-120
 
 Topographic Map 10-10 System
 ----------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-145
+.. GENERATED FROM PYTHON SOURCE LINES 120-148
 
 .. code-block:: Python
 
@@ -226,12 +229,12 @@ Topographic Map 10-10 System
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-148
+.. GENERATED FROM PYTHON SOURCE LINES 149-151
 
 Topographic Map 10-05 System
 ----------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-177
+.. GENERATED FROM PYTHON SOURCE LINES 151-179
 
 .. code-block:: Python
 
@@ -266,7 +269,6 @@ Topographic Map 10-05 System
 
 
 
-
 .. image-sg:: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_005.png
    :alt: Emotiv: 14 channels, All 10-05 Channels: (n346)
    :srcset: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_005.png
@@ -276,7 +278,285 @@ Topographic Map 10-05 System
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 178-197
+.. GENERATED FROM PYTHON SOURCE LINES 180-183
+
+Convolution with missing values (NaNs)
+--------------------------------------
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 185-188
+
+1D
+ ~~~~
+sp.conv1d_nan
+
+.. GENERATED FROM PYTHON SOURCE LINES 188-227
+
+.. code-block:: Python
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import scipy
+    import spkit as sp
+    seed = 4
+    x = (sp.create_signal_1d(n=100,seed=seed,sg_winlen=5)*10).round(0)
+    t = np.arange(len(x))/100
+    np.random.seed(seed)
+    r = np.random.rand(*x.shape)
+    x[r<0.05] = np.nan
+    kernel = np.ones(7)/7
+    np.random.seed(None)
+    x_scipy = scipy.signal.convolve(x.copy(), kernel,mode='same')
+    x_spkit = sp.conv1d_nan(x.copy(), kernel)
+    plt.figure(figsize=(8,7))
+    plt.subplot(311)
+    plt.plot(t,x,color='C0')
+    plt.vlines(t[np.isnan(x)],ymin=np.nanmin(x),ymax=np.nanmax(x),color='r',alpha=0.2,lw=8,label='missing: NaN')
+    plt.xlim([t[0],t[-1]])
+    plt.ylim([np.nanmin(x),np.nanmax(x)])
+    plt.legend(bbox_to_anchor=(1,1.2))
+    plt.grid()
+    plt.title('Signal with NaNs')
+    plt.subplot(312)
+    plt.plot(t,x_scipy)
+    plt.vlines(t[np.isnan(x_scipy)],ymin=np.nanmin(x),ymax=np.nanmax(x),color='r',alpha=0.2,lw=5.5)
+    plt.xlim([t[0],t[-1]])
+    plt.ylim([np.nanmin(x),np.nanmax(x)])
+    plt.grid()
+    plt.title('Convolution uisng Scipy (scipy.signal.convolution)')
+    plt.subplot(313)
+    plt.plot(t,x_spkit)
+    plt.xlim([t[0],t[-1]])
+    plt.ylim([np.nanmin(x),np.nanmax(x)])
+    plt.grid()
+    plt.title('Convolution uisng Spkit (sp.conv1d_nan)')
+    plt.tight_layout()
+    plt.show()
+
+
+
+
+.. image-sg:: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_006.png
+   :alt: Signal with NaNs, Convolution uisng Scipy (scipy.signal.convolution), Convolution uisng Spkit (sp.conv1d_nan)
+   :srcset: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_006.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 228-231
+
+2D
+ ~~~~
+sp.conv2d_nan
+
+.. GENERATED FROM PYTHON SOURCE LINES 231-261
+
+.. code-block:: Python
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    import scipy
+    import spkit as sp
+    seed = 2
+    I = (sp.create_signal_2d(n=10,seed=seed,sg_winlen=3)*10).round(0)
+    np.random.seed(seed)
+    r = np.random.rand(*I.shape)
+    np.random.seed(None)
+    I[r<0.05] = np.nan
+    kernel = np.ones([3,3])/9
+    I_scipy = scipy.signal.convolve2d(I.copy(), kernel,mode='same', boundary='fill',fillvalue=0)
+    I_spkit = sp.conv2d_nan(I.copy(), kernel, boundary='fill',fillvalue=0)
+    plt.figure(figsize=(12,4))
+    plt.subplot(131)
+    sns.heatmap(I, annot=True,cbar=False,xticklabels='', yticklabels='')
+    plt.title('Image with NaNs')
+    plt.subplot(132)
+    sns.heatmap(I_scipy, annot=True,cbar=False,xticklabels='', yticklabels='')
+    plt.title('Convolution uisng Scipy \n (scipy.signal.convolve2d)')
+    plt.subplot(133)
+    sns.heatmap(I_spkit, annot=True,cbar=False,xticklabels='', yticklabels='')
+    plt.title('Convolution uisng Spkit \n (sp.conv2d_nan)')
+    plt.tight_layout()
+    plt.show()
+
+
+
+
+
+
+
+.. image-sg:: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_007.png
+   :alt: Image with NaNs, Convolution uisng Scipy   (scipy.signal.convolve2d), Convolution uisng Spkit   (sp.conv2d_nan)
+   :srcset: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_007.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 262-265
+
+Filling Missing values with inter/exterpolation
+-----------------------------------------------
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 265-276
+
+.. code-block:: Python
+
+
+    # 1D
+    # ~~~~~
+    #sp.fill_nans_1d
+    import numpy as np
+    import spkit as sp
+    x = np.array([1,1,np.nan, 3,4,9,3, np.nan])
+    y = sp.fill_nans_1d(x)
+    print(x)
+    print(y)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    [ 1.  1. nan  3.  4.  9.  3. nan]
+    [ 1.  1.  2.  3.  4.  9.  3. -3.]
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 277-280
+
+2D
+ ~~~~
+sp.fill_nans_2d
+
+.. GENERATED FROM PYTHON SOURCE LINES 280-309
+
+.. code-block:: Python
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    import scipy
+    import spkit as sp
+    seed = 2
+    I = (sp.create_signal_2d(n=10,seed=seed,sg_winlen=3)*10).round(0)
+    np.random.seed(seed)
+    r = np.random.rand(*I.shape)
+    I[r<0.05] = np.nan
+    np.random.seed(None)
+    kernel = np.ones([2,2])/4
+    I_spkit = sp.conv2d_nan(I.copy(), kernel, boundary='reflect',fillvalue=0)
+    I_fill, I_sm  = sp.fill_nans_2d(I.copy())
+    plt.figure(figsize=(12,4))
+    plt.subplot(131)
+    sns.heatmap(I, annot=True,cbar=False,xticklabels='', yticklabels='')
+    plt.title('Matrix with NaNs')
+    plt.subplot(132)
+    sns.heatmap(I_fill, annot=True,cbar=False,xticklabels='', yticklabels='')
+    plt.title('Filling NaNs with \n (sp.fill_nans_2d)')
+    plt.subplot(133)
+    sns.heatmap(I_spkit, annot=True,cbar=False,xticklabels='', yticklabels='')
+    plt.title('Smoothing with \n (sp.conv2d_nan)')
+    plt.tight_layout()
+    plt.show()
+
+
+
+
+
+
+.. image-sg:: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_008.png
+   :alt: Matrix with NaNs, Filling NaNs with   (sp.fill_nans_2d), Smoothing with   (sp.conv2d_nan)
+   :srcset: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_008.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 310-316
+
+Wavelet Decomped Signals
+------------------------
+
+1. Wavelet Transform
+2. Wavelet Packet Decompositon
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 316-332
+
+.. code-block:: Python
+
+
+    # Example 1: Wavelet Transform
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    #
+    # sp.wavelet_decomposed_signals
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import spkit as sp
+    x,fs,lead_names = sp.data.ecg_sample_12leads(sample=2)
+    x = x[:int(fs*5),5]
+    x = sp.filterDC_sGolay(x, window_length=fs//3+1)
+    t = np.arange(len(x))/fs
+    XR = sp.wavelet_decomposed_signals(x,wv='db3',L=3,plot_each=False,WPD=False)
+    plt.show()
+
+
+
+
+
+.. image-sg:: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_009.png
+   :alt: Decomposed using Wavelet Transform (L=3)
+   :srcset: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_009.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 333-335
+
+Example 2: Wavelet Packet Decomposition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. GENERATED FROM PYTHON SOURCE LINES 335-346
+
+.. code-block:: Python
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import spkit as sp
+    x,fs,lead_names = sp.data.ecg_sample_12leads(sample=2)
+    x = x[:int(fs*5),5]
+    x = sp.filterDC_sGolay(x, window_length=fs//3+1)
+    t = np.arange(len(x))/fs
+    XR = sp.wavelet_decomposed_signals(x,wv='db3',L=3,plot_each=False,WPD=True)
+    plt.show()
+
+
+
+
+
+.. image-sg:: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_010.png
+   :alt: Decomposed using Wavelet Packet Decomposition(L=3)
+   :srcset: /auto_examples/release_highlights/images/sphx_glr_plot_release_highlights_0_0_9_7_010.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 347-366
 
 MEA: Multi-Electrode Array Processing
 -------------------------------------
@@ -301,7 +581,7 @@ Check Examples of MEA
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.711 seconds)
+   **Total running time of the script:** (0 minutes 1.395 seconds)
 
 
 .. _sphx_glr_download_auto_examples_release_highlights_plot_release_highlights_0_0_9_7.py:
