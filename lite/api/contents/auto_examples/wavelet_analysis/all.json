@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2024-08-24T23:16:48.182793Z",
+      "created": "2024-08-25T00:38:28.511084Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-08-24T23:16:46.632874Z",
+      "last_modified": "2024-08-25T00:38:27.149350Z",
       "mimetype": null,
       "name": "plot_sp_scalogram_cwt_example.ipynb",
       "path": "auto_examples/wavelet_analysis/plot_sp_scalogram_cwt_example.ipynb",
@@ -16,11 +16,11 @@
     },
     {
       "content": null,
-      "created": "2024-08-24T23:16:48.183243Z",
+      "created": "2024-08-25T00:38:28.511568Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-08-24T23:16:46.633301Z",
+      "last_modified": "2024-08-25T00:38:27.149673Z",
       "mimetype": null,
       "name": "plot_sp_wavelet_filtering_example.ipynb",
       "path": "auto_examples/wavelet_analysis/plot_sp_wavelet_filtering_example.ipynb",
@@ -29,11 +29,11 @@
       "writable": true
     }
   ],
-  "created": "2024-08-24T23:16:48.182995Z",
+  "created": "2024-08-25T00:38:28.511343Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2024-08-24T23:16:48.182995Z",
+  "last_modified": "2024-08-25T00:38:28.511343Z",
   "mimetype": null,
   "name": "wavelet_analysis",
   "path": "auto_examples/wavelet_analysis",

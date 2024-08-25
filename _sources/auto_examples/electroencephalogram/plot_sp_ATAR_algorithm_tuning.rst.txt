@@ -94,7 +94,7 @@ it can be set to try parallel processing, else will process each channel individ
 
 We recommed to use ***spkit.eeg.ATAR***.
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-109
+.. GENERATED FROM PYTHON SOURCE LINES 78-110
 
 .. code-block:: Python
 
@@ -118,6 +118,7 @@ We recommed to use ***spkit.eeg.ATAR***.
     # ## Filter with highpass
 
     Xf = sp.filter_X(X.copy(),fs=fs, band=[0.5], btype='highpass',ftype='SOS')
+
 
     t = np.arange(Xf.shape[0])/fs
     plt.figure(figsize=(12,5))
@@ -147,17 +148,17 @@ We recommed to use ***spkit.eeg.ATAR***.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-112
+.. GENERATED FROM PYTHON SOURCE LINES 111-113
 
 Applying ATAR Algorithm
-----------------------
+-----------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-116
+.. GENERATED FROM PYTHON SOURCE LINES 115-117
 
-Soft Thresholding: 
-----------------------
+Soft Thresholding:
+------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-142
+.. GENERATED FROM PYTHON SOURCE LINES 117-143
 
 .. code-block:: Python
 
@@ -211,12 +212,12 @@ Soft Thresholding:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-145
+.. GENERATED FROM PYTHON SOURCE LINES 144-146
 
 Linear Attenuation:
-----------------------
+-------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-169
+.. GENERATED FROM PYTHON SOURCE LINES 146-170
 
 .. code-block:: Python
 
@@ -274,12 +275,12 @@ Linear Attenuation:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 170-172
+.. GENERATED FROM PYTHON SOURCE LINES 171-173
 
 Elimination:
-----------------------
+------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-196
+.. GENERATED FROM PYTHON SOURCE LINES 173-197
 
 .. code-block:: Python
 
@@ -331,12 +332,12 @@ Elimination:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 197-199
+.. GENERATED FROM PYTHON SOURCE LINES 198-200
 
 Tuning :math:`\beta` with 'soft' : Controlling the aggressiveness
-----------------------
+-----------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 199-225
+.. GENERATED FROM PYTHON SOURCE LINES 200-226
 
 .. code-block:: Python
 
@@ -474,12 +475,12 @@ Tuning :math:`\beta` with 'soft' : Controlling the aggressiveness
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 226-228
+.. GENERATED FROM PYTHON SOURCE LINES 227-229
 
 Tuning :math:`\beta` with 'elim'
-----------------------
+--------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 228-254
+.. GENERATED FROM PYTHON SOURCE LINES 229-255
 
 .. code-block:: Python
 
@@ -617,17 +618,17 @@ Tuning :math:`\beta` with 'elim'
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 255-257
+.. GENERATED FROM PYTHON SOURCE LINES 256-258
 
 Other settings
-----------------------
+--------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-261
+.. GENERATED FROM PYTHON SOURCE LINES 260-262
 
 Changing wavelet function
-----------------------
+-------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 261-306
+.. GENERATED FROM PYTHON SOURCE LINES 262-307
 
 .. code-block:: Python
 
@@ -700,12 +701,12 @@ Changing wavelet function
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 307-309
+.. GENERATED FROM PYTHON SOURCE LINES 308-310
 
 Changing upper and lower bounds: :math:`k_1`, :math:`k_2`
-----------------------
+---------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 309-336
+.. GENERATED FROM PYTHON SOURCE LINES 310-337
 
 .. code-block:: Python
 
@@ -748,12 +749,12 @@ Changing upper and lower bounds: :math:`k_1`, :math:`k_2`
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 337-339
+.. GENERATED FROM PYTHON SOURCE LINES 338-340
 
 Changing IPR -  Interpercentile range
-----------------------
+-------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 339-364
+.. GENERATED FROM PYTHON SOURCE LINES 340-365
 
 .. code-block:: Python
 
@@ -794,12 +795,12 @@ Changing IPR -  Interpercentile range
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 365-367
+.. GENERATED FROM PYTHON SOURCE LINES 366-368
 
 Using the fix threshold :math:`\theta_\alpha`
-----------------------
+---------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 367-390
+.. GENERATED FROM PYTHON SOURCE LINES 368-391
 
 .. code-block:: Python
 
@@ -838,12 +839,12 @@ Using the fix threshold :math:`\theta_\alpha`
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 391-393
+.. GENERATED FROM PYTHON SOURCE LINES 392-394
 
 Changing window length (5 sec)
-----------------------
+------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 393-419
+.. GENERATED FROM PYTHON SOURCE LINES 394-420
 
 .. code-block:: Python
 
@@ -888,7 +889,7 @@ Changing window length (5 sec)
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 14.480 seconds)
+   **Total running time of the script:** (0 minutes 14.651 seconds)
 
 
 .. _sphx_glr_download_auto_examples_electroencephalogram_plot_sp_ATAR_algorithm_tuning.py:

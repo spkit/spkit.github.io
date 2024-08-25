@@ -18,9 +18,9 @@
 .. _sphx_glr_auto_examples_wavelet_analysis_plot_sp_scalogram_cwt_example.py:
 
 
-===============================
+=============
 Scalogram CWT
-===============================
+=============
 
 .. GENERATED FROM PYTHON SOURCE LINES 9-28
 
@@ -63,7 +63,7 @@ Scalogram CWT
 .. GENERATED FROM PYTHON SOURCE LINES 29-31
 
 Comparison Example
---------------------
+------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 31-46
 
@@ -111,7 +111,7 @@ Comparison Example
 .. GENERATED FROM PYTHON SOURCE LINES 47-49
 
 Gauss wavelet
---------------------
+--------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 49-79
 
@@ -208,7 +208,7 @@ Gauss wavelet
 .. GENERATED FROM PYTHON SOURCE LINES 80-82
 
 Morlet wavelet
---------------------
+---------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 82-86
 
@@ -239,7 +239,7 @@ Morlet wavelet
 .. GENERATED FROM PYTHON SOURCE LINES 87-89
 
 Gabor wavelet
---------------------
+--------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 89-94
 
@@ -271,7 +271,7 @@ Gabor wavelet
 .. GENERATED FROM PYTHON SOURCE LINES 95-97
 
 Poisson wavelet
---------------------
+----------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 97-102
 
@@ -303,7 +303,7 @@ Poisson wavelet
 .. GENERATED FROM PYTHON SOURCE LINES 103-105
 
 Complex Maxican wavelet
---------------------
+------------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 105-110
 
@@ -335,7 +335,7 @@ Complex Maxican wavelet
 .. GENERATED FROM PYTHON SOURCE LINES 111-113
 
 Complex Shannon wavelet
---------------------
+------------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 113-122
 
@@ -371,7 +371,7 @@ Complex Shannon wavelet
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.834 seconds)
+   **Total running time of the script:** (0 minutes 2.836 seconds)
 
 
 .. _sphx_glr_download_auto_examples_wavelet_analysis_plot_sp_scalogram_cwt_example.py:

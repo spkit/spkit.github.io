@@ -239,7 +239,7 @@
           <div class="spk-sidebar-toc">
             <ul>
 <li><a class="reference internal" href="#">Sinusoidal Model:  Analysis and Synthesis</a><ul>
-<li><a class="reference internal" href="#resulting-sinusoidal-model">Resulting Sinusoidal Model</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
 <li><a class="reference internal" href="#download-audio-file">Download audio file</a></li>
 <li><a class="reference internal" href="#stft-of-audio">STFT of Audio</a></li>
 <li><a class="reference internal" href="#analysis-of-audio-with-only-20-sinusodal-tracks">Analysis of Audio with only 20 sinusodal tracks</a></li>
@@ -273,29 +273,27 @@ to download the full example code or to run this example in your browser via Jup
 reconstruct an audio from it. We will  also examin the residual.</p>
 <p>Before starting, listen following three audio files, that are the same as generated from
 this example.</p>
-<section id="resulting-sinusoidal-model">
-<h2>Resulting Sinusoidal Model<a class="headerlink" href="#resulting-sinusoidal-model" title="Link to this heading">¶</a></h2>
-<p>&lt;h3&gt;Original Audio&lt;/h3&gt;
-<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav">https://github.com/spkit/data_samples/raw/main/files/singing-female.wav</a>
-&lt;audio controls=”controls”&gt;</p>
-<blockquote>
-<div><p>&lt;source src=”<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true">https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true</a>” type=”audio/wav”&gt;</p>
-</div></blockquote>
-<p>&lt;/audio&gt;</p>
-<p>&lt;h3&gt;Reconstructed Audio&lt;/h3&gt;
-<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav">https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav</a>
-&lt;audio controls=”controls”&gt;</p>
-<blockquote>
-<div><p>&lt;source src=”<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav?raw=true">https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav?raw=true</a>” type=”audio/wav”&gt;</p>
-</div></blockquote>
-<p>&lt;/audio&gt;</p>
-<p>&lt;h3&gt;Residual Audio&lt;/h3&gt;
-<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav">https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav</a>
-&lt;audio controls=”controls”&gt;</p>
-<blockquote>
-<div><p>&lt;source src=”<a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav?raw=true">https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav?raw=true</a>” type=”audio/wav”&gt;</p>
-</div></blockquote>
-<p>&lt;/audio&gt;</p>
+<p><strong>Resulting Sinusoidal Model</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav">Original Audio</a></p></li>
+<li><p><a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav">Reconstructed Audio</a></p></li>
+<li><p><a class="reference external" href="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav">Residual Audio</a></p></li>
+</ul>
+<div class="column-box">
+<p style="text-align:center;">Original Audio</p>
+<audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true" type="audio/wav" /></audio>
+</div>
+
+<div class="column-box">
+<p style="text-align:center;">Reconstructed Audio</p>
+<audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav?raw=true" type="audio/wav" /></audio>
+</div>
+
+<div class="column-box">
+<p style="text-align:center;">Residual Audio</p>
+<audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav?raw=true" type="audio/wav" /></audio>
+</div><section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">¶</a></h2>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">logging</span><span class="o">,</span> <span class="nn">os</span>
@@ -438,16 +436,29 @@ this example.</p>
 <section id="save-files-and-play-with-jupyter">
 <h2>Save files and Play with Jupyter<a class="headerlink" href="#save-files-and-play-with-jupyter" title="Link to this heading">¶</a></h2>
 <blockquote>
-<div><p>&lt;code&gt;
-import IPython</p>
-<p>wavfile.write(f”<a href="#id1"><span class="problematic" id="id2">sinmodel_recons_</span></a>”+file_name, rate=fs, data=Xr[:len(x)].astype(np.int16))
-wavfile.write(f”<a href="#id3"><span class="problematic" id="id4">sinmodel_residual_</span></a>”+file_name, rate=fs, data=Xd.astype(np.int16))</p>
-<p>display(IPython.display.Audio(data=x,rate=fs))
-display(IPython.display.Audio(data=Xr[:len(x)],rate=fs))
-display(IPython.display.Audio(data=Xd,rate=fs))
-&lt;/code&gt;</p>
-</div></blockquote>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.571 seconds)</p>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
+<span class="n">wavfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sinmodel_recons_&quot;</span><span class="o">+</span><span class="n">file_name</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">Xr</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">))</span>
+<span class="n">wavfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sinmodel_residual_&quot;</span><span class="o">+</span><span class="n">file_name</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">Xd</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">Audio</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">rate</span><span class="o">=</span><span class="n">fs</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">Audio</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">Xr</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)],</span><span class="n">rate</span><span class="o">=</span><span class="n">fs</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">Audio</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">Xd</span><span class="p">,</span><span class="n">rate</span><span class="o">=</span><span class="n">fs</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="column-box">
+<p style="text-align:center;">Original Audio</p>
+<audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true" type="audio/wav" /></audio>
+</div>
+
+<div class="column-box">
+<p style="text-align:center;">Reconstructed Audio</p>
+<audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav?raw=true" type="audio/wav" /></audio>
+</div>
+
+<div class="column-box">
+<p style="text-align:center;">Residual Audio</p>
+<audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav?raw=true" type="audio/wav" /></audio>
+</div></div></blockquote>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.237 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-signal-processing-plot-sp-sinusodal-model-analysis-synthesis-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/spkit/spkit/0.9.X?urlpath=lab/tree/notebooks/auto_examples/signal_processing/plot_sp_sinusodal_model_analysis_synthesis.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo5.svg" width="150px" /></a>
@@ -472,12 +483,12 @@ display(IPython.display.Audio(data=Xd,rate=fs))
 </div><div class="sphx-glr-thumbcontainer" tooltip="Analysis and Synthesis Models"><img alt="" src="../../_images/sphx_glr_plot_sp_sinusodal_model_example_sound_thumb.png" />
 <p><a class="reference internal" href="plot_sp_sinusodal_model_example_sound.html#sphx-glr-auto-examples-signal-processing-plot-sp-sinusodal-model-example-sound-py"><span class="std std-ref">Sinusoidal Model : Synthesis : Audio</span></a></p>
   <div class="sphx-glr-thumbnail-title">Sinusoidal Model : Synthesis : Audio</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Scalogram CWT"><img alt="" src="../../_images/sphx_glr_plot_sp_scalogram_cwt_example_thumb.png" />
-<p><a class="reference internal" href="../wavelet_analysis/plot_sp_scalogram_cwt_example.html#sphx-glr-auto-examples-wavelet-analysis-plot-sp-scalogram-cwt-example-py"><span class="std std-ref">Scalogram CWT</span></a></p>
-  <div class="sphx-glr-thumbnail-title">Scalogram CWT</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip=" An example of computation of entropy for a discreet source."><img alt="" src="../../_images/sphx_glr_plot_it_entropy_discreet_example_thumb.png" />
 <p><a class="reference internal" href="../information_theory/plot_it_entropy_discreet_example.html#sphx-glr-auto-examples-information-theory-plot-it-entropy-discreet-example-py"><span class="std std-ref">Entropy  -  Discreet Source</span></a></p>
   <div class="sphx-glr-thumbnail-title">Entropy  -  Discreet Source</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="We are pleased to announce the release of spkit 0.0.9.7, which comes with many bug fixes, more ..."><img alt="" src="../../_images/sphx_glr_plot_release_highlights_0_0_9_7_thumb.png" />
+<p><a class="reference internal" href="../release_highlights/plot_release_highlights_0_0_9_7.html#sphx-glr-auto-examples-release-highlights-plot-release-highlights-0-0-9-7-py"><span class="std std-ref">Release Highlights for spkit 0.0.9.7</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Release Highlights for spkit 0.0.9.7</div>
 </div></div><p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
 </section>
 </section>

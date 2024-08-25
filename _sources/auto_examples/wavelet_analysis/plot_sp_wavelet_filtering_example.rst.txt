@@ -18,9 +18,9 @@
 .. _sphx_glr_auto_examples_wavelet_analysis_plot_sp_wavelet_filtering_example.py:
 
 
-===============================
+=================
 Wavelet Filtering
-===============================
+=================
 
 **Background**
 
@@ -239,7 +239,7 @@ Limit the number of levels for decomposition to 2
 .. GENERATED FROM PYTHON SOURCE LINES 114-116
 
 With *db12*
--------------------
+------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 116-120
 
@@ -270,7 +270,7 @@ With *db12*
 .. GENERATED FROM PYTHON SOURCE LINES 121-123
 
 With Symlet - *sym4*
--------------------
+---------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 123-127
 
@@ -301,7 +301,7 @@ With Symlet - *sym4*
 .. GENERATED FROM PYTHON SOURCE LINES 128-130
 
 With Coiflet - *coif4*
--------------------
+-----------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 130-132
 
@@ -330,7 +330,7 @@ With Coiflet - *coif4*
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.648 seconds)
+   **Total running time of the script:** (0 minutes 0.616 seconds)
 
 
 .. _sphx_glr_download_auto_examples_wavelet_analysis_plot_sp_wavelet_filtering_example.py:

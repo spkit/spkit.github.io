@@ -18,9 +18,9 @@
 .. _sphx_glr_auto_examples_electroencephalogram_plot_sp_eeg_artifact_removal_ICA_ATAR.py:
 
 
-======================================================
+==========================
 EEG Artifact: ATAR and ICA
-======================================================
+==========================
 
 In this example we compare ICA with ATAR
 
@@ -272,7 +272,7 @@ Plots of Residuals
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 13.181 seconds)
+   **Total running time of the script:** (0 minutes 8.520 seconds)
 
 
 .. _sphx_glr_download_auto_examples_electroencephalogram_plot_sp_eeg_artifact_removal_ICA_ATAR.py:

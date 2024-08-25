@@ -18,9 +18,9 @@
 .. _sphx_glr_auto_examples_electroencephalogram_plot_sp_eeg_rhythmic_features.py:
 
 
-=====================================================
+======================================================
 EEG Computing Rhythmic Features - PhyAAt - Semanticity
-=====================================================
+======================================================
 
 In this example, we are using PhyAAt Dataset to show the how to compute rhythmic features
 and compare them.
@@ -228,7 +228,7 @@ Plots to compare
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 44.870 seconds)
+   **Total running time of the script:** (0 minutes 45.749 seconds)
 
 
 .. _sphx_glr_download_auto_examples_electroencephalogram_plot_sp_eeg_rhythmic_features.py:

@@ -135,7 +135,7 @@ There are 13 steps to analyse a recording file, which are as follow
   
 
 3\. Alignment of Stim Cycles
----------------------------
+----------------------------
 #TODO
 
 
@@ -150,14 +150,14 @@ There are 13 steps to analyse a recording file, which are as follow
 
 
 5\. Activation Time
------------------
+-------------------
 #TODO
 
   
 :func:`spkit.mea.activation_time_loc`
 
 6\. Repolarisation Time (optional)
------------------
+----------------------------------
 #TODO
 
 
@@ -176,7 +176,7 @@ There are 13 steps to analyse a recording file, which are as follow
 
 
 8\. Extracting EGM
------------------
+------------------
 #TODO
 
 
@@ -185,7 +185,7 @@ There are 13 steps to analyse a recording file, which are as follow
 
 
 9\. EGM Feature Extraction
------------------
+--------------------------
 #TODO
 
 
@@ -195,7 +195,7 @@ There are 13 steps to analyse a recording file, which are as follow
 
 
 10\. Identifying BAD Channels/electrodes
-----------------------------
+----------------------------------------
 #TODO
 
 
@@ -204,7 +204,7 @@ There are 13 steps to analyse a recording file, which are as follow
 
 
 11. Creating Feature Matrix
------------------
+---------------------------
 #TODO
 
 
@@ -223,7 +223,7 @@ There are 13 steps to analyse a recording file, which are as follow
 
 
 13. Conduction Velocity
------------------
+-----------------------
 #TODO
 
 

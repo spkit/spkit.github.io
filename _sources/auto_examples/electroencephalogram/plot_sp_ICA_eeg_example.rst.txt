@@ -18,9 +18,9 @@
 .. _sphx_glr_auto_examples_electroencephalogram_plot_sp_ICA_eeg_example.py:
 
 
-===============================
+=======================================
 Independed Principle Component analysis
-===============================
+=======================================
 
 Using *InfoMax, Extended InfoMax, FastICA, & Picard*
 
@@ -250,8 +250,8 @@ Decomposition and Construction matrices (Extended InfoMax)
 
  .. code-block:: none
 
-    Error X 3.2835345553650086e-11
-    Error S 6.914254585543844e-11
+    Error X 4.003699455301657e-11
+    Error S 4.803376793538483e-11
 
 
 
@@ -259,7 +259,7 @@ Decomposition and Construction matrices (Extended InfoMax)
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.288 seconds)
+   **Total running time of the script:** (0 minutes 1.511 seconds)
 
 
 .. _sphx_glr_download_auto_examples_electroencephalogram_plot_sp_ICA_eeg_example.py:

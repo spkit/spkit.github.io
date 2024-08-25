@@ -18,9 +18,9 @@
 .. _sphx_glr_auto_examples_signal_processing_plot_sp_analysis_sythesis_models.py:
 
 
-===============================
+=============================
 Analysis and Synthesis Models
-===============================
+=============================
 
 Analysis and Synthesis Models
 
@@ -58,7 +58,7 @@ In this script, we demonstrate following four models:
 .. GENERATED FROM PYTHON SOURCE LINES 26-28
 
 1 DFT Model
-----------------
+-----------
 
 .. GENERATED FROM PYTHON SOURCE LINES 28-93
 
@@ -171,7 +171,7 @@ In this script, we demonstrate following four models:
 .. GENERATED FROM PYTHON SOURCE LINES 96-98
 
 2 STFT Model
-----------------
+------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 98-145
 
@@ -247,7 +247,7 @@ In this script, we demonstrate following four models:
 .. GENERATED FROM PYTHON SOURCE LINES 148-150
 
 3 Fractional Fourier Transform: FRFT
-----------------
+------------------------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 150-203
 
@@ -328,7 +328,7 @@ In this script, we demonstrate following four models:
 .. GENERATED FROM PYTHON SOURCE LINES 206-208
 
 4 Sinasodual Model: Audio
-----------------
+-------------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 208-320
 
@@ -528,7 +528,7 @@ embed_audio('singing_female_recons', attribute = c("controls", "loop"))
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.244 seconds)
+   **Total running time of the script:** (0 minutes 3.042 seconds)
 
 
 .. _sphx_glr_download_auto_examples_signal_processing_plot_sp_analysis_sythesis_models.py:

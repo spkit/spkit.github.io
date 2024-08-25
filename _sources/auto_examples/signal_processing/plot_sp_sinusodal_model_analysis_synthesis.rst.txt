@@ -30,33 +30,40 @@ reconstruct an audio from it. We will  also examin the residual.
 Before starting, listen following three audio files, that are the same as generated from
 this example.
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-37
-
-Resulting Sinusoidal Model
---------------------------
-
-<h3>Original Audio</h3>
-https://github.com/spkit/data_samples/raw/main/files/singing-female.wav
-<audio controls="controls">
-      <source src="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true" type="audio/wav"> 
-</audio>
-
-<h3>Reconstructed Audio</h3>
-https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav
-<audio controls="controls">
-      <source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav?raw=true" type="audio/wav"> 
-</audio>
-
-<h3>Residual Audio</h3>
-https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav
-<audio controls="controls">
-      <source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav?raw=true" type="audio/wav"> 
-</audio>
+**Resulting Sinusoidal Model**
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-46
+* `Original Audio <https://github.com/spkit/data_samples/raw/main/files/singing-female.wav>`_
+* `Reconstructed Audio <https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav>`_
+* `Residual Audio <https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav>`_
+
+
+.. raw:: html
+   
+   <div class="column-box">
+   <p style="text-align:center;">Original Audio</p>
+   <audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true" type="audio/wav" /></audio>
+   </div>
+
+   <div class="column-box">
+   <p style="text-align:center;">Reconstructed Audio</p>
+   <audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav?raw=true" type="audio/wav" /></audio>
+   </div>
+
+   <div class="column-box">
+   <p style="text-align:center;">Residual Audio</p>
+   <audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav?raw=true" type="audio/wav" /></audio>
+   </div>
+
+.. GENERATED FROM PYTHON SOURCE LINES 42-44
+
+Example
+--------
+
+.. GENERATED FROM PYTHON SOURCE LINES 44-54
 
 .. code-block:: Python
+
 
 
     import numpy as np
@@ -80,12 +87,12 @@ https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-f
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-49
+.. GENERATED FROM PYTHON SOURCE LINES 55-57
 
 Download audio file
 ---------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-62
+.. GENERATED FROM PYTHON SOURCE LINES 57-70
 
 .. code-block:: Python
 
@@ -109,12 +116,12 @@ Download audio file
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-65
+.. GENERATED FROM PYTHON SOURCE LINES 71-73
 
 STFT of Audio
 --------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-84
+.. GENERATED FROM PYTHON SOURCE LINES 73-92
 
 .. code-block:: Python
 
@@ -149,12 +156,12 @@ STFT of Audio
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-87
+.. GENERATED FROM PYTHON SOURCE LINES 93-95
 
 Analysis of Audio with only 20 sinusodal tracks
 ------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-123
+.. GENERATED FROM PYTHON SOURCE LINES 95-131
 
 .. code-block:: Python
 
@@ -212,12 +219,12 @@ Analysis of Audio with only 20 sinusodal tracks
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-126
+.. GENERATED FROM PYTHON SOURCE LINES 132-134
 
 Synthesis of Audio from 20 sinusodal tracks
-------------------------------------------------
+--------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-147
+.. GENERATED FROM PYTHON SOURCE LINES 134-155
 
 .. code-block:: Python
 
@@ -260,12 +267,12 @@ Synthesis of Audio from 20 sinusodal tracks
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-150
+.. GENERATED FROM PYTHON SOURCE LINES 156-158
 
 Residual: Discarded part of Audio - mostly hissing sound
-------------------------------------------------------------
+---------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 150-169
+.. GENERATED FROM PYTHON SOURCE LINES 158-177
 
 .. code-block:: Python
 
@@ -300,26 +307,41 @@ Residual: Discarded part of Audio - mostly hissing sound
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 170-182
+.. GENERATED FROM PYTHON SOURCE LINES 178-206
 
 Save files and Play with Jupyter
 ---------------------------------
 
- <code>
- import IPython
+ .. code-block:: python
 
- wavfile.write(f"sinmodel_recons_"+file_name, rate=fs, data=Xr[:len(x)].astype(np.int16))
- wavfile.write(f"sinmodel_residual_"+file_name, rate=fs, data=Xd.astype(np.int16))
+    import IPython
+    wavfile.write(f"sinmodel_recons_"+file_name, rate=fs, data=Xr[:len(x)].astype(np.int16))
+    wavfile.write(f"sinmodel_residual_"+file_name, rate=fs, data=Xd.astype(np.int16))
+    display(IPython.display.Audio(data=x,rate=fs))
+    display(IPython.display.Audio(data=Xr[:len(x)],rate=fs))
+    display(IPython.display.Audio(data=Xd,rate=fs))
 
- display(IPython.display.Audio(data=x,rate=fs))
- display(IPython.display.Audio(data=Xr[:len(x)],rate=fs))
- display(IPython.display.Audio(data=Xd,rate=fs))
- </code>
+ .. raw:: html
+
+    <div class="column-box">
+    <p style="text-align:center;">Original Audio</p>
+    <audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/singing-female.wav?raw=true" type="audio/wav" /></audio>
+    </div>
+
+    <div class="column-box">
+    <p style="text-align:center;">Reconstructed Audio</p>
+    <audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_recons_singing-female.wav?raw=true" type="audio/wav" /></audio>
+    </div>
+
+    <div class="column-box">
+    <p style="text-align:center;">Residual Audio</p>
+    <audio controls=""><source src="https://github.com/spkit/data_samples/raw/main/files/sinmodel_residual_singing-female.wav?raw=true" type="audio/wav" /></audio>
+    </div>
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.571 seconds)
+   **Total running time of the script:** (0 minutes 2.237 seconds)
 
 
 .. _sphx_glr_download_auto_examples_signal_processing_plot_sp_sinusodal_model_analysis_synthesis.py:
