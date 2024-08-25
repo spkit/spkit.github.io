@@ -295,21 +295,24 @@ Admiddibility const :math:`C_{\psi} =\frac{1}{n}` and  :math:`w = 2\pi f`
 
 .. math::
 
-   \psi(t) &= \frac{1}{\pi} \frac{1-t^2}{(1+t^2)^2}\\
-   \psi(t) &= p(t) + \frac{d}{dt}p(t)\\
+   \psi(t) &= \frac{1}{\pi} \frac{1-t^2}{(1+t^2)^2}
+
+   \psi(t) &= p(t) + \frac{d}{dt}p(t)
+
    \psi(w) &= |w|e^{-|w|}
  
  
 **where**
-.
 
-.. math::
+  .. math::
 
-   p(t) &=\frac{1}{\pi}\frac{1}{1+t^2}\\
-   w &= 2\pi f
+    p(t) &=\frac{1}{\pi}\frac{1}{1+t^2}
+
+    w &= 2\pi f
    
 
- >>> XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,,wType='Poisson',method = 2,PlotPSD=True)
+
+>>> XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,,wType='Poisson',method = 2,PlotPSD=True)
   
   
 #Type 3 (n)
@@ -317,7 +320,8 @@ Admiddibility const :math:`C_{\psi} =\frac{1}{n}` and  :math:`w = 2\pi f`
  
 .. math::
 
-   \psi(t) &= \frac{1}{2\pi}(1-jt)^{-(n+1)}\\
+   \psi(t) &= \frac{1}{2\pi}(1-jt)^{-(n+1)}
+
    \psi(w) &= \frac{1}{\Gamma{n+1}}w^{n}e^{-w}u(w)
  
 
@@ -326,13 +330,15 @@ Admiddibility const :math:`C_{\psi} =\frac{1}{n}` and  :math:`w = 2\pi f`
 
 .. math::
 
-   \text{unit step function }\quad u(w) &=1 \quad \text{ if  $w>=0$ }\quad \text{else  } 0\\
+   
+   \text{unit step function }\quad u(w) &=1 \quad \text{ if  $w>=0$ }\quad \text{else  } 0
+
    w &= 2\pi f
 
 
 
- >>> XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,wType='Poisson',method = 3,PlotPSD=True)
-  
+
+>>> XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,wType='Poisson',method = 3,PlotPSD=True)
   
 #TODO   
 

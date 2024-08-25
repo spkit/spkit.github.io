@@ -65,8 +65,7 @@ since they reprepresent the outliers. However, some of the (weired) articles use
 A simple block-diagram shown below is the procedure of wavelet filtering.
 
 
-
-.. figure:: https://raw.githubusercontent.com/spkit/images/master/extra/images/wavelet_filtering_block_dia_1.png
+.. figure:: https://raw.githubusercontent.com/spkit/images/master/extra/wavelet_filtering_block_dia_1.png
    :align: center
    :scale: 80%
 
@@ -86,9 +85,9 @@ if you want to zero out coefficient below the threshold or above by setting *fil
 However, default setting is *threshold='optimal'* and *filter_out_below=True*.
 
 There are a few more options to tune threshold and mode of filtering. 
-For more details see doc section or run :func:`sp.wavelet_filtering`
+For more details see doc section or run :func:`spkit.wavelet_filtering`
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-86
+.. GENERATED FROM PYTHON SOURCE LINES 71-85
 
 .. code-block:: Python
 
@@ -113,12 +112,12 @@ For more details see doc section or run :func:`sp.wavelet_filtering`
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-89
+.. GENERATED FROM PYTHON SOURCE LINES 86-88
 
 Wavelet filtering with optimal threshold ans db3
 --------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 89-93
+.. GENERATED FROM PYTHON SOURCE LINES 88-92
 
 .. code-block:: Python
 
@@ -144,12 +143,12 @@ Wavelet filtering with optimal threshold ans db3
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-96
+.. GENERATED FROM PYTHON SOURCE LINES 93-95
 
 With SD threshold
 -------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 96-100
+.. GENERATED FROM PYTHON SOURCE LINES 95-99
 
 .. code-block:: Python
 
@@ -175,12 +174,12 @@ With SD threshold
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-103
+.. GENERATED FROM PYTHON SOURCE LINES 100-102
 
 With IQR
 ----------
 
-.. GENERATED FROM PYTHON SOURCE LINES 103-107
+.. GENERATED FROM PYTHON SOURCE LINES 102-106
 
 .. code-block:: Python
 
@@ -206,12 +205,12 @@ With IQR
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 108-110
+.. GENERATED FROM PYTHON SOURCE LINES 107-109
 
 Limit the number of levels for decomposition to 2
 ---------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-114
+.. GENERATED FROM PYTHON SOURCE LINES 109-113
 
 .. code-block:: Python
 
@@ -237,12 +236,12 @@ Limit the number of levels for decomposition to 2
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-117
+.. GENERATED FROM PYTHON SOURCE LINES 114-116
 
 With *db12*
 ------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-121
+.. GENERATED FROM PYTHON SOURCE LINES 116-120
 
 .. code-block:: Python
 
@@ -268,12 +267,12 @@ With *db12*
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-124
+.. GENERATED FROM PYTHON SOURCE LINES 121-123
 
 With Symlet - *sym4*
 ---------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-128
+.. GENERATED FROM PYTHON SOURCE LINES 123-127
 
 .. code-block:: Python
 
@@ -299,12 +298,12 @@ With Symlet - *sym4*
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 129-131
+.. GENERATED FROM PYTHON SOURCE LINES 128-130
 
 With Coiflet - *coif4*
 -----------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-133
+.. GENERATED FROM PYTHON SOURCE LINES 130-132
 
 .. code-block:: Python
 
@@ -331,7 +330,7 @@ With Coiflet - *coif4*
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.800 seconds)
+   **Total running time of the script:** (0 minutes 0.744 seconds)
 
 
 .. _sphx_glr_download_auto_examples_wavelet_analysis_plot_sp_wavelet_filtering_example.py:

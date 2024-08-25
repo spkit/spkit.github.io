@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.800** total execution time for 34 files **from all galleries**:
+**00:00.744** total execution time for 34 files **from all galleries**:
 
 .. container::
 
@@ -33,7 +33,7 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_wavelet_analysis_plot_sp_wavelet_filtering_example.py` (``../examples/wavelet_analysis/plot_sp_wavelet_filtering_example.py``)
-     - 00:00.800
+     - 00:00.744
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ATAR_algorithm_tuning.py` (``../examples/electroencephalogram/plot_sp_ATAR_algorithm_tuning.py``)
      - 00:00.000

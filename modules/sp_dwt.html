@@ -266,7 +266,7 @@
 <p>Other than classical spectral filtering, Wavelet filtering is one of common techniques used in signal processing.
 It allows to filter out short-time duration patterns captured by used wavelet. The patterns to be filtered out depends
 on the wavelet family (e.g. <em>db3</em>) used and number of level of decomposition.
-Algorithmically, it is very straightforward. Decompose a signal <span class="math notranslate nohighlight">\(x(n)\)</span>, into wavelet coefficients <span class="math notranslate nohighlight">\(X(k):math:\)</span>,
+Algorithmically, it is very straightforward. Decompose a signal <span class="math notranslate nohighlight">\(x(n)\)</span>, into wavelet coefficients <span class="math notranslate nohighlight">\(X(k)\)</span>,
 where each coefficient represents the strength of wavelet pattern at particular time. With some threshold,
 remove the coefficients by zeroing out and reconstruct the signal back.</p>
 <p>The machanism to choose a threshold on the strength of wavelet coefficient depends on the application and objective.
@@ -277,10 +277,14 @@ smaller strength.</p>
 \[\theta = \tilde{\sigma} \sqrt{2log(N)}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\tilde{\sigma}\)</span> is estimation of noise variance and <span class="math notranslate nohighlight">\(N\)</span> length of signal</p>
 <p>and <span class="math notranslate nohighlight">\(X(k)\)</span> are wavelet coeffients of <span class="math notranslate nohighlight">\(x(n)\)</span></p>
-<p>There are other methods to choose threshold too. One can choose a
-* <span class="math notranslate nohighlight">\(\theta =1.5\times SD(X(k))\)</span> or
-* <span class="math notranslate nohighlight">\(\theta =IQR(X(k))\)</span>
-as to select the outliers, by standard deviation and interquartile range, respectively.</p>
+<p>There are other methods to choose threshold too. One can choose a</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\theta =1.5\times SD(X(k))\)</span> or</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta =IQR(X(k))\)</span></p></li>
+</ul>
+</div></blockquote>
+<p>as to select the outliers, by standard deviation and interquartile range, respectively.</p>
 <p>According to the theory, the <strong>optimal threshold</strong> should be applied by zeroing out the coefficients
 below with magnitude lower than threshold <span class="math notranslate nohighlight">\(|X(k)|&lt;\theta\)</span>, and for later two methods of thresholds,
 standard deviation and interquartile range, the coefficients outside of the threshold should be zeroing out,
@@ -289,17 +293,17 @@ since they reprepresent the outliers. However, some of the (weired) articles use
 <figure class="align-center">
 <a class="reference internal image-reference" href="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelet_filtering_block_dia_1.png"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelet_filtering_block_dia_1.png" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelet_filtering_block_dia_1.png" /></a>
 </figure>
-<dl class="simple">
-<dt><strong>References:</strong></dt><dd><ul class="simple">
-<li><p>[1] D.L. Donoho, J.M. Johnstone, <strong>Ideal spatial adaptation by wavelet shrinkage</strong> Biometrika, 81 (1994), pp. 425-455</p></li>
+<p><strong>References:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>[1] D.L. Donoho, J.M. Johnstone, <em>Ideal spatial adaptation by wavelet shrinkage</em> Biometrika, 81 (1994), pp. 425-455</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <p><strong>API</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>spkit.wavelet_filtering(…)</strong></p></li>
-<li><p><strong>spkit.wavelet_filtering_win(…)</strong></p></li>
+<li><p><a class="reference internal" href="generated/spkit.wavelet_filtering.html#spkit.wavelet_filtering" title="spkit.wavelet_filtering"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.wavelet_filtering</span></code></a></p></li>
+<li><p><a class="reference internal" href="generated/spkit.wavelet_filtering_win.html#spkit.wavelet_filtering_win" title="spkit.wavelet_filtering_win"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.wavelet_filtering_win</span></code></a></p></li>
 </ul>
 </div></blockquote>
 <p>In <strong>*spkit*</strong>, we have implemented all three methods for threshold computing, can be chosen by <em>threshold = ‘optimal’,
@@ -307,7 +311,7 @@ since they reprepresent the outliers. However, some of the (weired) articles use
 if you want to zero out coefficient below the threshold or above by setting <em>filter_out_below</em> True or False.
 However, default setting is <em>threshold=’optimal’</em> and <em>filter_out_below=True</em>.</p>
 <p>There are a few more options to tune threshold and mode of filtering.
-For more details see doc section or run <code class="xref py py-func docutils literal notranslate"><span class="pre">sp.wavelet_filtering</span></code></p>
+For more details see doc section or run <a class="reference internal" href="generated/spkit.wavelet_filtering.html#spkit.wavelet_filtering" title="spkit.wavelet_filtering"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.wavelet_filtering</span></code></a></p>
 <figure class="align-center">
 <a class="reference external image-reference" href="../auto_examples/wavelet_analysis/plot_sp_wavelet_filtering_example.html"><img alt="../_images/sphx_glr_plot_sp_wavelet_filtering_example_001.png" src="../_images/sphx_glr_plot_sp_wavelet_filtering_example_001.png" style="width: 770.0px; height: 420.0px;" /></a>
 </figure>
@@ -339,7 +343,7 @@ For more details see doc section or run <code class="xref py py-func docutils li
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><a href="#id1"><span class="problematic" id="id2">`Check Example here&lt;../modules/generated/spkit.wavelet_decomposed_signals.html&gt;`_</span></a></p>
+<a href = "../modules/generated/spkit.wavelet_decomposed_signals.html" target="_blank">Check Example here</a><p>Check Example here <a class="reference internal" href="generated/spkit.wavelet_decomposed_signals.html#spkit.wavelet_decomposed_signals" title="spkit.wavelet_decomposed_signals"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.wavelet_decomposed_signals</span></code></a></p>
 </section>
 <section id="temporal-analysis">
 <h2><span class="section-number">3.2.4. </span>Temporal analysis<a class="headerlink" href="#temporal-analysis" title="Link to this heading">¶</a></h2>

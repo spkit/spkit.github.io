@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://spkit.github.io/auto_examples/wavelet_analysis/plot_sp_wavelet_filtering_example.html" />
 <meta property="og:site_name" content="spkit" />
 <meta property="og:description" content="Background Other than classical spectral filtering, Wavelet filtering is one of common techniques used in signal processing. It allows to filter out short-time duration patterns captured by used wa..." />
-<meta property="og:image" content="https://raw.githubusercontent.com/spkit/images/master/extra/images/wavelet_filtering_block_dia_1.png" />
+<meta property="og:image" content="https://raw.githubusercontent.com/spkit/images/master/extra/wavelet_filtering_block_dia_1.png" />
 <meta property="og:image:alt" content="spkit" />
 <meta name="description" content="Background Other than classical spectral filtering, Wavelet filtering is one of common techniques used in signal processing. It allows to filter out short-time duration patterns captured by used wa..." />
 
@@ -295,7 +295,7 @@ standard deviation and interquartile range, the coefficients outside of the thre
 since they reprepresent the outliers. However, some of the (weired) articles use these thresholds in other-way round.</p>
 <p>A simple block-diagram shown below is the procedure of wavelet filtering.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/spkit/images/master/extra/images/wavelet_filtering_block_dia_1.png"><img alt="https://raw.githubusercontent.com/spkit/images/master/extra/images/wavelet_filtering_block_dia_1.png" src="https://raw.githubusercontent.com/spkit/images/master/extra/images/wavelet_filtering_block_dia_1.png" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/spkit/images/master/extra/wavelet_filtering_block_dia_1.png"><img alt="https://raw.githubusercontent.com/spkit/images/master/extra/wavelet_filtering_block_dia_1.png" src="https://raw.githubusercontent.com/spkit/images/master/extra/wavelet_filtering_block_dia_1.png" /></a>
 </figure>
 <dl class="simple">
 <dt><strong>References:</strong></dt><dd><ul class="simple">
@@ -315,7 +315,7 @@ since they reprepresent the outliers. However, some of the (weired) articles use
 if you want to zero out coefficient below the threshold or above by setting <em>filter_out_below</em> True or False.
 However, default setting is <em>threshold=’optimal’</em> and <em>filter_out_below=True</em>.</p>
 <p>There are a few more options to tune threshold and mode of filtering.
-For more details see doc section or run <code class="xref py py-func docutils literal notranslate"><span class="pre">sp.wavelet_filtering</span></code></p>
+For more details see doc section or run <a class="reference internal" href="../../modules/generated/spkit.wavelet_filtering.html#spkit.wavelet_filtering" title="spkit.wavelet_filtering"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.wavelet_filtering</span></code></a></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">spkit</span> <span class="k">as</span> <span class="nn">sp</span>
@@ -390,7 +390,7 @@ For more details see doc section or run <code class="xref py py-func docutils li
 <img src="../../_images/sphx_glr_plot_sp_wavelet_filtering_example_007.png" srcset="../../_images/sphx_glr_plot_sp_wavelet_filtering_example_007.png" alt="plot sp wavelet filtering example" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WPD: False  wv: coif4  threshold: optimal  k: 1.5  mode: elim  filter_out_below?: True
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.800 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.744 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-wavelet-analysis-plot-sp-wavelet-filtering-example-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/spkit/spkit/0.9.X?urlpath=lab/tree/notebooks/auto_examples/wavelet_analysis/plot_sp_wavelet_filtering_example.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo7.svg" width="150px" /></a>

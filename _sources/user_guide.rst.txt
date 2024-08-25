@@ -12,8 +12,8 @@ User Guide
 
 .. seealso:: User Guide - API
     
-    **User Guide is in continues development. It is not complete yet, we are keep updating the contents.**
-    Please check API: :ref:`api_ref`, which is the most complete documentation of spkit.
+    **User Guide is in a continues development. It is not a complete guide yet, we are keep updating the contents.**
+    For now, please check the API: :ref:`api_ref`, which is the most complete documentation of all the functions and modules.
 
 
 

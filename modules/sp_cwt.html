@@ -483,26 +483,27 @@ w &amp;= 2\pi f\end{split}\]</div>
 <section id="type-2">
 <h3><span class="section-number">3.1.4.2. </span>#Type 2<a class="headerlink" href="#type-2" title="Link to this heading">¶</a></h3>
 <div class="math notranslate nohighlight">
-\[\begin{split}\psi(t) &amp;= \frac{1}{\pi} \frac{1-t^2}{(1+t^2)^2}\\
-\psi(t) &amp;= p(t) + \frac{d}{dt}p(t)\\
-\psi(w) &amp;= |w|e^{-|w|}\end{split}\]</div>
-<p><strong>where</strong>
-.</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\begin{split}  p(t) &amp;=\frac{1}{\pi}\frac{1}{1+t^2}\\
-  w &amp;= 2\pi f\end{split}\\
-&gt;&gt;&gt; XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,,wType='Poisson',method = 2,PlotPSD=True)\end{aligned}\end{align} \]</div>
+\[ \begin{align}\begin{aligned}\psi(t) &amp;= \frac{1}{\pi} \frac{1-t^2}{(1+t^2)^2}\\\psi(t) &amp;= p(t) + \frac{d}{dt}p(t)\\\psi(w) &amp;= |w|e^{-|w|}\end{aligned}\end{align} \]</div>
+<p><strong>where</strong></p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}p(t) &amp;=\frac{1}{\pi}\frac{1}{1+t^2}\\w &amp;= 2\pi f\end{aligned}\end{align} \]</div>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">XW</span><span class="p">,</span><span class="n">S</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">cwt</span><span class="o">.</span><span class="n">ScalogramCWT</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,,</span><span class="n">wType</span><span class="o">=</span><span class="s1">&#39;Poisson&#39;</span><span class="p">,</span><span class="n">method</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span><span class="n">PlotPSD</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="type-3-n">
 <h3><span class="section-number">3.1.4.3. </span>#Type 3 (n)<a class="headerlink" href="#type-3-n" title="Link to this heading">¶</a></h3>
 <div class="math notranslate nohighlight">
-\[\begin{split}\psi(t) &amp;= \frac{1}{2\pi}(1-jt)^{-(n+1)}\\
-\psi(w) &amp;= \frac{1}{\Gamma{n+1}}w^{n}e^{-w}u(w)\end{split}\]</div>
+\[ \begin{align}\begin{aligned}\psi(t) &amp;= \frac{1}{2\pi}(1-jt)^{-(n+1)}\\\psi(w) &amp;= \frac{1}{\Gamma{n+1}}w^{n}e^{-w}u(w)\end{aligned}\end{align} \]</div>
 <p><strong>where</strong>
 .</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\begin{split}  \text{unit step function }\quad u(w) &amp;=1 \quad \text{ if  $w&gt;=0$ }\quad \text{else  } 0\\
-  w &amp;= 2\pi f\end{split}\\&gt;&gt;&gt; XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,wType='Poisson',method = 3,PlotPSD=True)\end{aligned}\end{align} \]</div>
+\[ \begin{align}\begin{aligned}\text{unit step function }\quad u(w) &amp;=1 \quad \text{ if  $w&gt;=0$ }\quad \text{else  } 0\\w &amp;= 2\pi f\end{aligned}\end{align} \]</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">XW</span><span class="p">,</span><span class="n">S</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">cwt</span><span class="o">.</span><span class="n">ScalogramCWT</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span><span class="n">wType</span><span class="o">=</span><span class="s1">&#39;Poisson&#39;</span><span class="p">,</span><span class="n">method</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">PlotPSD</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>#TODO</p>
 </section>
 </section>
