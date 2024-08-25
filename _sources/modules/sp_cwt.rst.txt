@@ -17,7 +17,8 @@ Continues Wavelet Transform
     >>> t = np.arange(len(x))/fs
     >>> sp.cwt.compare_cwt_example(x,t,fs=fs)
 
-.. image:: https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/cwt_2.png
+
+.. image:: https://raw.githubusercontent.com/spkit/images/master/extra/cwt_2.png
 
 
 Gauss wavelet
@@ -91,8 +92,8 @@ To plot as analysis the wavelet functions
   >>> plt.show()
  
  
-.. image:: https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelets/gauss_1.png
-.. image:: https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelets/gauss_2.png
+.. image:: https://raw.githubusercontent.com/spkit/images/master/extra/wavelets/gauss_1.png
+.. image:: https://raw.githubusercontent.com/spkit/images/master/extra/wavelets/gauss_2.png
 
 
 
@@ -119,7 +120,7 @@ Changing the range of scale
   >>> plt.show()
 
 
-.. image:: https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelets/gauss_3_range.png
+.. image:: https://raw.githubusercontent.com/spkit/images/master/extra/wavelets/gauss_3_range.png
 
 
 
@@ -140,7 +141,7 @@ Example with EEG Signal
   >>> plt.show()
   
   
-.. image:: https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelets/signal_1.png
+.. image:: https://raw.githubusercontent.com/spkit/images/master/extra/wavelets/signal_1.png
 
 
 
@@ -156,7 +157,7 @@ With default setting of f0 and Q
   >>> XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,wType='Gauss',PlotPSD=True)
   
   
-.. image:: https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelets/gauss_psd_1.png
+.. image:: https://raw.githubusercontent.com/spkit/images/master/extra/wavelets/gauss_psd_1.png
 
 
 With a range of frequency and Q
@@ -170,7 +171,7 @@ From 0.1 to 10 Hz of analysis range and 100 points
   >>> XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,wType='Gauss',PlotPSD=True,f0=f0,Q=Q)
   
   
-.. image:: https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelets/gauss_psd_2.png
+.. image:: https://raw.githubusercontent.com/spkit/images/master/extra/wavelets/gauss_psd_2.png
 
 From 5 to 10 Hz of analysis range and 100 points
 
@@ -179,7 +180,7 @@ From 5 to 10 Hz of analysis range and 100 points
   >>> Q  = np.linspace(1,4,100)
   >>> XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,wType='Gauss',PlotPSD=True,f0=f0,Q=Q)
   
-.. image:: https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelets/gauss_psd_3.png
+.. image:: https://raw.githubusercontent.com/spkit/images/master/extra/wavelets/gauss_psd_3.png
 
 
 With constant Q
@@ -191,7 +192,7 @@ With constant Q
   >>> XW,S = sp.cwt.ScalogramCWT(x,t,fs=fs,wType='Gauss',PlotPSD=True,f0=f0,Q=Q)
   
   
-.. image:: https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/wavelets/gauss_psd_4.png
+.. image:: https://raw.githubusercontent.com/spkit/images/master/extra/wavelets/gauss_psd_4.png
 
 
 From 12 to 24 Hz 
@@ -267,14 +268,14 @@ The Gabor Wavelet function (technically same as Gaussian) in time and frequency 
 
 
 Poisson wavelet
--------------
+---------------
 
 Poisson wavelet is defined by positive integers ($n$), unlike other, and associated with Poisson probability distribution 
 
 The Poisson Wavelet function in time and frequency domain are defined as :math:`\psi(t)` and :math:`\psi(f)` as below;
 
 #Type 1 (n)
-~~~~~~
+~~~~~~~~~~~
 
 .. math::
 
@@ -290,7 +291,7 @@ Admiddibility const :math:`C_{\psi} =\frac{1}{n}` and  :math:`w = 2\pi f`
 
 
 #Type 2
-~~~~~~
+~~~~~~~
 
 .. math::
 
@@ -336,7 +337,7 @@ Admiddibility const :math:`C_{\psi} =\frac{1}{n}` and  :math:`w = 2\pi f`
 #TODO   
 
 Maxican wavelet 
--------------
+---------------
 
 Complex Mexican hat wavelet is derived from the conventional Mexican hat wavelet. It is a low-oscillation wavelet which is modulated by a complex exponential function with frequency :math:`f_0` `Ref <https://en.wikipedia.org/wiki/Complex_Mexican_hat_wavelet>`_..
 
@@ -356,7 +357,8 @@ The Maxican Wavelet function in time and frequency domain are defined as :math:`
 #TODO
 
 Shannon wavelet
--------------
+---------------
+
 Complex Shannon wavelet is the most simplified wavelet function, exploiting Sinc function by modulating with sinusoidal, which results in an ideal bandpass filter. Real Shannon wavelet is modulated by only a cos function `Ref <https://en.wikipedia.org/wiki/Shannon_wavelet>`_.
 
 The Shannon Wavelet function in time and frequency domain are defined as :math:`\psi(t)` and :math:`\psi(f)` as below;

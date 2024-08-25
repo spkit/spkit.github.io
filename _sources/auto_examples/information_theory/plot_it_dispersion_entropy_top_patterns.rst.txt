@@ -56,13 +56,12 @@ patterns repetitions more than others leads to high entropy.
 
 load sample EEG Signal
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-30
+.. GENERATED FROM PYTHON SOURCE LINES 22-29
 
 .. code-block:: Python
 
 
-    X,ch_names = sp.load_data.eegSample()
-    fs=128
+    X,fs,ch_names = sp.data.eeg_sample_14ch()
 
     Xi = sp.filter_X(X[:,0],band=[1,20],btype='bandpass',verbose=0)
     print('EEG Sample : Shape',Xi.shape)
@@ -76,17 +75,16 @@ load sample EEG Signal
 
  .. code-block:: none
 
-    /Users/nikeshbajaj/Library/CloudStorage/OneDrive-QueenMary,UniversityofLondon/Github/GIT3/Dev/SPKIT_Dev/SPKIT_DOC_7/examples/information_theory/plot_it_dispersion_entropy_top_patterns.py:23: DeprecationWarning: function eegSample will be deprecated in future version, due to naming convension, please use 'eeg_sample_14ch' for updated/improved functionality [spkit-0.0.9.7].
     EEG Sample : Shape (2048,)
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-32
+.. GENERATED FROM PYTHON SOURCE LINES 30-31
 
 Dispersion Entropy
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-81
+.. GENERATED FROM PYTHON SOURCE LINES 31-80
 
 .. code-block:: Python
 
@@ -185,7 +183,7 @@ Dispersion Entropy
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.502 seconds)
+   **Total running time of the script:** (0 minutes 0.528 seconds)
 
 
 .. _sphx_glr_download_auto_examples_information_theory_plot_it_dispersion_entropy_top_patterns.py:

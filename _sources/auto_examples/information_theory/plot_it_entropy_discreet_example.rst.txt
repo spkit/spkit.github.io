@@ -18,9 +18,9 @@
 .. _sphx_glr_auto_examples_information_theory_plot_it_entropy_discreet_example.py:
 
 
-===============================
+===========================
 Entropy  -  Discreet Source
-===============================
+===========================
 
 
 An example of computation of entropy for a discreet source.
@@ -83,7 +83,7 @@ An example of computation of entropy for a discreet source.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.040 seconds)
+   **Total running time of the script:** (0 minutes 0.042 seconds)
 
 
 .. _sphx_glr_download_auto_examples_information_theory_plot_it_entropy_discreet_example.py:

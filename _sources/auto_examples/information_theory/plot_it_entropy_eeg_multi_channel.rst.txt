@@ -32,7 +32,7 @@ among multi-channels of a sample EEG signals.
 (3) Cross-entropy and 
 (4) KL-Divergence Entropy
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-150
+.. GENERATED FROM PYTHON SOURCE LINES 17-149
 
 
 
@@ -66,7 +66,6 @@ among multi-channels of a sample EEG signals.
  .. code-block:: none
 
     spkit-version : 0.0.9.7
-    /Users/nikeshbajaj/Library/CloudStorage/OneDrive-QueenMary,UniversityofLondon/Github/GIT3/Dev/SPKIT_Dev/SPKIT_DOC_7/examples/information_theory/plot_it_entropy_eeg_multi_channel.py:25: DeprecationWarning: function eegSample will be deprecated in future version, due to naming convension, please use 'eeg_sample_14ch' for updated/improved functionality [spkit-0.0.9.7].
     (2048, 14)
     ['AF3', 'F7', 'F3', 'FC5', 'T7', 'P7', 'O1', 'O2', 'P8', 'T8', 'FC6', 'F4', 'F8', 'AF4']
     Selecting two channels AF3 (Frontal Lobe)and O1 (Occipital Lobe)
@@ -102,11 +101,10 @@ among multi-channels of a sample EEG signals.
     import numpy as np
     import matplotlib.pyplot as plt
     import spkit as sp
-    from spkit.data import load_data
     print('spkit-version :', sp.__version__)
 
-    X,ch_names = load_data.eegSample()
-    t = np.arange(X.shape[0])/128
+    X,fs,ch_names = sp.data.eeg_sample_14ch()
+    t = np.arange(X.shape[0])/fs
     nC = len(ch_names)
     print(X.shape)
     print(ch_names)
@@ -234,7 +232,7 @@ among multi-channels of a sample EEG signals.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.156 seconds)
+   **Total running time of the script:** (0 minutes 0.968 seconds)
 
 
 .. _sphx_glr_download_auto_examples_information_theory_plot_it_entropy_eeg_multi_channel.py:

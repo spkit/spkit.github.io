@@ -274,16 +274,14 @@ patterns repetitions more than others leads to high entropy.</p>
 </pre></div>
 </div>
 <p>load sample EEG Signal</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="p">,</span><span class="n">ch_names</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">load_data</span><span class="o">.</span><span class="n">eegSample</span><span class="p">()</span>
-<span class="n">fs</span><span class="o">=</span><span class="mi">128</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="p">,</span><span class="n">fs</span><span class="p">,</span><span class="n">ch_names</span> <span class="o">=</span> <a href="../../modules/generated/spkit.data.eeg_sample_14ch.html#spkit.data.eeg_sample_14ch" title="spkit.data.eeg_sample_14ch" class="sphx-glr-backref-module-spkit-data sphx-glr-backref-type-py-function"><span class="n">sp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">eeg_sample_14ch</span></a><span class="p">()</span>
 
 <span class="n">Xi</span> <span class="o">=</span> <a href="../../modules/generated/spkit.filter_X.html#spkit.filter_X" title="spkit.filter_X" class="sphx-glr-backref-module-spkit sphx-glr-backref-type-py-function"><span class="n">sp</span><span class="o">.</span><span class="n">filter_X</span></a><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">band</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span><span class="n">btype</span><span class="o">=</span><span class="s1">&#39;bandpass&#39;</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;EEG Sample : Shape&#39;</span><span class="p">,</span><span class="n">Xi</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">Xi</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="n">fs</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/Users/nikeshbajaj/Library/CloudStorage/OneDrive-QueenMary,UniversityofLondon/Github/GIT3/Dev/SPKIT_Dev/SPKIT_DOC_7/examples/information_theory/plot_it_dispersion_entropy_top_patterns.py:23: DeprecationWarning: function eegSample will be deprecated in future version, due to naming convension, please use &#39;eeg_sample_14ch&#39; for updated/improved functionality [spkit-0.0.9.7].
-EEG Sample : Shape (2048,)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>EEG Sample : Shape (2048,)
 </pre></div>
 </div>
 <p>Dispersion Entropy</p>
@@ -358,7 +356,7 @@ Top 10 Patterns
  [7 7 7 7]]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.502 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.528 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-information-theory-plot-it-dispersion-entropy-top-patterns-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/spkit/spkit/0.9.X?urlpath=lab/tree/notebooks/auto_examples/information_theory/plot_it_dispersion_entropy_top_patterns.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo1.svg" width="150px" /></a>

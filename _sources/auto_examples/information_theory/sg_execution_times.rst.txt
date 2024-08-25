@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:56.661** total execution time for 6 files **from auto_examples/information_theory**:
+**00:01.538** total execution time for 6 files **from auto_examples/information_theory**:
 
 .. container::
 
@@ -32,21 +32,21 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_sample_approx_entropy_comp.py` (``plot_it_sample_approx_entropy_comp.py``)
-     - 00:54.682
-     - 0.0
    * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_eeg_multi_channel.py` (``plot_it_entropy_eeg_multi_channel.py``)
-     - 00:01.156
+     - 00:00.968
      - 0.0
    * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_dispersion_entropy_top_patterns.py` (``plot_it_dispersion_entropy_top_patterns.py``)
-     - 00:00.502
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_dispersion_entropy_eeg_emb2.py` (``plot_it_dispersion_entropy_eeg_emb2.py``)
-     - 00:00.156
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_real_valued_example.py` (``plot_it_entropy_real_valued_example.py``)
-     - 00:00.126
+     - 00:00.528
      - 0.0
    * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_discreet_example.py` (``plot_it_entropy_discreet_example.py``)
-     - 00:00.040
+     - 00:00.042
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_dispersion_entropy_eeg_emb2.py` (``plot_it_dispersion_entropy_eeg_emb2.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_real_valued_example.py` (``plot_it_entropy_real_valued_example.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_sample_approx_entropy_comp.py` (``plot_it_sample_approx_entropy_comp.py``)
+     - 00:00.000
      - 0.0

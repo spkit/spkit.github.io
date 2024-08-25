@@ -273,7 +273,6 @@ among multi-channels of a sample EEG signals.</p>
 <li><img src="../../_images/sphx_glr_plot_it_entropy_eeg_multi_channel_003.png" srcset="../../_images/sphx_glr_plot_it_entropy_eeg_multi_channel_003.png" alt="plot it entropy eeg multi channel" class = "sphx-glr-multi-img"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>spkit-version : 0.0.9.7
-/Users/nikeshbajaj/Library/CloudStorage/OneDrive-QueenMary,UniversityofLondon/Github/GIT3/Dev/SPKIT_Dev/SPKIT_DOC_7/examples/information_theory/plot_it_entropy_eeg_multi_channel.py:25: DeprecationWarning: function eegSample will be deprecated in future version, due to naming convension, please use &#39;eeg_sample_14ch&#39; for updated/improved functionality [spkit-0.0.9.7].
 (2048, 14)
 [&#39;AF3&#39;, &#39;F7&#39;, &#39;F3&#39;, &#39;FC5&#39;, &#39;T7&#39;, &#39;P7&#39;, &#39;O1&#39;, &#39;O2&#39;, &#39;P8&#39;, &#39;T8&#39;, &#39;FC6&#39;, &#39;F4&#39;, &#39;F8&#39;, &#39;AF4&#39;]
 Selecting two channels AF3 (Frontal Lobe)and O1 (Occipital Lobe)
@@ -302,11 +301,10 @@ Entropy of Each channel
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">spkit</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="kn">from</span> <span class="nn">spkit.data</span> <span class="kn">import</span> <span class="n">load_data</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;spkit-version :&#39;</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 
-<span class="n">X</span><span class="p">,</span><span class="n">ch_names</span> <span class="o">=</span> <span class="n">load_data</span><span class="o">.</span><span class="n">eegSample</span><span class="p">()</span>
-<span class="n">t</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="mi">128</span>
+<span class="n">X</span><span class="p">,</span><span class="n">fs</span><span class="p">,</span><span class="n">ch_names</span> <span class="o">=</span> <a href="../../modules/generated/spkit.data.eeg_sample_14ch.html#spkit.data.eeg_sample_14ch" title="spkit.data.eeg_sample_14ch" class="sphx-glr-backref-module-spkit-data sphx-glr-backref-type-py-function"><span class="n">sp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">eeg_sample_14ch</span></a><span class="p">()</span>
+<span class="n">t</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="n">fs</span>
 <span class="n">nC</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ch_names</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ch_names</span><span class="p">)</span>
@@ -433,7 +431,7 @@ Entropy of Each channel
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.156 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.968 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-information-theory-plot-it-entropy-eeg-multi-channel-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/spkit/spkit/0.9.X?urlpath=lab/tree/notebooks/auto_examples/information_theory/plot_it_entropy_eeg_multi_channel.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo1.svg" width="150px" /></a>

@@ -73,20 +73,20 @@ For more details see doc section or run :func:`sp.wavelet_filtering`
 
 
 
-.. figure:: ../auto_examples/signal_processing/images/sphx_glr_plot_sp_wavelet_filtering_example_001.png
-   :target: ../auto_examples/signal_processing/plot_sp_wavelet_filtering_example.html
+.. figure:: ../auto_examples/wavelet_analysis/images/sphx_glr_plot_sp_wavelet_filtering_example_001.png
+   :target: ../auto_examples/wavelet_analysis/plot_sp_wavelet_filtering_example.html
    :align: center
    :scale: 70%
 
 
-.. figure:: ../auto_examples/signal_processing/images/sphx_glr_plot_sp_wavelet_filtering_example_003.png
-   :target: ../auto_examples/signal_processing/plot_sp_wavelet_filtering_example.html
+.. figure:: ../auto_examples/wavelet_analysis/images/sphx_glr_plot_sp_wavelet_filtering_example_003.png
+   :target: ../auto_examples/wavelet_analysis/plot_sp_wavelet_filtering_example.html
    :align: center
    :scale: 70%
 
 .. topic:: Examples:
 
-   * :ref:`sphx_glr_auto_examples_signal_processing_plot_sp_wavelet_filtering_example.py`
+   * :ref:`sphx_glr_auto_examples_wavelet_analysis_plot_sp_wavelet_filtering_example.py`
 
 
 Wavelet Package Analysis
@@ -112,7 +112,7 @@ Wavelet decomposed signals
     plt.show()
 
 
-`Check Example here<../modules/generated/spkit.wavelet_decomposed_signals.html>`
+`Check Example here<../modules/generated/spkit.wavelet_decomposed_signals.html>`_
 
 
 
