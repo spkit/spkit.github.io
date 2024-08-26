@@ -32,7 +32,7 @@ fairly compare two sources, either use normalised entropy or enforce the equal n
 
 
 .. image-sg:: /auto_examples/information_theory/images/sphx_glr_plot_it_entropy_real_valued_example_001.png
-   :alt: Shannan Entropy: 5.9493 bits, Shannan Entropy: 5.0568 bits
+   :alt: Shannan Entropy: 5.8784 bits, Shannan Entropy: 5.0509 bits
    :srcset: /auto_examples/information_theory/images/sphx_glr_plot_it_entropy_real_valued_example_001.png
    :class: sphx-glr-single-img
 
@@ -43,22 +43,20 @@ fairly compare two sources, either use normalised entropy or enforce the equal n
 
     spkit-version 0.0.9.7
     Shannan entropy
-    Entropy of x: H(x) =  4.458295645225287
-    Entropy of y: H(y) =  5.0568007770298
+    Entropy of x: H(x) =  4.45836212511516
+    Entropy of y: H(y) =  5.050864252588681
 
     Normalised Shannan entropy
-    Entropy of x: H(x) =  0.9997452649778813
-    Entropy of y: H(y) =  0.8492835159311757
+    Entropy of x: H(x) =  0.9997601726826201
+    Entropy of y: H(y) =  0.8586045779433459
 
     Un-normalised Shannan entropy with same number of bins
-    Entropy of x: H(x) =  5.94931580038085
-    Entropy of y: H(y) =  5.0568007770298
+    Entropy of x: H(x) =  5.878442630682764
+    Entropy of y: H(y) =  5.050864252588681
 
     Rényi entropy
-    Entropy of x: H(x) =  5.9443311905007485
-    Entropy of y: H(y) =  4.83432402148744
-    /Users/nikeshbajaj/Library/CloudStorage/OneDrive-QueenMary,UniversityofLondon/Github/GIT3/Dev/SPKIT_Dev/SPKIT_DOC_7/examples/information_theory/plot_it_entropy_real_valued_example.py:61: DeprecationWarning: function HistPlot will be deprecated in future version, due to naming consistency, please use 'hist_plot' for updated/improved functionality. [spkit-0.0.9.7].
-    /Users/nikeshbajaj/Library/CloudStorage/OneDrive-QueenMary,UniversityofLondon/Github/GIT3/Dev/SPKIT_Dev/SPKIT_DOC_7/examples/information_theory/plot_it_entropy_real_valued_example.py:66: DeprecationWarning: function HistPlot will be deprecated in future version, due to naming consistency, please use 'hist_plot' for updated/improved functionality. [spkit-0.0.9.7].
+    Entropy of x: H(x) =  5.874297680532265
+    Entropy of y: H(y) =  4.836835178964307
 
 
 
@@ -117,12 +115,12 @@ fairly compare two sources, either use normalised entropy or enforce the equal n
 
     plt.figure(figsize=(12,4))
     plt.subplot(121)
-    sp.HistPlot(x,show=False,norm=True)
+    sp.hist_plot(x,show=False,norm=True)
     plt.title(f'Shannan Entropy: {Hf_x.round(4)} bits')
     plt.xlabel('source: x ~ U[0-1]')
     plt.ylabel('prob.')
     plt.subplot(122)
-    sp.HistPlot(y,show=False,norm=True)
+    sp.hist_plot(y,show=False,norm=True)
     plt.title(f'Shannan Entropy: {Hf_y.round(4)} bits')
     plt.xlabel('source: y ~ N(0,1)')
     plt.ylabel('prob.')
@@ -132,7 +130,7 @@ fairly compare two sources, either use normalised entropy or enforce the equal n
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.125 seconds)
+   **Total running time of the script:** (0 minutes 0.241 seconds)
 
 
 .. _sphx_glr_download_auto_examples_information_theory_plot_it_entropy_real_valued_example.py:

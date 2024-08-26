@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:55.771** total execution time for 6 files **from auto_examples/information_theory**:
+**00:00.241** total execution time for 6 files **from auto_examples/information_theory**:
 
 .. container::
 
@@ -32,21 +32,21 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_sample_approx_entropy_comp.py` (``plot_it_sample_approx_entropy_comp.py``)
-     - 00:53.832
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_eeg_multi_channel.py` (``plot_it_entropy_eeg_multi_channel.py``)
-     - 00:01.022
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_dispersion_entropy_top_patterns.py` (``plot_it_dispersion_entropy_top_patterns.py``)
-     - 00:00.585
+   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_real_valued_example.py` (``plot_it_entropy_real_valued_example.py``)
+     - 00:00.241
      - 0.0
    * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_dispersion_entropy_eeg_emb2.py` (``plot_it_dispersion_entropy_eeg_emb2.py``)
-     - 00:00.155
+     - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_real_valued_example.py` (``plot_it_entropy_real_valued_example.py``)
-     - 00:00.125
+   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_dispersion_entropy_top_patterns.py` (``plot_it_dispersion_entropy_top_patterns.py``)
+     - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_discreet_example.py` (``plot_it_entropy_discreet_example.py``)
-     - 00:00.050
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_eeg_multi_channel.py` (``plot_it_entropy_eeg_multi_channel.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_sample_approx_entropy_comp.py` (``plot_it_sample_approx_entropy_comp.py``)
+     - 00:00.000
      - 0.0

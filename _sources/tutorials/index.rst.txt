@@ -46,7 +46,6 @@ Tutorials on Signal Processing is under-development, which will be available
 
 
 
-
 Machine Learning
 -----------------
 
@@ -103,37 +102,111 @@ Interactive Wigdets
 ..     <li>Machine Learning: <a href="https://nikeshbajaj.github.io/teaching/demos/ML/roc_v3.html" target="_blank"><b>For Understanding ROC</b></a></li>
 ..     </ul>
 
+.. * **Statistics:** `For Hypothesis Testing and T-test <https://nikeshbajaj.github.io/teaching/demos/Stats/sampling>`_
 
-
-* **Statistics:** `For Hypothesis Testing and T-test <https://nikeshbajaj.github.io/teaching/demos/Stats/sampling>`_
-
-
-
-.. raw:: html
+.. .. raw:: html
     
-    <div class="column-box">
-    <div class="card">
-    <a class="reference external image-reference" href="https://nikeshbajaj.github.io/teaching/demos/Stats/sampling">
-       <img alt="ml_roc_demo" src="https://nikeshbajaj.github.io/teaching/demos/stats_sampling_demo.gif" style="width: 300px;"/>
-     </a>
-    </div>
-    </div>
+..     <div class="column-box">
+..     <div class="card">
+..     <a class="reference external image-reference" href="https://nikeshbajaj.github.io/teaching/demos/Stats/sampling">
+..        <img alt="ml_roc_demo" src="https://nikeshbajaj.github.io/teaching/demos/stats_sampling_demo.gif" style="width: 300px;"/>
+..      </a>
+..     </div>
+..     </div>
+
+.. * **Machine Learning:** `For Understanding ROC <https://nikeshbajaj.github.io/teaching/demos/ML/roc_v3.html>`_
 
 
+.. .. raw:: html
 
-* **Machine Learning:** `For Understanding ROC <https://nikeshbajaj.github.io/teaching/demos/ML/roc_v3.html>`_
+..     <div class="column-box">
+..     <div class="card">
+..     <a class="reference external image-reference" href="https://nikeshbajaj.github.io/teaching/demos/ML/roc_v3.html">
+..        <img alt="https://nikeshbajaj.github.io/teaching/demos/ml_roc_demo.gif"
+..         src="https://nikeshbajaj.github.io/teaching/demos/ml_roc_demo.gif" style="width: 300px;"/>
+..      </a>
+..     </div>
+..     </div>
 
 
 .. raw:: html
 
-    <div class="column-box">
+    <div class="column-box" style="width: 300px;">
     <div class="card">
+        <div class="card-body">
+        <p><strong>Statistics:</strong> <a class="reference external" href="https://nikeshbajaj.github.io/teaching/demos/Stats/sampling">For Hypothesis Testing and T-test</a></p>
+        <a class="reference external image-reference" href="https://nikeshbajaj.github.io/teaching/demos/Stats/sampling">
+        <img alt="ml_roc_demo" src="https://nikeshbajaj.github.io/teaching/demos/stats_sampling_demo.gif" style="width: 300px;"/>
+    </a>
+    </div>
+    </div>
+    </div>
+
+    <div class="column-box" style="width: 300px;">
+    <div class="card">
+    <div class="card-body">
+    <p><strong>Machine Learning:</strong> <a class="reference external" href="https://nikeshbajaj.github.io/teaching/demos/ML/roc_v3.html">For Understanding ROC</a></p>
     <a class="reference external image-reference" href="https://nikeshbajaj.github.io/teaching/demos/ML/roc_v3.html">
-       <img alt="https://nikeshbajaj.github.io/teaching/demos/ml_roc_demo.gif"
+        <img alt="https://nikeshbajaj.github.io/teaching/demos/ml_roc_demo.gif"
         src="https://nikeshbajaj.github.io/teaching/demos/ml_roc_demo.gif" style="width: 300px;"/>
-     </a>
+    </a>
     </div>
     </div>
+    </div>
+
+
+
+
+Blogs/Tutorial-sessions
+-----------------------
+
+* `How to remove artifacts from EEG signals <https://link.medium.com/90mYhbr8Osb>`_
+
+    .. raw:: html
+
+        <div class="column-box">
+        <div class="card">
+        <a class="reference external image-reference" href="https://link.medium.com/90mYhbr8Osb">
+        <img alt="ML ROC"
+            src="https://spkit.github.io/V/0.0.9.6/assets/images/ATAR_2.png" style="width: 400px;"/>
+        </a>
+        </div>
+        </div>
+
+* **Introdcution to ML and DL (30/07/2021 - CU-FDP)**
+
+    A short introduction to machine learning and artificial intelligence, followed by supervised learning examples.
+    This session was delivered for an invited talk at Chandigarh University for Faculty Development Program.
+
+    **Slides:** `PPT <https://github.com/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/Intorduction_to_ML_&_DL_30_07_21.pptx?raw=true>`_ `PDF <https://github.com/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/Intorduction_to_ML_%26_DL_30_07_21.pdf>`_
+
+    
+    **Jupyter-notebooks**
+
+    .. raw:: html
+
+        <ul class="simple" style="line-height:1.4;">
+        <li><a>nbviewer - jupyter</a>
+            <ul class="simple">
+            <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression (Boston House Price)</a></li>
+            <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification (Breast Cancer, Iris, MNIST)</a></li>
+            <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/3_Deeplearning_CNN.ipynb" target="_blank">3. Deeplearning (MNIST)</a></li>
+            <li><a href="https://nbviewer.jupyter.org/github/Nikeshbajaj/Notebooks/tree/master/Tutorials_ML_DL/" target="_blank">All notebooks</a></li>
+            </ul></li>
+        <li><a>Google Colab</a>
+            <ul class="simple">
+            <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/1_Regression_Boston_price.ipynb" target="_blank">1. Regression  (Boston House Price)</a></li>
+            <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/2_Classification.ipynb" target="_blank">2. Classification (Breast Cancer, Iris, MNIST)</a></li>
+            <li><a href="https://colab.research.google.com/github/Nikeshbajaj/Notebooks/blob/master/Tutorials_ML_DL/3_Deeplearning_CNN.ipynb" target="_blank">3. Deeplearning (MNIST)</a></li>
+            </ul></li>
+        <li><a>Binder</a>
+            <ul class="simple">
+            <li><a href="https://mybinder.org/v2/gh/Nikeshbajaj/Notebooks/HEAD" target="_blank">All notebooks</a></li>
+            <li><a href="https://tinyurl.com/MLTutorial" target="_blank">https://tinyurl.com/MLTutorial</a></li>
+            </ul></li>
+        </ul>
+
+
 
 
 
@@ -141,5 +214,9 @@ Information Theory
 ------------------
 
 We are planning to create Tutorials on Information Theory
+
+
+
+
 
 
