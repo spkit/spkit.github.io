@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2024-08-27T11:27:30.536265Z",
+      "created": "2024-08-27T12:56:04.701145Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-08-27T11:27:29.089434Z",
+      "last_modified": "2024-08-27T12:56:03.186300Z",
       "mimetype": null,
       "name": "plot_release_highlights_0_0_9_6.ipynb",
       "path": "auto_examples/release_highlights/plot_release_highlights_0_0_9_6.ipynb",
@@ -16,11 +16,11 @@
     },
     {
       "content": null,
-      "created": "2024-08-27T11:27:30.536666Z",
+      "created": "2024-08-27T12:56:04.701854Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-08-27T11:27:29.089879Z",
+      "last_modified": "2024-08-27T12:56:03.186755Z",
       "mimetype": null,
       "name": "plot_release_highlights_0_0_9_7.ipynb",
       "path": "auto_examples/release_highlights/plot_release_highlights_0_0_9_7.ipynb",
@@ -29,11 +29,11 @@
       "writable": true
     }
   ],
-  "created": "2024-08-27T11:27:30.536490Z",
+  "created": "2024-08-27T12:56:04.701615Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2024-08-27T11:27:30.536490Z",
+  "last_modified": "2024-08-27T12:56:04.701615Z",
   "mimetype": null,
   "name": "release_highlights",
   "path": "auto_examples/release_highlights",

@@ -6,7 +6,7 @@ Release History
 
 Release notes for all spkit releases are linked in this page.
 
-**Tip:** `Subscribe to scikit-learn releases <https://libraries.io/pypi/spkit>`__
+**Tip:** `Subscribe to spkit releases <https://libraries.io/pypi/spkit>`__
 on libraries.io to be notified when new versions are released.
 
 .. toctree::

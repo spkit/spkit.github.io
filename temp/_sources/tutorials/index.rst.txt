@@ -54,7 +54,7 @@ For Machine Learning, we have been writing a book - `Principles of Machine Learn
 
 .. raw:: html
 
-    <div align="left" style="">
+    <div align="left">
         <a href="https://PMLBook.github.io" target="_blank"><img src="https://raw.githubusercontent.com/PMLBook/.github/main/book_cover_3d.png" width="200"/>
         </a>
     </div>
