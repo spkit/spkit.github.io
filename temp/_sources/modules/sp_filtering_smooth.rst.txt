@@ -94,9 +94,15 @@ Wavelet Filtering is covered in seperate section in more detail
 
 
 
-
+|details-start|
+**References**
+|details-split|
 
 .. topic:: References
 
   * [1] https://en.wikipedia.org/wiki/Mollifier
   * [2] https://en.wikipedia.org/wiki/Kurt_Otto_Friedrichs
+
+|details-end|
+
+

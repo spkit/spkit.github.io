@@ -98,7 +98,7 @@ To plot as analysis the wavelet functions
 
 
 With a range of scale parameters
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Changing the range of scale
 
@@ -146,7 +146,7 @@ Example with EEG Signal
 
 
 Scalogram with default parameters
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 With default setting of f0 and Q
 
@@ -161,7 +161,7 @@ With default setting of f0 and Q
 
 
 With a range of frequency and Q
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From 0.1 to 10 Hz of analysis range and 100 points
 
@@ -205,7 +205,7 @@ From 12 to 24 Hz
 
 
 With a plot of analysis wavelets
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
   
   >>> f0 = np.linspace(12,24,100)
@@ -216,11 +216,13 @@ With a plot of analysis wavelets
 #TODO Speech/Audio Signal
 
 Speech
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+
 #TODO
 
 Audio
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+
 #TODO
 
 
@@ -251,6 +253,7 @@ The Morlet Wavelet function in time and frequency domain are defined as :math:`\
 
 Gabor wavelet
 -------------
+
 #TODO
 
 The Gabor Wavelet function (technically same as Gaussian) in time and frequency domain are defined as :math:`\psi(t)` and :math:`\psi(f)` as below;

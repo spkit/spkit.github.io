@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.241** total execution time for 35 files **from all galleries**:
+**00:00.525** total execution time for 36 files **from all galleries**:
 
 .. container::
 
@@ -32,8 +32,8 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_real_valued_example.py` (``../examples/information_theory/plot_it_entropy_real_valued_example.py``)
-     - 00:00.241
+   * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_EDF_FILE.py` (``../examples/electroencephalogram/plot_sp_EDF_FILE.py``)
+     - 00:00.525
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ATAR_algorithm_tuning.py` (``../examples/electroencephalogram/plot_sp_ATAR_algorithm_tuning.py``)
      - 00:00.000
@@ -66,6 +66,9 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_eeg_multi_channel.py` (``../examples/information_theory/plot_it_entropy_eeg_multi_channel.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_real_valued_example.py` (``../examples/information_theory/plot_it_entropy_real_valued_example.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_information_theory_plot_it_sample_approx_entropy_comp.py` (``../examples/information_theory/plot_it_sample_approx_entropy_comp.py``)

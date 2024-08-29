@@ -4,7 +4,7 @@
 
 .. include:: includes/big_toc_css.rst
 
-.. _signal_processing:
+.. _signal_filtering:
 
 Signal Filtering
 -------------------

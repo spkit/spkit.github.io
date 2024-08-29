@@ -1,8 +1,8 @@
 .. _ml_trees:
 
-=============
+==============
 Decision Trees
-=============
+==============
 
 
 
@@ -10,7 +10,7 @@ Classification Trees
 ====================
 
 Visualising Trees
-----------------
+-----------------
 
 
 
@@ -27,4 +27,4 @@ Tree for catogories features
 
 
 Regression Trees
-====================
+================

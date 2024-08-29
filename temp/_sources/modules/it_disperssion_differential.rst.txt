@@ -524,10 +524,15 @@ Mutual Information :math:`I_{\partial}(X,Y)`
 
 
 
+|details-start|
+**References**
+|details-split|
 
-.. topic:: References:
+    * .. [1] https://statproofbook.github.io/P/mvn-dent.html
+    * .. [2] https://en.wikipedia.org/wiki/Multivariate_normal_distribution
+    * .. [3] https://en.wikipedia.org/wiki/Differential_entropy
+    * .. [4] Gokhale, DV; Ahmed, NA; Res, BC; Piscataway, NJ (May 1989). "Entropy Expressions and Their Estimators for Multivariate Distributions". IEEE Transactions on Information Theory. 35 (3): 688–692. doi:10.1109/18.30996.
 
-    .. [1] https://statproofbook.github.io/P/mvn-dent.html
-    .. [2] https://en.wikipedia.org/wiki/Multivariate_normal_distribution
-    .. [3] https://en.wikipedia.org/wiki/Differential_entropy
-    .. [4] Gokhale, DV; Ahmed, NA; Res, BC; Piscataway, NJ (May 1989). "Entropy Expressions and Their Estimators for Multivariate Distributions". IEEE Transactions on Information Theory. 35 (3): 688–692. doi:10.1109/18.30996.
+
+|details-end|
+

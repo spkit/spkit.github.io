@@ -77,8 +77,9 @@ Check here for more details : `Base of log in Entropy
 
 .. topic:: Examples:
 
-   * :ref:`sphx_glr_auto_examples_information_theory_plot_it_discreet_example.py`
+   * :ref:`sphx_glr_auto_examples_information_theory_plot_it_entropy_discreet_example.py`
 
+   
 
 Rényi entropy of order :math:`\alpha`
 ===================================
@@ -123,17 +124,19 @@ Here are the examples
 
 
 
+|details-start|
+**References**
+|details-split|
+
 .. topic:: References:
 
-  .. [1] Shannon, Claude Elwood. `A mathematical theory of communication <https://pure.mpg.de/rest/items/item_2383164/component/file_2383163/content>`_. The Bell system technical journal 27.3 (1948): 379-423
-
-  .. [2] `Entropy - Information Theory <https://en.wikipedia.org/wiki/Entropy_(information_theory)>`_
-
-  .. [3] `Rényi entropy <https://en.wikipedia.org/wiki/R%C3%A9nyi_entropy>`_
-
-  .. [4] `Hartley entropy <https://en.wikipedia.org/wiki/Hartley_function>`_
+  * .. [1] Shannon, Claude Elwood. `A mathematical theory of communication <https://pure.mpg.de/rest/items/item_2383164/component/file_2383163/content>`_. The Bell system technical journal 27.3 (1948): 379-423
+  * .. [2] `Entropy - Information Theory <https://en.wikipedia.org/wiki/Entropy_(information_theory)>`_
+  * .. [3] `Rényi entropy <https://en.wikipedia.org/wiki/R%C3%A9nyi_entropy>`_
+  * .. [4] `Hartley entropy <https://en.wikipedia.org/wiki/Hartley_function>`_
 
 
+|details-end|
 
 Entropy for real-valued source
 ===============================
@@ -667,13 +670,16 @@ Spectral Entropy & Permutation Entropy
 #TODO
 
 
+|details-start|
+**References**
+|details-split|
+
 .. topic:: References:
 
-  .. [1] Shannon, Claude Elwood. `A mathematical theory of communication <https://pure.mpg.de/rest/items/item_2383164/component/file_2383163/content>`_. The Bell system technical journal 27.3 (1948): 379-423
+  * .. [1] Shannon, Claude Elwood. `A mathematical theory of communication <https://pure.mpg.de/rest/items/item_2383164/component/file_2383163/content>`_. The Bell system technical journal 27.3 (1948): 379-423
+  * .. [2] `Entropy - Information Theory <https://en.wikipedia.org/wiki/Entropy_(information_theory)>`_
+  * .. [3] `Rényi entropy <https://en.wikipedia.org/wiki/R%C3%A9nyi_entropy>`_
+  * .. [4] `Hartley entropy <https://en.wikipedia.org/wiki/Hartley_function>`_
 
-  .. [2] `Entropy - Information Theory <https://en.wikipedia.org/wiki/Entropy_(information_theory)>`_
 
-  .. [3] `Rényi entropy <https://en.wikipedia.org/wiki/R%C3%A9nyi_entropy>`_
-
-  .. [4] `Hartley entropy <https://en.wikipedia.org/wiki/Hartley_function>`_
-
+|details-end|

@@ -1,8 +1,8 @@
 .. _eeg:
 
-======================
-Electroencephalography
-======================
+===========================
+EEG: Electroencephalography
+===========================
 
 Preprocessing
 ==============
@@ -53,6 +53,23 @@ Topographic Map
    * :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_eeg_topomaps.py`
 
 
+
+Read from EDF Files
+-------------------
+
+Spkit have function :func:`spkit.io.read_bdf` that supports reading EDF/BDF files of EEG.
+
+Here is an example
+
+.. figure:: ../auto_examples/electroencephalogram/images/sphx_glr_plot_sp_EDF_FILE_001.png
+   :target: ../auto_examples/electroencephalogram/plot_sp_EDF_FILE.html
+   :align: center
+   :scale: 70%
+
+
+.. topic:: Examples:
+
+   * :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_EDF_FILE.py`
 
 
 

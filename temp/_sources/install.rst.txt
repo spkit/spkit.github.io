@@ -195,7 +195,7 @@ may of the possible conflicts.
 In case, you are not using `scikit-learn`, install following required libraries that will set-up 
 the prerequites
 
-* numpy>1.8
+* numpy>1.8 
 * pandas
 * scipy
 * scikit-learn
@@ -208,6 +208,7 @@ the prerequites
 * joblib
 * phyaat
 
+Use numpy<2.0.0, some functions are not compatible with numpy>=2.0
 
 **Optional**
 ===============
