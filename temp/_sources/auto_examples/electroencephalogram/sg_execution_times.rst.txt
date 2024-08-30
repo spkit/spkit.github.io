@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.525** total execution time for 8 files **from auto_examples/electroencephalogram**:
+**00:00.712** total execution time for 8 files **from auto_examples/electroencephalogram**:
 
 .. container::
 
@@ -33,7 +33,7 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_EDF_FILE.py` (``plot_sp_EDF_FILE.py``)
-     - 00:00.525
+     - 00:00.712
      - 0.0
    * - :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ATAR_algorithm_tuning.py` (``plot_sp_ATAR_algorithm_tuning.py``)
      - 00:00.000

@@ -1,8 +1,8 @@
 .. _tutorials:
 
-=======================
+==========
 Tutorials
-=======================
+==========
 
 
 .. .. raw:: html
@@ -85,7 +85,7 @@ One of the course we have developed as **Introduction to Data Science Programmin
     <div class="column-box">
     <div class="card">
     <a class="reference external image-reference" href="https://nikeshbajaj.github.io/teaching/QMUL/QHP4701/">
-       <img alt="Data Science" src="https://nikeshbajaj.github.io/teaching/QMUL/QHP4701/imgs/cover.png" style="width: 300px;"/>
+       <img alt="Data Science" src="https://nikeshbajaj.github.io/teaching/QMUL/QHP4701/imgs/cover.png" target="_blank" style="width: 300px;"/>
      </a>
     </div>
     </div>
@@ -136,7 +136,7 @@ Interactive Wigdets
         <div class="card-body">
         <p><strong>Statistics:</strong> <a class="reference external" href="https://nikeshbajaj.github.io/teaching/demos/Stats/sampling">For Hypothesis Testing and T-test</a></p>
         <a class="reference external image-reference" href="https://nikeshbajaj.github.io/teaching/demos/Stats/sampling">
-        <img alt="ml_roc_demo" src="https://nikeshbajaj.github.io/teaching/demos/stats_sampling_demo.gif" style="width: 300px;"/>
+        <img alt="ml_roc_demo" src="https://nikeshbajaj.github.io/teaching/demos/stats_sampling_demo.gif" target="_blank" style="width: 300px;"/>
     </a>
     </div>
     </div>
@@ -148,7 +148,7 @@ Interactive Wigdets
     <p><strong>Machine Learning:</strong> <a class="reference external" href="https://nikeshbajaj.github.io/teaching/demos/ML/roc_v3.html">For Understanding ROC</a></p>
     <a class="reference external image-reference" href="https://nikeshbajaj.github.io/teaching/demos/ML/roc_v3.html">
         <img alt="https://nikeshbajaj.github.io/teaching/demos/ml_roc_demo.gif"
-        src="https://nikeshbajaj.github.io/teaching/demos/ml_roc_demo.gif" style="width: 300px;"/>
+        src="https://nikeshbajaj.github.io/teaching/demos/ml_roc_demo.gif" target="_blank"  style="width: 300px;"/>
     </a>
     </div>
     </div>
@@ -168,7 +168,7 @@ Blogs/Tutorial-sessions
         <div class="card">
         <a class="reference external image-reference" href="https://link.medium.com/90mYhbr8Osb">
         <img alt="ML ROC"
-            src="https://spkit.github.io/V/0.0.9.6/assets/images/ATAR_2.png" style="width: 400px;"/>
+            src="https://spkit.github.io/V/0.0.9.6/assets/images/ATAR_2.png" target="_blank" style="width: 400px;"/>
         </a>
         </div>
         </div>

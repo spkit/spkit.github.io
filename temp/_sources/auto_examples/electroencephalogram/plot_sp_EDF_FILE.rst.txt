@@ -188,17 +188,54 @@ Extract EEG Data and process
 
 .. GENERATED FROM PYTHON SOURCE LINES 80-82
 
+Plot - cover
+-------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 82-99
+
+.. code-block:: Python
+
+
+    # this is for the cover
+    fig,ax = plt.subplots(1,2,figsize=(10,4),gridspec_kw={'width_ratios': [2, 1]})
+    sep=100
+    ax[0].plot(t,Xf1+np.arange(Xf1.shape[1])*sep,color='k',alpha=0.5)
+    ax[0].set_xlim([t[0],t[-1]])
+    ax[0].set_yticks(np.arange(Xf1.shape[1])*sep, eeg_ch_names)
+    ax[0].set_xlabel('time (s)')
+    ax[0].set_title('EEG Sample: 20s duration')
+    ax[0].text(17,sep*7,'EDF File',fontsize=130,ha='center',va='center',color='C3')
+    Z1,im1 = sp.eeg.topomap(data=Pm[1],ch_names=eeg_ch_names,shownames=False,axes=ax[1],return_im=True,cmap='Blues_r')
+    ax[1].set_title(r'$\alpha$ (8-14 Hz)')
+    ax[1].set_zorder(-1)
+    #plt.colorbar(im1, ax=ax[1],label='dB')
+    plt.show()
+
+
+
+
+
+.. image-sg:: /auto_examples/electroencephalogram/images/sphx_glr_plot_sp_EDF_FILE_001.png
+   :alt: EEG Sample: 20s duration, $\alpha$ (8-14 Hz)
+   :srcset: /auto_examples/electroencephalogram/images/sphx_glr_plot_sp_EDF_FILE_001.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 100-102
+
 Plot
 -----
 
-.. GENERATED FROM PYTHON SOURCE LINES 82-95
+.. GENERATED FROM PYTHON SOURCE LINES 102-114
 
 .. code-block:: Python
 
     fig,ax = plt.subplots(1,2,figsize=(10,4),gridspec_kw={'width_ratios': [2, 1]})
-
     sep=100
-    ax[0].plot(t,Xf1+np.arange(Xf1.shape[1])*sep)
+    ax[0].plot(t,Xf1+np.arange(Xf1.shape[1])*sep,color='C0')
     ax[0].set_xlim([t[0],t[-1]])
     ax[0].set_yticks(np.arange(Xf1.shape[1])*sep, eeg_ch_names)
     ax[0].set_xlabel('time (s)')
@@ -211,9 +248,9 @@ Plot
     plt.show()
 
 
-.. image-sg:: /auto_examples/electroencephalogram/images/sphx_glr_plot_sp_EDF_FILE_001.png
+.. image-sg:: /auto_examples/electroencephalogram/images/sphx_glr_plot_sp_EDF_FILE_002.png
    :alt: EEG Sample: 20s duration, $\alpha$ (8-14 Hz)
-   :srcset: /auto_examples/electroencephalogram/images/sphx_glr_plot_sp_EDF_FILE_001.png
+   :srcset: /auto_examples/electroencephalogram/images/sphx_glr_plot_sp_EDF_FILE_002.png
    :class: sphx-glr-single-img
 
 
@@ -223,7 +260,7 @@ Plot
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.525 seconds)
+   **Total running time of the script:** (0 minutes 0.712 seconds)
 
 
 .. _sphx_glr_download_auto_examples_electroencephalogram_plot_sp_EDF_FILE.py:
