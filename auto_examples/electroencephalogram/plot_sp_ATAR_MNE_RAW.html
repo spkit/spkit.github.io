@@ -239,7 +239,7 @@
           <div class="spk-sidebar-toc">
             <ul>
 <li><a class="reference internal" href="#">ATAR Algorithm with MNE RAW Object</a><ul>
-<li><a class="reference internal" href="#download-sameple-file">Download sameple file</a></li>
+<li><a class="reference internal" href="#download-sample-file">Download sample file</a></li>
 <li><a class="reference internal" href="#read-edf-file-with-mne-raw">Read EDF File  with MNE Raw</a></li>
 <li><a class="reference internal" href="#extract-eeg-and-apply-atar">Extract EEG and Apply ATAR</a></li>
 <li><a class="reference internal" href="#putting-back-eeg-to-original-raw-mne">Putting back EEG to Original Raw MNE</a></li>
@@ -298,8 +298,8 @@ After ATAR, we will put EEG Data back to MNE Raw object. This is perticullary us
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>spkit-version :  0.0.9.7
 </pre></div>
 </div>
-<section id="download-sameple-file">
-<h2>Download sameple file<a class="headerlink" href="#download-sameple-file" title="Link to this heading">¶</a></h2>
+<section id="download-sample-file">
+<h2>Download sample file<a class="headerlink" href="#download-sample-file" title="Link to this heading">¶</a></h2>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download file, if not already downloaded</span>
 
 
@@ -425,7 +425,7 @@ Using matplotlib as 2D backend.
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span>  <span class="o">=</span> <span class="n">raw1</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="s1">&#39;eeg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalings</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">eeg</span><span class="o">=</span><span class="mf">100e-6</span><span class="p">),</span> <span class="n">duration</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_002.png" srcset="../../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_002.png" alt="plot sp ATAR MNE RAW" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 5.083 seconds)</p>
+<img src="../../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_002.png" srcset="../../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_002.png" alt="plot sp ATAR MNE RAW" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 5.141 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-electroencephalogram-plot-sp-atar-mne-raw-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/spkit/spkit/0.9.X?urlpath=lab/tree/notebooks/auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>

@@ -14,10 +14,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://spkit.github.io/modules/bsp_eeg.html" />
 <meta property="og:site_name" content="spkit" />
-<meta property="og:description" content="Preprocessing: Filtering: Power computation: Rhythmic Features: Examples:: EEG Computing Rhythmic Features - PhyAAt - Semanticity. Topographic Map: Examples:: EEG Topographic Map. Read from EDF Fil..." />
+<meta property="og:description" content="Preprocessing: Filtering: Power computation: Rhythmic Features: Examples:: EEG Computing Rhythmic Features - PhyAAt - Semanticity. Topographic Map: Examples:: EEG Topographic Map. Working with diff..." />
 <meta property="og:image" content="https://spkit.github.io/_images/sphx_glr_plot_sp_eeg_rhythmic_features_001.png" />
 <meta property="og:image:alt" content="spkit" />
-<meta name="description" content="Preprocessing: Filtering: Power computation: Rhythmic Features: Examples:: EEG Computing Rhythmic Features - PhyAAt - Semanticity. Topographic Map: Examples:: EEG Topographic Map. Read from EDF Fil..." />
+<meta name="description" content="Preprocessing: Filtering: Power computation: Rhythmic Features: Examples:: EEG Computing Rhythmic Features - PhyAAt - Semanticity. Topographic Map: Examples:: EEG Topographic Map. Working with diff..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -244,12 +244,16 @@
 <li><a class="reference internal" href="#power-computation">5.1.1.2. Power computation</a></li>
 <li><a class="reference internal" href="#rhythmic-features">5.1.1.3. Rhythmic Features</a></li>
 <li><a class="reference internal" href="#topographic-map">5.1.1.4. Topographic Map</a></li>
-<li><a class="reference internal" href="#read-from-edf-files">5.1.1.5. Read from EDF Files</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#removing-artifacts">5.1.2. Removing Artifacts</a><ul>
-<li><a class="reference internal" href="#atar-algorithm">5.1.2.1. ATAR Algorithm</a></li>
-<li><a class="reference internal" href="#ica-algorithm">5.1.2.2. ICA Algorithm</a></li>
+<li><a class="reference internal" href="#working-with-different-files-frameworks">5.1.2. Working with different files/frameworks</a><ul>
+<li><a class="reference internal" href="#read-from-edf-files">5.1.2.1. Read from EDF Files</a></li>
+<li><a class="reference internal" href="#work-with-mne-raw-object">5.1.2.2. Work with MNE Raw Object</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#removing-artifacts">5.1.3. Removing Artifacts</a><ul>
+<li><a class="reference internal" href="#atar-algorithm">5.1.3.1. ATAR Algorithm</a></li>
+<li><a class="reference internal" href="#ica-algorithm">5.1.3.2. ICA Algorithm</a></li>
 </ul>
 </li>
 </ul>
@@ -301,12 +305,23 @@
 </ul>
 </aside>
 </section>
+</section>
+<section id="working-with-different-files-frameworks">
+<h2><span class="section-number">5.1.2. </span>Working with different files/frameworks<a class="headerlink" href="#working-with-different-files-frameworks" title="Link to this heading">¶</a></h2>
+<p>Several file formats are used for storing EEG Data. Some are specifically designed to support device recording systems,
+and some are there to support specific frameworks and tools, such as eeglab/mne, etc.
+Even though these file formats/tools/frameworks are efficient for a particular field/scope, they limit the
+researchers/users’ ability to explore data freely (at least that’s how I feel). And sometimes,
+they even limit the understanding of the data itself.</p>
+<p>We prefer to extract raw signals from these files to process. This approach gives researchers/users much more
+independence, as after extracting signals as arrays (numpy.arrays), one can apply any signal processing algorithm,
+from a wide-variety of fields or even to custom-built algorithms.</p>
 <section id="read-from-edf-files">
-<h3><span class="section-number">5.1.1.5. </span>Read from EDF Files<a class="headerlink" href="#read-from-edf-files" title="Link to this heading">¶</a></h3>
+<h3><span class="section-number">5.1.2.1. </span>Read from EDF Files<a class="headerlink" href="#read-from-edf-files" title="Link to this heading">¶</a></h3>
 <p>Spkit have function <a class="reference internal" href="generated/spkit.io.read_bdf.html#spkit.io.read_bdf" title="spkit.io.read_bdf"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.io.read_bdf</span></code></a> that supports reading EDF/BDF files of EEG.</p>
 <p>Here is an example</p>
 <figure class="align-center">
-<a class="reference external image-reference" href="../auto_examples/electroencephalogram/plot_sp_EDF_FILE.html"><img alt="../_images/sphx_glr_plot_sp_EDF_FILE_001.png" src="../_images/sphx_glr_plot_sp_EDF_FILE_001.png" style="width: 700.0px; height: 280.0px;" /></a>
+<a class="reference external image-reference" href="../auto_examples/electroencephalogram/plot_sp_EDF_FILE.html"><img alt="../_images/sphx_glr_plot_sp_EDF_FILE_002.png" src="../_images/sphx_glr_plot_sp_EDF_FILE_002.png" style="width: 700.0px; height: 280.0px;" /></a>
 </figure>
 <aside class="topic">
 <p class="topic-title">Examples:</p>
@@ -315,11 +330,46 @@
 </ul>
 </aside>
 </section>
+<section id="work-with-mne-raw-object">
+<h3><span class="section-number">5.1.2.2. </span>Work with MNE Raw Object<a class="headerlink" href="#work-with-mne-raw-object" title="Link to this heading">¶</a></h3>
+<p>MNE is one of the tool used for EEG data processing. It allows to read several file formates as Raw Object, which further
+includes many analysis algorithms</p>
+<p>Here is an example of reading MNE Raw object, extract EEG data from it, process it with ATAR algorithm and put EEG data back to MNE
+Raw Object for further processing and analysis.</p>
+<table class="docutils align-left" style="width: 100%">
+<tbody>
+<tr class="row-odd"><td><p>Raw EEG Data</p></td>
+<td><p>After Applying ATAR</p></td>
+</tr>
+<tr class="row-even"><td><figure class="align-left" id="id4">
+<a class="reference external image-reference" href="../auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.html"><img alt="../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_001.png" src="../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_001.png" style="width: 400.0px; height: 400.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Fig 1. Raw EEG Data</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-left" id="id5">
+<a class="reference external image-reference" href="../auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.html"><img alt="../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_002.png" src="../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_002.png" style="width: 400.0px; height: 400.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Fig 2. After Applying ATAR</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<aside class="topic">
+<p class="topic-title">Examples:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.html#sphx-glr-auto-examples-electroencephalogram-plot-sp-atar-mne-raw-py"><span class="std std-ref">ATAR Algorithm with MNE RAW Object</span></a></p></li>
+</ul>
+</aside>
+</section>
 </section>
 <section id="removing-artifacts">
-<h2><span class="section-number">5.1.2. </span>Removing Artifacts<a class="headerlink" href="#removing-artifacts" title="Link to this heading">¶</a></h2>
+<h2><span class="section-number">5.1.3. </span>Removing Artifacts<a class="headerlink" href="#removing-artifacts" title="Link to this heading">¶</a></h2>
 <section id="atar-algorithm">
-<h3><span class="section-number">5.1.2.1. </span>ATAR Algorithm<a class="headerlink" href="#atar-algorithm" title="Link to this heading">¶</a></h3>
+<h3><span class="section-number">5.1.3.1. </span>ATAR Algorithm<a class="headerlink" href="#atar-algorithm" title="Link to this heading">¶</a></h3>
 <p>Apply ATAR on short windows of signal (single channel):</p>
 <p>Signal is decomposed in smaller overlapping windows and reconstructed after correcting using overlap-add method.</p>
 <p>For more details, check <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
@@ -347,11 +397,12 @@
 <p class="topic-title">Examples:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../auto_examples/electroencephalogram/plot_sp_ATAR_algorithm_tuning.html#sphx-glr-auto-examples-electroencephalogram-plot-sp-atar-algorithm-tuning-py"><span class="std std-ref">ATAR: Automatic and Tunable Artifact Removal Algorithm</span></a></p></li>
+<li><p><a class="reference internal" href="../auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.html#sphx-glr-auto-examples-electroencephalogram-plot-sp-atar-mne-raw-py"><span class="std std-ref">ATAR Algorithm with MNE RAW Object</span></a></p></li>
 </ul>
 </aside>
 </section>
 <section id="ica-algorithm">
-<h3><span class="section-number">5.1.2.2. </span>ICA Algorithm<a class="headerlink" href="#ica-algorithm" title="Link to this heading">¶</a></h3>
+<h3><span class="section-number">5.1.3.2. </span>ICA Algorithm<a class="headerlink" href="#ica-algorithm" title="Link to this heading">¶</a></h3>
 <p>ICA Filtering algorithm uses following three criteria for removing artifacts for EEG.</p>
 <ol class="arabic">
 <li><dl class="simple">

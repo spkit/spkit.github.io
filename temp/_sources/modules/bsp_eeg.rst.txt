@@ -54,6 +54,20 @@ Topographic Map
 
 
 
+Working with different files/frameworks
+=======================================
+
+Several file formats are used for storing EEG Data. Some are specifically designed to support device recording systems, 
+and some are there to support specific frameworks and tools, such as eeglab/mne, etc.
+Even though these file formats/tools/frameworks are efficient for a particular field/scope, they limit the 
+researchers/users' ability to explore data freely (at least that’s how I feel). And sometimes, 
+they even limit the understanding of the data itself.
+
+We prefer to extract raw signals from these files to process. This approach gives researchers/users much more 
+independence, as after extracting signals as arrays (numpy.arrays), one can apply any signal processing algorithm, 
+from a wide-variety of fields or even to custom-built algorithms.
+
+
 Read from EDF Files
 -------------------
 
@@ -61,7 +75,7 @@ Spkit have function :func:`spkit.io.read_bdf` that supports reading EDF/BDF file
 
 Here is an example
 
-.. figure:: ../auto_examples/electroencephalogram/images/sphx_glr_plot_sp_EDF_FILE_001.png
+.. figure:: ../auto_examples/electroencephalogram/images/sphx_glr_plot_sp_EDF_FILE_002.png
    :target: ../auto_examples/electroencephalogram/plot_sp_EDF_FILE.html
    :align: center
    :scale: 70%
@@ -70,6 +84,43 @@ Here is an example
 .. topic:: Examples:
 
    * :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_EDF_FILE.py`
+
+
+Work with MNE Raw Object
+------------------------
+
+MNE is one of the tool used for EEG data processing. It allows to read several file formates as Raw Object, which further
+includes many analysis algorithms
+
+Here is an example of reading MNE Raw object, extract EEG data from it, process it with ATAR algorithm and put EEG data back to MNE
+Raw Object for further processing and analysis.
+
+
+.. list-table:: 
+    :width: 100%
+    :align: left
+
+    * -  Raw EEG Data
+      -  After Applying ATAR
+
+    * - .. figure:: ../auto_examples/electroencephalogram/images/sphx_glr_plot_sp_ATAR_MNE_RAW_001.png
+           :target: ../auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.html
+           :align: left
+           :scale: 50%
+
+           Fig 1. Raw EEG Data
+
+      - .. figure:: ../auto_examples/electroencephalogram/images/sphx_glr_plot_sp_ATAR_MNE_RAW_002.png
+           :target: ../auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.html
+           :align: left
+           :scale: 50%
+
+           Fig 2. After Applying ATAR
+
+
+.. topic:: Examples:
+
+   * :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ATAR_MNE_RAW.py`
 
 
 
@@ -136,6 +187,7 @@ For more details, check [1]_
 .. topic:: Examples:
 
    * :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ATAR_algorithm_tuning.py`
+   * :ref:`sphx_glr_auto_examples_electroencephalogram_plot_sp_ATAR_MNE_RAW.py`
 
 
 

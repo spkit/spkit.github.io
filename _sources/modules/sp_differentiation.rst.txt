@@ -1,9 +1,0 @@
-.. _diff:
-
-================
-Differentiation
-================
-
-
-Signal Gradient
-===============

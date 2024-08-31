@@ -72,7 +72,7 @@ Any file that can be read by `mne.io.read_raw**` can be used in this way to appl
 
 .. GENERATED FROM PYTHON SOURCE LINES 39-41
 
-Download sameple file
+Download sample file
 ----------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 41-56
@@ -283,7 +283,7 @@ Plot for comparison
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.083 seconds)
+   **Total running time of the script:** (0 minutes 5.141 seconds)
 
 
 .. _sphx_glr_download_auto_examples_electroencephalogram_plot_sp_ATAR_MNE_RAW.py:
