@@ -1,0 +1,553 @@
+
+
+<!DOCTYPE html>
+<!-- data-theme below is forced to be "light" but should be changed if we use pydata-theme-sphinx in the future -->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" data-content_root="../../" data-theme="light"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" data-content_root="../../" data-theme="light">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="ATAR Algorithm with MNE RAW Object" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://spkit.github.io/auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.html" />
+<meta property="og:site_name" content="spkit" />
+<meta property="og:description" content="In this example, we show, how to apply ATAR algorithm with MNE Raw object. We will read EDF File as MNE Raw file then extract EEG Data from it, scale and transport it for ATAR. After ATAR, we will ..." />
+<meta property="og:image" content="https://github.com/spkit/spkit.github.io/blob/master/assets/logo/logo.png" />
+<meta property="og:image:alt" content="spkit" />
+<meta name="description" content="In this example, we show, how to apply ATAR algorithm with MNE Raw object. We will read EDF File as MNE Raw file then extract EEG Data from it, scale and transport it for ATAR. After ATAR, we will ..." />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>ATAR Algorithm with MNE RAW Object &mdash; spkit 0.0.9.7 documentation</title>
+  
+  <link rel="canonical" href="http://spkit.github.io/stable/auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.html" />
+
+  
+  <link rel="shortcut icon" href="../../_static/favicon.ico" />
+  
+
+  <link rel="stylesheet" href="../../_static/css/vendor/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+  <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+  <link rel="stylesheet" href="../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sg_gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sg_gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sg_gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <script id="documentation_options" data-url_root="../../"
+    src="../../_static/documentation_options.js"></script>
+  <script src="../../_static/js/vendor/jquery-3.6.3.slim.min.js"></script>
+  <script src="../../_static/js/details-permalink.js"></script>
+
+  <link rel="stylesheet" href="../../_static/css/vendor/nature_spkit.css" type="text/css" /> 
+
+
+</head>
+
+<body>
+  
+
+
+
+
+
+<!-- ('About us', pathto('about'), ''), -->
+
+
+<div id="logo-banner">
+  <div class="logo">
+    <!-- <a href="../../%23.html"><img src="_static/spkit_logo.png" alt="spkit logo"  border="0" /></a> -->
+  <!-- <a href="#"><img src="_static/spkit_logo.png" alt="spkit logo"  border="0" /></a> -->
+  <a href="../../index.html"><img src="../../_static/spkit_logo.png" alt="spkit logo"  border="0" /></a>
+  </div>
+  <div class="tags">
+  <ul>
+    <li>&#9672; Easy to use toolkit for signal processing and analysis</li>
+    <li>&#9672; More of biomedical signal analysis with visualization</li>
+    <li>&#9672; Includes basic machine learning models with visualization</li>
+    <!-- <li>&#9672; Open source</li> -->
+  </ul>
+  </div>
+  <div class="banner">
+  <h2>Signal Processing Toolkit</h2>
+  <h4><i>Simple and easy to use for signal analysis and predictive analysis</i></h4>
+  </div>
+</div>
+<nav id="navbar" class="spk-docs-navbar navbar navbar-expand-md navbar-light bg-light py-0">
+  <div class="container-fluid spk-docs-container px-0">
+      <a class="navbar-brand py-0" href="../../index.html">
+        <img
+          class="spk-brand-img"
+          src="../../_static/spkit_small_icon_v.png"
+          alt="logo"/>
+      </a>
+    <button
+      id="spk-navbar-toggler"
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="spk-navbar-collapse collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link" href="../../index.html">Home</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="spk-nav-link nav-link" href="../../install.html">Install</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link" href="../../user_guide.html">User Guide</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link" href="../../modules/classes.html">API</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link" href="../index.html">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link" href="../../tutorials/index.html">Tutorials</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link" target="_blank" rel="noopener noreferrer" href="https://github.com/Nikeshbajaj/spkit/discussions?discussions_q=">Discussion Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link" href="../../about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link nav-more-item-mobile-items" href="../../getting_started.html" >Getting Started</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link nav-more-item-mobile-items" href="../../whats_new/v0.0.9.7.html" >What's new</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link nav-more-item-mobile-items" href="https://github.com/nikeshbajaj/spkit" target="_blank">GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link nav-more-item-mobile-items" href="https://spkit.github.io/dev/index.html" target="_blank" rel="noopener noreferrer">Development</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link nav-more-item-mobile-items" href="https://github.com/Nikeshbajaj/spkit/discussions?discussions_q=" target="_blank">Get Involved</a>
+        </li>
+        <li class="nav-item">
+          <a class="spk-nav-link nav-link nav-more-item-mobile-items" href="https://spkit.github.io/dev/versions.html" >Other Versions and Download</a>
+        </li>
+        <li class="nav-item dropdown nav-more-item-dropdown">
+          <a class="spk-nav-link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="spk-nav-dropdown-item dropdown-item" href="../../getting_started.html" >Getting Started</a>
+              <a class="spk-nav-dropdown-item dropdown-item" href="../../whats_new/v0.0.9.7.html" >What's new</a>
+              <a class="spk-nav-dropdown-item dropdown-item" href="https://github.com/nikeshbajaj/spkit" target="_blank">GitHub</a>
+              <a class="spk-nav-dropdown-item dropdown-item" href="https://spkit.github.io/dev/index.html" target="_blank" rel="noopener noreferrer">Development</a>
+              <a class="spk-nav-dropdown-item dropdown-item" href="https://github.com/Nikeshbajaj/spkit/discussions?discussions_q=" target="_blank">Get Involved</a>
+              <a class="spk-nav-dropdown-item dropdown-item" href="https://spkit.github.io/dev/versions.html" >Other Versions and Download</a>
+          </div>
+        </li>
+      </ul>
+      <div id="searchbox" role="search">
+          <div class="searchformwrapper">
+          <form class="search" action="../../search.html" method="get">
+            <input class="spk-search-text-input" type="text" name="q" aria-labelledby="searchlabel" />
+            <input class="spk-search-text-btn" type="submit" value="Go" />
+          </form>
+          </div>
+      </div>
+      <a class ="nav-more-item-dropdown">
+      <font size="4em" style="margin: 5px 5px 0px 5px;color:rgb(0, 0, 0)">V</font>
+      </a>
+      <div class="nav-item dropdown nav-more-item-dropdown-vs">
+        <a class="sp-nav-link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font color="black">0.0.9.7 (latest)</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="sp-nav-dropdown-item dropdown-item" href="../../index.html" >0.0.9.7 (latest)</a>
+            <a class="sp-nav-dropdown-item dropdown-item" href="../../V/0.0.9.6/index.html" >0.0.9.6</a>
+            <a class="sp-nav-dropdown-item dropdown-item" href="../../V/0.0.9.5/index.html" >0.0.9.5</a>
+            <a class="sp-nav-dropdown-item dropdown-item" href="../../V/0.0.9.4/index.html" >0.0.9.4</a>
+            <a class="sp-nav-dropdown-item dropdown-item" href="../../V/0.0.9.3/index.html" >0.0.9.3</a>
+            <a class="sp-nav-dropdown-item dropdown-item" href="../../V/0.0.9.2/index.html" >0.0.9.2</a>
+            <a class="sp-nav-dropdown-item dropdown-item" href="../../V/0.0.9.1/index.html" >0.0.9.1</a>
+            <a class="sp-nav-dropdown-item dropdown-item" href="https://github.com/Nikeshbajaj/spkit/releases" >More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+  <div class="d-flex" id="spk-doc-wrapper" class="border-right">
+    <input type="checkbox" name="spk-toggle-checkbox" id="spk-toggle-checkbox">
+    <label id="spk-sidemenu-toggle" class="spk-btn-toggle-toc btn spk-btn-primary" for="spk-toggle-checkbox">Toggle
+      Menu</label>
+      <div id="spk-sidebar-top-logoimg">
+        <a href="../../index.html">
+          <img class="spk-brand-img-side" src="../../_static/spkit_logo.png" alt="spkit logo"  border="0" />
+        </a>
+      </div>
+    <div id="spk-sidebar-wrapper" class="border-right">
+      <div class="spk-sidebar-top-content">
+        <hr style="margin: 0 0 10px 0" />
+        <div class="alert alert-danger p-1 mb-2" role="alert">
+          <p class="text-center mb-0">
+            <strong>SpKit 0.0.9.7</strong><br />
+            <!-- <a class="reference external" href="https://pypi.org/project/spkit" target="_blank"><img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/Nikeshbajaj/spkit?label=latest%20version&style=plastic"></a> -->
+            <a class="reference external" href="https://pepy.tech/project/spkit" target="_blank"><img
+                src="https://static.pepy.tech/personalized-badge/spkit?period=total&amp;units=international_system&amp;left_color=black&amp;right_color=orange&amp;left_text=downloads"
+                alt="PyPI - Downloads" /></a>
+            <a class="reference external" href="https://pypi.python.org/pypi/spkit" target="_blank"><img
+                alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/spkit?style=plastic"></a>
+            <!-- <a href="http://spkit.github.io/dev/versions.html">Other versions</a> -->
+          </p>
+        </div>
+        <div class="alert alert-warning p-1 mb-2" role="alert">
+          <p class="text-center mb-0">
+            Please <a class="font-weight-bold" href="../../about.html#citing">
+              <string>cite us</string>
+            </a> if you use the software.
+          </p>
+        </div>
+        <div class="btn-group w-100 mb-2" role="group" aria-label="rellinks">
+          <a href="index.html" role="button" class="btn spk-btn-rellink py-1"
+            spk-rellink-tooltip="Electroencephalography (EEG)">Prev</a><a href=" index.html" role="button" class="btn spk-btn-rellink py-1"
+            spk-rellink-tooltip="Electroencephalography (EEG)">Up</a>
+          <a href="plot_sp_ATAR_algorithm_tuning.html" role="button" class="btn spk-btn-rellink py-1"
+            spk-rellink-tooltip="ATAR: Automatic and Tunable Artifact Removal Algorithm">Next</a>
+        </div>
+        <hr>
+      </div>
+      <div class=" spk-sidebar-toc-wrapper">
+          <!-- <div class="btn-group w-100 mb-2" role="group" aria-label="rellinks">
+            <a href="index.html" role="button" class="btn spk-btn-rellink py-1"
+              spk-rellink-tooltip="Electroencephalography (EEG)">Prev</a><a href=" index.html" role="button" class="btn spk-btn-rellink py-1"
+              spk-rellink-tooltip="Electroencephalography (EEG)">Up</a>
+            <a href="plot_sp_ATAR_algorithm_tuning.html" role="button" class="btn spk-btn-rellink py-1"
+              spk-rellink-tooltip="ATAR: Automatic and Tunable Artifact Removal Algorithm">Next</a>
+          </div>
+          <hr> -->
+          <div class="spk-sidebar-toc">
+            <ul>
+<li><a class="reference internal" href="#">ATAR Algorithm with MNE RAW Object</a><ul>
+<li><a class="reference internal" href="#download-sameple-file">Download sameple file</a></li>
+<li><a class="reference internal" href="#read-edf-file-with-mne-raw">Read EDF File  with MNE Raw</a></li>
+<li><a class="reference internal" href="#extract-eeg-and-apply-atar">Extract EEG and Apply ATAR</a></li>
+<li><a class="reference internal" href="#putting-back-eeg-to-original-raw-mne">Putting back EEG to Original Raw MNE</a></li>
+<li><a class="reference internal" href="#plot-for-comparison">Plot for comparison</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    <div id="spk-page-content-wrapper">
+      <div class="spk-page-content container-fluid body px-md-3" role="main">
+        
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-electroencephalogram-plot-sp-atar-mne-raw-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code or to run this example in your browser via JupyterLite or Binder</p>
+</div>
+<section class="sphx-glr-example-title" id="atar-algorithm-with-mne-raw-object">
+<span id="sphx-glr-auto-examples-electroencephalogram-plot-sp-atar-mne-raw-py"></span><h1>ATAR Algorithm with MNE RAW Object<a class="headerlink" href="#atar-algorithm-with-mne-raw-object" title="Link to this heading">¶</a></h1>
+<p>In this example, we show, how to apply ATAR algorithm with MNE Raw object.</p>
+<p>We will read EDF File as MNE Raw file then extract EEG Data from it, scale and transport it for ATAR.
+After ATAR, we will put EEG Data back to MNE Raw object. This is perticullary useful, when all the other analysis is done in MNE Framework.</p>
+<p>We do not show the analysis part, only, <strong>how to extract EEG from MNE Raw, apply ATAR and put it back</strong></p>
+<p>Same can be applied, when EEG Data file is</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FIF</p></li>
+<li><p>EDF</p></li>
+<li><p>BDF</p></li>
+<li><p>EGI</p></li>
+<li><p>vhdr</p></li>
+</ul>
+</div></blockquote>
+<p>Any file that can be read by <code class="docutils literal notranslate"><span class="pre">mne.io.read_raw**</span></code> can be used in this way to apply ATAR.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">re</span><span class="o">,</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">glob</span><span class="o">,</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<a href="https://docs.python.org/3/library/warnings.html#warnings.filterwarnings" title="warnings.filterwarnings" class="sphx-glr-backref-module-warnings sphx-glr-backref-type-py-function"><span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span></a><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
+
+
+<span class="kn">import</span> <span class="nn">spkit</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;spkit-version : &#39;</span><span class="p">,</span><span class="n">sp</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">mne</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>spkit-version :  0.0.9.7
+</pre></div>
+</div>
+<section id="download-sameple-file">
+<h2>Download sameple file<a class="headerlink" href="#download-sameple-file" title="Link to this heading">¶</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download file, if not already downloaded</span>
+
+
+<span class="n">path</span> <span class="o">=</span><span class="s1">&#39;https://github.com/spkit/data_samples/raw/main/files/Resting_EPOCX_14Ch_Sample1.edf&#39;</span>
+
+
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;Resting_EPOCX_14Ch_Sample1.edf&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span><span class="p">(</span><a href="https://docs.python.org/3/library/os.path.html#os.path.exists" title="os.path.exists" class="sphx-glr-backref-module-os-path sphx-glr-backref-type-py-function"><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span></a><span class="p">(</span><span class="n">file_name</span><span class="p">)):</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="read-edf-file-with-mne-raw">
+<h2>Read EDF File  with MNE Raw<a class="headerlink" href="#read-edf-file-with-mne-raw" title="Link to this heading">¶</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">raw</span> <span class="o">=</span> <span class="n">mne</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">read_raw_edf</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">preload</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">info</span><span class="p">)</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s2">&quot;sfreq&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Channel Names&#39;</span><span class="p">)</span>
+<a href="../../modules/generated/spkit.utils.pretty_print.html#spkit.utils.pretty_print" title="spkit.utils.pretty_print" class="sphx-glr-backref-module-spkit-utils sphx-glr-backref-type-py-function"><span class="n">sp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">pretty_print</span></a><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">ch_names</span><span class="p">)</span>
+
+<span class="n">eeg_ch</span>  <span class="o">=</span><span class="p">[</span><span class="s1">&#39;AF3&#39;</span><span class="p">,</span> <span class="s1">&#39;F7&#39;</span><span class="p">,</span> <span class="s1">&#39;F3&#39;</span><span class="p">,</span> <span class="s1">&#39;FC5&#39;</span><span class="p">,</span> <span class="s1">&#39;T7&#39;</span><span class="p">,</span> <span class="s1">&#39;P7&#39;</span><span class="p">,</span> <span class="s1">&#39;O1&#39;</span><span class="p">,</span> <span class="s1">&#39;O2&#39;</span><span class="p">,</span> <span class="s1">&#39;P8&#39;</span><span class="p">,</span> <span class="s1">&#39;T8&#39;</span><span class="p">,</span> <span class="s1">&#39;FC6&#39;</span><span class="p">,</span> <span class="s1">&#39;F4&#39;</span><span class="p">,</span> <span class="s1">&#39;F8&#39;</span><span class="p">,</span> <span class="s1">&#39;AF4&#39;</span><span class="p">]</span>
+<span class="n">ch_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">ch_names</span><span class="p">)</span>
+<span class="n">ch_type</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eeg&#39;</span> <span class="k">if</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">eeg_ch</span> <span class="k">else</span> <span class="s1">&#39;bio&#39;</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">ch_names</span><span class="p">]</span>
+<span class="n">raw</span><span class="o">.</span><span class="n">set_channel_types</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">ch_names</span><span class="p">,</span> <span class="n">ch_type</span><span class="p">)))</span>
+
+<span class="n">raw</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">l_freq</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">h_freq</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="s1">&#39;eeg&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span>  <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="s1">&#39;eeg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalings</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">eeg</span><span class="o">=</span><span class="mf">100e-6</span><span class="p">),</span> <span class="n">duration</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_001.png" srcset="../../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_001.png" alt="plot sp ATAR MNE RAW" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Extracting EDF parameters from /Users/nikeshbajaj/Library/CloudStorage/OneDrive-QueenMary,UniversityofLondon/Github/GIT3/Dev/SPKIT_Dev/SPKIT_DOC_7/examples/electroencephalogram/Resting_EPOCX_14Ch_Sample1.edf...
+EDF file detected
+Setting channel info structure...
+Creating raw.info structure...
+Reading 0 ... 41087  =      0.000 ...   320.992 secs...
+&lt;Info | 8 non-empty values
+ bads: []
+ ch_names: TIME_STAMP_s, TIME_STAMP_ms, OR_TIME_STAMP_s, OR_TIME_STAMP_ms, ...
+ chs: 60 EEG
+ custom_ref_applied: False
+ highpass: 0.0 Hz
+ lowpass: 64.0 Hz
+ meas_date: 2022-11-03 16:34:32 UTC
+ nchan: 60
+ projs: []
+ sfreq: 128.0 Hz
+ subject_info: 1 item (dict)
+&gt;
+Channel Names
+0 TIME_STAMP_s     |    1 TIME_STAMP_ms    |    2 OR_TIME_STAMP_s
+3 OR_TIME_STAMP_ms |    4 COUNTER          |    5 INTERPOLATED
+6 AF3              |    7 F7               |    8 F3
+9 FC5              |    10 T7              |    11 P7
+12 O1              |    13 O2              |    14 P8
+15 T8              |    16 FC6             |    17 F4
+18 F8              |    19 AF4             |    20 RAW_CQ
+21 BATTERY         |    22 BATTERY_PERCENT |    23 MarkerIndex
+24 MarkerType      |    25 MarkerValueInt  |    26 MARKER_HARDWARE
+27 CQ_AF3          |    28 CQ_F7           |    29 CQ_F3
+30 CQ_FC5          |    31 CQ_T7           |    32 CQ_P7
+33 CQ_O1           |    34 CQ_O2           |    35 CQ_P8
+36 CQ_T8           |    37 CQ_FC6          |    38 CQ_F4
+39 CQ_F8           |    40 CQ_AF4          |    41 CQ_OVERALL
+42 EQ_SampleRateQua|    43 EQ_OVERALL      |    44 EQ_AF3
+45 EQ_F7           |    46 EQ_F3           |    47 EQ_FC5
+48 EQ_T7           |    49 EQ_P7           |    50 EQ_O1
+51 EQ_O2           |    52 EQ_P8           |    53 EQ_T8
+54 EQ_FC6          |    55 EQ_F4           |    56 EQ_F8
+57 EQ_AF4          |    58 CQ_CMS          |    59 CQ_DRL
+Filtering raw data in 1 contiguous segment
+Setting up high-pass filter at 0.5 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal highpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 0.50
+- Lower transition bandwidth: 0.50 Hz (-6 dB cutoff frequency: 0.25 Hz)
+- Filter length: 845 samples (6.602 s)
+
+Using matplotlib as 2D backend.
+</pre></div>
+</div>
+</section>
+<section id="extract-eeg-and-apply-atar">
+<h2>Extract EEG and Apply ATAR<a class="headerlink" href="#extract-eeg-and-apply-atar" title="Link to this heading">¶</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+
+<span class="c1">#EEG Channels</span>
+<span class="n">XE</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">XE</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">XE</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">XE</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+<span class="c1"># Scale in uV (order of 100s) and transpose (channle at axis =1)</span>
+<span class="n">XE</span> <span class="o">=</span> <span class="n">XE</span><span class="o">.</span><span class="n">T</span><span class="o">*</span><span class="mf">1e6</span>
+
+<span class="c1"># ATAR</span>
+<span class="n">XR</span> <span class="o">=</span> <a href="../../modules/generated/spkit.eeg.ATAR.html#spkit.eeg.ATAR" title="spkit.eeg.ATAR" class="sphx-glr-backref-module-spkit-eeg sphx-glr-backref-type-py-function"><span class="n">sp</span><span class="o">.</span><span class="n">eeg</span><span class="o">.</span><span class="n">ATAR</span></a><span class="p">(</span><span class="n">XE</span><span class="p">,</span><span class="n">wv</span><span class="o">=</span><span class="s1">&#39;db3&#39;</span><span class="p">,</span><span class="n">winsize</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">thr_method</span><span class="o">=</span><span class="s1">&#39;ipr&#39;</span><span class="p">,</span> <span class="n">OptMode</span><span class="o">=</span><span class="s1">&#39;elim&#39;</span><span class="p">,</span><span class="n">beta</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">k2</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">use_joblib</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Scale and transpose back</span>
+<span class="n">XR</span> <span class="o">=</span> <span class="n">XR</span><span class="o">.</span><span class="n">T</span><span class="o">*</span><span class="mf">1e-6</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(14, 41088) -0.0003016368415400783 0.00046421187258672094
+</pre></div>
+</div>
+</section>
+<section id="putting-back-eeg-to-original-raw-mne">
+<h2>Putting back EEG to Original Raw MNE<a class="headerlink" href="#putting-back-eeg-to-original-raw-mne" title="Link to this heading">¶</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">raw1</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">Xi</span> <span class="o">=</span> <span class="n">raw1</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+<span class="n">Xi</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="n">XR</span>
+<span class="n">raw1</span><span class="o">.</span><span class="n">_data</span> <span class="o">=</span> <span class="n">Xi</span>
+</pre></div>
+</div>
+</section>
+<section id="plot-for-comparison">
+<h2>Plot for comparison<a class="headerlink" href="#plot-for-comparison" title="Link to this heading">¶</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span>  <span class="o">=</span> <span class="n">raw1</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="s1">&#39;eeg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalings</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">eeg</span><span class="o">=</span><span class="mf">100e-6</span><span class="p">),</span> <span class="n">duration</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_002.png" srcset="../../_images/sphx_glr_plot_sp_ATAR_MNE_RAW_002.png" alt="plot sp ATAR MNE RAW" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 5.083 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-electroencephalogram-plot-sp-atar-mne-raw-py">
+<div class="binder-badge docutils container">
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/spkit/spkit/0.9.X?urlpath=lab/tree/notebooks/auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
+</div>
+<div class="lite-badge docutils container">
+<a class="reference external image-reference" href="../../lite/lab/?path=auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.ipynb"><img alt="Launch JupyterLite" src="../../_images/jupyterlite_badge_logo.svg" width="150px" /></a>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/bc323e8543bb12219a2db8463ac7d4ae/plot_sp_ATAR_MNE_RAW.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_sp_ATAR_MNE_RAW.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/2bb9030b0902b6adef3b3761ca17a116/plot_sp_ATAR_MNE_RAW.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_sp_ATAR_MNE_RAW.py</span></code></a></p>
+</div>
+</div>
+<p class="rubric">Related examples</p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip=" An Example of reading and working with EDF File."><img alt="" src="../../_images/sphx_glr_plot_sp_EDF_FILE_thumb.png" />
+<p><a class="reference internal" href="plot_sp_EDF_FILE.html#sphx-glr-auto-examples-electroencephalogram-plot-sp-edf-file-py"><span class="std std-ref">EEG Data from EDF File</span></a></p>
+  <div class="sphx-glr-thumbnail-title">EEG Data from EDF File</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="In this example code, we demonstrate analysis of MEA Recording, with minimal settings, using si..."><img alt="" src="../../_images/sphx_glr_plot_mea_minimal_setting_example_thumb.png" />
+<p><a class="reference internal" href="../multielectrode-array/plot_mea_minimal_setting_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-minimal-setting-example-py"><span class="std std-ref">MEA: Minimal Setting: Example</span></a></p>
+  <div class="sphx-glr-thumbnail-title">MEA: Minimal Setting: Example</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="In this example code, we demonstrate analysis of MEA Recording, with each step. There are 13 st..."><img alt="" src="../../_images/sphx_glr_plot_mea_stepwise_example_thumb.png" />
+<p><a class="reference internal" href="../multielectrode-array/plot_mea_stepwise_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-stepwise-example-py"><span class="std std-ref">MEA: Step-wise Analysis: Example</span></a></p>
+  <div class="sphx-glr-thumbnail-title">MEA: Step-wise Analysis: Example</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="# Sinusoidal Model:  Analysis and Synthesis"><img alt="" src="../../_images/sphx_glr_plot_sp_sinusodal_model_analysis_synthesis_thumb.png" />
+<p><a class="reference internal" href="../signal_processing/plot_sp_sinusodal_model_analysis_synthesis.html#sphx-glr-auto-examples-signal-processing-plot-sp-sinusodal-model-analysis-synthesis-py"><span class="std std-ref">Sinusoidal Model:  Analysis and Synthesis</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Sinusoidal Model:  Analysis and Synthesis</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip=" ATAR: Automatic and Tunable Artifact Removal Algorithm -  Tuning"><img alt="" src="../../_images/sphx_glr_plot_sp_ATAR_algorithm_tuning_thumb.png" />
+<p><a class="reference internal" href="plot_sp_ATAR_algorithm_tuning.html#sphx-glr-auto-examples-electroencephalogram-plot-sp-atar-algorithm-tuning-py"><span class="std std-ref">ATAR: Automatic and Tunable Artifact Removal Algorithm</span></a></p>
+  <div class="sphx-glr-thumbnail-title">ATAR: Automatic and Tunable Artifact Removal Algorithm</div>
+</div></div><p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+</section>
+
+
+      </div>
+      <div class="container">
+        <footer class="spk-content-footer">
+          &copy; 2019 - 2024, spkit developers (BSD License).
+          <!-- -->
+          <!-- <a href="../../_sources/auto_examples/electroencephalogram/plot_sp_ATAR_MNE_RAW.rst.txt" rel="nofollow">Show this page source</a> -->
+          <!-- -->
+        </footer>
+      </div>
+
+      <div class="container-fluid py-3">
+        <hr>
+        <div class="container spk-landing-container">
+              <a class="spk-footer-funding-link" href="../../about.html">
+              <div class="text-center">
+                      <p class="mt-2">
+                        Spkit developed in collabration with other projects:
+                      </p>
+                      <a href="https://PhyAAt.github.io" target="_blank"><img class="spk-footer-funding-logo" src="../../_static/phyaat_logo.png" title="PhyAAt"></a>
+                      <a href="https://PyLFSR.github.io" target="_blank"><img class="spk-footer-funding-logo" src="../../_static/pylfsr_logo.png" title="PyLFSR" ></a>
+                      <a href="https://MLEndDatasets.github.io" target="_blank"><img class="spk-footer-funding-logo" src="../../_static/mlend_logo.png" title="MLEnd-Datasets" ></a>
+                      <a href='https://clustrmaps.com/site/1b9h1'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=46b0cb&w=a&t=n&d=eQr8xSBiKVuSq6m0psK-Ey9TZ7rLzjRX-MpatyfFGQI&co=ffffff&ct=000000' width="30"/></a>
+
+              </div>
+              </a>
+              <!-- <div style="width:3px;">
+                <a href="https://clustrmaps.com/site/1b9h1"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=eQr8xSBiKVuSq6m0psK-Ey9TZ7rLzjRX-MpatyfFGQI&cl=ffffff" /></a>  
+              </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../_static/js/vendor/bootstrap.min.js"></script>
+  
+<script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-59299155-3', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<!-- 
+<script defer data-domain="scikit-learn.org" src="https://views.scientific-python.org/js/script.js">
+</script>
+ -->
+
+<script src="../../_static/clipboard.min.js"></script>
+<script src="../../_static/copybutton.js"></script>
+
+<script>
+$(document).ready(function() {
+    /* Add a [>>>] button on the top-right corner of code samples to hide
+     * the >>> and ... prompts and the output and thus make the code
+     * copyable. */
+    var div = $('.highlight-python .highlight,' +
+                '.highlight-python3 .highlight,' +
+                '.highlight-pycon .highlight,' +
+		        '.highlight-default .highlight')
+    var pre = div.find('pre');
+
+    // get the styles from the current theme
+    pre.parent().parent().css('position', 'relative');
+
+    // create and add the button to all the code blocks that contain >>>
+    div.each(function(index) {
+        var jthis = $(this);
+        // tracebacks (.gt) contain bare text elements that need to be
+        // wrapped in a span to work with .nextUntil() (see later)
+        jthis.find('pre:has(.gt)').contents().filter(function() {
+            return ((this.nodeType == 3) && (this.data.trim().length > 0));
+        }).wrap('<span>');
+    });
+
+	/*** Add permalink buttons next to glossary terms ***/
+	$('dl.glossary > dt[id]').append(function() {
+		return ('<a class="headerlink" href="#' +
+			    this.getAttribute('id') +
+			    '" title="Permalink to this term">¶</a>');
+	});
+});
+
+</script>
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+</body>
+
+</html>

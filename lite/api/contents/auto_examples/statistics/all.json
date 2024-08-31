@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2024-08-30T11:56:42.325537Z",
+      "created": "2024-08-31T01:06:53.637661Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-08-30T11:56:40.861043Z",
+      "last_modified": "2024-08-31T01:06:51.348731Z",
       "mimetype": null,
       "name": "plot_stats_group_boxplotes.ipynb",
       "path": "auto_examples/statistics/plot_stats_group_boxplotes.ipynb",
@@ -16,11 +16,11 @@
     },
     {
       "content": null,
-      "created": "2024-08-30T11:56:42.326176Z",
+      "created": "2024-08-31T01:06:53.638009Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-08-30T11:56:40.861269Z",
+      "last_modified": "2024-08-31T01:06:51.348947Z",
       "mimetype": null,
       "name": "plot_stats_testing_2groups_demo.ipynb",
       "path": "auto_examples/statistics/plot_stats_testing_2groups_demo.ipynb",
@@ -29,11 +29,11 @@
       "writable": true
     }
   ],
-  "created": "2024-08-30T11:56:42.325883Z",
+  "created": "2024-08-31T01:06:53.637869Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2024-08-30T11:56:42.325883Z",
+  "last_modified": "2024-08-31T01:06:53.637869Z",
   "mimetype": null,
   "name": "statistics",
   "path": "auto_examples/statistics",
