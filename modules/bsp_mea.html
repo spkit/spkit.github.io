@@ -305,6 +305,8 @@ It is used to analyse the eletrophysiology of cells/tissues under different clin
 <p>One of the simple function to provide complete analysis of recorded file is to use <code class="docutils literal notranslate"><span class="pre">`spkit.mea.analyse_mea_file`</span></code> function.
 This uses the default settings of all the paramters for extracting electrograms, identifying bad eletrodes, extracting features and plotting figures.</p>
 <p><code class="docutils literal notranslate"><span class="pre">`spkit.mea.analyse_mea_file`</span></code> needs two essential inputs, <code class="docutils literal notranslate"><span class="pre">`files_name`</span></code> :  a full path of recoding file in ‘.h5’ format and <code class="docutils literal notranslate"><span class="pre">`stim_fhz`</span></code> frequency of stimulus in Hz.</p>
+<p><a class="reference internal" href="../auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-minimal-setting-example-py"><span class="std std-ref">An example with minimal settings can be found here</span></a></p>
+	
 <p><code class="docutils literal notranslate"><span class="pre">An</span> <span class="pre">example</span> <span class="pre">with</span> <span class="pre">minimal</span> <span class="pre">settings&lt;auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html&gt;</span></code></p>
 <figure class="align-center">
 <a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html"><img alt="../_images/sphx_glr_plot_mea_minimal_setting_example_004.png" src="../_images/sphx_glr_plot_mea_minimal_setting_example_004.png" style="width: 500.0px; height: 350.0px;" /></a>
@@ -316,7 +318,7 @@ This uses the default settings of all the paramters for extracting electrograms,
 </ul>
 </aside>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spkit</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">analyse_mea_file</span><span class="p">(</span><span class="n">files_name</span><span class="p">,</span><span class="n">stim_fhz</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Features_df,Features_ch,Features_mat, Data = sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">analyse_mea_file</span><span class="p">(</span><span class="n">files_name</span><span class="p">,</span><span class="n">stim_fhz</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_3.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_3.png" style="width: 800px;" /></a>
