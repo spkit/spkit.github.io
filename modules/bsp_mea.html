@@ -10,19 +10,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="5.4. MEA: Microelectrode Array Processing" />
+<meta property="og:title" content="5.4. MEA: Microelectrode Array Processing Toolkit" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://spkit.github.io/modules/bsp_mea.html" />
 <meta property="og:site_name" content="spkit" />
-<meta property="og:description" content="Check examples here: Microelectrode-Array (MEA)#TODO Microelectrode Arrays System utilies an array of electrodes mounted on a small plate as a grid electrodes (e.g. 60) evenly spaced (700mm apart..." />
+<meta property="og:description" content="The Microelectrode Array System utilies an array of electrodes mounted on a small plate (MEA plat) as a grid electrodes (e.g. 60) evenly spaced (700μm apart). It is used to analyse the eletrophysio..." />
 <meta property="og:image" content="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_2.png" />
 <meta property="og:image:alt" content="spkit" />
-<meta name="description" content="Check examples here: Microelectrode-Array (MEA)#TODO Microelectrode Arrays System utilies an array of electrodes mounted on a small plate as a grid electrodes (e.g. 60) evenly spaced (700mm apart..." />
+<meta name="description" content="The Microelectrode Array System utilies an array of electrodes mounted on a small plate (MEA plat) as a grid electrodes (e.g. 60) evenly spaced (700μm apart). It is used to analyse the eletrophysio..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   
-  <title>5.4. MEA: Microelectrode Array Processing &mdash; spkit 0.0.9.7 documentation</title>
+  <title>5.4. MEA: Microelectrode Array Processing Toolkit &mdash; spkit 0.0.9.7 documentation</title>
   
   <link rel="canonical" href="http://spkit.github.io/stable/modules/bsp_mea.html" />
 
@@ -238,26 +238,22 @@
           <hr> -->
           <div class="spk-sidebar-toc">
             <ul>
-<li><a class="reference internal" href="#">5.4. MEA: Microelectrode Array Processing</a><ul>
-<li><a class="reference internal" href="#complete-analysis-of-a-recording">5.4.1. Complete Analysis of a recording</a></li>
-<li><a class="reference internal" href="#step-wise-analysis">5.4.2. Step-wise Analysis</a></li>
-<li><a class="reference internal" href="#read-hdf-file">5.4.3. 1. Read HDF File</a></li>
+<li><a class="reference internal" href="#">5.4. MEA: Microelectrode Array Processing Toolkit</a><ul>
+<li><a class="reference internal" href="#complete-analysis-of-a-mea-recording-with-a-single-line">5.4.1. Complete analysis of a MEA recording (with a single-line)</a></li>
+<li><a class="reference internal" href="#step-by-step-analysis">5.4.2. Step-by-step analysis</a></li>
+<li><a class="reference internal" href="#read-mea-recording-file">5.4.3. 1. Read MEA recording file</a></li>
 <li><a class="reference internal" href="#stim-localisation">5.4.4. 2. Stim Localisation</a></li>
-<li><a class="reference internal" href="#alignment-of-stim-cycles">5.4.5. 3. Alignment of Stim Cycles</a></li>
+<li><a class="reference internal" href="#aligning-cycles">5.4.5. 3. Aligning Cycles</a></li>
 <li><a class="reference internal" href="#averaging-cycles-or-selecting-one">5.4.6. 4. Averaging Cycles or Selecting one</a></li>
 <li><a class="reference internal" href="#activation-time">5.4.7. 5. Activation Time</a></li>
 <li><a class="reference internal" href="#repolarisation-time-optional">5.4.8. 6. Repolarisation Time (optional)</a></li>
-<li><a class="reference internal" href="#apd-if-rt-is-computed">5.4.9. 7. APD (if RT is computed)</a></li>
+<li><a class="reference internal" href="#action-potential-duration-apd-if-rt-is-computed">5.4.9. 7. Action Potential Duration (APD)  (if RT is computed)</a></li>
 <li><a class="reference internal" href="#extracting-egm">5.4.10. 8. Extracting EGM</a></li>
 <li><a class="reference internal" href="#egm-feature-extraction">5.4.11. 9. EGM Feature Extraction</a></li>
 <li><a class="reference internal" href="#identifying-bad-channels-electrodes">5.4.12. 10. Identifying BAD Channels/electrodes</a></li>
-<li><a class="reference internal" href="#creating-feature-matrix">5.4.13. 11. Creating Feature Matrix</a></li>
+<li><a class="reference internal" href="#creating-and-visualising-feature-matrix">5.4.13. 11. Creating and Visualising Feature Matrix</a></li>
 <li><a class="reference internal" href="#interpolation">5.4.14. 12. Interpolation</a></li>
 <li><a class="reference internal" href="#conduction-velocity">5.4.15. 13. Conduction Velocity</a></li>
-<li><a class="reference internal" href="#plots-and-figures">5.4.16. Plots and Figures</a></li>
-<li><a class="reference internal" href="#id1">5.4.17. Extracting EGM</a></li>
-<li><a class="reference internal" href="#egm-processing-feature-extractions">5.4.18. EGM Processing &amp; Feature Extractions</a></li>
-<li><a class="reference internal" href="#conduction-and-activation-map">5.4.19. Conduction and Activation Map</a></li>
 </ul>
 </li>
 </ul>
@@ -273,172 +269,410 @@
     <div id="spk-page-content-wrapper">
       <div class="spk-page-content container-fluid body px-md-3" role="main">
         
-  <section id="mea-multi-electrode-array-processing">
-<span id="mea"></span><h1><span class="section-number">5.4. </span>MEA: Microelectrode Array Processing<a class="headerlink" href="#mea-multi-electrode-array-processing" title="Link to this heading">¶</a></h1>
-
-<div class="admonition seealso">
-<p class="admonition-title">Note</p>
-<!-- <p>User Guide - API</p> -->
-<ul>
-<li><p><strong>User Guide for MEA to explain each function and steps is in progress.</strong> For now, please check the APIs: <a class="reference internal" href="/modules/classes.html#mea-multi-electrode-array"><span class="std std-ref">API Reference - MEA </span></a>, which has the most detailed explanantion as documentation of all the functions.</p></li>
-<li><p>Also, check example code and try them with online - Binder with one click, to explore the functionalities with an example file -  <a class="reference internal" href="../auto_examples/multielectrode-array/index.html#mea-examples"> <span class="std std-ref">Examples: Micro-Electrode-Array (MEA)</span> </a> </p></li>
-</ul>
-</div>
-	  
-<!-- <h3>Check examples for use of the code <a class="reference internal" href="../auto_examples/multielectrode-array/index.html#mea-examples"> <span class="std std-ref">Micro-Electrode-Array (MEA)</span> </a> </h3> -->
-<!-- <h3>For detailed documentation of each function, use <code>help(fun)</code> e.g. <code>help(spkit.mea.analyse_mea_file)</code> <a class="reference internal" href="../auto_examples/multielectrode-array/index.html#mea-examples"> <span class="std std-ref">Micro-Electrode-Array (MEA)</span> </a> </h3> -->
-
-	  
-<p>Check examples here: <a class="reference internal" href="../auto_examples/multielectrode-array/index.html#mea-examples"><span class="std std-ref">Micro-Electrode-Array (MEA)</span></a></p>
-
-	  <a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-stepwise-example-py"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_2.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_2.png" style="width: 800px;" /></a>
-<p>#TODO</p>
-<p>Micro-Electrode Arrays System utilies an array of electrodes mounted on a small plate as a grid electrodes (e.g. 60) evenly spaced (700mm apart).
-It is used to analyse the eletrophysiology of cells/tissues under different clinical conditions by stimulating with certain voltage on a regular intervals. As shown in figure below, a plate of MEA system of 60 electrodes (source: <a class="reference external" href="https://www.multichannelsystems.com/products/meas-60-electrodes">https://www.multichannelsystems.com/products/meas-60-electrodes</a>). One of the commonly used research field is the cardiac electrophysiology.</p>
+  <section id="mea-microelectrode-array-processing-toolkit">
+<span id="mea"></span><h1><span class="section-number">5.4. </span>MEA: Microelectrode Array Processing Toolkit<a class="headerlink" href="#mea-microelectrode-array-processing-toolkit" title="Link to this heading">¶</a></h1>
+<p>The Microelectrode Array System utilies an array of electrodes mounted on a small plate (MEA plat) as a grid electrodes (e.g. 60) evenly spaced (700μm apart).
+It is used to analyse the eletrophysiology of cells and tissues under different clinical conditions by stimulating with certain voltage on a regular intervals.</p>
+<a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-stepwise-example-py"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_2.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_2.png" style="width: 650px;" /></a>
+<p>A figure shown below is a plate of MEA system of 60 electrodes (source: <a class="reference external" href="https://www.multichannelsystems.com/products/meas-60-electrodes">https://www.multichannelsystems.com/products/meas-60-electrodes</a>). One of the commonly used research field is the cardiac electrophysiology.</p>
 <a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-stepwise-example-py"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_plate_source.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_plate_source.png" style="width: 400px;" /></a>
-<p>This python library analyse the recorded signal file, by extracting the electrograms (EGMs) from signal recoding of each eletrodes, and extracting the features of each EGM.</p>
-<p>#TODO</p>
-<a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-stepwise-example-py"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_3.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_3.png" style="width: 800px;" /></a>
-<section id="complete-analysis-of-a-recording">
-<h2><span class="section-number">5.4.1. </span>Complete Analysis of a recording<a class="headerlink" href="#complete-analysis-of-a-recording" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
-<p>One of the simple function to provide complete analysis of recorded file is to use <code class="docutils literal notranslate"><span class="pre">`spkit.mea.analyse_mea_file`</span></code> function.
-This uses the default settings of all the paramters for extracting electrograms, identifying bad eletrodes, extracting features and plotting figures.</p>
-<p><code class="docutils literal notranslate"><span class="pre">`spkit.mea.analyse_mea_file`</span></code> needs two essential inputs, <code class="docutils literal notranslate"><span class="pre">`files_name`</span></code> :  a full path of recoding file in ‘.h5’ format and <code class="docutils literal notranslate"><span class="pre">`stim_fhz`</span></code> frequency of stimulus in Hz.</p>
-<p><a class="reference internal" href="../auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-minimal-setting-example-py"><span class="std std-ref">An example with minimal settings can be found here</span></a></p>
-	
-<p><code class="docutils literal notranslate"><span class="pre">An</span> <span class="pre">example</span> <span class="pre">with</span> <span class="pre">minimal</span> <span class="pre">settings&lt;auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html&gt;</span></code></p>
+<p>This Python toolkit is for automated electrophysiological analysis of MEA recordings, designed to streamline data preprocessing, feature extraction, visualisation, and batch analysis.
+With a focus on reproducibility, transparency, and ease of use, this toolkit offers a robust alternative to manual processing.
+It enables cardiac researchers to efficiently analyse MEA data at scale, while allowing extension or adaptation of analysis modules to suit specific experimental needs.
+An overview of the MEA toolkit is shown in figure below:</p>
+<a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-stepwise-example-py"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_visualisation_3.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_visualisation_3.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Check our full paper explaining this toolkit  -  <em>A Python Toolkit for Automated Electrophysiological Analysis of Microelectrode Array Recordings</em>, published in Computing in Cardiology 2025.</p></li>
+<li><p>Check examples here: <a class="reference internal" href="../auto_examples/multielectrode-array/index.html#mea-examples"><span class="std std-ref">Microelectrode Array (MEA)</span></a></p></li>
+</ul>
+<section id="complete-analysis-of-a-mea-recording-with-a-single-line">
+<h2><span class="section-number">5.4.1. </span>Complete analysis of a MEA recording (with a single-line)<a class="headerlink" href="#complete-analysis-of-a-mea-recording-with-a-single-line" title="Link to this heading">¶</a></h2>
+<p>This toolkit allows researchers to perform a complete analyse of an MEA recording by using <code class="docutils literal notranslate"><span class="pre">`spkit.mea.analyse_mea_file`</span></code> function.
+This uses the default settings of all the paramters for extracting electrograms, identifying bad eletrodes, extracting features and plotting figures.
+<code class="docutils literal notranslate"><span class="pre">`spkit.mea.analyse_mea_file`</span></code> needs two essential inputs, <code class="docutils literal notranslate"><span class="pre">`files_name`</span></code> :  a full path of recoding file in ‘.h5’ format and <code class="docutils literal notranslate"><span class="pre">`stim_fhz`</span></code> frequency of stimulus in Hz.</p>
+<p><strong>Download a sample file</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">spkit</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;spkit-version: &#39;</span><span class="p">,</span><span class="n">sp</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="c1"># Download Sample file if not done already</span>
+
+<span class="n">file_name</span><span class="o">=</span> <span class="s1">&#39;MEA_Sample_North_1000mV_1Hz.h5&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_name</span><span class="p">)):</span>
+   <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;https://spkit.github.io/data_samples/files/MEA_Sample_North_1000mV_1Hz.h5&#39;</span>
+   <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+   <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Complete analysis with default setting</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Features_df</span><span class="p">,</span><span class="n">Features_ch</span><span class="p">,</span><span class="n">Features_mat</span><span class="p">,</span> <span class="n">Data</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">analyse_mea_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">stim_fhz</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It returns <code class="docutils literal notranslate"><span class="pre">Features_df</span></code>, <code class="docutils literal notranslate"><span class="pre">Features_ch</span></code>, <code class="docutils literal notranslate"><span class="pre">Features_mat</span></code>, and <code class="docutils literal notranslate"><span class="pre">Data</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Features_df</span></code>: A spreadsheet (pandas dataframe) of summarised features.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Features_ch</span></code>: A spreadsheet  of all the features for each channels (good and bad).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Features_mat</span></code>: A dictionary containing all the feature matrices</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Data</span></code>: A dictionary containing raw data</p></li>
+</ul>
 <figure class="align-center">
 <a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html"><img alt="../_images/sphx_glr_plot_mea_minimal_setting_example_004.png" src="../_images/sphx_glr_plot_mea_minimal_setting_example_004.png" style="width: 500.0px; height: 350.0px;" /></a>
 </figure>
+<a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_3.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_3.png" style="width: 800px;" /></a>
 <aside class="topic">
 <p class="topic-title">Examples:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-minimal-setting-example-py"><span class="std std-ref">MEA: Minimal Setting: Example</span></a></p></li>
 </ul>
 </aside>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spkit</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="n">Features_df,Features_ch,Features_mat, Data = sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">analyse_mea_file</span><span class="p">(</span><span class="n">files_name</span><span class="p">,</span><span class="n">stim_fhz</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-<a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_minimal_setting_example.html"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_3.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_proce_3.png" style="width: 800px;" /></a>
 </section>
-<section id="step-wise-analysis">
-<h2><span class="section-number">5.4.2. </span>Step-wise Analysis<a class="headerlink" href="#step-wise-analysis" title="Link to this heading">¶</a></h2>
+<section id="step-by-step-analysis">
+<h2><span class="section-number">5.4.2. </span>Step-by-step analysis<a class="headerlink" href="#step-by-step-analysis" title="Link to this heading">¶</a></h2>
+<p>In this section, we describe how to analyse an MEA recording step-by-step. An example of this is linked below:</p>
 <aside class="topic">
 <p class="topic-title">Examples:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-stepwise-example-py"><span class="std std-ref">MEA: Step-wise Analysis: Example</span></a></p></li>
 </ul>
 </aside>
-<p>#TODO</p>
-<p>There are 13 steps to analyse a recording file, which are as follow</p>
+<p>There are several steps to analyse a recording file, which are as follow:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Read HDF File</p></li>
-<li><p>Stim loc</p></li>
-<li><p>Align Cycles</p></li>
-<li><p>Average Cycles/Select one</p></li>
+<li><p>Read MEA file recording file</p></li>
+<li><p>Stim Localisation</p></li>
+<li><p>Aligning Cycles</p></li>
+<li><p>Aggregating Cycles/Select one</p></li>
 <li><p>Activation Time</p></li>
 <li><p>Activation &amp; Repolarisation Time</p></li>
-<li><p>APD</p></li>
+<li><p>Action Potential Duration APD</p></li>
 <li><p>Extract EGM</p></li>
 <li><p>EGM Feature Extraction</p></li>
-<li><p>BAD Channels</p></li>
-<li><p>Feature Matrix</p></li>
+<li><p>Identifying BAD Channels</p></li>
+<li><p>Creating and Visualising Feature Matrix</p></li>
 <li><p>Interpolation</p></li>
 <li><p>Conduction Velocity</p></li>
 </ol>
 </div></blockquote>
 </section>
-<section id="read-hdf-file">
-<h2><span class="section-number">5.4.3. </span>1. Read HDF File<a class="headerlink" href="#read-hdf-file" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
-<p><a class="reference internal" href="generated/spkit.io.read_hdf.html#spkit.io.read_hdf" title="spkit.io.read_hdf"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.io.read_hdf</span></code></a></p>
+<section id="read-mea-recording-file">
+<h2><span class="section-number">5.4.3. </span>1. Read MEA recording file<a class="headerlink" href="#read-mea-recording-file" title="Link to this heading">¶</a></h2>
+<p>To read an MEA file, HDF reading function of spkit (<a class="reference internal" href="generated/spkit.io.read_hdf.html#spkit.io.read_hdf" title="spkit.io.read_hdf"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.io.read_hdf</span></code></a>). To experiment with steps, download a sample file from ‘<a class="reference external" href="https://spkit.github.io/data_samples/files/MEA_Sample_North_1000mV_1Hz.h5">https://spkit.github.io/data_samples/files/MEA_Sample_North_1000mV_1Hz.h5</a>’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="mi">25000</span>
+<span class="n">X</span><span class="p">,</span><span class="n">fs</span><span class="p">,</span><span class="n">ch_labels</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This returns <code class="docutils literal notranslate"><span class="pre">X</span></code> which is numpy array, <code class="docutils literal notranslate"><span class="pre">fs</span></code> sampling rate, and <code class="docutils literal notranslate"><span class="pre">ch_labels</span></code> channel lables</p>
 </section>
 <section id="stim-localisation">
 <h2><span class="section-number">5.4.4. </span>2. Stim Localisation<a class="headerlink" href="#stim-localisation" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<p>A biphasic stimulus (<span class="math notranslate nohighlight">\(\pm\)</span> 1000 mV for 2 ms) has a sharp deflection in middle, while transition from -1000 mV to +1000 mV.
+This sharp deflection is identified by <span class="math notranslate nohighlight">\(max \{dv(t)/dt\}\)</span> (maximum positive slop).</p>
+<a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_stimulus_loc_2.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_stimulus_loc_2.png" style="width: 300px;" /></a>
+<p>We use ch=0, which is 47, as can be seen from ch_labels[0]</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stim_fhz</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">stim_loc</span><span class="p">,</span><span class="n">_</span>  <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">get_stim_loc</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">ch</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span><span class="n">fhz</span><span class="o">=</span><span class="n">stim_fhz</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">stim_loc_ms</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">stim_loc</span><span class="p">)</span><span class="o">/</span><span class="n">fs</span>
+</pre></div>
+</div>
+<p><strong>Plot</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="n">fs</span>
+<span class="n">sep</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">tix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">))</span><span class="o">*</span><span class="n">sep</span>
+<span class="n">tiy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">tiy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span><span class="mi">1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">-</span> <span class="n">tix</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">tiy</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sep</span><span class="p">,</span><span class="n">tiy</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Channel #&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time (ms)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Full recording of channels&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">stim_loc_ms</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 <p><a class="reference internal" href="generated/spkit.mea.get_stim_loc.html#spkit.mea.get_stim_loc" title="spkit.mea.get_stim_loc"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.get_stim_loc</span></code></a></p>
 </section>
-<section id="alignment-of-stim-cycles">
-<h2><span class="section-number">5.4.5. </span>3. Alignment of Stim Cycles<a class="headerlink" href="#alignment-of-stim-cycles" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<section id="aligning-cycles">
+<h2><span class="section-number">5.4.5. </span>3. Aligning Cycles<a class="headerlink" href="#aligning-cycles" title="Link to this heading">¶</a></h2>
+<p>After the locations of each stimulus across all channels are identified, all cycles are aligned with the corresponding stimulus for each channel.
+While aliging the cycles, the first 2 ms of the recording immediately following <span class="math notranslate nohighlight">\(max \{dv(t)/dt\}\)</span> are excluded.</p>
+<a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_stim_loc_align_cycles_2.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_stim_loc_align_cycles_2.png" style="width: 500px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exclude_first_dur</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">dur_after_spike</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">exclude_last_cycle</span><span class="o">=</span><span class="kc">True</span>
+
+<span class="n">XB</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">align_cycles</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">stim_loc</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">exclude_first_dur</span><span class="o">=</span><span class="n">exclude_first_dur</span><span class="p">,</span>
+                        <span class="n">dur_after_spike</span><span class="o">=</span><span class="n">dur_after_spike</span><span class="p">,</span>
+                        <span class="n">exclude_last_cycle</span><span class="o">=</span><span class="n">exclude_last_cycle</span><span class="p">,</span><span class="n">pad</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of EGMs/Cycles per channel =&#39;</span><span class="p">,</span><span class="n">XB</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><strong>Plot</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ch</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">XB</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="n">fs</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">XB</span><span class="p">[</span><span class="n">ch</span><span class="p">,:,:])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">XB</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s1"> Cycles (Alinged) of Channel: </span><span class="si">{</span><span class="n">ch</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time (ms)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 <p><a class="reference internal" href="generated/spkit.mea.align_cycles.html#spkit.mea.align_cycles" title="spkit.mea.align_cycles"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.align_cycles</span></code></a></p>
 </section>
 <section id="averaging-cycles-or-selecting-one">
 <h2><span class="section-number">5.4.6. </span>4. Averaging Cycles or Selecting one<a class="headerlink" href="#averaging-cycles-or-selecting-one" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<p>Once all cycles are aligned across channels, an averaged cycle for each channel is produced by computing the arithmetic mean.
+Averaging cycles reduces noise and yields clearer electrograms.
+By default, the final cycle is excluded (this can be modified)</p>
+<p><code class="docutils literal notranslate"><span class="pre">egm_number</span> <span class="pre">=</span> <span class="pre">-1</span></code> means to aggrerate all the cycles, to select 1st cycle, set <code class="docutils literal notranslate"><span class="pre">egm_number=0</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">egm_number</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">egm_number</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+   <span class="n">X1B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">XB</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; -- Averaged All EGM&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="c1"># egm_number should be between from 0 to &#39;Number of EGMs/Cycles per channel &#39;</span>
+   <span class="k">assert</span> <span class="n">egm_number</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">XB</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+   <span class="n">X1B</span> <span class="o">=</span> <span class="n">XB</span><span class="p">[:,:,</span><span class="n">egm_number</span><span class="p">]</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; -- Selected EGM -&gt;&#39;</span><span class="p">,</span><span class="n">egm_number</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;EGM Shape : &#39;</span><span class="p">,</span><span class="n">X1B</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="activation-time">
 <h2><span class="section-number">5.4.7. </span>5. Activation Time<a class="headerlink" href="#activation-time" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<p>Activation Time (AT) is defined as the time of the maximum negative slope (<span class="math notranslate nohighlight">\(\max\{-dv(t)/dt\}\)</span>) of the contact electrograms (EGMs).
+Following electrical stimulation of cells or tissues, there exists a specific duration (depending on the study and treatment)
+within which an electrogram is expected to occur.</p>
+<a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_egm_extreaction_1.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_egm_extreaction_1.png" style="width: 500px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">at_range</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span> <span class="c1"># expected range for AT</span>
+
+<span class="c1"># for only activation</span>
+<span class="n">at_loc</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">activation_time_loc</span><span class="p">(</span><span class="n">X1B</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span><span class="n">at_range</span><span class="o">=</span><span class="n">at_range</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><a class="reference internal" href="generated/spkit.mea.activation_time_loc.html#spkit.mea.activation_time_loc" title="spkit.mea.activation_time_loc"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.activation_time_loc</span></code></a></p>
 </section>
 <section id="repolarisation-time-optional">
 <h2><span class="section-number">5.4.8. </span>6. Repolarisation Time (optional)<a class="headerlink" href="#repolarisation-time-optional" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<p>Similar to AT, RT is defined by the time of the maximum deflection of the T-wave electrogram; however,
+either a positive or a negative deflection may be considered for RT (the alternative and Wyatt methods).
+As RT follows AT, the expected range for RT excludes the already computed AT.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">at_range</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
+<span class="n">rt_range</span><span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+
+<span class="c1"># for only activation</span>
+<span class="n">at_loc</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">activation_time_loc</span><span class="p">(</span><span class="n">X1B</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span><span class="n">at_range</span><span class="o">=</span><span class="n">at_range</span><span class="p">)</span>
+
+<span class="c1"># for only activation and repolarisation together</span>
+<span class="n">at_loc</span><span class="p">,</span> <span class="n">rt_loc</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">activation_repol_time_loc</span><span class="p">(</span><span class="n">X1B</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span><span class="n">at_range</span><span class="o">=</span><span class="n">at_range</span><span class="p">,</span> <span class="n">rt_range</span><span class="o">=</span><span class="n">rt_range</span><span class="p">)</span>
+
+<span class="n">at_loc_ms</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="n">at_loc</span><span class="o">/</span><span class="n">fs</span>
+<span class="n">rt_loc_ms</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="n">rt_loc</span><span class="o">/</span><span class="n">fs</span>
+</pre></div>
+</div>
 <p><a class="reference internal" href="generated/spkit.mea.activation_repol_time_loc.html#spkit.mea.activation_repol_time_loc" title="spkit.mea.activation_repol_time_loc"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.activation_repol_time_loc</span></code></a></p>
 </section>
-<section id="apd-if-rt-is-computed">
-<h2><span class="section-number">5.4.9. </span>7. APD (if RT is computed)<a class="headerlink" href="#apd-if-rt-is-computed" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<section id="action-potential-duration-apd-if-rt-is-computed">
+<h2><span class="section-number">5.4.9. </span>7. Action Potential Duration (APD)  (if RT is computed)<a class="headerlink" href="#action-potential-duration-apd-if-rt-is-computed" title="Link to this heading">¶</a></h2>
+<p>Action Potential Duration is computed only is RT has been computed. <span class="math notranslate nohighlight">\(APD = RT-AT\)</span></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apd_ms</span> <span class="o">=</span> <span class="n">rt_loc_ms</span><span class="o">-</span><span class="n">at_loc_ms</span>
 </pre></div>
 </div>
 </section>
 <section id="extracting-egm">
 <h2><span class="section-number">5.4.10. </span>8. Extracting EGM<a class="headerlink" href="#extracting-egm" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<p>With identified ATs, EGMs for each channel are extracted over a defined duration (e.g. 5 ms).
+Each EGM is then processed to remove drift using the Savitzky–Golay filter,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dur_from_loc</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">remove_drift</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">XE</span><span class="p">,</span><span class="n">ATloc</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">extract_egm</span><span class="p">(</span><span class="n">X1B</span><span class="p">,</span><span class="n">act_loc</span><span class="o">=</span><span class="n">at_loc</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span><span class="n">dur_from_loc</span><span class="o">=</span><span class="n">dur_from_loc</span><span class="p">,</span><span class="n">remove_drift</span><span class="o">=</span><span class="n">remove_drift</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">XE</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">ATloc</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><a class="reference internal" href="generated/spkit.mea.extract_egm.html#spkit.mea.extract_egm" title="spkit.mea.extract_egm"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.extract_egm</span></code></a></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_grid_egm_1.png"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_grid_egm_1.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_grid_egm_1.png" style="width: 600px;" /></a>
 </section>
 <section id="egm-feature-extraction">
 <h2><span class="section-number">5.4.11. </span>9. EGM Feature Extraction<a class="headerlink" href="#egm-feature-extraction" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<p>From extracted EGMs, a predefined set of morphological features is extracted for each channel.</p>
+<ul class="simple">
+<li><p>Peak-to-peak voltage</p></li>
+<li><p>Fractionation Index</p></li>
+<li><p>EGM duration</p></li>
+<li><p>Energy and voltage dispersion</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EGM_feat</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">XE</span><span class="p">)):</span>
+   <span class="n">egmf</span><span class="p">,</span> <span class="n">feat_names</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">egm_features</span><span class="p">(</span><span class="n">XE</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span><span class="n">act_loc</span><span class="o">=</span><span class="n">ATloc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span><span class="n">plot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">width_rel_height</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+                                 <span class="n">findex_rel_dur</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">findex_rel_height</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">findex_npeak</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+   <span class="n">EGM_feat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">egmf</span><span class="p">)</span>
+
+<span class="c1">#XE = np.array(XE)</span>
+<span class="c1">#ATloc = np.array(ATloc)</span>
+<span class="n">EGM_feat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">EGM_feat</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Following EGM Features are etracted: &#39;</span><span class="p">,</span> <span class="n">feat_names</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;EGM_Feat shape :&#39;</span><span class="p">,</span><span class="n">EGM_feat</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shapes: XE =&#39;</span><span class="p">,</span><span class="n">XE</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;, AT =&#39;</span><span class="p">,</span><span class="n">ATloc</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="s1">&#39;, EGM_F=&#39;</span> <span class="p">,</span><span class="n">EGM_feat</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><a class="reference internal" href="generated/spkit.mea.egm_features.html#spkit.mea.egm_features" title="spkit.mea.egm_features"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.egm_features</span></code></a></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/egm_processing_1.png"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/egm_processing_1.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/egm_processing_1.png" style="width: 600px;" /></a>
 </section>
 <section id="identifying-bad-channels-electrodes">
 <h2><span class="section-number">5.4.12. </span>10. Identifying BAD Channels/electrodes<a class="headerlink" href="#identifying-bad-channels-electrodes" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<p>There are three criteria implemented to automatically identifies poor-quality channels and EGMs. These criteria can be configured.</p>
+<p><strong>Based on Stimulation</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">good_channels</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bad_channels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">]</span>
+
+<span class="n">p2p_thr</span><span class="o">=</span><span class="mi">5</span>
+<span class="n">bad_ch_stim_thr</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">bad_ch_mnmx</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+
+<span class="n">range_act_thr</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
+
+<span class="n">bad_channels_list</span> <span class="o">=</span><span class="p">[]</span>
+<span class="n">bad_channels_idx_1</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">bad_channels_idx_1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">find_bad_channels_idx</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">thr</span><span class="o">=</span><span class="n">bad_ch_stim_thr</span><span class="p">,</span><span class="n">stim_fhz</span><span class="o">=</span><span class="n">stim_fhz</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span>
+                  <span class="n">mnmx</span><span class="o">=</span><span class="n">bad_ch_mnmx</span><span class="p">,</span><span class="n">plot</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">plot_dur</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">bad_channels_ch_1</span>  <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ch_labels</span><span class="p">[</span><span class="n">bad_channels_idx_1</span><span class="p">])</span>
+<span class="n">bad_channels_list</span>  <span class="o">=</span> <span class="n">bad_channels_list</span> <span class="o">+</span> <span class="n">bad_channels_ch_1</span>
+<span class="n">bad_channels_list</span>  <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">bad_channels_list</span><span class="p">))</span>
+<span class="n">bad_channels_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Based on EGM voltage</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bad_channels_idx_2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bad_channels_idx_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">EGM_feat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;</span><span class="n">p2p_thr</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">bad_channels_ch_2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ch_labels</span><span class="p">[</span><span class="n">bad_channels_idx_2</span><span class="p">])</span>
+<span class="n">bad_channels_list</span> <span class="o">=</span> <span class="n">bad_channels_list</span> <span class="o">+</span> <span class="n">bad_channels_ch_2</span>
+</pre></div>
+</div>
+<p><strong>Based on Activation Time range</strong></p>
+<p>This only works, when expected range passed to EGM is open-ended.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bad_channels_idx_3</span> <span class="o">=</span><span class="p">[]</span>
+<span class="n">bad_channels_idx_3</span> <span class="o">=</span> <span class="n">bad_channels_idx_3</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">at_loc_ms</span><span class="o">&lt;</span><span class="n">range_act_thr</span><span class="p">[</span><span class="mi">0</span><span class="p">])[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">bad_channels_idx_3</span> <span class="o">=</span> <span class="n">bad_channels_idx_3</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">at_loc_ms</span><span class="o">&gt;</span><span class="n">range_act_thr</span><span class="p">[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">bad_channels_ch_3</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ch_labels</span><span class="p">[</span><span class="n">bad_channels_idx_3</span><span class="p">])</span>
+<span class="n">bad_channels_list</span> <span class="o">=</span> <span class="n">bad_channels_list</span> <span class="o">+</span> <span class="n">bad_channels_ch_3</span>
+
+<span class="n">bad_channels_list</span> <span class="o">=</span> <span class="n">bad_channels_list</span> <span class="o">+</span> <span class="n">bad_channels</span>
+<span class="n">bad_channels_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">bad_channels_list</span><span class="p">))</span>
+<span class="n">bad_channels_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">good_channels</span><span class="p">):</span>
+   <span class="n">bad_channels_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">bad_channels_list</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">good_channels</span><span class="p">))</span>
+   <span class="n">bad_channels_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+
+<span class="n">good_channels_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">ch</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">ch_labels</span> <span class="k">if</span> <span class="n">ch</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bad_channels_list</span><span class="p">])</span>
+<span class="n">good_channels_list_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="n">ch_labels</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">ch_labels</span> <span class="k">if</span> <span class="n">ch</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bad_channels_list</span><span class="p">])</span>
+</pre></div>
+</div>
 <p><a class="reference internal" href="generated/spkit.mea.find_bad_channels_idx.html#spkit.mea.find_bad_channels_idx" title="spkit.mea.find_bad_channels_idx"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.find_bad_channels_idx</span></code></a></p>
 </section>
-<section id="creating-feature-matrix">
-<h2><span class="section-number">5.4.13. </span>11. Creating Feature Matrix<a class="headerlink" href="#creating-feature-matrix" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<section id="creating-and-visualising-feature-matrix">
+<h2><span class="section-number">5.4.13. </span>11. Creating and Visualising Feature Matrix<a class="headerlink" href="#creating-and-visualising-feature-matrix" title="Link to this heading">¶</a></h2>
+<p>From list of features as arrays, the feaure matrixes can be created and visualise them.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AT_grid</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">arrange_mea_grid</span><span class="p">(</span><span class="n">at_loc_ms</span><span class="p">,</span> <span class="n">ch_labels</span><span class="o">=</span><span class="n">ch_labels</span><span class="p">)</span>
+<span class="n">RT_grid</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">arrange_mea_grid</span><span class="p">(</span><span class="n">rt_loc_ms</span><span class="p">,</span> <span class="n">ch_labels</span><span class="o">=</span><span class="n">ch_labels</span><span class="p">)</span>
+<span class="n">APD_grid</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">arrange_mea_grid</span><span class="p">(</span><span class="n">apd_ms</span><span class="p">,</span> <span class="n">ch_labels</span><span class="o">=</span><span class="n">ch_labels</span><span class="p">)</span>
+
+<span class="n">Ax</span><span class="p">,</span><span class="n">Mxbad</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">mea_feature_map</span><span class="p">(</span><span class="n">at_loc_ms</span><span class="p">,</span><span class="n">ch_labels</span><span class="o">=</span><span class="n">ch_labels</span><span class="p">,</span><span class="n">bad_channels</span><span class="o">=</span><span class="n">bad_channels_list</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
+                              <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;ms&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Activation Time&#39;</span><span class="p">)</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">mea_feature_map</span><span class="p">(</span><span class="n">EGM_feat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">ch_labels</span><span class="o">=</span><span class="n">ch_labels</span><span class="p">,</span><span class="n">bad_channels</span><span class="o">=</span><span class="n">bad_channels_list</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
+                              <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;mV&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Peak-to-Peak&#39;</span><span class="p">)</span>
+
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">mea_feature_map</span><span class="p">(</span><span class="mi">1000</span><span class="o">*</span><span class="n">EGM_feat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">fs</span><span class="p">,</span><span class="n">ch_labels</span><span class="o">=</span><span class="n">ch_labels</span><span class="p">,</span><span class="n">bad_channels</span><span class="o">=</span><span class="n">bad_channels_list</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
+                              <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;ms&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;EGM Duration&#39;</span><span class="p">)</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">mea_feature_map</span><span class="p">(</span><span class="n">EGM_feat</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span><span class="n">ch_labels</span><span class="o">=</span><span class="n">ch_labels</span><span class="p">,</span><span class="n">bad_channels</span><span class="o">=</span><span class="n">bad_channels_list</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
+                              <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;F-index&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Fractionation Index&#39;</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.0f&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference external image-reference" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_feature_matrixs.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_feature_matrixs.png" style="width: 800px;" /></a>
 <p><a class="reference internal" href="generated/spkit.mea.mea_feature_map.html#spkit.mea.mea_feature_map" title="spkit.mea.mea_feature_map"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.mea_feature_map</span></code></a></p>
 </section>
 <section id="interpolation">
 <h2><span class="section-number">5.4.14. </span>12. Interpolation<a class="headerlink" href="#interpolation" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<p>After removing values from bad channels, matrixes can be filled by interpolating the missing (BAD) values.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">range_act_thr</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
+<span class="n">intp_param</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">pkind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span><span class="n">filter_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;conv&#39;</span><span class="p">)</span>
+
+<span class="n">AxI</span><span class="p">,</span> <span class="n">AxIx</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">fill_nans_2d</span><span class="p">(</span><span class="n">Ax</span><span class="o">*</span><span class="n">Mxbad</span><span class="p">,</span><span class="n">clip_range</span><span class="o">=</span><span class="n">range_act_thr</span><span class="p">,</span><span class="o">**</span><span class="n">intp_param</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Plots</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">mat_list_show</span><span class="p">([</span><span class="n">Ax</span><span class="p">,</span> <span class="n">Ax</span><span class="o">*</span><span class="n">Mxbad</span><span class="p">,</span> <span class="n">AxI</span><span class="p">],</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">grid</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+            <span class="n">titles</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Activation Time&#39;</span><span class="p">,</span> <span class="s1">&#39;- Bad Channels&#39;</span><span class="p">,</span> <span class="s1">&#39;Interpolated Activation Time&#39;</span><span class="p">],</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ms&#39;</span><span class="p">,</span><span class="s1">&#39;ms&#39;</span><span class="p">,</span><span class="s1">&#39;ms&#39;</span><span class="p">])</span>
+
+<span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">mat_list_show</span><span class="p">([</span><span class="n">AxI</span><span class="p">,</span> <span class="n">AxIx</span><span class="p">],</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">grid</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+            <span class="n">titles</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Interpolated (preserving original values)&#39;</span><span class="p">,</span> <span class="s1">&#39;Interpolation-Smooth&#39;</span><span class="p">],</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ms&#39;</span><span class="p">,</span><span class="s1">&#39;ms&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p><a class="reference internal" href="generated/spkit.fill_nans_2d.html#spkit.fill_nans_2d" title="spkit.fill_nans_2d"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.fill_nans_2d</span></code></a></p>
 </section>
 <section id="conduction-velocity">
 <h2><span class="section-number">5.4.15. </span>13. Conduction Velocity<a class="headerlink" href="#conduction-velocity" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
+<p>To compute the conduction velocity, a few parameters have to be defined.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cv_param</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">eD</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span><span class="n">esp</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">,</span><span class="n">cv_pad</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">cv_thr</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">arr_agg</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="n">plots</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">CV_df</span><span class="p">,</span> <span class="n">CV_thetas</span><span class="p">,</span> <span class="n">CV0</span><span class="p">,</span> <span class="n">CV</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">compute_cv</span><span class="p">(</span><span class="n">AxI</span><span class="p">,</span><span class="n">Mxbad</span><span class="p">,</span><span class="n">flip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="o">**</span><span class="n">cv_param</span><span class="p">)</span>
+
+<span class="n">_</span><span class="p">,</span> <span class="n">CV_thetas_smooth</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">compute_cv</span><span class="p">(</span><span class="n">AxIx</span><span class="p">,</span><span class="n">Mxbad</span><span class="p">,</span><span class="n">flip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">silent_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="o">**</span><span class="n">cv_param</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Plots</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">AxI</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span><span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">AxI</span><span class="p">,</span><span class="n">levels</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ms&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Activation Map&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">mea</span><span class="o">.</span><span class="n">mat_1_show</span><span class="p">(</span><span class="n">CV</span><span class="o">*</span><span class="n">Mxbad</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.1f&#39;</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;cm/s&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Cond. Velocity&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">cv_arr_prop</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">_</span>  <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">direction_flow_map</span><span class="p">(</span><span class="n">X_theta</span><span class="o">=</span><span class="n">CV_thetas</span><span class="p">,</span><span class="n">X</span><span class="o">=</span><span class="n">AxI</span><span class="p">,</span><span class="n">upsample</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                           <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">arr_pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span>
+                           <span class="n">stream_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;CV&#39;</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                           <span class="n">heatmap_prop</span> <span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">),</span>
+                           <span class="n">arr_prop</span> <span class="o">=</span><span class="n">cv_arr_prop</span><span class="p">,</span>
+                           <span class="n">stream_prop</span> <span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">density</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
 <p><a class="reference internal" href="generated/spkit.mea.compute_cv.html#spkit.mea.compute_cv" title="spkit.mea.compute_cv"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.compute_cv</span></code></a></p>
-</section>
-<section id="plots-and-figures">
-<h2><span class="section-number">5.4.16. </span>Plots and Figures<a class="headerlink" href="#plots-and-figures" title="Link to this heading">¶</a></h2>
-<p>#TODO</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="generated/spkit.mea.plot_mea_grid.html#spkit.mea.plot_mea_grid" title="spkit.mea.plot_mea_grid"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.plot_mea_grid</span></code></a></p></li>
-<li><p><a class="reference internal" href="generated/spkit.mea.mea_feature_map.html#spkit.mea.mea_feature_map" title="spkit.mea.mea_feature_map"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.mea_feature_map</span></code></a></p></li>
-<li><p><a class="reference internal" href="generated/spkit.mea.mat_list_show.html#spkit.mea.mat_list_show" title="spkit.mea.mat_list_show"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.mea.mat_list_show</span></code></a></p></li>
-<li><p><a class="reference internal" href="generated/spkit.direction_flow_map.html#spkit.direction_flow_map" title="spkit.direction_flow_map"><code class="xref py py-func docutils literal notranslate"><span class="pre">spkit.direction_flow_map</span></code></a></p></li>
-</ul>
-</section>
-<section id="id1">
-<h2><span class="section-number">5.4.17. </span>Extracting EGM<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_grid_egm_1.png"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_grid_egm_1.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_grid_egm_1.png" style="width: 800px;" /></a>
-</section>
-<section id="egm-processing-feature-extractions">
-<h2><span class="section-number">5.4.18. </span>EGM Processing &amp; Feature Extractions<a class="headerlink" href="#egm-processing-feature-extractions" title="Link to this heading">¶</a></h2>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/egm_processing_1.png"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/egm_processing_1.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/egm_processing_1.png" style="width: 800px;" /></a>
-</section>
-<section id="conduction-and-activation-map">
-<h2><span class="section-number">5.4.19. </span>Conduction and Activation Map<a class="headerlink" href="#conduction-and-activation-map" title="Link to this heading">¶</a></h2>
 <a class="reference internal image-reference" href="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_act_cv_map_2.png"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_act_cv_map_2.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_act_cv_map_2.png" style="width: 800px;" /></a>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_act_cv_map_1.png"><img alt="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_act_cv_map_1.png" class="align-center" src="https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/images/docs_fig/mea_act_cv_map_1.png" style="width: 1000px;" /></a>
+<p><strong>Check-out the exaple each step</strong></p>
+<aside class="topic">
+<p class="topic-title">Examples:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../auto_examples/multielectrode-array/plot_mea_stepwise_example.html#sphx-glr-auto-examples-multielectrode-array-plot-mea-stepwise-example-py"><span class="std std-ref">MEA: Step-wise Analysis: Example</span></a></p></li>
+</ul>
+</aside>
 </section>
 </section>
 
@@ -446,7 +680,7 @@ This uses the default settings of all the paramters for extracting electrograms,
       </div>
       <div class="container">
         <footer class="spk-content-footer">
-          &copy; 2019 - 2024, spkit developers (BSD License).
+          &copy; 2019 - 2025, spkit developers (BSD License).
           <!-- -->
           <!-- <a href="../_sources/modules/bsp_mea.rst.txt" rel="nofollow">Show this page source</a> -->
           <!-- -->
